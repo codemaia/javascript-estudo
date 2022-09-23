@@ -281,3 +281,4 @@ const age = 31;
 // console.log(age !== 31);
 // console.log(age !== '31');
 
+console.log(age === 31);
