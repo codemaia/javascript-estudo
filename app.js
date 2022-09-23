@@ -281,4 +281,38 @@ const age = 31;
 // console.log(age !== 31);
 // console.log(age !== '31');
 
-console.log(age === 31);
+
+
+
+
+// AULA 04-04 ****************************************************************************
+//Conversao de tipos
+
+let score = '100';
+
+//score = Number(score); //converte string para NUMBER
+
+// utilizamos typreof para identificar o tipo de dado
+// console.log(score + 1);
+// console.log(typeof score);
+
+const crazyConversion = Number('Maça');
+const convertedNumber = String(97);
+const booleanConversion = Boolean(10);
+
+console.log(crazyConversion);
+console.log(convertedNumber, typeof convertedNumber); //""
+console.log(booleanConversion);
+
+/* 
+    Valores falsy:
+    - false
+    - 0
+    - "", '', ``
+    - null
+    - undefined
+    - NaN
+
+    Valores truthy:
+    - Qualquer valor que nao é falsy
+*/
