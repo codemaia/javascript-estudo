@@ -3,7 +3,7 @@
 //console.log(2, 1);
 
 
-// AULA 01-06
+// AULA 01-06 ****************************************************************************
 
 /*let age = 33;
 let currentYear = 2022;
@@ -22,7 +22,7 @@ console.log(points);
 
 
 
-//AULA 02-03
+//AULA 02-03 ****************************************************************************
 // STRINGS
 
 /*
@@ -58,7 +58,7 @@ console.log(index);
 
 
 
-//AULA 02-04
+//AULA 02-04 ****************************************************************************
 // Métodos de strings
 // Não mudam o valor original
 
@@ -89,7 +89,7 @@ console.log(emailReplace) //yaracroft@rogermelo.com.br
 
 
 
-//AULA 02-05
+//AULA 02-05 ****************************************************************************
 // Numbers
 
 /*
@@ -149,7 +149,7 @@ console.log(likesMessage);
 
 
 
-//AULA 02-06
+//AULA 02-06 ****************************************************************************
 // Template strings
 
 /*
@@ -175,4 +175,48 @@ const html = `
 console.log(html);
 
 */
+
+
+
+
+
+// AULA 03-02 ****************************************************************************
+
+// Arrays
+
+// Arrays são utilizados para armazenar uma lista de valores que geralmente tem relação entre si
+
+let heroes = ['Batman', 'Catwoman', 'Iron Man'];
+
+//sobrescrever um valor
+heroes[2] = 'Spider-Man';
+//
+
+const age = [31, 25, 39, 40, 25];
+
+const randomArray = ['Parker', 'Diana', 19, 18];
+
+
+// Metodos de arrays
+//join -> retorna uma nova string do array concatenado e separado por ',' mas podemos passar um separador
+const joinHeroes = heroes.join(' | ');
+
+//indexOf -> obtem o index da primeira ocorrencia do valor passado. Valor passado que não existe no array retorna -1 ****
+const indexOf25 = age.indexOf(25); 
+
+//concat -> concatena 2 arrays e nao modifica o array original.
+const moreHeroes = heroes.concat(['Superman', 'Wolverine']);
+
+//push -> adiciona valores passados ao fim do array e retorna o novo numero de itens do array. ALTERA O VALOR ORIGINAL DO ARRAY
+const pushToHeroes = heroes.push('Cyclops', 'Hulk');
+
+//pop -> remove o ultimo item de um array e retorna esse item removido
+const popHeroes = heroes.pop('Hulk');
+
+console.log(heroes);
+
+
+
+// AULA 03-03 ****************************************************************************
+
 
