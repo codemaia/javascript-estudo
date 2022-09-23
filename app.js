@@ -192,7 +192,7 @@ let heroes = ['Batman', 'Catwoman', 'Iron Man'];
 heroes[2] = 'Spider-Man';
 //
 
-const age = [31, 25, 39, 40, 25];
+//const age = [31, 25, 39, 40, 25];
 
 const randomArray = ['Parker', 'Diana', 19, 18];
 
@@ -202,7 +202,7 @@ const randomArray = ['Parker', 'Diana', 19, 18];
 const joinHeroes = heroes.join(' | ');
 
 //indexOf -> obtem o index da primeira ocorrencia do valor passado. Valor passado que não existe no array retorna -1 ****
-const indexOf25 = age.indexOf(25); 
+//const indexOf25 = age.indexOf(25); 
 
 //concat -> concatena 2 arrays e nao modifica o array original.
 const moreHeroes = heroes.concat(['Superman', 'Wolverine']);
@@ -213,10 +213,71 @@ const pushToHeroes = heroes.push('Cyclops', 'Hulk');
 //pop -> remove o ultimo item de um array e retorna esse item removido
 const popHeroes = heroes.pop('Hulk');
 
-console.log(heroes);
+// console.log(heroes);
 
 
 
 // AULA 03-03 ****************************************************************************
+//Null e undefined
 
+
+
+
+
+// AULA 04-02 ****************************************************************************
+//Booleans e comparações
+// console.log(true, false, 'true', 'false');
+
+
+// Métodos podem retornar booleans
+// método includes -> PODE SER USADO EM STRINGS E ARRAYS  -verifica se uma string existe em outra string
+const email = 'brucewayne@renanmaia.com.br';
+const includes = email.includes('wayne');
+const names = ['dio', 'roger', 'robert'];
+const arrayIncludes = names.includes('rob');
+
+// console.log(includes);
+// console.log(arrayIncludes);
+
+
+//Operadores de comparação
+
+// const age = 31;
+const name = 'roger'; //letra minuscula é maior que caracteres MAIUSCULOS
+
+// console.log(age == 31);
+// console.log(age == 35);
+// console.log(age != 35); // age "!= não é igual" a 35
+// console.log(age != 31);
+// console.log(age > 30);
+// console.log(age > 31);
+// console.log(age < 31);
+// console.log(age < 32);
+// console.log(age <= 31);
+// console.log(age >= 31);
+
+// console.log(name == 'roger');
+// console.log(name == 'Roger');
+// console.log(name > 'belinha');
+// console.log(name > 'Roger');
+// console.log(name > 'Belinha');
+
+
+// AULA 04-03 ****************************************************************************
+
+const age = 31;
+
+// 'igual a' e 'diferente de'
+// console.log(age == 31);
+// console.log(age == '31'); //a string '31' é convertida para number devido ao sinal '=='
+// console.log(age != 31);
+// console.log(age != '31');//a string '31' é convertida para number devido ao sinal '=='
+
+
+// 'igual a, e do mesmo tipo' e 'diferente de, e do mesmo tipo'
+
+// console.log(age === 31);
+// console.log(age === '31');
+// console.log(age !== 31);
+// console.log(age !== '31');
 
