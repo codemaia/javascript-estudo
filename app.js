@@ -300,7 +300,7 @@ const crazyConversion = Number('Maça');
 const convertedNumber = String(97);
 const booleanConversion = Boolean(10);
 
-console.log(crazyConversion);
+curso-de-js/exercicio-23console.log(crazyConversion);
 console.log(convertedNumber, typeof convertedNumber); //""
 console.log(booleanConversion);
 
