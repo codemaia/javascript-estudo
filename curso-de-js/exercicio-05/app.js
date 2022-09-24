@@ -21,6 +21,14 @@
     5
 */
 
+// let i = 0
+
+// while(i <= 5) { // ou i < 6
+//   console.log(i);
+
+//   i++;
+// }
+
 
 
 /*
@@ -29,6 +37,10 @@
   - Utilizando um for loop, faça o mesmo que foi pedido no exercício 01.
 */
 
+
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i);
+// }
 
 
 /*
