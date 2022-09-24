@@ -54,6 +54,11 @@
   "Esta é a Xª vez que esta frase é exibida no console."
 */
 
+// for (i = 1; i <= 10; i++) {
+//   console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`)
+// }
+
+
 
 
 /*
@@ -66,7 +71,16 @@
   - Para ver se deu certo, exiba o upperCaseCities no console.
 */
 
-const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
+const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais'];
+let upperCaseCities = [];
+
+for (let i = 0; i < cities.length; i++) {
+  upperCaseCities.push(cities[i].toUpperCase());
+}
+
+// console.log(upperCaseCities);
+
+
 
 /*
   05 - Comente o console.log acima e:
@@ -77,7 +91,14 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
     <li>João Grilo</li><li>Chicó</li><li>Rosinha</li>
 */
 
-const names = ['João Grilo', 'Chicó', 'Rosinha']
+const names = ['João Grilo', 'Chicó', 'Rosinha'];
+
+for(let i = 0; i > 2;i++) {
+  const HTMLTemplate = `<li>${names[0]}</li>`;
+  console.log(HTMLTemplate);
+}
+
+
 
 /*
   06 - Comente o console.log acima e:
@@ -88,7 +109,7 @@ const names = ['João Grilo', 'Chicó', 'Rosinha']
   - O console deve exibir true.
 */
 
-const numbers = ['91', '5', '30', '97', '83', '31']
+const numbers = ['91', '5', '30', '97', '83', '31'];
 
 /*
   07 - Comente o console.log acima.
@@ -113,4 +134,4 @@ const arrays = [
   [64, 8, 32],
   [8, 32, 16],
   [2, 8, 4]
-]
+];
