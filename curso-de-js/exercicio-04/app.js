@@ -16,9 +16,12 @@
 
 const my3FavoriteTVShows = ['The BigBan Theory', 'Naruto', 'Jujutsu Kaisen'];
 const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.slice(0,1)}, ${my3FavoriteTVShows.slice(1,2)} e ${my3FavoriteTVShows.slice(2,3)}.`;
+//resolucao professor:
+//const sentence2 = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ')}.`.replace(', J', ' e J');
+
 
 // console.log(sentence);
-
+// console.log(sentence2)
 
 /*
   02 - Comente o console.log() acima e:
@@ -27,7 +30,7 @@ const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.slice(0,
     possui 3 itens.
 */
 
-// console.log(my3FavoriteTVShows.length === 3);
+//  console.log(my3FavoriteTVShows.length === 3);
 
 /*
   03 - Comente o console.log() acima e:
@@ -76,8 +79,9 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
   caracteres? BOOLEAN."
 */
 
+const theNumberCheck = 39;
 
-// console.log(`A string que a "typeSentence" armazena tem mais de ${Number(39)} caracteres? ${String(typeSentence.length > Number(39)).replace('t', 'T')}`);
+// console.log(`A string que a "typeSentence" armazena tem mais de ${theNumberCheck} caracteres? ${String(typeSentence.length > theNumberCheck).replace('t', 'T')}`);
 
 
 
@@ -94,7 +98,7 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
 const falsyValues = [0, "", false, '', ``, null, undefined, NaN];
 
 // console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são falsy. Inclusive o  
-// ${falsyValues[2]} feito com index e o ${falsyValues.slice(2)} feito com o slice.`);
+//  ${falsyValues[2]} feito com index e o ${falsyValues.slice(2, 3)} feito com o slice.`);
 
 
 
@@ -134,8 +138,7 @@ const ages = [31, 82, 61, 11];
 const agesSum = ages[0] + ages[2];
 
 // console.log(agesSum);
-// console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  
-// é: ${agesSum <= 92}.`);
+// console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação é: ${agesSum <= 92}.`);
 
 
 
@@ -165,5 +168,8 @@ const isNotASting = typeof randomTVShow !== 'string' ;
 */
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
-
+//minha resolucao
 //console.log(evenNumbers[evenNumbers.indexOf(8)] === 8);
+
+//resolucao professor:
+// console.log(evenNumbers.indexOf(8) !== -1);
