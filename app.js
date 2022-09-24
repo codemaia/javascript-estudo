@@ -233,8 +233,8 @@ const popHeroes = heroes.pop('Hulk');
 // método includes -> PODE SER USADO EM STRINGS E ARRAYS  -verifica se uma string existe em outra string
 const email = 'brucewayne@renanmaia.com.br';
 const includes = email.includes('wayne');
-const names = ['dio', 'roger', 'robert'];
-const arrayIncludes = names.includes('rob');
+//const names = ['dio', 'roger', 'robert'];
+//const arrayIncludes = names.includes('rob');
 
 // console.log(includes);
 // console.log(arrayIncludes);
@@ -300,9 +300,9 @@ const crazyConversion = Number('Maça');
 const convertedNumber = String(97);
 const booleanConversion = Boolean(10);
 
-curso-de-js/exercicio-23console.log(crazyConversion);
-console.log(convertedNumber, typeof convertedNumber); //""
-console.log(booleanConversion);
+// console.log(crazyConversion);
+// console.log(convertedNumber, typeof convertedNumber); //""
+// console.log(booleanConversion);
 
 /* 
     Valores falsy:
@@ -316,3 +316,60 @@ console.log(booleanConversion);
     Valores truthy:
     - Qualquer valor que nao é falsy, ou seja, qualquer valor que não esteja aprensentado no falsy a cima
 */
+
+
+
+
+
+
+/// ETAPA 2 CONTROLE DE FLUXO ***********************************************************************************************************
+
+/// AULA 01-03
+/// For loop  *************************************************************************************************************
+
+
+// for (let i = 0; i < 5; i++) {
+//     console.log(`Dentro do loop: ${i}`);
+// }
+
+// console.log('Loop concluido');
+
+
+
+// const names = ['Linus', 'Ada', 'Bill'];
+//                 //resulta em 3 que é a quantidade de itens do array, isso nos assegura que vamos executar o codigo baseado na quantidade
+//                 //de itens do array sem saber quantos itens possui.
+// for (let i = 0; i < names.length; i++) {
+//     //console.log(i) //0, 1, 2
+//     console.log(names[i]);
+// }
+
+
+// for (let i = 0; i < names.length; i++) {
+//     const HTMLTemplate = `<p>${names[i]}</p>`
+//     console.log(HTMLTemplate);
+// }
+
+
+
+
+
+/// AULA 01-04
+/// While loop  *************************************************************************************************************
+
+
+// let i = 0
+
+// while(i < 5) {
+//     console.log(`Dentro do loop while: ${i}`);
+//     i++;
+// }
+
+
+// const names = ['Lívia', 'Renan', 'Tita', 'Brisa'];
+// let i = 0;
+
+// while(i < names.length) {
+//     console.log(names[i]); //names[i] i terá o valor dos indixes dos arrays, ex: começa com i = 0, 0 é o primeiro index do array;
+//     i++;
+// }
