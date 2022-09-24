@@ -314,5 +314,5 @@ console.log(booleanConversion);
     - NaN
 
     Valores truthy:
-    - Qualquer valor que nao é falsy
+    - Qualquer valor que nao é falsy, ou seja, qualquer valor que não esteja aprensentado no falsy a cima
 */
