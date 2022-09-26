@@ -113,6 +113,18 @@ for(let i = 0; i < 1 ;i++) {
 
 const numbers = ['91', '5', '30', '97', '83', '31'];
 
+for(let i = 0; i < numbers.length; i++) {
+  let arrayNumber = Number(numbers[i]);
+  let soma = 0
+  soma += arrayNumber
+  
+  
+
+  console.log(soma);
+  
+}
+
+
 /*
   07 - Comente o console.log acima.
 
