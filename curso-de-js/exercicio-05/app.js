@@ -78,7 +78,7 @@ for (let i = 0; i < cities.length; i++) {
   upperCaseCities.push(cities[i].toUpperCase());
 }
 
-// console.log(upperCaseCities);
+//console.log(upperCaseCities);
 
 
 
@@ -95,8 +95,8 @@ const names = ['João Grilo', 'Chicó', 'Rosinha'];
 
 for(let i = 0; i < 1 ;i++) {
   // const HTMLTemplate = `<li>${names[0]}</li><li>${names[1]}</li><li>${names[2]}</li>`;
-  const HTMLTemplate = `${names}`;
-  console.log(HTMLTemplate);
+  const HTMLTemplate = `<li>${names.join('</li><li>')}</li>`;
+  // console.log(HTMLTemplate);
   
 }
 
