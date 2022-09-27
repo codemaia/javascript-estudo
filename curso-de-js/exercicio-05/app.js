@@ -78,7 +78,7 @@ for (let i = 0; i < cities.length; i++) {
   upperCaseCities.push(cities[i].toUpperCase());
 }
 
-//console.log(upperCaseCities);
+// console.log(upperCaseCities);
 
 
 
@@ -92,14 +92,15 @@ for (let i = 0; i < cities.length; i++) {
 */
 
 const names = ['João Grilo', 'Chicó', 'Rosinha'];
+let htmlTemplate = ``;
 
-for(let i = 0; i < 1 ;i++) {
-  // const HTMLTemplate = `<li>${names[0]}</li><li>${names[1]}</li><li>${names[2]}</li>`;
-  const HTMLTemplate = `<li>${names.join('</li><li>')}</li>`;
-  // console.log(HTMLTemplate);
+for(let i = 0; i < names.length ;i++) {
   
+  htmlTemplate += `<li>${names[i]}</li>`;
+
 }
 
+// console.log(htmlTemplate);
 
 
 /*
@@ -112,17 +113,14 @@ for(let i = 0; i < 1 ;i++) {
 */
 
 const numbers = ['91', '5', '30', '97', '83', '31'];
+let sumArray = 0;
 
 for(let i = 0; i < numbers.length; i++) {
-  let arrayNumber = Number(numbers[i]);
-  let soma = 0
-  soma += arrayNumber
-  
-  
-
-  console.log(soma);
+  sumArray += Number(numbers[i]);
   
 }
+
+// console.log(sumArray === 337);
 
 
 /*
@@ -144,8 +142,23 @@ for(let i = 0; i < numbers.length; i++) {
 */
 
 const arrays = [
-  [4, 32, 8],
-  [64, 8, 32],
-  [8, 32, 16],
-  [2, 8, 4]
+  [4, 32, 8], //0
+  [64, 8, 32], //1
+  [8, 32, 16], //2
+  [2, 8, 4] //3
 ];
+
+let sumArrays = 0;
+
+for (let i = 0; i < arrays.length; i++) {
+  // console.log(arrays[i]);
+  for(let j = 0; j < arrays[i].length; j++) {
+    // console.log(arrays[i][j]);
+    sumArrays += arrays[i][j];
+
+  }
+  
+}
+
+console.log(sumArrays);
+
