@@ -120,7 +120,7 @@ for(let i = 0; i < numbers.length; i++) {
   
 }
 
-// console.log(sumArray === 337);
+//  console.log(sumArray === 337);
 
 
 /*
@@ -160,5 +160,5 @@ for (let i = 0; i < arrays.length; i++) {
   
 }
 
-console.log(sumArrays);
+//  console.log(sumArrays); AMASSAMOOOOOOOOOOOOOOOOOOOOS !!
 
