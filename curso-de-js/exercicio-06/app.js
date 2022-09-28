@@ -25,13 +25,13 @@
 
 const fruits = ['morango', 'banana', 'mamão'];
 
-// if (fruits.includes('abacaxi')) {
-//   console.log(`A string "abacaxi" existe no array fruits.`);
-// } else if (fruits.includes('pera')) {
-//   console.log(`A string "pera" existe no array fruits.`);
-// } else {
-//   console.log(`Nem pera nem abacaxi existem no array "fruits".`);
-// }
+if (fruits.includes('abacaxi')) {
+  console.log(`A string "abacaxi" existe no array fruits.`);
+} else if (fruits.includes('pera')) {
+  console.log(`A string "pera" existe no array fruits.`);
+} else {
+  console.log(`Nem pera nem abacaxi existem no array "fruits".`);
+}
 
 
 /*
@@ -53,15 +53,17 @@ const fruits = ['morango', 'banana', 'mamão'];
 12 as 17 boa tarde
 */
 
-const currentTime = 22;
+const currentTime = 20;
+const isMorning = currentTime >= 6 && currentTime <= 11;
+const isAfternoon = currentTime >= 12 && currentTime <= 17;
 
-// if (currentTime >= 6 && currentTime < 12) {
-//   console.log('Good morning! (Bom dia!)');
-// } else if (currentTime >= 12 && currentTime < 18) {
-//   console.log('Good Afternoon! (Boa tarde!)'); 
-// } else {
-//   console.log('Good Evening! (Boa noite!)');
-// }
+if (isMorning) {
+  console.log('Good morning! (Bom dia!)');
+} else if (isAfternoon) {
+  console.log('Good Afternoon! (Boa tarde!)'); 
+} else {
+  console.log('Good Evening! (Boa noite!)');
+}
 
 
 
@@ -82,15 +84,18 @@ const currentTime = 22;
 */
 
 const yearOld = 31;
-let freeOrPaid = '';
+let freeOrPaid = null;
+const isChild = yearOld <= 7;
+const isOlder = yearOld >= 65
 
-if (yearOld <= 7 || yearOld >= 65) {
+
+if (isChild || isOlder) {
   freeOrPaid = 'Para você, a entrada é grátis!';
 } else {
   freeOrPaid = 'A entrada é R$ 30,00';
 }
 
-// console.log(freeOrPaid);
+console.log(freeOrPaid);
 
 
 
@@ -108,12 +113,15 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 const newArray = [];
 
 for (let i = 0; i < numbers.length; i++) {
-  if(numbers[i] >= 11 && numbers[i] <= 90) {
+  const number = numbers[i];
+  const isNumberBetween = number >= 11 && number <= 90;
+
+  if(isNumberBetween) {
     newArray.push(numbers[i]);  
   } 
 }
 
-//  console.log(newArray);
+ console.log(newArray);
 
 
 
@@ -131,6 +139,33 @@ for (let i = 0; i < numbers.length; i++) {
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+
+/*
+//Resolucao professor
+
+let numberAmount = 0;
+let booleanAmount = 0;
+let stringAmount = 0;
+
+for (let i = 0; i < crazyArray.length; i++) {
+  const typeOfItem = typeof crazyArray[i];
+  const isItemANumber = typeOfItem === 'number';
+  const isItemABoolean = typeOfItem === 'boolean';
+
+  if(isItemANumber) {
+    numberAmount = numberAmount + 1;
+  } else if (isItemABoolean) {
+    booleanAmount += 1;
+  } else {
+    stringAmount++;
+  }
+}
+
+console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} números e ${stringAmount} strings.`)
+
+*/
+
+
 const isABoolean = 'boolean';
 const isANumber = 'number';
 //const isAString = 'string';
@@ -140,19 +175,19 @@ let strings = 0;
 
 
 for (let i = 0; i < crazyArray.length; i++) {
+  const typeOfItem = typeof crazyArray[i];
 
-  if(typeof crazyArray[i] === isABoolean) { 
+  if(typeOfItem === isABoolean) { 
     // console.log(`hi, i'm boolean`);
     booleans++;
-  } else if (typeof crazyArray[i] === isANumber) {
+  } else if (typeOfItem === isANumber) {
     number++;
   } else {
     strings++;
   }
-
 }
 
-// console.log(`O crazyArray tem ${booleans}' booleans, ${number} números e ${strings} strings.`);
+console.log(`O crazyArray tem ${booleans} booleans, ${number} números e ${strings} strings.`);
 
 
 /*
@@ -177,17 +212,22 @@ const numbersPair = [];
 const numbersOdd = [];
 
 for (let i = 0; i < randomNumbers.length; i++) {
-
-  if(randomNumbers[i] % 2 == 0) {
+  const number = randomNumbers[i];
+  const isPairNumber = number % 2 === 0;
+  
+  if(isPairNumber) {
     // console.log(randomNumbers[i]);
-    numbersPair.push(randomNumbers[i]);
+    numbersPair.push(number);
   } else {
-    numbersOdd.push(randomNumbers[i]);
+    numbersOdd.push(number);
   }
 
 }
 
-console.log(`Numeros ímpares: ${numbersOdd.join(', ').replace(', 3', ' e 3')}. Números pares: ${numbersPair.join(', ').replace(', 5', ' e 5')}.`);
+const numbersPairtString = numbersPair.join(', ').replace(', 5', ' e 5');
+const numbersOddString = numbersOdd.join(', ').replace(', 3', ' e 3');
+
+console.log(`Numeros ímpares: ${numbersOddString}. Números pares: ${numbersPairtString}.`);
 
 
 
