@@ -131,6 +131,9 @@ for (let i = 0; i < numbers.length; i++) {
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+const isABoolean = 'boolean';
+const isANumber = 'number';
+//const isAString = 'string';
 let number = 0;
 let booleans = 0;
 let strings = 0;
@@ -138,10 +141,10 @@ let strings = 0;
 
 for (let i = 0; i < crazyArray.length; i++) {
 
-  if(typeof crazyArray[i] === 'boolean') { 
+  if(typeof crazyArray[i] === isABoolean) { 
     // console.log(`hi, i'm boolean`);
     booleans++;
-  } else if (typeof crazyArray[i] === 'number') {
+  } else if (typeof crazyArray[i] === isANumber) {
     number++;
   } else {
     strings++;
@@ -149,7 +152,7 @@ for (let i = 0; i < crazyArray.length; i++) {
 
 }
 
-console.log(`O crazyArray tem ${booleans} booleans, ${number} números e ${strings} strings.`);
+// console.log(`O crazyArray tem ${booleans}' booleans, ${number} números e ${strings} strings.`);
 
 
 /*
@@ -168,7 +171,24 @@ console.log(`O crazyArray tem ${booleans} booleans, ${number} números e ${strin
 
   "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
 */
-
+  
 const randomNumbers = [73, 4, 67, 10, 31, 58];
+const numbersPair = [];
+const numbersOdd = [];
+
+for (let i = 0; i < randomNumbers.length; i++) {
+
+  if(randomNumbers[i] % 2 == 0) {
+    // console.log(randomNumbers[i]);
+    numbersPair.push(randomNumbers[i]);
+  } else {
+    numbersOdd.push(randomNumbers[i]);
+  }
+
+}
+
+console.log(`Numeros ímpares: ${numbersOdd.join(', ').replace(', 3', ' e 3')}. Números pares: ${numbersPair.join(', ').replace(', 5', ' e 5')}.`);
+
+
 
 
