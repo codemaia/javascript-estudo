@@ -409,10 +409,32 @@
 
 // AULA 02-03
 // Else e else if statements **********************************************************************
+// ELSE (se não);
+
+// const password = 'oi1233333333';
+
+// if(password.length >= 12) { //se true
+//     console.log('senha muito forte! :D');
+// }else if (password.length >= 8) { //se true
+//     console.log('Essa senha tem 8 ou mais caracteres');
+// } else { //se não
+//     console.log('a senha deve conter 8 ou mais caracteres');
+// }
 
 
-const password = 'oi123';
 
-if (password.length >= 8) {
-    console.log('Essa senha tem 8 ou mais caracteres');
-}
+
+
+// AULA 02-04
+// Operadores lógicos "OU" || e "E" && *********************************************************
+
+
+// const password = 'oi123';
+
+// if(password.length >= 12 && password.includes('1')) { //se true && "e" (&& as duas expressoes precisam retornar TRUE)
+//     console.log('senha muito forte! :D');
+// }else if (password.length >= 8 || password.includes('1') && password.length >= 5) { //se true || "ou" (|| apenas uma expressão precisar retornar TRUE. Podemos colocar mais de 2 expressoes, e precisamos que apenas 1 retorne TRUE. || com &&)
+//     console.log('Senha forte!');
+// } else { //se não
+//     console.log('a senha deve conter 8 ou mais caracteres');
+// }
