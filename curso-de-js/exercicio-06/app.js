@@ -23,15 +23,15 @@
     "Nem pera nem abacaxi existem no array "fruits".".
 */
 
-const fruits = ['morango', 'banana', 'mamão', 'pera'];
+const fruits = ['morango', 'banana', 'mamão'];
 
-if (fruits.includes('abacaxi')) {
-  console.log(`A string "abacaxi" existe no array fruits.`);
-} else if (fruits.includes('pera')) {
-  console.log(`A string "pera" existe no array fruits.`);
-} else {
-  console.log(`Nem pera nem abacaxi existem no array "fruits".`);
-}
+// if (fruits.includes('abacaxi')) {
+//   console.log(`A string "abacaxi" existe no array fruits.`);
+// } else if (fruits.includes('pera')) {
+//   console.log(`A string "pera" existe no array fruits.`);
+// } else {
+//   console.log(`Nem pera nem abacaxi existem no array "fruits".`);
+// }
 
 
 /*
@@ -48,6 +48,26 @@ if (fruits.includes('abacaxi')) {
 */
 
 /*
+6 as < 12 bom dia
+
+12 as 17 boa tarde
+*/
+
+const currentTime = 22;
+
+// if (currentTime >= 6 && currentTime < 12) {
+//   console.log('Good morning! (Bom dia!)');
+// } else if (currentTime >= 12 && currentTime < 18) {
+//   console.log('Good Afternoon! (Boa tarde!)'); 
+// } else {
+//   console.log('Good Evening! (Boa noite!)');
+// }
+
+
+
+
+
+/*
   03
 
   - Armazene sua idade em uma constante;
@@ -61,6 +81,20 @@ if (fruits.includes('abacaxi')) {
     também está funcionando.
 */
 
+const yearOld = 31;
+let freeOrPaid = '';
+
+if (yearOld <= 7 || yearOld >= 65) {
+  freeOrPaid = 'Para você, a entrada é grátis!';
+} else {
+  freeOrPaid = 'A entrada é R$ 30,00';
+}
+
+// console.log(freeOrPaid);
+
+
+
+
 /*
   04
 
@@ -71,6 +105,9 @@ if (fruits.includes('abacaxi')) {
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+
+
+
 
 /*
   05
