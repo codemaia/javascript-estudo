@@ -105,7 +105,15 @@ if (yearOld <= 7 || yearOld >= 65) {
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+const newArray = [];
 
+for (let i = 0; i < numbers.length; i++) {
+  if(numbers[i] >= 11 && numbers[i] <= 90) {
+    newArray.push(numbers[i]);  
+  } 
+}
+
+//  console.log(newArray);
 
 
 
@@ -123,6 +131,26 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+let number = 0;
+let booleans = 0;
+let strings = 0;
+
+
+for (let i = 0; i < crazyArray.length; i++) {
+
+  if(typeof crazyArray[i] === 'boolean') { 
+    // console.log(`hi, i'm boolean`);
+    booleans++;
+  } else if (typeof crazyArray[i] === 'number') {
+    number++;
+  } else {
+    strings++;
+  }
+
+}
+
+console.log(`O crazyArray tem ${booleans} booleans, ${number} números e ${strings} strings.`);
+
 
 /*
   06
