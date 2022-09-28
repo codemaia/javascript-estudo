@@ -169,4 +169,6 @@ console.log(`O crazyArray tem ${booleans} booleans, ${number} números e ${strin
   "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
 */
 
-const randomNumbers = [73, 4, 67, 10, 31, 58]
+const randomNumbers = [73, 4, 67, 10, 31, 58];
+
+
