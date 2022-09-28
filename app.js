@@ -438,3 +438,100 @@
 // } else { //se não
 //     console.log('a senha deve conter 8 ou mais caracteres');
 // }
+
+
+
+
+
+//AULA 03-02
+// O operador lógico not (!) ######################################################
+/*
+    (!) Esse operador quando inserido na frente de um boolean ele inverte o boolean.
+Se o boolean é true vira false e vice e versa.
+
+!true = false
+!false = true
+
+*/
+
+// let isUserLoggedIn = false;
+
+// if(!isUserLoggedIn) {
+//     console.log('Você precisa fazer login para continuar');
+// }
+
+
+// console.log(!true);
+// console.log(!false);
+
+
+
+
+
+//AULA 03-03
+// Break e continue ######################################################
+
+/*
+    Break = Parar/quebrar o loop.
+            A iteração pelos elementos seguintes não vai continuar.
+
+    continue = Pula uma iteração em particular. Se CONTINUE é chamada, o código a baixo é ignorado
+               e a iteração continua (pulando a iteração em particular declarada);
+
+*/
+
+
+// const scores = [50, 25, 0, 30, 100, 20, 10];
+
+// for (let i = 0; i < scores.length; i++) {
+//     //continue => pular o valor/iteração 0 (zero).
+//     if (scores[i] === 0) {
+//         continue;
+//     }
+
+//     console.log(`sua pontuação: ${scores[i]}`);
+
+//     //break => parar o loop na 'pontuação máxima'
+
+//     if(scores[i] === 100) {
+//         console.log('parabéns, você atingiu a pontuação máxima');
+
+//         break;
+//     }
+
+// }
+
+
+
+
+
+
+//AULA 03-04
+// A condicional switch ######################################################
+
+/*
+    switch = Usado para verificar multiplos valores possíveis de uma variavel ou constante.
+    
+*/
+
+const grade = 'E';
+
+switch(grade) {
+    case 'A':
+        console.log('você tirou um A');
+        break;
+    case 'B':
+        console.log('você tirou um B');
+        break;
+    case 'C':
+        console.log('você tirou um C');
+        break;
+    case 'D':
+        console.log('você tirou um D');
+        break;
+    case 'E':
+        console.log('você tirou um E');
+        break;
+    default:
+        console.log('nota invalida');
+}
