@@ -5,7 +5,7 @@
   - O resultado exibido no console deve ser: false true.
 */
 
-console.log(true, false)
+// console.log(!true, !false)
 
 /*
   02
@@ -16,7 +16,15 @@ console.log(true, false)
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
 
-const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
+
+const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo'];
+
+// if(!animals.includes('leão')) {
+//   console.log("Leão não existe no array animals.");
+// } else {
+//   console.log("Existe um leão no array animals.");
+// }
+
 
 /*
   03
@@ -29,7 +37,21 @@ const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 
-const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
+// const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
+// let sumNumbers = 0;
+
+// for (let i = 0; i < randomNumbers.length; i++) {    
+//     sumNumbers += randomNumbers[i];  
+
+//     if(sumNumbers > 400) {
+//       console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${sumNumbers}.`);
+//       break;
+//     }
+  
+// }
+
+
+
 
 /*
   04
@@ -41,6 +63,24 @@ const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
 */
 
 const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
+let newSetence = '';
+
+for (let i = 0; i < sentence.length; i++) {
+
+
+  if (sentence[i].includes('certeza')) {
+    continue;
+  }
+  
+
+
+}
+// console.log(sentence.join(' '))
+console.log(`${newSetence}`);
+
+
+
+
 
 /*
   05
