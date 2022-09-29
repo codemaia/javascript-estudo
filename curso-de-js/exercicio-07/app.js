@@ -63,21 +63,23 @@ const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo'];
 */
 
 const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
-let newSetence = '';
+let newSentence = [];
 
 for (let i = 0; i < sentence.length; i++) {
 
+    if (sentence[i].includes('certeza')) {
+      continue;
+    } else {
+      newSentence.push(sentence[i]);
+    } 
 
-  if (sentence[i].includes('certeza')) {
-    continue;
-  }
-  
+    
+
 
 
 }
-// console.log(sentence.join(' '))
-console.log(`${newSetence}`);
 
+// console.log(`${newSentence.join(' ')}`);
 
 
 
