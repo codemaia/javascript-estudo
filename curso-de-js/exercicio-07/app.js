@@ -37,18 +37,19 @@ if(!animals.includes('leão')) {
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 
-// const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
-// let sumNumbers = 0;
+const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43];
+let sumNumbers = 0;
+let limit = 400;
 
-// for (let i = 0; i < randomNumbers.length; i++) {    
-//     sumNumbers += randomNumbers[i];  
+for (let i = 0; i < randomNumbers.length; i++) {    
+    sumNumbers += randomNumbers[i];  
 
-//     if(sumNumbers > 400) {
-//       console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${sumNumbers}.`);
-//       break;
-//     }
+    if(sumNumbers > limit) {
+      console.log(`A soma ultrapassou ${limit}. Até aqui, o valor atual é ${sumNumbers}.`);
+      break;
+    }
   
-// }
+}
 
 
 
@@ -75,7 +76,32 @@ for (let i = 0; i < sentence.length; i++) {
 
 }
 
-// console.log(`${newSentence.join(' ')}`);
+console.log(`${newSentence.join(' ')}`);
+
+/*
+Resolução professor:
+
+let newSentence = '';
+
+for (let i = 0; i < sentence.length; i++) {
+  const word = sentence[i];
+
+  if (word === 'certeza') {
+    continue;
+  }
+
+  newSentence += `${word} `;
+
+}
+
+console.log(newSentence);
+
+*/
+
+
+
+
+
 
 
 /*
@@ -95,26 +121,25 @@ for (let i = 0; i < sentence.length; i++) {
 
 const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false,'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
 let onlyString = [];
-let onlyBoolean = [];
 let contInterationBoolean = 0;
 let contInterationArray = 0;
 
-/*  
-  interar apenas até a 4 string. let's go!
-*/
+// /*  
+//   interar apenas até a 4 string. let's go!
+// */
 
 for (let i = 0; i < randomValues.length; i++) {
+
+  if(onlyString.length === 4) {
+    break;
+  }
   
   if(typeof randomValues[i] === 'string')  {
 
     onlyString.push(randomValues[i]);
 
-    if(onlyString.length === 4) {
-      break;
-    }
 
   } else if (typeof randomValues[i] === 'boolean') {
-    onlyBoolean.push(randomValues[i]);
     contInterationBoolean++;
     
   }
@@ -123,18 +148,60 @@ for (let i = 0; i < randomValues.length; i++) {
 
 }
 
-// console.log(`
-// 3 informações sobre o array randomValues:
-// - As primeiras 4 strings são ${onlyString.join(', ').replace(', G', ' e G')};
-// - Até que as primeiras 4 strings fossem iteradas, ${contInterationBoolean} booleans foram iterados;
-// - O array foi iterado por ${contInterationArray} vezes.
+console.log(`
+3 informações sobre o array randomValues:
+- As primeiras 4 strings são ${onlyString.join(', ').replace(', G', ' e G')};
+- Até que as primeiras 4 strings fossem iteradas, ${contInterationBoolean} booleans foram iterados;
+- O array foi iterado por ${contInterationArray} vezes.
 
-// `)
+`)
+
 
 // console.log(contInterationBoolean);
 // console.log(contInterationArray);
 // console.log(onlyString);
 // console.log(onlyBoolean);
+
+
+
+/* 
+ Resolucao professor:
+
+let stringAmount = 0;
+let booleanAmount = 0;
+let totalInterations = 0;
+let firstFourStrings = [];
+
+
+for (let i = 0; i < randomValues.length; i++) {
+  if(stringAmount === 4) {
+    break;
+  }
+
+  if(typeof randomValues[i] === 'string') {
+    stringAmount++;
+    firstFourStrings.push(randomValues[i]);
+  }
+
+  if(typeof randomValues[i] === 'boolean') {
+    booleanAmount++
+  }
+
+  totalInterations++;
+
+}
+
+console.log(`
+3 informações sobre o array randomValues:
+- As primeiras 4 strings são ${firstFourStrings.join(', ').replace(`, ${firstFourStrings[firstFourStrings.length -1]}`, ` e ${firstFourStrings[firstFourStrings.length -1]}`)};
+- Até que as primeiras 4 strings fossem iteradas, ${booleanAmount} booleans foram iterados;
+- O array foi iterado por ${totalInterations} vezes.
+
+`)
+
+*/
+
+
 
 
 
