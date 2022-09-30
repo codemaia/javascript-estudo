@@ -535,3 +535,29 @@ Se o boolean é true vira false e vice e versa.
 //     default:
 //         console.log('nota invalida');
 // }
+
+
+
+
+
+
+// ETAPA 03 - FUNÇÕES E METODOS ########################################################################################
+
+// AULA 01-02 O que são funções 
+
+/*
+    Funções fazem parte do tipo OBJECT.
+    Papel principal é permitir criar um bloco de código que podemos invocar e executar quando quiser.
+    
+    Função = UMA CAIXA DE CÓDIGO E PODEMOS EXECUTALAS VARIAIS VEZES NO CÓDIGO.
+    podemos passar valores para uma função, a função vai pegar os valores.. fazer algo e devolver o resultado.
+    
+    EX: Pega a latitude e longitude, joga numa função e ela converte para um endereço. oss
+
+    # Invocando função:
+
+    showMessage()
+
+
+
+*/
