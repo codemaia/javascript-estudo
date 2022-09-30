@@ -543,10 +543,10 @@ Se o boolean é true vira false e vice e versa.
 
 // ETAPA 03 - FUNÇÕES E METODOS ########################################################################################
 
-// AULA 01-02 O que são funções 
+// AULA 01-02 - O que são funções 
 
 /*
-    Funções fazem parte do tipo OBJECT.
+    @ Funções fazem parte do tipo OBJECT.
     Papel principal é permitir criar um bloco de código que podemos invocar e executar quando quiser.
     
     Função = UMA CAIXA DE CÓDIGO E PODEMOS EXECUTALAS VARIAIS VEZES NO CÓDIGO.
@@ -561,3 +561,42 @@ Se o boolean é true vira false e vice e versa.
 
 
 */
+
+
+
+
+
+
+// AULA 01-03 - Function declaration, function expression and hoisting
+
+
+/*
+    @ Hoisting -> Içamento para o topo do arquivo.
+    
+    # Quanto menos contarmos com o que esta por debaixo do panos (hoisting/içamento) melhor para nossa aplicação
+      e mais facil é para debugar.
+    
+
+*/
+
+
+// Function declaration
+// -> A function declaration é 'içada' para o topo do arquivo e com isso podemos declarar ela mesmo que a sua construção venha depois. 
+//    podemos colocala em qualquer lugar do arquivo que o JavaScript vai puxala para o topo do arquivo e executar normalmente.
+
+sayHi(); // -> Por isso não é ocasionado erro. diferente de uma FUNCTION EXPRESSION.
+
+function sayHi () {
+    console.log('oi');
+}
+
+
+
+// Function expression
+// -> Aqui o hoisting 'Içamento' não funciona. É necessário criar/declarar a function expression antes da sua invocação.
+
+const showFood = function () {
+    console.log('pizza *.*');
+}
+
+showFood();
