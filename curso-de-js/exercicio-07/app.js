@@ -73,15 +73,9 @@ for (let i = 0; i < sentence.length; i++) {
       newSentence.push(sentence[i]);
     } 
 
-    
-
-
-
 }
 
 // console.log(`${newSentence.join(' ')}`);
-
-
 
 
 /*
@@ -99,7 +93,50 @@ for (let i = 0; i < sentence.length; i++) {
   "
 */
 
-const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
+const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false,'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
+let onlyString = [];
+let onlyBoolean = [];
+let contInterationBoolean = 0;
+let contInterationArray = 0;
+
+/*  
+  interar apenas até a 4 string. let's go!
+*/
+
+for (let i = 0; i < randomValues.length; i++) {
+  
+  if(typeof randomValues[i] === 'string')  {
+
+    onlyString.push(randomValues[i]);
+
+    if(onlyString.length === 4) {
+      break;
+    }
+
+  } else if (typeof randomValues[i] === 'boolean') {
+    onlyBoolean.push(randomValues[i]);
+    contInterationBoolean++;
+    
+  }
+  
+  contInterationArray++;
+
+}
+
+console.log(`
+3 informações sobre o array randomValues:
+- As primeiras 4 strings são ${onlyString.join(', ').replace(', G', ' e G')};
+- Até que as primeiras 4 strings fossem iteradas, ${contInterationBoolean} booleans foram iterados;
+- O array foi iterado por ${contInterationArray} vezes.
+
+`)
+
+// console.log(contInterationBoolean);
+// console.log(contInterationArray);
+// console.log(onlyString);
+// console.log(onlyBoolean);
+
+
 
 /*
   06
