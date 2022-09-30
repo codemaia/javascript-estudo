@@ -5,7 +5,7 @@
   - O resultado exibido no console deve ser: false true.
 */
 
-// console.log(!true, !false)
+console.log(!true, !false)
 
 /*
   02
@@ -19,11 +19,11 @@
 
 const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo'];
 
-// if(!animals.includes('leão')) {
-//   console.log("Leão não existe no array animals.");
-// } else {
-//   console.log("Existe um leão no array animals.");
-// }
+if(!animals.includes('leão')) {
+  console.log("Leão não existe no array animals.");
+} else {
+  console.log("Existe um leão no array animals.");
+}
 
 
 /*
@@ -123,13 +123,13 @@ for (let i = 0; i < randomValues.length; i++) {
 
 }
 
-console.log(`
-3 informações sobre o array randomValues:
-- As primeiras 4 strings são ${onlyString.join(', ').replace(', G', ' e G')};
-- Até que as primeiras 4 strings fossem iteradas, ${contInterationBoolean} booleans foram iterados;
-- O array foi iterado por ${contInterationArray} vezes.
+// console.log(`
+// 3 informações sobre o array randomValues:
+// - As primeiras 4 strings são ${onlyString.join(', ').replace(', G', ' e G')};
+// - Até que as primeiras 4 strings fossem iteradas, ${contInterationBoolean} booleans foram iterados;
+// - O array foi iterado por ${contInterationArray} vezes.
 
-`)
+// `)
 
 // console.log(contInterationBoolean);
 // console.log(contInterationArray);
@@ -158,7 +158,28 @@ console.log(`
     da bebida além da que você escolheu.
 */
 
-// const drinkType
+const drinkType = 'agua';
+
+
+// switch(drinkType) {
+//   case 'agua':
+//     console.log(`Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.`);
+//     break;
+//   case 'refrigerante':
+//     console.log("Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.");
+//     break;
+//   case 'suco':
+//     console.log("Bebida produzida do líquido extraído de frutos.");
+//     break;
+//   default:
+//     console.log("Bebida desconhecida");
+// }
+
+
+
+
+
+
 
 /*
   07
@@ -168,7 +189,7 @@ console.log(`
     para testar o switch que você escreveu.
 */
 
-const a = 2
+const a = 1
 
 // if (a === 0) {
 //   console.log(`O valor de "a" é ${a}`)
@@ -176,4 +197,15 @@ const a = 2
 //   console.log(`O valor de "a" é ${a}`)
 // } else {
 //   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
+// }
+
+// switch(a) {
+//   case 0:
+//     console.log(`O valor de "a" é ${a}`);
+//     break;
+//   case 1:
+//     console.log(`O valor de "a" é ${a}`);
+//     break;
+//   default:
+//     console.log(`O valor de "a" é qualquer número, exceto 0 e 1`);
 // }
