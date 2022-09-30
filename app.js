@@ -584,19 +584,51 @@ Se o boolean é true vira false e vice e versa.
 // -> A function declaration é 'içada' para o topo do arquivo e com isso podemos declarar ela mesmo que a sua construção venha depois. 
 //    podemos colocala em qualquer lugar do arquivo que o JavaScript vai puxala para o topo do arquivo e executar normalmente.
 
-sayHi(); // -> Por isso não é ocasionado erro. diferente de uma FUNCTION EXPRESSION.
+// sayHi(); // -> Por isso não é ocasionado erro. diferente de uma FUNCTION EXPRESSION.
 
-function sayHi () {
-    console.log('oi');
+// function sayHi () {
+//     console.log('oi');
+// }
+
+
+
+// // Function expression
+// // -> Aqui o hoisting 'Içamento' não funciona. É necessário criar/declarar a function expression antes da sua invocação.
+
+// const showFood = function () {
+//     console.log('pizza *.*');
+// }
+
+// showFood();
+
+
+
+
+
+
+// AULA 01-04 - Argumentos, parametros e default parameters
+
+
+/*
+    @ Na função passa PARAMETRO!
+      Na invocação da função passa ARGUMENTO!
+
+      A ordem dos ARGUMENTOS (invocação) deve seguir a ordem dos PARAMETROS (função)
+    # dentro da função os parametros nao precisam estar na ordem :) 
+    # para evitar retornos UNDEFINED das função podemos passar valores defaults nos PARAMETROS.
+    
+    segue exemplo a baixo
+
+*/
+
+// Argumentos, parâmetros e default parameters
+
+const myFunc = function (name = 'Renan', lastName = 'Maia') {
+    console.log(`Salve, ${name} ${lastName}!`);
 }
 
 
 
-// Function expression
-// -> Aqui o hoisting 'Içamento' não funciona. É necessário criar/declarar a function expression antes da sua invocação.
-
-const showFood = function () {
-    console.log('pizza *.*');
-}
-
-showFood();
+myFunc();
+myFunc('Livia', 'Ataide');
+myFunc('Livia');
