@@ -46,7 +46,7 @@ const divisionTwoNumbers = function (number1 = 0, number2 = 1) {
 */
 
 
-function showString (argg = `o irmao nao digitou nada`) {
+function showString (argg = 0) {
     
 
        for (let i = 1; i <= 7; i++) {
@@ -54,10 +54,29 @@ function showString (argg = `o irmao nao digitou nada`) {
        console.log(`Esta é a ${i}ª vez que essa string ${argg} é exibida`);
     }
 
+    return argg;
+
 }
 
+console.log(showString(`sextou`));
 
-showString(`SEXTOOU`);
+
+// //V2
+
+//   function showString (argg = 0) {
+    
+
+//        for (let i = 1; i <= 7; i++) {
+//        i;
+//        console.log(`Esta é a ${i}ª vez que essa string ${argg} é exibida`);
+//     }
+
+// }
+
+// showString(`sextou`);
+
+
+
 
 
 /*
@@ -72,6 +91,10 @@ showString(`SEXTOOU`);
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+
+
+
+
 
 /*
   05
