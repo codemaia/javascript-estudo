@@ -140,6 +140,7 @@ const positiveNumbers = function (arr) {
 
 }
 
+
 for (let i = 0; i < randomNumbers.length; i++) {
   contArray++
 
@@ -149,7 +150,7 @@ for (let i = 0; i < randomNumbers.length; i++) {
 
 }
 
-console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos.`)
+// console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos.`)
 
 
 
@@ -163,7 +164,26 @@ console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${posit
     função.
 */
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+
+getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
+
+function getOddNumbers (arr) {
+  let numbersOdd = [];
+
+  for (let i = 0; i < arr.length; i++)   {
+    if (arr[i] % 2 != 0) {
+      numbersOdd.push(arr[i]);
+    }
+  }
+
+  return numbersOdd;
+
+}
+
+
+// console.log(getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]));
+
+
 
 /*
   07
