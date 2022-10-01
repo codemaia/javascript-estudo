@@ -623,12 +623,53 @@ Se o boolean é true vira false e vice e versa.
 
 // Argumentos, parâmetros e default parameters
 
-const myFunc = function (name = 'Renan', lastName = 'Maia') {
-    console.log(`Salve, ${name} ${lastName}!`);
-}
+// const myFunc = function (name = 'Renan', lastName = 'Maia') {
+//     console.log(`Salve, ${name} ${lastName}!`);
+// }
+
+// myFunc();
+// myFunc('Livia', 'Ataide');
+// myFunc('Livia');
 
 
 
-myFunc();
-myFunc('Livia', 'Ataide');
-myFunc('Livia');
+
+
+
+// AULA 01-05 - Retornando valores
+
+/*  
+
+
+
+*/
+
+
+// Retornando valores
+
+// const double = function (number) {
+//     const doubleResult = number * 2;
+//     return doubleResult
+// }
+
+// const result = double(3);
+
+// console.log(result);
+
+
+// // -> Outra opção de criação
+
+// const doubleV2 = function (number) {
+//     return number * 2;
+// }
+
+// const resultV2 = double(3);
+// console.log(resultV2);
+
+
+
+// const showResult = function (value) {
+//     return `O resultado é: ${value}`;
+// }
+
+// console.log(showResult(result));
