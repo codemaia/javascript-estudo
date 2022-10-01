@@ -7,6 +7,15 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 
+
+function multiplyTwoNumbers (value1 = 0, value2 = 0) {
+  return value1 * value2;
+}
+
+//  console.log(multiplyTwoNumbers(2, 2));
+
+
+
 /*
   02
 
@@ -14,6 +23,14 @@
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
+
+const divisionTwoNumbers = function (number1 = 0, number2 = 1) {
+  return number1 / number2;
+}
+
+// console.log(divisionTwoNumbers(10, 2));
+
+
 
 /*
   03
@@ -27,6 +44,21 @@
 
   "Esta é a Xª vez que essa string é exibida."
 */
+
+
+function showString (argg = `o irmao nao digitou nada`) {
+    
+
+       for (let i = 1; i <= 7; i++) {
+       i;
+       console.log(`Esta é a ${i}ª vez que essa string ${argg} é exibida`);
+    }
+
+}
+
+
+showString(`SEXTOOU`);
+
 
 /*
   04
