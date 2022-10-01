@@ -58,7 +58,7 @@ function showString (argg = 0) {
 
 }
 
-console.log(showString(`sextou`));
+// console.log(showString(`sextou`));
 
 
 // //V2
@@ -91,8 +91,22 @@ console.log(showString(`sextou`));
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+let arrUperCase = [];
 
 
+const upperCaseFunc = function (arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+
+      arrUperCase.push(arr[i].toUpperCase());
+
+    }
+
+    return arrUperCase;
+}
+
+
+// console.log(upperCaseFunc(millennialWords));
 
 
 
@@ -108,6 +122,36 @@ const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influenc
 */
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
+let contArray = 0;
+let contNegativeNumber = 0;
+
+const positiveNumbers = function (arr) {
+  let contPositiveNumber = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+
+      if(arr[i] > 0) {
+        contPositiveNumber++;
+      }
+
+  }
+
+  return contPositiveNumber;
+
+}
+
+for (let i = 0; i < randomNumbers.length; i++) {
+  contArray++
+
+  if (randomNumbers[i] < 0) {
+    contNegativeNumber++;
+  }
+
+}
+
+console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos.`)
+
+
 
 /*
   06
