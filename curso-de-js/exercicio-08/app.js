@@ -221,3 +221,12 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+
+let frase = [];
+
+for (let i = 0; i < functions.length; i++) {
+    frase.push(functions[i]);
+    console.log(frase);
+};
+
+console.log(frase);
