@@ -125,6 +125,7 @@ const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 let contArray = 0;
 let contNegativeNumber = 0;
 
+
 const positiveNumbers = function (arr) {
   let contPositiveNumber = 0;
 
@@ -150,7 +151,7 @@ for (let i = 0; i < randomNumbers.length; i++) {
 
 }
 
-// console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos.`)
+// console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos ou assim ${contArray-positiveNumbers(randomNumbers)} negativos.`)
 
 
 
@@ -229,7 +230,10 @@ for (let i = 0; i < functions.length; i++) {
     // frase += functions[i]();
 };
 
-console.log(`${frase.join(' ')}`);
+// console.log(`${frase.join(' ')}`);
+
+
+
 
 
 
