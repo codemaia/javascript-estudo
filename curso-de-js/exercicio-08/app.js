@@ -225,8 +225,12 @@ const functions = [
 let frase = [];
 
 for (let i = 0; i < functions.length; i++) {
-    frase.push(functions[i]);
-    console.log(frase);
+    frase.push(functions[i]());
+    // frase += functions[i]();
 };
 
-console.log(frase);
+console.log(`${frase.join(' ')}`);
+
+
+
+
