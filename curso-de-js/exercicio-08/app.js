@@ -230,7 +230,7 @@ for (let i = 0; i < functions.length; i++) {
     // frase += functions[i]();
 };
 
-// console.log(`${frase.join(' ')}`);
+console.log(`${frase.join(' ')}`);
 
 
 
