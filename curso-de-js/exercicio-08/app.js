@@ -135,7 +135,7 @@ for (let i = 0; i < randomNumbers.length; i++) {
 
 }
 
-console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${contPositiveNumber} positivos e ${contNegativeNumber} negativos.`)
+// console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${contPositiveNumber} positivos e ${contNegativeNumber} negativos.`)
 
 
 /* MY RESOLUTION
@@ -205,7 +205,7 @@ function getOddNumbers (arr = []) {
 const oddNuber = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
 
 
-console.log(oddNuber);
+// console.log(oddNuber);
 
 
 
@@ -257,7 +257,7 @@ for (let i = 0; i < functions.length; i++) {
     frase += string
 };
 
-console.log(frase);
+// console.log(frase);
 
 
 

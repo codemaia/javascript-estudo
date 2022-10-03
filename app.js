@@ -673,3 +673,49 @@ Se o boolean é true vira false e vice e versa.
 // }
 
 // console.log(showResult(result));
+
+
+
+
+
+// AULA 02-02 - ARROW FUNCTIONS
+
+/*
+    # Quando a função não houver parametro utilizar:
+    
+    os () são obrigatorios quando não houver parametro.
+
+    () => {
+
+    };
+
+*/
+
+// função tradicional
+
+// const double = function (number) {
+//     return number * 2;
+// }
+
+
+// arrow function
+
+// 1. PREFIRO ESTA
+// const double = (number = 0) => {
+//     return number * 2
+// }
+
+
+// ou 
+// utilizar somente quando houver somente 1 PARAMETRO
+// const double = number => { 
+//     return number * 2;
+// }
+
+//ou
+// outra forma de utilizar quando só houver 1 parametro.
+const double = number => number * 2;
+
+
+const result = double(3);
+console.log(`O resultado é : ${result}`);
