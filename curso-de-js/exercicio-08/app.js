@@ -12,7 +12,7 @@ function multiplyTwoNumbers (value1 = 0, value2 = 0) {
   return value1 * value2;
 }
 
-//  console.log(multiplyTwoNumbers(2, 2));
+//  console.log(multiplyTwoNumbers(5, 9));
 
 
 
@@ -24,11 +24,11 @@ function multiplyTwoNumbers (value1 = 0, value2 = 0) {
     2 números.
 */
 
-const divisionTwoNumbers = function (number1 = 0, number2 = 1) {
+const divisionTwoNumbers = function (number1 = 0, number2 = 0) {
   return number1 / number2;
 }
 
-// console.log(divisionTwoNumbers(10, 2));
+// console.log(divisionTwoNumbers(10,5));
 
 
 
@@ -46,19 +46,15 @@ const divisionTwoNumbers = function (number1 = 0, number2 = 1) {
 */
 
 
-function showString (argg = 0) {
-    
-
-       for (let i = 1; i <= 7; i++) {
-       i;
-       console.log(`Esta é a ${i}ª vez que essa string ${argg} é exibida`);
-    }
-
-    return argg;
-
+const log = function (value = 'Você deve passar um valor como argumento') {
+  console.log(value);
 }
 
-// console.log(showString(`sextou`));
+for (let i = 0; i < 7; i++) {
+  log(`Esta é a ${i + 1}ª vez que essa string é exibida.`)
+}
+
+
 
 
 // //V2
@@ -230,7 +226,7 @@ for (let i = 0; i < functions.length; i++) {
     // frase += functions[i]();
 };
 
-console.log(`${frase.join(' ')}`);
+// console.log(`${frase.join(' ')}`);
 
 
 
