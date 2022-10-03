@@ -51,7 +51,7 @@ const log = function (value = 'Você deve passar um valor como argumento') {
 }
 
 for (let i = 0; i < 7; i++) {
-  log(`Esta é a ${i + 1}ª vez que essa string é exibida.`)
+  // log(`Esta é a ${i + 1}ª vez que essa string é exibida.`)
 }
 
 
@@ -87,11 +87,10 @@ for (let i = 0; i < 7; i++) {
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
-let arrUperCase = [];
 
-
-const upperCaseFunc = function (arr) {
-
+//NEED REFATORATION
+const upperCaseFunc = function (arr = []) {
+  let arrUperCase = [];
     for (let i = 0; i < arr.length; i++) {
 
       arrUperCase.push(arr[i].toUpperCase());
@@ -117,11 +116,32 @@ const upperCaseFunc = function (arr) {
   "O array "randomNumbers" possui XX números, sendo XX positivos e XX negativos."
 */
 
+//NEED REFATORATION
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
-let contArray = 0;
+let contPositiveNumber = 0;
 let contNegativeNumber = 0;
 
+const isPositive = function (number = 0) {
+  return number >= 1;
+}
 
+for (let i = 0; i < randomNumbers.length; i++) {
+  const isPositiveNumber = isPositive(randomNumbers[i]);
+  if (isPositiveNumber) {
+    contPositiveNumber++;
+  } else {
+    contNegativeNumber++;
+  }
+
+}
+
+console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${contPositiveNumber} positivos e ${contNegativeNumber} negativos.`)
+
+
+/* MY RESOLUTION
+
+let contArray = 0;
+let contNegativeNumber = 0;
 const positiveNumbers = function (arr) {
   let contPositiveNumber = 0;
 
@@ -146,8 +166,10 @@ for (let i = 0; i < randomNumbers.length; i++) {
   }
 
 }
+console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos ou assim ${contArray-positiveNumbers(randomNumbers)} negativos.`)
+*/
 
-// console.log(`O array "randomNumbers" possui ${contArray} números, sendo ${positiveNumbers(randomNumbers)} positivos e ${contNegativeNumber} negativos ou assim ${contArray-positiveNumbers(randomNumbers)} negativos.`)
+
 
 
 
@@ -164,12 +186,15 @@ for (let i = 0; i < randomNumbers.length; i++) {
 
 getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
 
-function getOddNumbers (arr) {
+function getOddNumbers (arr = []) {
   let numbersOdd = [];
 
   for (let i = 0; i < arr.length; i++)   {
-    if (arr[i] % 2 != 0) {
-      numbersOdd.push(arr[i]);
+    const number = arr[i]
+    const isOddNumber = number % 2 != 0
+
+    if (isOddNumber) {
+      numbersOdd.push(number);
     }
   }
 
@@ -177,8 +202,10 @@ function getOddNumbers (arr) {
 
 }
 
+const oddNuber = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
 
-// console.log(getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]));
+
+console.log(oddNuber);
 
 
 
@@ -219,14 +246,18 @@ const functions = [
   function () { return 'Ocidentais.' }
 ]
 
-let frase = [];
+// let frase = [];
+
+let frase = ''
 
 for (let i = 0; i < functions.length; i++) {
-    frase.push(functions[i]());
-    // frase += functions[i]();
+    // frase.push(functions[i]());
+    const string = `${functions[i]()} `;
+
+    frase += string
 };
 
-// console.log(`${frase.join(' ')}`);
+console.log(frase);
 
 
 
