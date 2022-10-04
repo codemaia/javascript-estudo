@@ -81,7 +81,7 @@ const indexToString = (i, string) => {
   return `O index é ${getIndex}`;
 };
 
-console.log(indexToString('@', 'renan@email.com'));
+// console.log(indexToString('@', 'renan@email.com'));
 
 
 
@@ -91,6 +91,21 @@ console.log(indexToString('@', 'renan@email.com'));
   - Crie uma função que, ao ser invocada, retorna um boolean indicando se o item  
     passado por argumento existe no array (também passado por argumento).
 */
+
+
+const detectedArray = (arg = 'digite o item', arr = []) => {
+  //utilizar include?
+  if(arr.includes(arg)) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+// console.log(detectedArray('coxinha',['renan','maia','livia','tita','brisa','lux']));
+
+
 
 /*
   06
