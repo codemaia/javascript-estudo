@@ -678,7 +678,10 @@ Se o boolean é true vira false e vice e versa.
 
 
 
+
+
 // AULA 02-02 - ARROW FUNCTIONS
+
 
 /*
     # Quando a função não houver parametro utilizar:
@@ -714,8 +717,44 @@ Se o boolean é true vira false e vice e versa.
 
 //ou
 // outra forma de utilizar quando só houver 1 parametro.
-const double = number => number * 2;
+// const double = number => number * 2;
 
 
-const result = double(3);
-console.log(`O resultado é : ${result}`);
+// const result = double(3);
+// console.log(`O resultado é : ${result}`);
+
+
+
+
+
+
+// AULA 02-03 - FUNÇÕES vs MÉTODOS
+
+
+/*
+    # funções
+        são criadas sozinhas.
+
+
+    # métodos.
+        são funções que estao associadas a objetos ou tipos de dados como strings.
+        são funções que fazem alguma ação. Utilizamos ' . ' para invocar
+*/
+
+// const name = 'Roger';
+
+
+// // funções
+
+// const sayHi = () => 'Oi';
+
+// const greet = sayHi();
+
+// console.log(greet);
+
+
+// // métodos
+
+// const nameToUpperCase = name.toUpperCase();
+
+// console.log(nameToUpperCase);
