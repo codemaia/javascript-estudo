@@ -758,3 +758,65 @@ Se o boolean é true vira false e vice e versa.
 // const nameToUpperCase = name.toUpperCase();
 
 // console.log(nameToUpperCase);
+
+
+
+
+
+
+
+
+// AULA 02-04 O método forEach e callbacks
+
+
+
+/* 
+    # callbacks -> São funções que passamos como argumentos da invoção de outras funções ou métodos.
+
+    @ forEach => 'PARA CADA' item do array vamos executar alguma ação.
+                 iterar em cada item do array (como um for porém mais elegante)
+
+
+*/
+
+
+
+// forEach e callbacks
+
+//                 // 3 - CALLBACK: a arrow function de 'myFunc' foi passada como parametro para o parametro 'callback'
+// const myFunc = callback => {  // 1 - função declarada
+//     const value = 77;
+
+//     callback(value);// 4 - podemos invocar essa função pois ela tem uma função como parametro
+//                     // e essa função recebe 'number' como parametro estamos passando o 'value' como argumento da invocação da função
+// }
+
+
+// myFunc(number => { // 2 - função invocada recebendo uma função por argumento
+//     console.log(number);
+// });
+
+
+
+// forEach
+
+// const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
+
+// //podemos desacoprar a arrown function (callback) do forEach.
+// const logArrayInfo = (socialNetwork, index, array) => {
+//     console.log(index, socialNetwork, array);
+// }
+
+//                         //parametros recebíveis.
+// socialNetworks.forEach(logArrayInfo);
+// //ou
+// // socialNetworks.forEach((socialNetwork, index, array) => {
+// //     console.log(index, socialNetwork, array);
+// // })
+
+
+
+
+
+
+
