@@ -820,3 +820,26 @@ Se o boolean é true vira false e vice e versa.
 
 
 
+
+// AULA 02-05 Utilizando callbacks
+
+
+/*
+
+*/
+
+
+const ul = document.querySelector('[data-js="ul"]');
+
+const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
+
+
+let HTMLTemplate = '';
+
+socialNetworks.forEach(socialNetwork => {
+    HTMLTemplate += `<li style="color: deeppink;">${socialNetwork}</li>`
+})
+
+console.log(HTMLTemplate);
+
+ul.innerHTML = HTMLTemplate;
