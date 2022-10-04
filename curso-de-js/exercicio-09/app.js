@@ -103,7 +103,7 @@ const detectedArray = (arg = 'digite o item', arr = []) => {
 
 }
 
-// console.log(detectedArray('coxinha',['renan','maia','livia','tita','brisa','lux']));
+// console.log(detectedArray('pizza',['renan','maia','livia','tita','brisa','lux']));
 
 
 
@@ -153,6 +153,28 @@ const popArray = (arr = []) => {
     invocação é null.
 */
 
+
+const isNull = (arg = 'digite') => {
+  
+  if(arg !== null) {
+
+    return `not is null`;
+
+  } else {
+
+    return `is null`;
+
+  }
+
+
+}
+
+
+// console.log(isNull(null));
+
+
+
+
 /*
   09
 
@@ -163,6 +185,12 @@ const popArray = (arr = []) => {
     argumento a função que exibe seu nome no console e veja se o nome realmente  
     foi exibido.
 */
+
+
+
+
+
+
 
 /*
   10
