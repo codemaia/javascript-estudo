@@ -70,10 +70,18 @@ const toLowerCaseString = value => {
 
 
 const indexToString = (i, string) => {
-  return string[i];
+
+  // const getString = string;
+  // const getIndex = i;
+
+  // return getString.indexOf(i);
+
+  const getIndex = string.indexOf(i);
+
+  return `O index é ${getIndex}`;
 };
 
-console.log(indexToString('a'))
+console.log(indexToString('@', 'renan@email.com'));
 
 
 
