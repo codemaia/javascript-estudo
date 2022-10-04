@@ -114,6 +114,17 @@ const detectedArray = (arg = 'digite o item', arr = []) => {
     argumentos em sua invocação;
 */
 
+
+const concatArrays = (arr1 = [], arr2 = []) => {
+  
+  return arr1.concat(arr2);
+
+}
+
+
+console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista']));
+
+
 /*
   07
 
