@@ -122,7 +122,7 @@ const concatArrays = (arr1 = [], arr2 = []) => {
 }
 
 
-console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista']));
+// console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista']));
 
 
 /*
@@ -131,6 +131,20 @@ console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista']
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
+
+
+const popArray = (arr = []) => {
+
+  // arr.pop(arr[arr.length - 1]);
+
+  arr.pop();
+
+  return arr;
+
+}
+
+// console.log(popArray(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista', 'Analista de Redes'])));
+
 
 /*
   08
