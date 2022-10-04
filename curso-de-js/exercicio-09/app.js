@@ -58,12 +58,24 @@ const toLowerCaseString = value => {
 // console.log(toLowerCaseString('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'));
 // console.log(toLowerCaseString('ALO ALO ALO BROOO'));
 
+
+
+
 /*
   04
 
   - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
+
+
+const indexToString = (i, string) => {
+  return string[i];
+};
+
+console.log(indexToString('a'))
+
+
 
 /*
   05
