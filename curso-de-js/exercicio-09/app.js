@@ -13,9 +13,15 @@
     valor no console.
 */
 
-function convertToString (value) {
-  return String(value)
+// function convertToString (value) {
+//   return String(value)
+// }
+
+const convertToString = value => {
+  return String(value);
 }
+
+// console.log(convertToString('HELLO'))
 
 /*
   02
@@ -23,6 +29,16 @@ function convertToString (value) {
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
+
+const contCaracterString = value => {
+  return String(value).length;
+}
+
+// console.log(contCaracterString('Renan'));
+// console.log(contCaracterString('          '));
+
+
+
 
 /*
   03
@@ -33,6 +49,14 @@ function convertToString (value) {
 
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
+
+
+const toLowerCaseString = value => {
+  return String(value).toLowerCase();
+};
+
+// console.log(toLowerCaseString('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'));
+// console.log(toLowerCaseString('ALO ALO ALO BROOO'));
 
 /*
   04

@@ -829,17 +829,17 @@ Se o boolean é true vira false e vice e versa.
 */
 
 
-const ul = document.querySelector('[data-js="ul"]');
+// const ul = document.querySelector('[data-js="ul"]');
 
-const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
+// const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
 
 
-let HTMLTemplate = '';
+// let HTMLTemplate = '';
 
-socialNetworks.forEach(socialNetwork => {
-    HTMLTemplate += `<li style="color: deeppink;">${socialNetwork}</li>`
-})
+// socialNetworks.forEach(socialNetwork => {
+//     HTMLTemplate += `<li style="color: deeppink;">${socialNetwork}</li>`
+// })
 
-console.log(HTMLTemplate);
+// console.log(HTMLTemplate);
 
-ul.innerHTML = HTMLTemplate;
+// ul.innerHTML = HTMLTemplate;
