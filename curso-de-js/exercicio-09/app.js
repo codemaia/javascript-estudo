@@ -222,24 +222,12 @@ const triple = (arg) => {
 };
 
 const funcCallback = callback => {
-  // const value = arg;
+  
   callback;
 };
 
 funcCallback(triple(33));
 // triple(33)
-
-
-// function greeting(name) {
-//   console.log('Olá ' + name);
-// }
-
-// function processUserInput(callback) {
-//   var name = prompt('Por favor insira seu nome.');
-//   callback(name);
-// }
-
-// processUserInput(greeting);
 
 
 /*
@@ -251,7 +239,12 @@ funcCallback(triple(33));
   "O Xº item do array [X, X, X] é X."
 */
 
-const numbers = [1, 2, 3]
+const numbers = [1, 2, 3];
+
+numbers.forEach(() => {
+  
+})
+
 
 /*
   12
