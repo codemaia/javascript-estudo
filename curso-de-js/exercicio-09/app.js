@@ -191,13 +191,13 @@ const isNull = (arg = 'digite') => {
 
 const myFuncCallBack = callback => {
 
-  callback(value);
+  // callback();
   
 };
 
 
 const myName = () => {
-  return console.log('Renan');
+  return console.log('Livia');
 }
 
 
