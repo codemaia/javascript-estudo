@@ -217,7 +217,7 @@ const myName = () => {
     resulte no triplo de 33.
 */
 
-const triploArg = (arg = 0) => {
+const triploArg = (arg) => {
 
   console.log(arg * 3);
 
@@ -225,13 +225,15 @@ const triploArg = (arg = 0) => {
 
 const myCallBack = callback => {
     
-     callback();
+     return callback();
 };
 
 
-myCallBack(triploArg(33));
+myCallBack(() => {
+  console.log(33 * 3)
+});
 
-// // console.log(triploArg(33));
+// console.log(triploArg(33));
 
 
 // function greeting(name) {
