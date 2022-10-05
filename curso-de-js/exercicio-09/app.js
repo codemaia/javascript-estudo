@@ -346,7 +346,7 @@ section.innerHTML = paragraphs;
 
 */
 
-const arrayLikes = ['Renan', 'Fulano'];
+const arrayLikes = ['Renan', 'Fulano', 'Ciclano', 'Beltrano', 'Loren Ipson', 'Ciclano', 'Beltrano', 'Loren Ipson'];
 const arrayLikes2 = [] ;
 
 let contLikes = 0;
@@ -356,7 +356,7 @@ const funcLikes = (arr = []) => {
 
   arr.forEach((index, arr, array) => {
     contLikes++;
-    console.log(index, arr, array);
+    // console.log(index, arr, array);
   })
 
   if (arr.length === 0) {
@@ -367,11 +367,15 @@ const funcLikes = (arr = []) => {
 
   } else if (arr.length === 2) {
     console.log(`${arr.join(' e ')} ou ${arr[0]} e ${arr[1]} curtiram isso`);
+
   } else if (arr.length === 3) {
-    
+    console.log(`${arr[0]}, ${arr[1]} e ${arr[2]} curtiram isso`)
+
+  } else {
+    console.log(`${arr[0]}, ${arr[1]} e mais ${arr.length - 2} pessoas curtiram isso`)
+
   }
   
-
 }
 
 
