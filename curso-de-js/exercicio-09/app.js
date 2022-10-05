@@ -296,7 +296,7 @@ letters.forEach((letters) => {
   </article>
 */
 
-const section = document.querySelector('[data-js="section"]')
+const section = document.querySelector('[data-js="section"]');
 
 const review = [
   'Eu sempre adorei o filme e quando descobri que tinha o livro também fiquei doido. Demorei um pouco mas acabei comprando e finalmente li \o/.',
@@ -305,13 +305,13 @@ const review = [
   'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.'
 ]
 
-let paragraphs = ''
+let paragraphs = '';
 
 review.forEach((review) => {
-  paragraphs += `<p>${review}</p>`
+  paragraphs += `<p>${review}</p>`;
 });
 
-section.innerHTML = paragraphs
+section.innerHTML = paragraphs;
 
 
 
@@ -323,18 +323,56 @@ section.innerHTML = paragraphs
 
   - Implemente uma função que retorna uma string com a quantidade de pessoas que  
     curtiram um post, conforme descrito a seguir;
+
   - A função deve receber por parâmetro um array com os nomes das pessoas que  
     curtiram o post/vídeo/foto;  
+
   - Se o array recebido estiver vazio, a mensagem que a função deve retornar é  
     "Ninguém curtiu isso";  
+
   - Se o array conter apenas um nome, como "Rafael", por exemplo, a mensagem  
     retornada deve ser "Rafael curtiu isso";  
+
   - Se o array conter 2 nomes, a mensagem retornada deve ser  
     "NOME_1 e NOME_2 curtiram isso";  
+
   - Se o array conter 3 nomes, a mensagem retornada deve ser  
     "NOME_1, NOME_2 e NOME_3 curtiram isso";  
+
   - Se o array conter 4 ou mais nomes, a mensagem retornada deve ser  
     "NOME_1, NOME_2 e mais X pessoas curtiram isso". O "X" deve ser substituído  
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
+
 */
+
+const arrayLikes = ['Renan', 'Fulano'];
+const arrayLikes2 = [] ;
+
+let contLikes = 0;
+
+
+const funcLikes = (arr = []) => {
+
+  arr.forEach((index, arr, array) => {
+    contLikes++;
+    console.log(index, arr, array);
+  })
+
+  if (arr.length === 0) {
+    console.log("Ninguém curtiu isso")
+
+  } else if (arr.length === 1) {
+    console.log(`${arr} curtiu isso`);
+
+  } else if (arr.length === 2) {
+    console.log(`${arr.join(' e ')} ou ${arr[0]} e ${arr[1]} curtiram isso`);
+  } else if (arr.length === 3) {
+    
+  }
+  
+
+}
+
+
+funcLikes(arrayLikes);
