@@ -21,7 +21,7 @@ const convertToString = value => {
   return String(value);
 }
 
-// console.log(convertToString('HELLO'))
+console.log(typeof convertToString(true))
 
 /*
   02
@@ -34,7 +34,7 @@ const contCaracterString = value => {
   return String(value).length;
 }
 
-// console.log(contCaracterString('Renan'));
+console.log(contCaracterString('Renan'));
 // console.log(contCaracterString('          '));
 
 
@@ -55,7 +55,7 @@ const toLowerCaseString = value => {
   return String(value).toLowerCase();
 };
 
-// console.log(toLowerCaseString('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'));
+console.log(toLowerCaseString('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'));
 // console.log(toLowerCaseString('ALO ALO ALO BROOO'));
 
 
@@ -76,12 +76,12 @@ const indexToString = (i, string) => {
 
   // return getString.indexOf(i);
 
-  const getIndex = string.indexOf(i);
+  const showIndex = string.indexOf(i);
 
-  return `O index é ${getIndex}`;
+  return `O index é ${showIndex}`;
 };
 
-// console.log(indexToString('@', 'renan@email.com'));
+console.log(indexToString('@', 'renan@email.com'));
 
 
 
@@ -92,8 +92,13 @@ const indexToString = (i, string) => {
     passado por argumento existe no array (também passado por argumento).
 */
 
+//Resolução professor:
+/*
+const isItemIncluded = (item, array) => array.includes(item);
+console.log(isItemIncluded(7, [7, 3, 1]));
+*/
 
-const detectedArray = (arg = 'digite o item', arr = []) => {
+const detectedArray = (arg, arr = []) => {
   //utilizar include?
   if(arr.includes(arg)) {
     return true;
@@ -103,7 +108,7 @@ const detectedArray = (arg = 'digite o item', arr = []) => {
 
 }
 
-// console.log(detectedArray('pizza',['renan','maia','livia','tita','brisa','lux']));
+console.log(detectedArray('pizza',['renan','maia','livia','tita','brisa','lux']));
 
 
 
@@ -122,7 +127,7 @@ const concatArrays = (arr1 = [], arr2 = []) => {
 }
 
 
-// console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista']));
+console.log(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista', 'Analista de redes']));
 
 
 /*
@@ -143,7 +148,7 @@ const popArray = (arr = []) => {
 
 }
 
-// console.log(popArray(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista', 'Analista de Redes'])));
+console.log(popArray(concatArrays(['renan', 31, 'livia', 31], ['Programador', 'Dentista', 'Analista de Redes'])));
 
 
 /*
@@ -170,7 +175,7 @@ const isNull = (arg = 'digite') => {
 }
 
 
-// console.log(isNull(null));
+console.log(isNull(null));
 
 
 
@@ -190,8 +195,9 @@ const isNull = (arg = 'digite') => {
 
 
 const myFuncCallBack = callback => {
-  
-  
+
+  callback();
+
 };
 
 
@@ -200,7 +206,7 @@ const myName = () => {
 };
 
 
-// myFuncCallBack(myName());
+myFuncCallBack(myName);
 
 
 
@@ -216,19 +222,34 @@ const myName = () => {
     resulte no triplo de 33.
 */
 
+//RESOLUÇÃO PROFESSOR:
 
+const callCallBack = (value, callback) => {
+  return callback(value);
+}
+
+const triple = (number) => {
+  return number * 3;
+}
+
+
+console.log(callCallBack(33, triple));
+
+
+/*
 const myCalculator = (num = 0) => {
-  let triple = num * 3;
+  const triple = num * 3;
   return triple;
 }
 
 const myDisplayerFunc = (callback) => {
-  let value = callback;
+  const value = callback;
   console.log(`The result: ${value}`);
 };
 
 
-// myDisplayerFunc(myCalculator(33));
+myDisplayerFunc(myCalculator(33));
+*/
 
 
 
@@ -242,14 +263,18 @@ const myDisplayerFunc = (callback) => {
 */
 
 const numbers = [1, 2, 3];
-let contNumbers = 0
-
-numbers.forEach((number, index, numbers) => {
+//let contNumbers = 0;
+const showNumbersInfor = (item, index, array) => {
   // console.log(number, numbers, index);
-  contNumbers++
-  // console.log(`O ${contNumbers}º item do array [${numbers.join(', ')}] é ${number}.`);
+  // contNumbers++;
+  const itemPosition = index + 1;
+  const itens = array.join(', ');
   
-})
+  console.log(`O ${itemPosition}º item do array [${itens}] é ${item}.`);
+  
+};
+
+numbers.forEach(showNumbersInfor);
 
 
 
@@ -270,11 +295,11 @@ let lettersCopy = []
 //   lettersCopy.push(letters[i])
 // }
 
-letters.forEach((letters) => {
-    lettersCopy.push(letters);
+letters.forEach((letter) => {
+    lettersCopy.push(letter);
 })
 
-// console.log(lettersCopy);
+console.log(lettersCopy);
 
 
 
@@ -306,10 +331,11 @@ const review = [
 ]
 
 let paragraphs = '';
+const createParagraphs = (paragraph) => {
+  paragraphs += `<p>${paragraph}</p>`;
+}
 
-review.forEach((review) => {
-  paragraphs += `<p>${review}</p>`;
-});
+review.forEach(createParagraphs);
 
 section.innerHTML = paragraphs;
 
@@ -349,30 +375,34 @@ section.innerHTML = paragraphs;
 const arrayLikes = ['Renan', 'Fulano', 'Ciclano', 'Beltrano', 'Loren Ipson', 'Ciclano', 'Beltrano', 'Loren Ipson'];
 const arrayLikes2 = [] ;
 
-let contLikes = 0;
+
 
 
 const funcLikes = (arr = []) => {
+  const firstName = arr[0];
+  const secondName = arr[1];
+  const thirdName = arr[2];
+  const totalNamesMinusTwo = arr.length - 2;
 
   arr.forEach((index, arr, array) => {
-    contLikes++;
+  
     // console.log(index, arr, array);
   })
 
   if (arr.length === 0) {
-    console.log("Ninguém curtiu isso")
+    console.log("Ninguém curtiu isso");
 
   } else if (arr.length === 1) {
-    console.log(`${arr} curtiu isso`);
+    console.log(`${firstName} curtiu isso`);
 
   } else if (arr.length === 2) {
-    console.log(`${arr.join(' e ')} ou ${arr[0]} e ${arr[1]} curtiram isso`);
+    console.log(`${firstName} e ${secondName} curtiram isso`);
 
   } else if (arr.length === 3) {
-    console.log(`${arr[0]}, ${arr[1]} e ${arr[2]} curtiram isso`)
+    console.log(`${firstName}, ${secondName} e ${thirdName} curtiram isso`);
 
   } else {
-    console.log(`${arr[0]}, ${arr[1]} e mais ${arr.length - 2} pessoas curtiram isso`)
+    console.log(`${firstName}, ${secondName} e mais ${totalNamesMinusTwo} pessoas curtiram isso`);
 
   }
   
@@ -380,3 +410,31 @@ const funcLikes = (arr = []) => {
 
 
 funcLikes(arrayLikes);
+
+
+//RESOLUÇÃO PROFESSOR:
+
+/*
+const getLikesMessage = (names = []) => {
+  const firstName = names[0];
+  const secondName = names[1];
+  const thirdName = names[2];
+  const totalNamesMinusTwo = names.length - 2;
+
+  switch (names.length) {
+    case 0:
+      return "Ninguém curtiu isso"
+    case 1:
+      return `${firstName} curtiu isso`
+    case 2: 
+      return `${firstName} e ${secondName} curtiram isso`
+    case 3: 
+      return `${firstName}, ${secondName} e ${thirdName} curtiram isso`
+    default:
+      return `${firstName}, ${secondName} e mais ${totalNamesMinusTwo} pessoas curtiram isso`
+  }
+
+}
+
+console.log(getLikesMessage(['Roger', 'Christian', 'Edson', 'Neilson', 'Matheus']));
+*/
