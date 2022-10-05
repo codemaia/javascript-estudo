@@ -247,9 +247,12 @@ let contNumbers = 0
 numbers.forEach((number, index, numbers) => {
   // console.log(number, numbers, index);
   contNumbers++
-  console.log(`O ${contNumbers}º item do array [${numbers.join(', ')}] é ${number}.`);
+  // console.log(`O ${contNumbers}º item do array [${numbers.join(', ')}] é ${number}.`);
   
 })
+
+
+
 
 
 /*
@@ -263,9 +266,17 @@ numbers.forEach((number, index, numbers) => {
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+// for (let i = 0; i < letters.length; i++) {
+//   lettersCopy.push(letters[i])
+// }
+
+letters.forEach((letters) => {
+    lettersCopy.push(letters);
+})
+
+// console.log(lettersCopy);
+
+
 
 /*
   13
@@ -296,7 +307,16 @@ const review = [
 
 let paragraphs = ''
 
+review.forEach((review) => {
+  paragraphs += `<p>${review}</p>`
+});
+
 section.innerHTML = paragraphs
+
+
+
+
+
 
 /*
   14
