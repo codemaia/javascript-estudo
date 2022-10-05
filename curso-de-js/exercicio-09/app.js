@@ -190,18 +190,18 @@ const isNull = (arg = 'digite') => {
 
 
 const myFuncCallBack = callback => {
-
-  // callback();
+  
+  //  callback();
   
 };
 
 
 const myName = () => {
   return console.log('Livia');
-}
+};
 
 
-myFuncCallBack(myName());
+// myFuncCallBack(myName());
 
 
 
@@ -216,6 +216,35 @@ myFuncCallBack(myName());
   - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
     resulte no triplo de 33.
 */
+
+const triploArg = (arg = 0) => {
+
+  console.log(arg * 3);
+
+};
+
+const myCallBack = callback => {
+    
+     callback();
+};
+
+
+myCallBack(triploArg(33));
+
+// // console.log(triploArg(33));
+
+
+// function greeting(name) {
+//   console.log('Olá ' + name);
+// }
+
+// function processUserInput(callback) {
+//   var name = prompt('Por favor insira seu nome.');
+//   callback(name);
+// }
+
+// processUserInput(greeting);
+
 
 /*
   11
