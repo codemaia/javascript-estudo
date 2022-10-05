@@ -242,8 +242,12 @@ const myDisplayerFunc = (callback) => {
 */
 
 const numbers = [1, 2, 3];
+let contNumbers = 0
 
-numbers.forEach(() => {
+numbers.forEach((number, index, numbers) => {
+  // console.log(number, numbers, index);
+  contNumbers++
+  console.log(`O ${contNumbers}º item do array [${numbers.join(', ')}] é ${number}.`);
   
 })
 

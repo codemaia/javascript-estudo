@@ -777,6 +777,22 @@ Se o boolean é true vira false e vice e versa.
                  iterar em cada item do array (como um for porém mais elegante)
 
 
+    Testes:
+
+    console.log('My testers');
+    const myDisplaer = (show) => {
+        console.log(`It's the result: ${show}`);
+    }
+
+
+    const myCalculator = (num = 0) => {
+        let triple = num * 3;
+        return triple;
+    }
+
+    myDisplaer(myCalculator(0));
+
+
 */
 
 
@@ -845,15 +861,3 @@ Se o boolean é true vira false e vice e versa.
 // ul.innerHTML = HTMLTemplate;
 
 
-console.log('My testers');
-const myDisplaer = (show) => {
-    console.log(`It's the result: ${show}`);
-}
-
-
-const myCalculator = (num = 0) => {
-    let triple = num * 3;
-    return triple;
-}
-
-myDisplaer(myCalculator(0));
