@@ -191,7 +191,6 @@ const isNull = (arg = 'digite') => {
 
 const myFuncCallBack = callback => {
   
-  //  callback();
   
 };
 
@@ -217,17 +216,20 @@ const myName = () => {
     resulte no triplo de 33.
 */
 
-const triple = (arg) => {
-  return console.log(arg * 3);
+
+const myCalculator = (num = 0) => {
+  let triple = num * 3;
+  return triple;
+}
+
+const myDisplayerFunc = (callback) => {
+  let value = callback;
+  console.log(`The result: ${value}`);
 };
 
-const funcCallback = callback => {
-  
-  callback;
-};
 
-funcCallback(triple(33));
-// triple(33)
+// myDisplayerFunc(myCalculator(33));
+
 
 
 /*

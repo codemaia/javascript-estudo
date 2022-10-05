@@ -843,3 +843,17 @@ Se o boolean é true vira false e vice e versa.
 // console.log(HTMLTemplate);
 
 // ul.innerHTML = HTMLTemplate;
+
+
+console.log('My testers');
+const myDisplaer = (show) => {
+    console.log(`It's the result: ${show}`);
+}
+
+
+const myCalculator = (num = 0) => {
+    let triple = num * 3;
+    return triple;
+}
+
+myDisplaer(myCalculator(0));
