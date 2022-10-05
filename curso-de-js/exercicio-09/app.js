@@ -189,6 +189,20 @@ const isNull = (arg = 'digite') => {
 
 
 
+const myFuncCallBack = callback => {
+
+  callback(value);
+  
+};
+
+
+const myName = () => {
+  return console.log('Renan');
+}
+
+
+myFuncCallBack(myName());
+
 
 
 
