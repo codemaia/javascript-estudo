@@ -143,10 +143,30 @@ const isAnSUV = car => {
   return false
 }
 
-console.log(isAnSUV('Honda Civic'))
-console.log(isAnSUV('Ford EcoSport'))
+// console.log(isAnSUV('Honda Civic'))
+// console.log(isAnSUV('Ford EcoSport'))
 
 
+const isAnSUV2 = car => {
+
+  switch(car) {
+    case 'Honda HR-V':
+      return true;
+    case 'Jeep Renegade':
+      return true;
+    case 'Ford EcoSport':
+      return true;
+    case 'Hyundai iX35':
+      return true;
+    default:
+      return false;
+  }
+
+}
+
+
+console.log(isAnSUV2('Jeep Renegade'))
+console.log(isAnSUV2('Golzinho bola'))
 
 
 
