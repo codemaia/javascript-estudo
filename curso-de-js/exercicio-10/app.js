@@ -13,7 +13,7 @@
 
 let cat = {
   name: 'Lux',
-  age:  '1',
+  age:  1,
   color: 'Mesclada',
   bestFriend: ['Tita', 'Brisa'],
   sound: function () {
@@ -22,9 +22,9 @@ let cat = {
 }
 
 
-// console.log(cat);
-// cat.sound();
-// console.log(cat.bestFriend[0]);
+console.log(cat);
+cat.sound();
+console.log(cat.bestFriend[0]);
 
 /*
   02
@@ -35,7 +35,7 @@ let cat = {
   Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "X", "age", que recebeu "X", "color", que recebeu "X", "bestFriends", que recebeu um array com os itens "X" e "X", e "sound", que recebeu uma função que retorna "X".
 */
 
-// console.log(`Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "${cat.name}", "age", que recebeu "${cat.age}", "color", que recebeu "${cat.color}", "bestFriends", que recebeu um array com os itens "${cat.bestFriend[0]}" e "${cat.bestFriend[1]}", e "sound", que recebeu uma função que retorna "${cat.sound()}".`)
+// console.log(`Até  aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "${cat.name}", "age", que recebeu "${cat.age}", "color", que recebeu "${cat.color}", "bestFriends", que recebeu um array com os itens "${cat.bestFriend[0]}" e "${cat.bestFriend[1]}", e "sound", que recebeu uma função que retorna "${cat.sound()}".`)
 
 
 
@@ -47,8 +47,8 @@ let cat = {
 */
 
 
-cat.age = 2;
-// console.log(cat.age);
+cat.age += 2;
+console.log(cat.age);
 
 
 /*
@@ -59,13 +59,23 @@ cat.age = 2;
     adicionado.
 */
 
+
+//adicionando utilizando object como parametro
+
+const addFriendToObject = (string, object) => {
+  object.bestFriend.push(string);
+}
+
+
+
 const addFriendsCat = (string) => {
   cat.bestFriend.push(string);
 }
 
 addFriendsCat('Livia');
-// console.log(cat.bestFriend);
-// console.log(cat);
+addFriendToObject('Renan', cat);
+console.log(cat.bestFriend);
+console.log(cat);
 
 
 
@@ -78,14 +88,25 @@ addFriendsCat('Livia');
     colchetes.
 */
 
+
+//EXEMPLO PROFESSOR:
+
+const changeColor = object => {
+  object['color'] += ` e azul`;
+}
+
+changeColor(cat);
+const colorProperty = 'color';
+console.log(cat[colorProperty]);
+
 const addColorCat = (string) => {
   cat['color'] += `, ${string}`
 }
 
-// console.log(cat['color']);
-// addColorCat('Malhadinha')
-// console.log(cat);
-// console.log(cat['color']);
+console.log(cat['color']);
+addColorCat('Malhadinha')
+console.log(cat);
+console.log(cat['color']);
 
 
 
@@ -99,7 +120,7 @@ const addColorCat = (string) => {
 
 const isABoolean = value => typeof value === 'object';
 
-// console.log(isABoolean(cat));
+console.log(isABoolean(cat));
 
 
 
@@ -124,8 +145,12 @@ let dog = {
   }
 }
 
-// console.log(`A soma das idades de ${cat.name} e ${dog.name} é ${cat.age + dog.age}.`);
 
+const getAgeMessage = (cat, dog) => `A soma das idades de ${cat.name} e ${dog.name} é ${cat.age + dog.age}.`
+
+const ageMessage = getAgeMessage(cat, dog);
+
+console.log(ageMessage);
 
 /*
   08
@@ -135,38 +160,58 @@ let dog = {
   - Como você refatoraria esta função?
 */
 
-const isAnSUV = car => {
-  if (car === 'Honda HR-V' || car === 'Jeep Renegade' || car === 'Ford EcoSport' || car === 'Hyundai iX35') {
-    return true
-  }
+// const arrCar = ['Honda HR-V', 'Jeep Renegade', 'Ford EcoSport', 'Hyundai iX35'];
 
-  return false
-}
 
-// console.log(isAnSUV('Honda Civic'))
+const isAnSUV = car => ['Honda HR-V', 'Jeep Renegade', 'Ford EcoSport', 'Hyundai iX35'].includes(car);
+
+// OR
+
+
+// const isAnSUV = car => {
+//   if (arrCar.includes(car)) {
+//     return true
+//   }
+
+//   return false
+// }
+
+// console.log(isAnSUV('GOL BOLA'))
 // console.log(isAnSUV('Ford EcoSport'))
 
 
-const isAnSUV2 = car => {
+// OR
 
-  switch(car) {
-    case 'Honda HR-V':
-      return true;
-    case 'Jeep Renegade':
-      return true;
-    case 'Ford EcoSport':
-      return true;
-    case 'Hyundai iX35':
-      return true;
-    default:
-      return false;
-  }
-
+const checkCar = (arr, car = '') => {
+  return arr.includes(car);
 }
+
+// console.log(checkCar(arrCar, 'Honda Civic'));
+
+// OR
+
+
+// const isAnSUV2 = car => {
+
+//   switch(car) {
+//     case 'Honda HR-V':
+//       return true;
+//     case 'Jeep Renegade':
+//       return true;
+//     case 'Ford EcoSport':
+//       return true;
+//     case 'Hyundai iX35':
+//       return true;
+//     default:
+//       return false;
+//   }
+
+// }
 
 
 // console.log(isAnSUV2('Jeep Renegade'))
 // console.log(isAnSUV2('Golzinho bola'))
+
 
 
 
@@ -187,27 +232,28 @@ const isAnSUV2 = car => {
 
 const verifyType = (type) => {
   
-  let types = {
-    null: 'Seta, explicitamente, uma variável sem valor.',
-    undefined: 'Representa um valor não-setado.',
-    object: 'Arrays, Datas, Objetos literais, Funções, etc.'
-  }
+//   const obj = {
+//     null: 'Seta, explicitamente, uma variável sem valor.',
+//     undefined: 'Representa um valor não-setado.',
+//     object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+//   }
 
-  switch(type) {
-    case null: 
-      return types.null;
-    case undefined:
-      return types.undefined;
-    case 'object': 
-      return types.object;
-    default:
-      return 'Nenhum type encontrado'
-  }
+//  return obj[type];
+
+ // OR
+
+ return {
+  null: 'Seta, explicitamente, uma variável sem valor.',
+  undefined: 'Representa um valor não-setado.',
+  object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+}[type];
 
 }
 
-// const arr = {};
-// let arr1 = typeof arr;
+const arr = {};
+let arr1 = typeof arr;
 // console.log(arr1)
 
-// console.log(verifyType('object'));
+console.log(verifyType('null'));
+console.log(verifyType('undefined'));
+console.log(verifyType('object'));
