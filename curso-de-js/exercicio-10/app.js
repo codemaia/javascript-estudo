@@ -10,6 +10,22 @@
   - Exiba o objeto no console.
 */
 
+
+let cat = {
+  name: 'Lux',
+  age:  '1',
+  color: 'Mesclada',
+  bestFriend: ['Tita', 'Brisa'],
+  sound: function () {
+    return 'MiaaaaaaaauUuUuUu!';
+  }
+}
+
+
+// console.log(cat);
+// cat.sound();
+// console.log(cat.bestFriend[0]);
+
 /*
   02
 
@@ -19,11 +35,21 @@
   Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "X", "age", que recebeu "X", "color", que recebeu "X", "bestFriends", que recebeu um array com os itens "X" e "X", e "sound", que recebeu uma função que retorna "X".
 */
 
+// console.log(`Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "${cat.name}", "age", que recebeu "${cat.age}", "color", que recebeu "${cat.color}", "bestFriends", que recebeu um array com os itens "${cat.bestFriend[0]}" e "${cat.bestFriend[1]}", e "sound", que recebeu uma função que retorna "${cat.sound()}".`)
+
+
+
+
 /*
   03
 
   - Adicione 2 anos à idade do gato e exiba a idade atualizada no console.
 */
+
+
+cat.age = 2;
+// console.log(cat.age);
+
 
 /*
   04
@@ -32,6 +58,16 @@
   - Exiba o array de amigos no console para verificar se o novo amigo(a) foi  
     adicionado.
 */
+
+const addFriendsCat = (string) => {
+  cat.bestFriend.push(string);
+}
+
+addFriendsCat('Livia');
+// console.log(cat.bestFriend);
+// console.log(cat);
+
+
 
 /*
   05
@@ -42,6 +78,17 @@
     colchetes.
 */
 
+const addColorCat = (string) => {
+  cat['color'] += `, ${string}`
+}
+
+// console.log(cat['color']);
+// addColorCat('Malhadinha')
+// console.log(cat);
+// console.log(cat['color']);
+
+
+
 /*
   06
 
@@ -49,6 +96,9 @@
     parâmetro é um objeto;
   - Utilize a função para exibir no console se "cat" é um objeto.
 */
+
+
+
 
 /*
   07
