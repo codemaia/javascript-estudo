@@ -97,6 +97,10 @@ const addColorCat = (string) => {
   - Utilize a função para exibir no console se "cat" é um objeto.
 */
 
+const isABoolean = value => typeof value === 'object';
+
+// console.log(isABoolean(cat));
+
 
 
 
@@ -109,6 +113,19 @@ const addColorCat = (string) => {
 
   "A soma das idades de NOME_DO_GATO e NOME_DO_CACHORRO é RESULTADO_DA_SOMA."
 */
+
+let dog = {
+  name: 'Tita',
+  age:  5,
+  color: 'Caramelo',
+  bestFriend: ['Lux', 'Brisa'],
+  sound: function () {
+    return 'AU AU AU AU!';
+  }
+}
+
+// console.log(`A soma das idades de ${cat.name} e ${dog.name} é ${cat.age + dog.age}.`);
+
 
 /*
   08
@@ -126,8 +143,12 @@ const isAnSUV = car => {
   return false
 }
 
-// console.log(isAnSUV('Honda Civic'))
-// console.log(isAnSUV('Ford EcoSport'))
+console.log(isAnSUV('Honda Civic'))
+console.log(isAnSUV('Ford EcoSport'))
+
+
+
+
 
 /*
   09
