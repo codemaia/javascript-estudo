@@ -861,3 +861,99 @@ Se o boolean é true vira false e vice e versa.
 // ul.innerHTML = HTMLTemplate;
 
 
+
+
+
+
+
+
+
+// ETAPA 04 - OBJETOS ########################################################################################
+
+// AULA 01-02 O que são objetos
+
+
+/*
+                                   METODOS (FUNÇÕES)
+    Objetos possuem PROPRIEDADES e AÇÕES!
+
+
+
+*/
+
+
+
+
+
+// AULA 01-03 CRIANDO OBJETOS LITERAIS
+
+
+// criando um objeto literal
+
+
+// let user = {
+//     name: 'Renan',
+//     age: 31,
+//     email: 'renanmaia@email.com',
+//     city: 'Belém',
+//     blogPosts: ['Empadão de frango', '4 receitas de purê de batata']
+// }
+
+//visualizando o objeto
+// console.log(user);
+
+// // acessando o valor da propriedade
+// console.log(user.name);
+
+// // atribuindo um novo valor para a propriedade
+// user.age = 21;
+// console.log(user.age);
+
+// // outra opção para acessar o valor da propriedade
+// // nessa opção precisar ser string ou variavel que armazena uma string
+// console.log(user['name']);
+// console.log(user['email']);
+
+// //atribuindo novo valor com a notação de couchetes
+// user['name'] = 'Livia';
+// console.log(user['name']);
+
+
+// //poderemos usar variaveis também;
+// const key = 'email';
+// console.log(user[key]);
+
+
+// console.log(typeof user);
+
+
+
+
+
+// AULA 01-04 ADICIONANDO METODOS (FUNCOES)
+
+/*
+    METODOS são funções criadas dentro do objeto!
+
+
+*/
+
+
+let user = {
+    name: 'Renan',
+    age: 31,
+    email: 'renanmaia@email.com',
+    city: 'Belém',
+    blogPosts: ['Empadão de frango', '4 receitas de purê de batata'],
+    
+    login: function () {
+        console.log('Usuario logado');
+    },
+    logout: function () {
+        console.log('Usuario deslogado');
+    }
+}
+
+
+user.login();
+user.logout();
