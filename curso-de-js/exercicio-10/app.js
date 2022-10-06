@@ -190,7 +190,7 @@ const verifyType = (type) => {
   let types = {
     null: 'Seta, explicitamente, uma variável sem valor.',
     undefined: 'Representa um valor não-setado.',
-    // object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+    object: 'Arrays, Datas, Objetos literais, Funções, etc.'
   }
 
   switch(type) {
@@ -198,13 +198,16 @@ const verifyType = (type) => {
       return types.null;
     case undefined:
       return types.undefined;
-    // case object: 
-    //   return types.object;
+    case 'object': 
+      return types.object;
     default:
       return 'Nenhum type encontrado'
   }
 
 }
 
+// const arr = {};
+// let arr1 = typeof arr;
+// console.log(arr1)
 
-verifyType(null);
+// console.log(verifyType('object'));
