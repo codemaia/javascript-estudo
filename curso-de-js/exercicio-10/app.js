@@ -165,8 +165,8 @@ const isAnSUV2 = car => {
 }
 
 
-console.log(isAnSUV2('Jeep Renegade'))
-console.log(isAnSUV2('Golzinho bola'))
+// console.log(isAnSUV2('Jeep Renegade'))
+// console.log(isAnSUV2('Golzinho bola'))
 
 
 
@@ -182,3 +182,29 @@ console.log(isAnSUV2('Golzinho bola'))
     propriedades, retorne a mensagem que a propriedade armazena;
   - Teste a função, exibindo no console a mensagem de cada propriedade.
 */
+
+
+
+const verifyType = (type) => {
+  
+  let types = {
+    null: 'Seta, explicitamente, uma variável sem valor.',
+    undefined: 'Representa um valor não-setado.',
+    // object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+  }
+
+  switch(type) {
+    case null: 
+      return types.null;
+    case undefined:
+      return types.undefined;
+    // case object: 
+    //   return types.object;
+    default:
+      return 'Nenhum type encontrado'
+  }
+
+}
+
+
+verifyType(null);
