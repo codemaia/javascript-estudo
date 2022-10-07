@@ -1096,25 +1096,61 @@ Se o boolean é true vira false e vice e versa.
 
 // o objeto Math
 
-console.log(Math);
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-const area = 7.2;
+// const area = 7.2;
 
-console.log(Math.round(area)); // ARREDONDA O NUMBER
-console.log(Math.floor(area)); // ARREDONDA O NUMBER SEMPRE PARA BAIXO
-console.log(Math.ceil(area));  // ARREDONDA O NUMBER SEMPRE PARA CIMA
-console.log(Math.trunc(area)); // RETIRA O DECIMAL DO NUMBER
+// console.log(Math.round(area)); // ARREDONDA O NUMBER
+// console.log(Math.floor(area)); // ARREDONDA O NUMBER SEMPRE PARA BAIXO
+// console.log(Math.ceil(area));  // ARREDONDA O NUMBER SEMPRE PARA CIMA
+// console.log(Math.trunc(area)); // RETIRA O DECIMAL DO NUMBER
 
 
 
-// numeros aleatorios
+// // numeros aleatorios
 
-const randomNumber = Math.random();
+// const randomNumber = Math.random();
 
-console.log(randomNumber);
+// console.log(randomNumber);
 
-// obter numeros aleatorios entre 0 e 100 (incluindo o 100);
+// // obter numeros aleatorios entre 0 e 100 (incluindo o 100);
 
-console.log(Math.round(randomNumber * 100));
+// console.log(Math.round(randomNumber * 100));
+
+
+
+
+
+// AULA 03-04 TIPOS DE REFERENCIA vs TIPOS PRIMITIVOS
+
+
+// valores primitivos
+// SALVA O PRIMEIRO VALOR
+
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+
+
+
+console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100;
+
+console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
+
+
+
+// valores de referencia
+// APONTAM PRO MESMO OBJETO
+
+let userOne = { name: 'Renan', age: 31}
+let userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.age = 32;
+
+console.log(userOne, userTwo);
