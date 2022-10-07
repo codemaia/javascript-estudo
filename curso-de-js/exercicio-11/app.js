@@ -21,12 +21,13 @@ const myName = 'Renan';
   - Você sabe por que isso aconteceu?
   
   R: Sim, declarei minha variavel somente no bloco da função, sendo assim
-     ela não pode ser acessada fora da função.
+     ela não pode ser acessada fora da função. Para ela poder ser acessada fora da função
+     eu preciso adiciona-la ao 'return'
 */
 
 function myAge (){
   let age = 31;
-  console.log(age);
+  console.log(age);  
 }
 
 // console.log(age);
@@ -60,17 +61,20 @@ let car = {
   run () {
 
     this.isRunning = true;
-    console.log(`O ${this.name} está em movimento`);
+    return `O ${this.name} está em movimento`;
 
   },
   stop () {
 
     this.isRunning = false;
-    console.log(`O ${this.name} está parado`);
+    return `O ${this.name} está parado`;
 
   },
   getColorMessage () {
-    console.log(`O ${this.name} está disponivel nas cores ${this.colors.join(', ').replace(', v',' e v')}`);
+    const lastItem = this.colors[this.colors.length - 1];
+    const colors = this.colors.join(', ').replace(lastItem, `e ${lastItem}`);
+
+    return `O ${this.name} está disponivel nas cores ${colors}`;
   }
 }
 
@@ -85,7 +89,8 @@ let car = {
   - Faça o carro andar e exiba no console se ele realmente está em movimento.
 */
 
-car.run();
+console.log(car.run());
+console.log(car.isRunning === true);
 
 
 
@@ -96,7 +101,8 @@ car.run();
 */
 
 
-car.stop();
+console.log(car.stop());
+console.log(car.isRunning === false);
 
 
 /*
@@ -106,7 +112,8 @@ car.stop();
 */
 
 
-car.getColorMessage();
+console.log(car.getColorMessage());
+
 console.log(car.colors);
 car.colors.forEach((item) => {
   console.log(item)
