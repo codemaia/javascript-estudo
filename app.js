@@ -1051,3 +1051,70 @@ Se o boolean é true vira false e vice e versa.
 // user.logout();
 
 // user.logBlogPosts();
+
+
+
+
+
+// AULA 03-02 OBJETOS EM ARRAYS
+
+
+// let user = {
+//         name: 'Renan',
+//         age: 31,
+//         email: 'renanmaia@email.com',
+//         city: 'Belém',
+//         blogPosts: [
+//             { title: 'Empadão de frango', likes: 30 },
+//             { title: '4 receitas de purê de batata', likes: 50 }
+//         ],
+//         login: function () {
+//             console.log('Usuario logado');
+//         },
+//         logout: function () {
+//             console.log('Usuario deslogado');
+//         },
+//         logBlogPosts () { // FUNCTION DECLARATION
+//             console.log(`${this.name} escreveu os seguintes posts:`);
+    
+//             this.blogPosts.forEach(post => {
+//                 console.log(post.title, post.likes);
+//             })
+    
+//         }
+//     }
+    
+    
+// user.login();
+// user.logout();
+// user.logBlogPosts();
+
+
+
+
+// AULA 03-03 O OBJETO MATH
+
+// o objeto Math
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.2;
+
+console.log(Math.round(area)); // ARREDONDA O NUMBER
+console.log(Math.floor(area)); // ARREDONDA O NUMBER SEMPRE PARA BAIXO
+console.log(Math.ceil(area));  // ARREDONDA O NUMBER SEMPRE PARA CIMA
+console.log(Math.trunc(area)); // RETIRA O DECIMAL DO NUMBER
+
+
+
+// numeros aleatorios
+
+const randomNumber = Math.random();
+
+console.log(randomNumber);
+
+// obter numeros aleatorios entre 0 e 100 (incluindo o 100);
+
+console.log(Math.round(randomNumber * 100));
