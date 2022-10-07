@@ -939,21 +939,115 @@ Se o boolean é true vira false e vice e versa.
 */
 
 
-let user = {
-    name: 'Renan',
-    age: 31,
-    email: 'renanmaia@email.com',
-    city: 'Belém',
-    blogPosts: ['Empadão de frango', '4 receitas de purê de batata'],
+// let user = {
+//     name: 'Renan',
+//     age: 31,
+//     email: 'renanmaia@email.com',
+//     city: 'Belém',
+//     blogPosts: ['Empadão de frango', '4 receitas de purê de batata'],
     
-    login: function () {
-        console.log('Usuario logado');
-    },
-    logout: function () {
-        console.log('Usuario deslogado');
-    }
-}
+//     login: function () {
+//         console.log('Usuario logado');
+//     },
+//     logout: function () {
+//         console.log('Usuario deslogado');
+//     }
+// }
 
 
-user.login();
-user.logout();
+// user.login();
+// user.logout();
+
+
+
+
+
+
+
+// AULA 02-02 Variáveis de escopo de bloco
+
+/*
+    CONST => não pode ter seu valor reatribuido (const number = 1 .... const number = 2 #ERROR)
+
+    LET => pode ser reatribuido ( let number = 2 .... let number = 3 #SUCESSFUL)]
+
+    VAR => NÃO OBEDECE ESCOPO
+
+
+*/
+
+// variáveis e escopo de bloco
+
+// const age = 31;
+
+// if (true) {
+//     const age = 41;
+//     const name = 'Renan'
+
+//     console.log (`dentro do 1ª bloco de código: ${age} ${name}`);
+
+
+//     if (true) {
+//         const age = 51
+//         console.log(`dentro do 2ª bloco de codigo: ${age}`);
+//     }
+
+// }
+
+
+
+// console.log(`fora do bloco de código: ${age}`);
+
+
+
+
+
+
+// AULA 02-03 A PALAVRA-CHAVE THIS
+
+/*
+    this: A PALVRA-CHAVE THIS REFERENCIA O OBJETO ONDE ELA ESTA
+          é um objeto de contexto, ela representa o contexto no qual o codigo atual esta sendo executado!
+
+          dependendo de onde usar o valor vai mudar, se usarmos na raiz ele muda, se usarmos dentro de um metodo(funcao) ele 
+          obtem os valores do objeto.
+
+          se utilizarmos ARROW FUNCTION para o this ele referencia o WINDOWS e não o metodo que ele foi criado.
+
+          @ SEMPRE USAR FUNCTION DECLARETION COM O THIS
+
+*/
+
+
+
+// a palavra-chave this
+
+
+// let user = {
+//     name: 'Renan',
+//     age: 31,
+//     email: 'renanmaia@email.com',
+//     city: 'Belém',
+//     blogPosts: ['Empadão de frango', '4 receitas de purê de batata'],
+    
+//     login: function () {
+//         console.log('Usuario logado');
+//     },
+//     logout: function () {
+//         console.log('Usuario deslogado');
+//     },
+//     logBlogPosts () { // FUNCTION DECLARATION
+//         console.log(`${this.name} escreveu os seguintes posts:`);
+
+//         this.blogPosts.forEach(post => {
+//             console.log(post);
+//         })
+
+//     }
+// }
+
+
+// user.login();
+// user.logout();
+
+// user.logBlogPosts();
