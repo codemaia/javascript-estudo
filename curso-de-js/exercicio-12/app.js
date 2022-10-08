@@ -11,7 +11,6 @@
   
   - Todos os filmes e diretores do array devem constar na lista.
 */
-
 const best2019Movies = [
   { title: 'Parasita', directedBy: 'Bong Joon-ho' },
   { title: 'Bacurau', directedBy: 'Kleber Mendonça Filho' },
@@ -26,6 +25,15 @@ const best2019Movies = [
   { title: 'Varda por Agnès', directedBy: 'Agnès Varda' },
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
+
+// let movies = ``
+best2019Movies.forEach((best2019Movie) => {
+   movies += `${best2019Movie.title}` 
+}); 
+
+console.log(` Segundo o site Omelete, os melhores filmes de 2019 são:
+  - ${movies.title}`)
+
 
 /*
   02
