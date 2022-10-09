@@ -26,19 +26,18 @@ const best2019Movies = [
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
 
-// let movies = ``
+ let moviesTitle = ``
 
-const movies2019 = (arr) => {
-  arr.forEach(movie => {
-    console.log(movie);
-  });
-}
+best2019Movies.forEach((item) => {
+    moviesTitle += `- ${item.title}\n`
+})
 
 
-movies2019(best2019Movies);
+console.log(moviesTitle)
 
 
-console.log(` Segundo o site Omelete, os melhores filmes de 2019 são:`)
+
+
 
 
 /*
