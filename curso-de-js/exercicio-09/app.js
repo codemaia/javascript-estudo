@@ -9,7 +9,7 @@
 /*
   01
 
-  - Converta a função abaixo em uma arrow function e utilize-a para exibir um  
+  - Converta a função abaixo em uma arrow function e utilize-gita para exibir um  
     valor no console.
 */
 

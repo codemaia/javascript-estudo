@@ -27,12 +27,18 @@ const best2019Movies = [
 ]
 
 // let movies = ``
-best2019Movies.forEach((best2019Movie) => {
-   movies += `${best2019Movie.title}` 
-}); 
 
-console.log(` Segundo o site Omelete, os melhores filmes de 2019 são:
-  - ${movies.title}`)
+const movies2019 = (arr) => {
+  arr.forEach(movie => {
+    console.log(movie);
+  });
+}
+
+
+movies2019(best2019Movies);
+
+
+console.log(` Segundo o site Omelete, os melhores filmes de 2019 são:`)
 
 
 /*
