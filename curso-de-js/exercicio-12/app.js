@@ -90,6 +90,7 @@ const youtubeUser = {
   - Exiba o valor do PI no console.
 */
 
+// console.log(Math.PI);
 
 
 /*
@@ -101,6 +102,8 @@ const youtubeUser = {
 
 const firstNumber = 8.3
 
+// console.log(Math.ceil(firstNumber));
+
 /*
   05
 
@@ -109,6 +112,8 @@ const firstNumber = 8.3
 */
 
 const secondNumber = 3.5
+
+console.log(Math.round(secondNumber));
 
 /*
   06
