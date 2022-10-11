@@ -32,12 +32,7 @@ best2019Movies.forEach((item) => {
     moviesTitle += `- ${item.title}, dirigido por ${item.directedBy}\n`
 })
 
-
-console.log(moviesTitle)
-
-
-
-
+console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${moviesTitle}`)
 
 
 
