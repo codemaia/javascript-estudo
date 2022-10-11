@@ -1114,7 +1114,7 @@ Se o boolean é true vira false e vice e versa.
 // const randomNumber = Math.random();
 
 // console.log(randomNumber);
-
+    
 // // obter numeros aleatorios entre 0 e 100 (incluindo o 100);
 
 // console.log(Math.round(randomNumber * 100));
