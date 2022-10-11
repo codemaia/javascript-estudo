@@ -26,14 +26,21 @@ const best2019Movies = [
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
 
- let moviesTitle = ``
+let moviesTitle = ``
 
 best2019Movies.forEach((item) => {
     moviesTitle += `- ${item.title}, dirigido por ${item.directedBy}\n`
 })
 
 // console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${moviesTitle}`)
+ 
+// let movies = ``;
 
+// best2019Movies.forEach((movie) => {
+//   movies += `- ${movie.title}, dirigido por ${movie.directedBy}\n`
+// })
+
+// console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${movies}`)
 
 
 /*
