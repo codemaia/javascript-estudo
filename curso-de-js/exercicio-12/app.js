@@ -29,11 +29,12 @@ const best2019Movies = [
  let moviesTitle = ``
 
 best2019Movies.forEach((item) => {
-    moviesTitle += `- ${item.title}\n`
+    moviesTitle += `- ${item.title}, dirigido por ${item.directedBy}\n`
 })
 
 
 console.log(moviesTitle)
+
 
 
 
