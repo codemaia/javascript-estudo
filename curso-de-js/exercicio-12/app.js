@@ -32,7 +32,7 @@ best2019Movies.forEach((item) => {
     moviesTitle += `- ${item.title}, dirigido por ${item.directedBy}\n`
 })
 
-console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${moviesTitle}`)
+// console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${moviesTitle}`)
 
 
 
@@ -49,6 +49,8 @@ console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${movies
   
   - As 4 linhas da mensagem, podem ser exibidas separadamente.
 */
+
+
 
 const youtubeUser = {
   name: 'Roger Melo',
@@ -68,8 +70,19 @@ const youtubeUser = {
       gitHub: 'https://github.com/Roger-Melo'
     },
     country: 'Brasil'
+  },
+  showRecentVideos () {
+    console.log(`Videos recentes de ${this.name}:`);
+
+    this.videos.recentVideos.forEach((videos) => {
+      console.log(videos.title);
+    })
+    
   }
 }
+
+
+// youtubeUser.showRecentVideos();
 
 /*
   03
