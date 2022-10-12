@@ -1239,27 +1239,55 @@ Se o boolean é true vira false e vice e versa.
 
 // querySelector()
 
-const paragraph = document.querySelector('p'); // pegando primeiro 'p' do html
-const paragraphClass = document.querySelector('.error'); // pegando o valor pela class.
-const errorDiv = document.querySelector('div.error');
-const h1 = document.querySelector('body > h1');
+// const paragraph = document.querySelector('p'); // pegando primeiro 'p' do html
+// const paragraphClass = document.querySelector('.error'); // pegando o valor pela class.
+// const errorDiv = document.querySelector('div.error');
+// const h1 = document.querySelector('body > h1');
 
-// console.log(paragraph);
-// console.log(paragraphClass);    
-// console.log(errorDiv)
-// console.log(h1);
+// // console.log(paragraph);
+// // console.log(paragraphClass);    
+// // console.log(errorDiv)
+// // console.log(h1);
 
 
-// querySelectorAll()
+// // querySelectorAll()
 
-const paragraphAll = document.querySelectorAll('p');
+// const paragraphAll = document.querySelectorAll('p');
 
-// console.log(paragraphAll[0]);
-// paragraphAll.forEach((paragraph) => {
-//     console.log(paragraph);
-// })
+// // console.log(paragraphAll[0]);
+// // paragraphAll.forEach((paragraph) => {
+// //     console.log(paragraph);
+// // })
 
-const errors = document.querySelectorAll('.error');
+// const errors = document.querySelectorAll('.error');
 
-console.log(errors);
+// console.log(errors);
 
+
+
+
+
+
+
+// AULA 01-08 - Outras maneiras de fazer queries no DOM
+
+/**
+ *  
+ * 
+ */
+
+
+
+// obter um elemento atraves do ID
+const title = document.getElementById('title');
+// console.log(title);
+
+// obter um elemento atraves do nome da classe
+const errors = document.getElementsByClassName('error');
+// console.log(errors[0]); // nao é possivel utilizar forEach
+
+
+// obter elementos atraves do nome da tag
+const paragraph = document.getElementsByTagName('p');
+
+console.log(paragraph);
