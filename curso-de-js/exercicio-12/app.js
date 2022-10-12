@@ -26,13 +26,16 @@ const best2019Movies = [
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
 
-let moviesTitle = ``
 
-best2019Movies.forEach((item) => {
-    moviesTitle += `- ${item.title}, dirigido por ${item.directedBy}\n`
-})
+let moviesTitle = `Segundo o site Omelete, os melhores filmes de 2019 são:`
+let generateMovieTitle = (item) => {
+  moviesTitle += `
+  - ${item.title}, dirigido por ${item.directedBy}`;
+}
 
-// console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${moviesTitle}`)
+best2019Movies.forEach(generateMovieTitle);
+
+console.log(moviesTitle);
  
 // let movies = ``;
 
@@ -41,7 +44,6 @@ best2019Movies.forEach((item) => {
 // })
 
 // console.log(`Segundo o site Omelete, os melhores filmes de 2019 são: \n${movies}`)
-
 
 /*
   02
