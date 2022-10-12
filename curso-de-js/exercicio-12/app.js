@@ -35,7 +35,7 @@ let generateMovieTitle = (item) => {
 
 best2019Movies.forEach(generateMovieTitle);
 
-console.log(moviesTitle);
+// console.log(moviesTitle);
  
 // let movies = ``;
 
@@ -81,17 +81,29 @@ const youtubeUser = {
     country: 'Brasil'
   },
   showRecentVideos () {
-    console.log(`Videos recentes de ${this.name}:`);
+    let titleVideos = `Videos recentes de ${this.name}: `
 
     this.videos.recentVideos.forEach((videos) => {
-      console.log(videos.title);
+      titleVideos += `
+${videos.title}`;
+      
     })
+
+    console.log(titleVideos)
     
-  }
+  },
+  // showRecentVideos () {
+  //   console.log(`Videos recentes de ${this.name}:`);
+
+  //   this.videos.recentVideos.forEach((videos) => {
+  //     console.log(videos.title);
+  //   })
+    
+  // }
 }
 
 
-// youtubeUser.showRecentVideos();
+youtubeUser.showRecentVideos();
 
 /*
   03
@@ -99,7 +111,7 @@ const youtubeUser = {
   - Exiba o valor do PI no console.
 */
 
-// console.log(Math.PI);
+console.log(Math.PI);
 
 
 /*
@@ -111,7 +123,7 @@ const youtubeUser = {
 
 const firstNumber = 8.3
 
-// console.log(Math.ceil(firstNumber));
+console.log(Math.ceil(firstNumber));
 
 /*
   05
@@ -122,7 +134,7 @@ const firstNumber = 8.3
 
 const secondNumber = 3.5
 
-// console.log(Math.round(secondNumber));
+console.log(Math.round(secondNumber));
 
 /*
   06
@@ -133,7 +145,7 @@ const secondNumber = 3.5
 
 const thirdNumber = 8.9
 
-// console.log(Math.floor(thirdNumber))
+console.log(Math.floor(thirdNumber))
 
 /*
   07
@@ -143,7 +155,7 @@ const thirdNumber = 8.9
 
 const fourthNumber = 5.5
 
-// console.log(Math.trunc(fourthNumber));
+console.log(Math.trunc(fourthNumber));
 
 
 /*
@@ -156,4 +168,4 @@ const fourthNumber = 5.5
 
 const randomNumbers = Math.random();
 
-// console.log(Math.round(randomNumbers* 10));
+console.log(Math.round(randomNumbers * 10));
