@@ -1212,6 +1212,7 @@ Se o boolean é true vira false e vice e versa.
 // AULA 01-06 - O que é o DOM - Document Object Model
 
 
+
 /**
  *              HTML 
  *            /     \
@@ -1222,4 +1223,43 @@ Se o boolean é true vira false e vice e versa.
  *                      / \
  *       text node ->  h1  p -> text node
  */                     
+
+
+
+
+
+// AULA 01-07 - Query selector & query selector all
+
+/**
+ *  Botão direito no elemento HTML > botão direito no seletor em Elements
+ *  selecionar COPY depois COPY SELECTOR
+ * 
+ */
+
+
+// querySelector()
+
+const paragraph = document.querySelector('p'); // pegando primeiro 'p' do html
+const paragraphClass = document.querySelector('.error'); // pegando o valor pela class.
+const errorDiv = document.querySelector('div.error');
+const h1 = document.querySelector('body > h1');
+
+// console.log(paragraph);
+// console.log(paragraphClass);    
+// console.log(errorDiv)
+// console.log(h1);
+
+
+// querySelectorAll()
+
+const paragraphAll = document.querySelectorAll('p');
+
+// console.log(paragraphAll[0]);
+// paragraphAll.forEach((paragraph) => {
+//     console.log(paragraph);
+// })
+
+const errors = document.querySelectorAll('.error');
+
+console.log(errors);
 
