@@ -12,7 +12,10 @@ const getCatInfo = () => {
   const name = 'Marcos'
   let age = 3
   const color = 'Cinza'
+  getCatInfo()
 }
+
+console.log()
 
 /*
   02
