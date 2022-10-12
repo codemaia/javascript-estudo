@@ -1129,28 +1129,50 @@ Se o boolean é true vira false e vice e versa.
 // valores primitivos
 // SALVA O PRIMEIRO VALOR
 
-let scoreOne = 50;
-let scoreTwo = scoreOne;
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
 
 
 
 
-console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
+// console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
 
-scoreOne = 100;
+// scoreOne = 100;
 
-console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
+// console.log(`scoreOne: ${scoreOne} | scoreTwo: ${scoreTwo}`);
 
 
 
 // valores de referencia
 // APONTAM PRO MESMO OBJETO
 
-let userOne = { name: 'Renan', age: 31}
-let userTwo = userOne;
+// let userOne = { name: 'Renan', age: 31}
+// let userTwo = userOne;
 
-console.log(userOne, userTwo);
+// console.log(userOne, userTwo);
 
-userOne.age = 32;
+// userOne.age = 32;
 
-console.log(userOne, userTwo);
+// console.log(userOne, userTwo);
+
+
+
+
+
+// ETAPA 05 - O DOCUMENT OBJECT MODEL - DOM ##################################################################################
+
+
+
+// AULA 01-03 - 3 escopos em JavaScript que você deve conhecers
+
+
+/*
+    Nao é possivel acessar variaveis fora do seu bloco de codigo
+    a não ser que sejam variaveis globais.
+
+    Com funções alinhadas, as funções mais internas conseguem acessar
+    variaveis que se encontram fora do seu escopo ou seja nas funçoes externas
+    , porém as funçoes
+    que estao externas não conseguem acessar variaveis declaradas nas
+    funções mais internas.
+*/
