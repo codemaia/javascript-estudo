@@ -1176,3 +1176,50 @@ Se o boolean é true vira false e vice e versa.
     que estao externas não conseguem acessar variaveis declaradas nas
     funções mais internas.
 */
+
+
+
+
+// AULA 01-04 - Mozilla Developer Network - MDN DOCUMENTAÇÃO
+
+
+/*
+    pt-br
+    https://developer.mozilla.org/pt-BR/
+
+    en
+    https://developer.mozilla.org/en-US/
+
+*/
+
+
+
+
+
+// AULA 01-05 - interagindo com o browser
+
+/**
+ *  Adicionar conteudo
+ *  Modificar estilo CSS
+ *  Reagir a eventos
+ *  Criar interações menos discretas
+ */
+
+
+
+
+
+// AULA 01-06 - O que é o DOM - Document Object Model
+
+
+/**
+ *              HTML 
+ *            /     \
+ *          HEAD    BODY
+ *          /       /  |  \
+ *        title   h1  div  div
+ *        texts nodes   \
+ *                      / \
+ *       text node ->  h1  p -> text node
+ */                     
+
