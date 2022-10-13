@@ -12,10 +12,11 @@ const getCatInfo = () => {
   const name = 'Marcos'
   let age = 3
   const color = 'Cinza'
-  getCatInfo()
+  console.log([name, age, color]);
 }
+// getCatInfo()
 
-console.log()
+
 
 /*
   02
@@ -32,10 +33,14 @@ const external = () => {
     const extraInternal = () => {
       console.log(movie.toUpperCase())
     }
+
+    extraInternal();
   }
+
+  internal();
 }
 
-external()
+// external();
 
 /*
   03
@@ -47,6 +52,9 @@ external()
 */
 
 let randomNumbers = [3, 2, 1]
+
+randomNumbers.reverse();
+// console.log(randomNumbers);
 
 /*
   04
@@ -61,6 +69,10 @@ let crazyArray = [
   function getMessage () { return 'hi' },
   [ 5, 96, 53  ]
 ]
+
+const shifted = crazyArray.shift();
+// console.log(crazyArray);
+// console.log(shifted);
 
 /*
   05
@@ -78,6 +90,16 @@ const dogs = [
   { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
   { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
 ]
+
+const found = dogs.find(dog => dog.name === 'Zequinha');
+// const found = dogs.find((dog) => {
+//   if(dog.name === 'Zequinha') {
+//     return dog.name;
+//   }
+// });
+
+console.log(found);
+
 
 /*
   06
