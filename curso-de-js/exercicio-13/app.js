@@ -12,11 +12,20 @@ const getCatInfo = () => {
   const name = 'Marcos'
   let age = 3
   const color = 'Cinza'
-  console.log([name, age, color]);
+  return {
+    name,
+    age,
+    color
+  }
 }
-// getCatInfo()
 
+//DESTRUCTION
+//DESESTRUTURAÇÃO DO OBJETO EM VARIAVEIS | DESTRINCHANDO OBJETOS, 
+//as 'variaveis' assumem o valor da propriedade do objeto. No caso a função retorna um objeto.
+const { name, color, age } = getCatInfo();
 
+// console.log(getCatInfo())
+console.log(`${name} é um gato ${color} de ${age} anos.`);
 
 /*
   02
@@ -40,7 +49,7 @@ const external = () => {
   internal();
 }
 
-// external();
+external();
 
 /*
   03
@@ -54,7 +63,7 @@ const external = () => {
 let randomNumbers = [3, 2, 1]
 
 randomNumbers.reverse();
-// console.log(randomNumbers);
+console.log(randomNumbers);
 
 /*
   04
@@ -71,7 +80,7 @@ let crazyArray = [
 ]
 
 const shifted = crazyArray.shift();
-// console.log(crazyArray);
+console.log(crazyArray);
 // console.log(shifted);
 
 /*
@@ -98,7 +107,7 @@ const found = dogs.find(dog => dog.name === 'Zequinha');
 //   }
 // });
 
-// console.log(found);
+console.log(found);
 
 
 /*
@@ -134,7 +143,7 @@ const found = dogs.find(dog => dog.name === 'Zequinha');
 */
 
 const mainTitle = document.querySelector('.main-title');
-// console.log(mainTitle);
+console.log(mainTitle);
 
 /*
   07
@@ -146,4 +155,4 @@ const mainTitle = document.querySelector('.main-title');
 
 
 const secondaryTitle = document.querySelectorAll('.secondary-title');
-// console.log(secondaryTitle);
+console.log(secondaryTitle);
