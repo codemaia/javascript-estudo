@@ -98,7 +98,7 @@ const found = dogs.find(dog => dog.name === 'Zequinha');
 //   }
 // });
 
-console.log(found);
+// console.log(found);
 
 
 /*
@@ -133,6 +133,9 @@ console.log(found);
   </section>
 */
 
+const mainTitle = document.querySelector('.main-title');
+// console.log(mainTitle);
+
 /*
   07
 
@@ -140,3 +143,7 @@ console.log(found);
     página, através da classe deles;
   - Exiba esse NodeList no console.
 */
+
+
+const secondaryTitle = document.querySelectorAll('.secondary-title');
+// console.log(secondaryTitle);
