@@ -53,15 +53,17 @@ numbers.forEach(number => {
 */
 
 const newLi = document.querySelectorAll('.number');
-console.log(newLi);
+// console.log(newLi);
 
 newLi.forEach((number) => {
 
   // console.log(number.textContent)
   if (number.textContent % 2 === 0) {
-      console.log(`${number.textContent} + aqui é PAR`);
+      // console.log(`${number.textContent} + aqui é PAR`);
+      number.style.color = 'lightblue';
   } else {
-      console.log(`${number.textContent}`);
+      // console.log(`${number.textContent}`);
+      number.style.color = 'pink';
   }
 });
 
