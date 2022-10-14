@@ -1350,3 +1350,39 @@ Se o boolean é true vira false e vice e versa.
 // });
 
 
+
+
+
+
+
+
+
+// AULA 02-03 - Obtendo e setando atributos
+/**
+ *   @ getAttribute('atributo "ex: href" ') -> Pegar o atributo, neste caso o link que esta no href
+ * 
+ *   possui dois parametros
+ *      o atributo que quer modificar, novo valor do atributo
+ *   @ setAttribute('href', 'https://twitter.com/codemaia') -> Colocar o novo valor no atributo.
+ * 
+ */
+
+// getAttribute
+// const link = document.querySelector('a');
+// // console.log(link.getAttribute('href'));
+
+
+// // setAttribute
+// link.setAttribute('href', 'https://twitter.com/codemaia');
+
+// link.innerText = 'Twitter codemaia';
+
+
+// const paragraph = document.querySelector('p');
+// console.log(paragraph.getAttribute('class'));
+
+// paragraph.setAttribute('class', 'success');
+
+
+// //INSERIR ATRIBUTOS QUE AINDA NÃO EXISTEM (EX: CSS)
+// paragraph.setAttribute('style', 'color: green;')
