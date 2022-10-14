@@ -1386,3 +1386,81 @@ Se o boolean é true vira false e vice e versa.
 
 // //INSERIR ATRIBUTOS QUE AINDA NÃO EXISTEM (EX: CSS)
 // paragraph.setAttribute('style', 'color: green;')
+
+
+
+
+// AULA 02-04 - Modificando estilos CSS (inline)
+/**
+ *  USAR A PROPRIEDADE:
+ *   @ style.
+ * 
+ * 
+ * 
+ */
+
+
+// const title = document.querySelector('h1');
+
+// console.log(title.style);
+// console.log(title.style.color);
+
+// //adicionar CSS sem substituir o que ja existe
+// title.style.margin = '50px';
+// title.style.color = 'pink';
+// title.style.fontSize = '50px';
+// //remover o CSS
+// title.style.margin = '';
+
+
+
+
+// AULA 02-05 - Obtendo, adicionando, removendo e alterando classes CSS
+/**
+ *  Propriedades:
+ * 
+ *  Obter listagem das classes:
+ *  @ classList
+ * 
+ *  Inserir classe no elemento:
+ * 
+ *  @ classList.add('nome da classe')
+ * 
+ *  Remover classe do elemento:
+ * 
+ *  @ classList.remove('nome da classe')
+ * 
+ */
+
+
+// const paragraph = document.querySelector('p');
+
+// console.log(paragraph.classList);
+
+// paragraph.classList.add('error');
+// paragraph.classList.remove('error');
+// paragraph.classList.add('success');
+
+const paragraphs = document.querySelectorAll('p');
+
+// console.log(paragraphs);
+
+// console.log(paragraphs.innerText);
+
+//MINHA RESOLUÇÃO
+paragraphs.forEach((paragraph, index, array) => {
+    console.log(paragraph.innerText);
+
+    if(paragraph.innerText.lastIndexOf('error') !== -1) {
+        paragraph.classList.add('error');
+    } else if (paragraph.innerText.lastIndexOf('success') !== -1) {
+        paragraph.classList.add('success');
+    }
+
+});
+
+
+
+
+
+
