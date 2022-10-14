@@ -77,16 +77,22 @@ newLi.forEach((number) => {
   P.s: a classe "body-background" já está declarada no style.css.
 */
 
-
+const body = document.querySelector('body');
+// console.log(body);
+body.classList.add('body-background');
 
 /*
   05
 
-  - Adicione o link 
+  - Adicione so link 
     https://github.com/roger-melo-treinamentos/curso-de-js-roger-melo no href  
     do link do index.html.
 */
 
+const hrefA = document.querySelector('a');
+// console.log(hrefA);
+
+hrefA.setAttribute('href', 'https://github.com/roger-melo-treinamentos/curso-de-js-roger-melo');
 
 
 /*
@@ -95,7 +101,8 @@ newLi.forEach((number) => {
   - Exiba o novo valor do atributo href do link no console.
 */
 
-
+const href = document.querySelector('a')
+// console.log(href.getAttribute('href'));
 
 /*
   07
@@ -104,6 +111,8 @@ newLi.forEach((number) => {
     manipuladas via JS no h1.
 */
 
+
+console.log()
 
 
 /*
