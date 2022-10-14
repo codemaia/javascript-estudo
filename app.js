@@ -1279,15 +1279,74 @@ Se o boolean é true vira false e vice e versa.
 
 
 // obter um elemento atraves do ID
-const title = document.getElementById('title');
-// console.log(title);
+// const title = document.getElementById('title');
+// // console.log(title);
 
-// obter um elemento atraves do nome da classe
-const errors = document.getElementsByClassName('error');
-// console.log(errors[0]); // nao é possivel utilizar forEach
+// // obter um elemento atraves do nome da classe
+// const errors = document.getElementsByClassName('error');
+// // console.log(errors[0]); // nao é possivel utilizar forEach
 
 
-// obter elementos atraves do nome da tag
-const paragraph = document.getElementsByTagName('p');
+// // obter elementos atraves do nome da tag
+// const paragraph = document.getElementsByTagName('p');
 
-console.log(paragraph);
+// console.log(paragraph);
+
+
+
+
+
+
+
+
+
+// AULA 02-02 - Adicionando e modificando conteúdo em uma página
+
+/**
+ *  @ innerText -> para modificar o TEXTO do DOM
+ *                 utilizando o += ele recebe o que já tem mais a nova atribuição
+ *                 EX: hello world texto inserido pelo DOM
+ *  
+ *  @ innerHTML -> para modificar o HTML do DOM
+ *                 utilizando o += ele recebe o HTML que ja tem lá e mais a nova atribuição
+ *                 se a div estiver vazia, o innerHTML é inserido mesmo assim;
+ * 
+ * 
+ *  # innerText e innerHTML são tanto GETTERS quanto SETTERS
+ * 
+ */
+
+
+
+// //alterando apenas 1 item de TEXTO
+// const paragraph = document.querySelector('p'); 
+
+// // paragraph.innerHTML += ' Texto inserido pelo DOM';
+
+// // console.log(paragraph)
+
+
+
+// //alterando vários itens de TEXTO de uma vez
+// const paragraphs = document.querySelectorAll('p');
+// console.log(paragraphs);
+
+// // paragraphs.forEach((paragraph, index) => {
+// //     paragraph.innerText += ` Novo texto ${index + 1}`;
+// // });
+
+
+
+
+// //adicionar ou modificar o HTML dos elementos
+// const div = document.querySelector('.content');
+
+// // div.innerHTML += '<h2>Novo h2</h2>';
+
+// const people = ['Livia', 'Renan', 'Tita', 'Brisa', 'Lux'];
+
+// people.forEach((person) => {
+//     div.innerHTML += `<p>${person}</p>`;
+// });
+
+
