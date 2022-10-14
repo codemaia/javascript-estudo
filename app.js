@@ -1487,9 +1487,9 @@ const paragraphs = document.querySelectorAll('p');
 //ADICIONANDO CLASS (toggle)
 
 
-const title = document.querySelector('h1');
+// const title = document.querySelector('h1');
 
-//adiciona a classe
-title.classList.toggle('teste');
-//se chamado mais uma vez REMOVE a class
-title.classList.toggle('teste');
+// //adiciona a classe
+// title.classList.toggle('teste');
+// //se chamado mais uma vez REMOVE a class
+// title.classList.toggle('teste');

@@ -5,7 +5,9 @@
     maiúsculas.
 */
 
-
+const h1 = document.querySelector('h1');
+// console.log(h1.innerText.toUpperCase());
+h1.innerText = h1.innerText.toUpperCase();
 
 /*
   02
