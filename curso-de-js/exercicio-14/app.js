@@ -17,18 +17,30 @@ h1.textContent = h1.textContent.toUpperCase();
 */
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ];
-let liArr = ``
-const classNumber = document.querySelector('.numbers');
+let liNumbers = ``
+const classNumber = document.querySelector('ul.numbers');
 console.log(classNumber);
 
-
 numbers.forEach(number => {
-  liArr =  `<li>${number}</li>`;
-  classNumber.innerHTML += liArr;
+  
+  liNumbers =  `<li>${number}</li>`;
+  classNumber.innerHTML += liNumbers;
 
+  if(liNumbers !== null) {
+    const newLi = document.querySelectorAll('li');
+    newLi.forEach(element => {
+      element.classList.add('numbers');
+    });
+    
+  }
+  
 });
+// const newLi = document.querySelectorAll('li');
 
-
+// newLi.forEach(element => {
+//   element.classList.add('numbers');
+// });
+// console.log(newLi)
 
 
 /*
