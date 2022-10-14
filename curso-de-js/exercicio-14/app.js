@@ -111,16 +111,19 @@ const href = document.querySelector('a')
     manipuladas via JS no h1.
 */
 
-
-console.log()
+const h1Styles = document.querySelector('h1');
+// console.log(h1Styles)
+// console.log(h1Styles.style);
 
 
 /*
   08
-
   - Remova a classe "body-background", do elemento body.
 */
 
+const removeBody = document.querySelector('body');
+// removeBody.classList.toggle('body-background');
+removeBody.classList.remove('body-background');
 
 
 /*
@@ -129,3 +132,6 @@ console.log()
   - Se o link da página possuir uma classe "link", remova-a;
   - Não utilize o método remove() para fazer isso.
 */
+
+const aLink = document.querySelector('a');
+aLink.classList.toggle('link');
