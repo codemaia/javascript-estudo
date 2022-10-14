@@ -18,23 +18,28 @@ h1.textContent = h1.textContent.toUpperCase();
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ];
 let liNumbers = ``
-const classNumber = document.querySelector('ul.numbers');
+const classNumber = document.querySelector('.numbers');
+
+const insertNumberIntoUl = number => {
+  classNumber.innerHTML +=`<li class="number">${number}</li>`
+};
+numbers.forEach(insertNumberIntoUl);  
 
 
-numbers.forEach(number => {
+// numbers.forEach(number => {
 
-  liNumbers =  `<li>${number}</li>`;
-  classNumber.innerHTML += liNumbers;
+//   liNumbers =  `<li>${number}</li>`;
+//   classNumber.innerHTML += liNumbers;
 
-  if(liNumbers !== null) {
-    const newLi = document.querySelectorAll('li');
-    newLi.forEach(element => {
-      element.classList.add('number');
-    });
+//   if(liNumbers !== null) {
+//     const newLi = document.querySelectorAll('li');
+//     newLi.forEach(element => {
+//       element.classList.add('number');
+//     });
     
-  };
+//   };
   
-});
+// });
 // const newLi = document.querySelectorAll('li');
 
 // newLi.forEach(element => {
@@ -56,15 +61,20 @@ const newLi = document.querySelectorAll('.number');
 // console.log(newLi);
 
 newLi.forEach((number) => {
+  const isEven = Number(number.textContent) % 2 === 0;
 
   // console.log(number.textContent)
-  if (number.textContent % 2 === 0) {
+  if (isEven) {
       // console.log(`${number.textContent} + aqui é PAR`);
       number.style.color = 'lightblue';
-  } else {
-      // console.log(`${number.textContent}`);
-      number.style.color = 'pink';
+      return
   }
+
+  number.style.color = 'pink';
+  // } else {
+  //     // console.log(`${number.textContent}`);
+  //     number.style.color = 'pink';
+  // }
 });
 
 
@@ -77,7 +87,8 @@ newLi.forEach((number) => {
   P.s: a classe "body-background" já está declarada no style.css.
 */
 
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
+const body = document.body;
 // console.log(body);
 body.classList.add('body-background');
 
