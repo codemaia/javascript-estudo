@@ -1420,19 +1420,28 @@ Se o boolean é true vira false e vice e versa.
  *  Propriedades:
  * 
  *  Obter listagem das classes:
- *  @ classList
+ *  @classList
  * 
  *  Inserir classe no elemento:
  * 
- *  @ classList.add('nome da classe')
+ *  @classList.add('nome da classe')
  * 
  *  Remover classe do elemento:
  * 
- *  @ classList.remove('nome da classe')
+ *  @classList.remove('nome da classe')
  * 
+ *  Pegar o texto dentro da propriedade. 'Ex: pegar o texto dentro da propriedade <p>texto</p>:
+ *  
+ *  @textContent -> ele pega o texto mesmo se não estiver visinal (diplay: none);
+ * 
+ *  Adicionar classe css:
+ *  
+ *  @toggle
  */
 
 
+
+//ADICIONANDO CLASSE CSS
 // const paragraph = document.querySelector('p');
 
 // console.log(paragraph.classList);
@@ -1448,19 +1457,39 @@ const paragraphs = document.querySelectorAll('p');
 // console.log(paragraphs.innerText);
 
 //MINHA RESOLUÇÃO
-paragraphs.forEach((paragraph, index, array) => {
-    console.log(paragraph.innerText);
+// paragraphs.forEach((paragraph, index, array) => {
+//     console.log(paragraph.innerText);
 
-    if(paragraph.innerText.lastIndexOf('error') !== -1) {
-        paragraph.classList.add('error');
-    } else if (paragraph.innerText.lastIndexOf('success') !== -1) {
-        paragraph.classList.add('success');
-    }
+//     if(paragraph.innerText.lastIndexOf('error') !== -1) {
+//         paragraph.classList.add('error');
+//     } else if (paragraph.innerText.lastIndexOf('success') !== -1) {
+//         paragraph.classList.add('success');
+//     }
 
-});
-
-
+// });
 
 
+//RESOLUÇÃO PROFESSOR
+// propriedade textContent
+
+// paragraphs.forEach(paragraph => {
+//     if(paragraph.textContent.includes('error')) {
+//         paragraph.classList.add('error');
+//     }
+
+//     if(paragraph.textContent.includes('success')) {
+//         paragraph.classList.add('success');
+//     }
+// })
 
 
+
+//ADICIONANDO CLASS (toggle)
+
+
+const title = document.querySelector('h1');
+
+//adiciona a classe
+title.classList.toggle('teste');
+//se chamado mais uma vez REMOVE a class
+title.classList.toggle('teste');
