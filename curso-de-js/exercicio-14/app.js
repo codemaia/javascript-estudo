@@ -19,20 +19,20 @@ h1.textContent = h1.textContent.toUpperCase();
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ];
 let liNumbers = ``
 const classNumber = document.querySelector('ul.numbers');
-console.log(classNumber);
+
 
 numbers.forEach(number => {
-  
+
   liNumbers =  `<li>${number}</li>`;
   classNumber.innerHTML += liNumbers;
 
   if(liNumbers !== null) {
     const newLi = document.querySelectorAll('li');
     newLi.forEach(element => {
-      element.classList.add('numbers');
+      element.classList.add('number');
     });
     
-  }
+  };
   
 });
 // const newLi = document.querySelectorAll('li');
@@ -43,6 +43,7 @@ numbers.forEach(number => {
 // console.log(newLi)
 
 
+
 /*
   03
 
@@ -50,6 +51,19 @@ numbers.forEach(number => {
     - Se o número é par, ele deve ser exibido na cor "lightblue";
     - Se o número é ímpar, exiba-o na cor "pink".
 */
+
+const newLi = document.querySelectorAll('.number');
+console.log(newLi);
+
+newLi.forEach((number) => {
+
+  // console.log(number.textContent)
+  if (number.textContent % 2 === 0) {
+      console.log(`${number.textContent} + aqui é PAR`);
+  } else {
+      console.log(`${number.textContent}`);
+  }
+});
 
 
 
