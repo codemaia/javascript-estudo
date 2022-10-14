@@ -6,8 +6,8 @@
 */
 
 const h1 = document.querySelector('h1');
-// console.log(h1.innerText.toUpperCase());
-h1.innerText = h1.innerText.toUpperCase();
+// console.log(h1.textContent.toUpperCase());
+h1.textContent = h1.textContent.toUpperCase();
 
 /*
   02
@@ -16,7 +16,17 @@ h1.innerText = h1.innerText.toUpperCase();
   - Cada número deve estar dentro de uma <li> com a classe "number".
 */
 
-const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
+const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ];
+let innerHTML = ``
+const classNumber = document.querySelector('.numbers');
+console.log(classNumber);
+
+
+numbers.forEach(number => {
+  innerHTML = `<li>${number}</li>`;
+  // console.log(innerHTML);
+});
+
 
 /*
   03
