@@ -78,7 +78,25 @@ const videos = [{
 }, {
   name: 'Como fazer requisições HTTP com o método fetch | JavaScript',
   length: '00:02:55'
-}]
+}];
+
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    
+    videos.forEach(video => {
+      const li = document.createElement('li');
+      
+      li.textContent = video.name;
+
+      ul.append(li);
+      
+    });
+
+});
+
+
 
 /*
   07
