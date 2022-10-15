@@ -1631,35 +1631,37 @@ const article = document.querySelector('article');
  */
 
 
-const ul = document.querySelector('ul');
-// ul.remove();
+// const ul = document.querySelector('ul');
+// // ul.remove();
+
+// const lis = document.querySelectorAll('li');
+
+//  lis.forEach(li => {
+//      li.addEventListener('click', event => {
+//          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+
+//        //clickedElement.style.textDecoration = 'line-through';
+//          clickedElement.remove(); //-> remover o elemento
+//      });
+//  });
 
 
- const lis = document.querySelectorAll('li');
+//  //ADICIONANDO EVENTO NO BUTTON
 
- lis.forEach(li => {
-     li.addEventListener('click', event => {
-         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+//  const button = document.querySelector('button');
 
-       //clickedElement.style.textDecoration = 'line-through';
-         clickedElement.remove(); //-> remover o elemento
-     });
- });
+//  button.addEventListener('click', () => {
+//     //outra forma de adicionar 
+//     // ul.innerHTML += `<li>Novo item com o innerHTML</li>`;
 
+//     //1
+//     const li = document.createElement('li');
+//     //2
+//     li.textContent = 'Novo item';
+//     //3
+//     ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
 
- //ADICIONANDO EVENTO NO BUTTON
-
- const button = document.querySelector('button');
-
- button.addEventListener('click', () => {
-    //1
-    const li = document.createElement('li');
-    //2
-    li.textContent = 'Novo item';
-    //3
-    ul.append(li);
-
- });
+//  });
 
 
  
