@@ -1535,16 +1535,16 @@ const article = document.querySelector('article');
 // console.log(article.children);
 // console.log(Array.from(article.children));
          //article.childre -> os filhos de article (5) [h2, p, p, p, div]
-Array.from(article.children).forEach(element => {
-    element.classList.add('article-element');
-});
+// Array.from(article.children).forEach(element => {
+//     element.classList.add('article-element');
+// });
 
 
 
 // ## FILHO -> PAI
 // ## CHILDREN -> PARENTS
 
-const title = document.querySelector('h2');
+// const title = document.querySelector('h2');
 //retorna o PAI do h2
 // console.log(title.parentElement);
 
@@ -1560,3 +1560,44 @@ const title = document.querySelector('h2');
 // SABER QUAL O IRMÃO ANTERIOR (do h2)
 // retorna NULL se não houver irmao anterior, se for o primeiro filho.
 // console.log(title.previousElementSibling);
+
+
+
+
+
+
+// AULA 03-03 - Eventos de clique
+
+/**
+ *  # EVENTLISTENER 
+ *  @ addEventListener('click')
+ *   -> 'escuta' o evento
+ * 
+ *  @ ANOTAR SOBRE TARGET  ############################################ ____ AQUII A
+ * 
+ */
+
+
+// ADICIONANDO EVENT NO BOTÃO BUTTON (E EM TUDO KKK)
+
+
+// 1 - FAZER UMA QUERY NO DOM PARA OBTER A REFERENCIA DO ELEMENTO NA QUAL QUEREMOS QUE O EVENTO ACONTEÇA
+// 2 - ADICIONAR NESSE ELEMENTO UM EVENTLISTENER
+//    -> ESCUTAR O EVENTO EM UM ELEMENTO ESPECIFICO
+// 3 - IMPLEMENTAR UMA FUNÇAO DE CALLBACK QUE VAI SER EXECUTADA QUANDO O EVENTO ACONTECER
+
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    
+    console.log('clicled')
+});
+
+const lis = document.querySelectorAll('li');
+
+lis.forEach(li => {
+    li.addEventListener('click', event => {
+        console.log(event.target);
+    })
+})
