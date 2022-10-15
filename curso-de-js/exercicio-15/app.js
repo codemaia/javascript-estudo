@@ -80,6 +80,8 @@ const videos = [{
   length: '00:02:55'
 }];
 
+//ja possuimos a referencia da 'ul' no inicio do script
+
 
 const button = document.querySelector('button');
 
@@ -104,3 +106,17 @@ button.addEventListener('click', () => {
   - Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
     sejam removidos.
 */
+
+
+//ja possuimos a referencia do h1 mais a cima do script
+
+h1.addEventListener('click', event => {
+    // console.log(event.target);
+    const body = document.querySelector('body');
+    // body.remove();
+    console.log(body.children);
+    Array.from(body.children).forEach(children => {
+      children.remove();
+    })
+    
+});
