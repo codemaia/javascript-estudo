@@ -51,6 +51,15 @@ const h1 = document.querySelector('h1');
     exibida no console.
 */
 
+const lis = document.querySelectorAll('li');
+// console.log(lis);
+lis.forEach(li => {
+  li.addEventListener('click', event => {
+    console.log(event.target);
+  });
+});
+
+
 
 
 /*
