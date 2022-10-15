@@ -1572,8 +1572,9 @@ const article = document.querySelector('article');
  *  # EVENTLISTENER 
  *  @ addEventListener('click')
  *   -> 'escuta' o evento
- * 
- *  @ ANOTAR SOBRE TARGET  ############################################ ____ AQUII A
+ *  
+ *    #Na callback do click, ou seja o 'event' é disponibilizado uma propriedade chamda target como a baixo.
+ *  @ event.target -> PEGA O ELEMENTO QUE FOI CLICADO
  * 
  */
 
@@ -1598,6 +1599,8 @@ const lis = document.querySelectorAll('li');
 
 lis.forEach(li => {
     li.addEventListener('click', event => {
-        console.log(event.target);
-    })
-})
+        const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+
+        clickedElement.style.textDecoration = 'line-through';
+    });
+});
