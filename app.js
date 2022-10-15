@@ -1588,19 +1588,78 @@ const article = document.querySelector('article');
 // 3 - IMPLEMENTAR UMA FUNÇAO DE CALLBACK QUE VAI SER EXECUTADA QUANDO O EVENTO ACONTECER
 
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', () => {
+// button.addEventListener('click', () => {
     
-    console.log('clicled')
-});
+//     console.log('clicled')
+// });
 
-const lis = document.querySelectorAll('li');
+// const lis = document.querySelectorAll('li');
 
-lis.forEach(li => {
-    li.addEventListener('click', event => {
-        const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+// lis.forEach(li => {
+//     li.addEventListener('click', event => {
+//         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+//         clickedElement.style.textDecoration = 'line-through';
 
-        clickedElement.style.textDecoration = 'line-through';
-    });
-});
+//     });
+// });
+
+
+
+
+
+
+
+// AULA 03-04 - Criando e removendo  elementos do DOM
+
+/**
+ *   #recebe como paramentro o elemento que queremos criar
+ *    @ append(li) -> ADICIONA O ELEMENTO AO FINAL / no ultimo filho
+ *    @ prepend(li) -> ADICIONA O ELEMENTO NO INICIO / como primeiro filho.
+ * 
+ *    1 - CRIA O ELEMENTO
+ *         const li = document.createElement('li');
+ * 
+ *    2 - Setta o conteudo e os atributos do elemento
+ *         li.textContent = 'Novo item';
+ * 
+ *    3 - Adiciona como primeiro ou ultimo elemento filho no DOM
+ *         ul.prepend(li);
+ *  
+ * 
+ */
+
+
+const ul = document.querySelector('ul');
+// ul.remove();
+
+
+ const lis = document.querySelectorAll('li');
+
+ lis.forEach(li => {
+     li.addEventListener('click', event => {
+         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+
+       //clickedElement.style.textDecoration = 'line-through';
+         clickedElement.remove(); //-> remover o elemento
+     });
+ });
+
+
+ //ADICIONANDO EVENTO NO BUTTON
+
+ const button = document.querySelector('button');
+
+ button.addEventListener('click', () => {
+    //1
+    const li = document.createElement('li');
+    //2
+    li.textContent = 'Novo item';
+    //3
+    ul.append(li);
+
+ });
+
+
+ 
