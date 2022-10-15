@@ -12,7 +12,7 @@ Array.from(ul.children).forEach(element => {
   element.classList.add('video');
 });
 
-console.log(ul);
+// console.log(ul);
 
 /*
   02
@@ -21,6 +21,8 @@ console.log(ul);
     e exiba-o no console;
 */
 
+const h2 = document.querySelector('h2');
+// console.log(h2.parentElement);
 
 
 /*
@@ -29,6 +31,8 @@ console.log(ul);
   - Descubra quem é o próximo elemento irmão do h1 e exiba-o no console;
 */
 
+const h1 = document.querySelector('h1');
+// console.log(h1.nextElementSibling);
 
 
 /*
@@ -37,6 +41,7 @@ console.log(ul);
   - Descubra quem é o irmão anterior da ul e exiba-o no console;
 */
 
+// console.log(ul.previousElementSibling);
 
 
 /*
