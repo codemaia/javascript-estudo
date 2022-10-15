@@ -1493,3 +1493,70 @@ const paragraphs = document.querySelectorAll('p');
 // title.classList.toggle('teste');
 // //se chamado mais uma vez REMOVE a class
 // title.classList.toggle('teste');
+
+
+
+
+
+
+
+// AULA 03-02 - Parents, children e siblings
+
+/**
+ *              HTML 
+ *            /         \
+ *          HEAD          BODY
+ *          /       /      |      \
+ *        title   h1  div(parent)  div -> SIBLINGS (elementos no mesmo nivel, no mesmo pai direto)
+ *        texts nodes   \
+ *                      / \
+ *       text node ->  h1  p -> text node
+ *                      \  /
+ *                      (childrens)
+ * 
+ *  ## PEGAR OS CHILDRENS
+ *  @ article.children
+ * 
+ * 
+ *  ## CONVERTER HTMLCOLLECTION PARA ARRAY!
+ *  @ Array.from('ARGUMENTO')
+ *      -> const article = documento.querySelector('article);
+ *      -> console.log(Array.from(article.children));
+ * 
+ * 
+ */    
+
+
+const article = document.querySelector('article');
+
+// ## PAI -> FILHO
+// ## PARENTS -> CHILDREN
+
+// console.log(article.children);
+// console.log(Array.from(article.children));
+         //article.childre -> os filhos de article (5) [h2, p, p, p, div]
+Array.from(article.children).forEach(element => {
+    element.classList.add('article-element');
+});
+
+
+
+// ## FILHO -> PAI
+// ## CHILDREN -> PARENTS
+
+const title = document.querySelector('h2');
+//retorna o PAI do h2
+// console.log(title.parentElement);
+
+
+//retorna o PAI do PAI (PAI DO article);
+// console.log(title.parentElement.parentElement);
+
+
+// SABER QUAL O PROXIMO IRMÃO (SIBLINGS)
+// console.log(title.nextElementSibling);
+
+
+// SABER QUAL O IRMÃO ANTERIOR (do h2)
+// retorna NULL se não houver irmao anterior, se for o primeiro filho.
+// console.log(title.previousElementSibling);
