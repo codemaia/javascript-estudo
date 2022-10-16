@@ -1698,8 +1698,28 @@ const article = document.querySelector('article');
 
 // AULA 04-02 - Event bubbling e event delegation
 /**
+ * #Event bubbling - Borbulhamento de eventos
+ *  @ O evento é disparado/iniciado target do evento, ou seja, onde foi 'cliclado' ou chamado um evento
+ *    e é propagado até o TOPO do DOM.
+ *  Ex:
+ *      no nosso estudo temos varias <li> dentro de um <ul>
+ *      o event target é disparado na <li> e ira se propagar para o PAI 
+ *      no caso a <ul> verificando se há eventListener na mesma, 
+ *      caso tenha ira disparar a função de callback do evento, 
+ *      depois irá subir novamente do <ul> para o PAI, 
+ *      no caso o <body> e se houver eventos lá irá dispara-los.
+ * 
+ *  @ Para evitar a propagação do event podemos adicionar um
+ *  @ event.stopPropagation() na função de callback principal para que não
+ *                            se propague para os PAIS.
  * 
  * 
+ * 
+ *  #Event Delegation
+ *    @ Adicionamos o event ao PAI <ul>, mesmo clicando nas <li> que são 
+ *      filhas, o event target é disparado e propagado para o PAI <ul>
+ *  
+ *    @ devemos checar se realmente a TAG é a LI, utilizando .tagName
  * 
  */
 
@@ -1719,16 +1739,31 @@ button.addEventListener('click', () => {
  });
 
 
-const lis = document.querySelectorAll('li');
+// const lis = document.querySelectorAll('li');
 
- lis.forEach(li => {
-     li.addEventListener('click', event => {
-         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+//  lis.forEach(li => {
+//      li.addEventListener('click', event => {
+//          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+         
+//          console.log('CLICOU NA LI');
+        
+//          event.stopPropagation(); //-> EVITA QUE O EVENTO SE PROPAGUE PARA O PAI
+//                                  //NO CASO, PARA A <ul>
+//         //clickedElement.style.textDecoration = 'line-through';
+//          clickedElement.remove(); //-> remover o elemento
+//      }); 
+//  });
 
-       //clickedElement.style.textDecoration = 'line-through';
-         clickedElement.remove(); //-> remover o elemento
-     });
+
+//Exemplo de Event bubbling and Event delegation
+ ul.addEventListener('click', event => {
+    const clickedElement = event.target; //PEGANDO O target para saber onde foi clicado
+    
+    if (clickedElement.tagName === 'LI') { // prop tagName para indicar a tag que queremos a ação
+        clickedElement.remove();
+    };
  });
+ 
 
 
 
