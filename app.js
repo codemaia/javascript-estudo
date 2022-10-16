@@ -1665,3 +1665,25 @@ const article = document.querySelector('article');
 
 
  
+
+// AULA 04-01s - destructuring em parâmetros de funções
+/**
+ *  #DESTRUCTURING OBJETOS 
+ *  @ foi passado como parametro da função o
+ *    mesmo nome das propriedades do objeto 'objTeste'
+ *    utilizando ({name, job}) para assim se referenciar
+ *    as propriedades do objeto. É necessário que tenham
+ *    os mesmos nomes.
+ */
+
+
+// const objTeste = {
+//     name: 'Lili',
+//     job: 'Ser linda'
+// }
+
+// const showNameAndJob = ({name, job}) => {
+//     console.log(name, job);
+// }
+
+// showNameAndJob(objTeste)

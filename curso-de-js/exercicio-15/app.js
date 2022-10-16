@@ -7,12 +7,16 @@
 */
 
 const ul = document.querySelector('ul');
+const lis = Array.from(ul.children);
 
-Array.from(ul.children).forEach(element => {
+const insertVideoClass = element => {
   element.classList.add('video');
-});
+}
 
-// console.log(ul);
+lis.forEach(insertVideoClass);
+
+// console.log({ul, lis});
+// console.log(lis);
 
 /*
   02
@@ -51,13 +55,18 @@ const h1 = document.querySelector('h1');
     exibida no console.
 */
 
-const lis = document.querySelectorAll('li');
-// console.log(lis);
-lis.forEach(li => {
-  li.addEventListener('click', event => {
-    console.log(event.target);
-  });
-});
+// const lis = document.querySelectorAll('li');
+// console.log(lis2);
+
+const showClickedLi = event => {
+  console.log(event.target);
+}
+
+const addClickEvent = li => {
+  li.addEventListener('click', showClickedLi);
+}
+
+lis.forEach(addClickEvent);
 
 
 
@@ -82,7 +91,7 @@ const videos = [{
 
 //ja possuimos a referencia da 'ul' no inicio do script
 
-
+/* my resolution
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
@@ -97,6 +106,25 @@ button.addEventListener('click', () => {
     });
 
 });
+*/
+
+//RESOLUÇÃO PROFESSOR + DESTRUCTURING EM PARAMETROS DE FUNÇÕES
+
+//destructuring
+const insertVideoLi = ({ name, length }) => {
+  ul.innerHTML += `<li>${name}</li>`
+}
+
+const handleClickButton = () => {
+
+  videos.forEach(insertVideoLi);
+  
+};
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', handleClickButton);
+
 
 
 
@@ -110,13 +138,22 @@ button.addEventListener('click', () => {
 
 //ja possuimos a referencia do h1 mais a cima do script
 
-h1.addEventListener('click', event => {
-    // console.log(event.target);
-    const body = document.querySelector('body');
-    // body.remove();
-    console.log(body.children);
-    Array.from(body.children).forEach(children => {
-      children.remove();
-    })
+// h1.addEventListener('click', event => {
+//     // console.log(event.target);
+//     const body = document.querySelector('body');
+//     // body.remove();
+//     // console.log(body.children);
+//     Array.from(body.children).forEach(children => {
+//       children.remove();
+//     })
     
-});
+// });
+
+
+//RESOLUÇÃO PROFESSOR
+
+// const body = document.body;
+
+// h1.addEventListener('click', () => {
+//   body.innerHTML = '';
+// });
