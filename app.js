@@ -1666,6 +1666,8 @@ const article = document.querySelector('article');
 
  
 
+
+
 // AULA 04-01s - destructuring em parâmetros de funções
 /**
  *  #DESTRUCTURING OBJETOS 
@@ -1677,13 +1679,60 @@ const article = document.querySelector('article');
  */
 
 
-const objTeste = {
-    name: 'Lili',
-    job: 'Ser linda'
-}
+// const objTeste = {
+//     name: 'Lili',
+//     job: 'Ser linda'
+// }
 
-const showNameAndJob = ({name, job}) => {
-    console.log(name, job);
-}
+// const showNameAndJob = ({name, job}) => {
+//     console.log(name, job);
+// }
 
-showNameAndJob(objTeste)
+// showNameAndJob(objTeste)
+
+
+
+
+
+
+
+// AULA 04-02 - Event bubbling e event delegation
+/**
+ * 
+ * 
+ * 
+ */
+
+
+
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    //1
+    const li = document.createElement('li');
+    //2
+    li.textContent = 'Novo item';
+    //3
+    ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
+
+ });
+
+
+const lis = document.querySelectorAll('li');
+
+ lis.forEach(li => {
+     li.addEventListener('click', event => {
+         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+
+       //clickedElement.style.textDecoration = 'line-through';
+         clickedElement.remove(); //-> remover o elemento
+     });
+ });
+
+
+
+
+
+
+
