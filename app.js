@@ -1677,13 +1677,13 @@ const article = document.querySelector('article');
  */
 
 
-// const objTeste = {
-//     name: 'Lili',
-//     job: 'Ser linda'
-// }
+const objTeste = {
+    name: 'Lili',
+    job: 'Ser linda'
+}
 
-// const showNameAndJob = ({name, job}) => {
-//     console.log(name, job);
-// }
+const showNameAndJob = ({name, job}) => {
+    console.log(name, job);
+}
 
-// showNameAndJob(objTeste)
+showNameAndJob(objTeste)
