@@ -1725,45 +1725,53 @@ const article = document.querySelector('article');
 
 
 
-const ul = document.querySelector('ul');
-const button = document.querySelector('button');
+// const ul = document.querySelector('ul');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', () => {
-    //1
-    const li = document.createElement('li');
-    //2
-    li.textContent = 'Novo item';
-    //3
-    ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
+// button.addEventListener('click', () => {
+//     //1
+//     const li = document.createElement('li');
+//     //2
+//     li.textContent = 'Novo item';
+//     //3
+//     ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
 
- });
-
-
-// const lis = document.querySelectorAll('li');
-
-//  lis.forEach(li => {
-//      li.addEventListener('click', event => {
-//          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
-         
-//          console.log('CLICOU NA LI');
-        
-//          event.stopPropagation(); //-> EVITA QUE O EVENTO SE PROPAGUE PARA O PAI
-//                                  //NO CASO, PARA A <ul>
-//         //clickedElement.style.textDecoration = 'line-through';
-//          clickedElement.remove(); //-> remover o elemento
-//      }); 
 //  });
 
 
-//Exemplo de Event bubbling and Event delegation
- ul.addEventListener('click', event => {
-    const clickedElement = event.target; //PEGANDO O target para saber onde foi clicado
+// // const lis = document.querySelectorAll('li');
+
+// //  lis.forEach(li => {
+// //      li.addEventListener('click', event => {
+// //          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+         
+// //          console.log('CLICOU NA LI');
+        
+// //          event.stopPropagation(); //-> EVITA QUE O EVENTO SE PROPAGUE PARA O PAI
+// //                                  //NO CASO, PARA A <ul>
+// //         //clickedElement.style.textDecoration = 'line-through';
+// //          clickedElement.remove(); //-> remover o elemento
+// //      }); 
+// //  });
+
+
+// //Exemplo de Event bubbling and Event delegation
+//  ul.addEventListener('click', event => {
+//     const clickedElement = event.target; //PEGANDO O target para saber onde foi clicado
     
-    if (clickedElement.tagName === 'LI') { // prop tagName para indicar a tag que queremos a ação
-        clickedElement.remove();
-    };
- });
+//     if (clickedElement.tagName === 'LI') { // prop tagName para indicar a tag que queremos a ação
+//         clickedElement.remove();
+//     };
+//  });
  
+
+
+
+
+
+// AULA 04-03 - Mais eventos do DOM
+
+
 
 
 
