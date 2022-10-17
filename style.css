@@ -1,0 +1,33 @@
+/* AULA 03-03 - Eventos de clique  */
+ul {
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    max-width: 200px;
+    padding: 8px;
+    margin: 8px 0;
+    background: #eee;
+    border: 1px dotted #ddd;
+}
+
+
+
+
+
+
+/* NÃO LEMBRO A AULA KKKK
+
+.error {
+    padding: 10px;
+    color: red;
+    border: 1px dotted crimson;
+}
+
+.success {
+    padding: 10px;
+    color: green;
+    border: 1px dotted green;
+}
+*/
