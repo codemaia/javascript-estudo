@@ -1588,19 +1588,194 @@ const article = document.querySelector('article');
 // 3 - IMPLEMENTAR UMA FUNÇAO DE CALLBACK QUE VAI SER EXECUTADA QUANDO O EVENTO ACONTECER
 
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', () => {
+// button.addEventListener('click', () => {
     
-    console.log('clicled')
-});
+//     console.log('clicled')
+// });
 
-const lis = document.querySelectorAll('li');
+// const lis = document.querySelectorAll('li');
 
-lis.forEach(li => {
-    li.addEventListener('click', event => {
-        const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+// lis.forEach(li => {
+//     li.addEventListener('click', event => {
+//         const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+//         clickedElement.style.textDecoration = 'line-through';
 
-        clickedElement.style.textDecoration = 'line-through';
-    });
-});
+//     });
+// });
+
+
+
+
+
+
+
+// AULA 03-04 - Criando e removendo  elementos do DOM
+
+/**
+ *   #recebe como paramentro o elemento que queremos criar
+ *    @ append(li) -> ADICIONA O ELEMENTO AO FINAL / no ultimo filho
+ *    @ prepend(li) -> ADICIONA O ELEMENTO NO INICIO / como primeiro filho.
+ * 
+ *    1 - CRIA O ELEMENTO
+ *         const li = document.createElement('li');
+ * 
+ *    2 - Setta o conteudo e os atributos do elemento
+ *         li.textContent = 'Novo item';
+ * 
+ *    3 - Adiciona como primeiro ou ultimo elemento filho no DOM
+ *         ul.prepend(li);
+ *  
+ * 
+ */
+
+
+// const ul = document.querySelector('ul');
+// // ul.remove();
+
+// const lis = document.querySelectorAll('li');
+
+//  lis.forEach(li => {
+//      li.addEventListener('click', event => {
+//          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+
+//        //clickedElement.style.textDecoration = 'line-through';
+//          clickedElement.remove(); //-> remover o elemento
+//      });
+//  });
+
+
+//  //ADICIONANDO EVENTO NO BUTTON
+
+//  const button = document.querySelector('button');
+
+//  button.addEventListener('click', () => {
+//     //outra forma de adicionar 
+//     // ul.innerHTML += `<li>Novo item com o innerHTML</li>`;
+
+//     //1
+//     const li = document.createElement('li');
+//     //2
+//     li.textContent = 'Novo item';
+//     //3
+//     ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
+
+//  });
+
+
+ 
+
+
+
+// AULA 04-01s - destructuring em parâmetros de funções
+/**
+ *  #DESTRUCTURING OBJETOS 
+ *  @ foi passado como parametro da função o
+ *    mesmo nome das propriedades do objeto 'objTeste'
+ *    utilizando ({name, job}) para assim se referenciar
+ *    as propriedades do objeto. É necessário que tenham
+ *    os mesmos nomes.
+ */
+
+
+// const objTeste = {
+//     name: 'Lili',
+//     job: 'Ser linda'
+// }
+
+// const showNameAndJob = ({name, job}) => {
+//     console.log(name, job);
+// }
+
+// showNameAndJob(objTeste)
+
+
+
+
+
+
+
+// AULA 04-02 - Event bubbling e event delegation
+/**
+ * #Event bubbling - Borbulhamento de eventos
+ *  @ O evento é disparado/iniciado target do evento, ou seja, onde foi 'cliclado' ou chamado um evento
+ *    e é propagado até o TOPO do DOM.
+ *  Ex:
+ *      no nosso estudo temos varias <li> dentro de um <ul>
+ *      o event target é disparado na <li> e ira se propagar para o PAI 
+ *      no caso a <ul> verificando se há eventListener na mesma, 
+ *      caso tenha ira disparar a função de callback do evento, 
+ *      depois irá subir novamente do <ul> para o PAI, 
+ *      no caso o <body> e se houver eventos lá irá dispara-los.
+ * 
+ *  @ Para evitar a propagação do event podemos adicionar um
+ *  @ event.stopPropagation() na função de callback principal para que não
+ *                            se propague para os PAIS.
+ * 
+ * 
+ * 
+ *  #Event Delegation
+ *    @ Adicionamos o event ao PAI <ul>, mesmo clicando nas <li> que são 
+ *      filhas, o event target é disparado e propagado para o PAI <ul>
+ *  
+ *    @ devemos checar se realmente a TAG é a LI, utilizando .tagName
+ * 
+ */
+
+
+
+// const ul = document.querySelector('ul');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () => {
+//     //1
+//     const li = document.createElement('li');
+//     //2
+//     li.textContent = 'Novo item';
+//     //3
+//     ul.append(li); //-> ADICIONANDO O ELEMENTO NO PAI;
+
+//  });
+
+
+// // const lis = document.querySelectorAll('li');
+
+// //  lis.forEach(li => {
+// //      li.addEventListener('click', event => {
+// //          const clickedElement = event.target //PEGAR O ELEMENTO QUE FOI CLICADO
+         
+// //          console.log('CLICOU NA LI');
+        
+// //          event.stopPropagation(); //-> EVITA QUE O EVENTO SE PROPAGUE PARA O PAI
+// //                                  //NO CASO, PARA A <ul>
+// //         //clickedElement.style.textDecoration = 'line-through';
+// //          clickedElement.remove(); //-> remover o elemento
+// //      }); 
+// //  });
+
+
+// //Exemplo de Event bubbling and Event delegation
+//  ul.addEventListener('click', event => {
+//     const clickedElement = event.target; //PEGANDO O target para saber onde foi clicado
+    
+//     if (clickedElement.tagName === 'LI') { // prop tagName para indicar a tag que queremos a ação
+//         clickedElement.remove();
+//     };
+//  });
+ 
+
+
+
+
+
+// AULA 04-03 - Mais eventos do DOM
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,28 @@
+<<<<<<< HEAD
 /* AULA 03-03 - Eventos de clique  */
+=======
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    background: #eee;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* AULA 04-02
+>>>>>>> ba9ef8d807df3f48d93eb44bc07b52c18453043f
 ul {
     padding: 0;
 }
 
+<<<<<<< HEAD
 li{
+=======
+li {
+>>>>>>> ba9ef8d807df3f48d93eb44bc07b52c18453043f
     list-style-type: none;
     max-width: 200px;
     padding: 8px;
@@ -12,6 +31,7 @@ li{
     border: 1px dotted #ddd;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -30,4 +50,6 @@ li{
     color: green;
     border: 1px dotted green;
 }
+=======
+>>>>>>> ba9ef8d807df3f48d93eb44bc07b52c18453043f
 */
