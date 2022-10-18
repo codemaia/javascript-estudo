@@ -1770,6 +1770,42 @@ const article = document.querySelector('article');
 
 
 // AULA 04-03 - Mais eventos do DOM
+/**
+ *  # Events:
+ *  @ copy
+ * 
+ *  @ mousemove 
+ *    - offsetX
+ *    - offsetY
+ * 
+ *  @ wheel 
+ *    - pageX ->
+ *    - pageY -> 
+ *    - evento do scroll do mouse
+ *    - ele é adicionado no proprio document. | document.addEventListener('wheel', ())
+ * 
+ *  Listagem de eventos - MDN
+ *  https://developer.mozilla.org/en-US/docs/Web/Events
+ */
+
+// const paragraph = document.querySelector('.copy-me');
+
+// paragraph.addEventListener('copy', () => {
+//     console.log('texto copiado');
+// })
+
+
+// const div = document.querySelector('.box');
+
+// div.addEventListener('mousemove', event => {
+//     div.textContent = `X ${event.offsetX} | Y ${event.offsetY}`; //INSERINDO o texto com as propriedades de localização do mouse
+//     // console.log(event.offsetX, event.offsetY);
+// });
+
+
+// document.addEventListener('wheel', event => {
+//     console.log(event.pageX, event.pageY);
+// });
 
 
 
