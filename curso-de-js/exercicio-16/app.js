@@ -21,8 +21,6 @@ div.addEventListener('click', () => {
   console.log('Clicou na div.')
 })
 
-
-
 /*
   02
 
@@ -34,8 +32,6 @@ div.addEventListener('click', () => {
 // const tagName = event.target.tagName;
 // console.log(`Clicou no ${tagName}, filho da div.`); // <- 02
 
-
-
 /*
   03
 
@@ -45,9 +41,18 @@ div.addEventListener('click', () => {
 */
 
 const h2 = document.querySelector('h2');
+//div
+div.addEventListener('click', event => {
+  h2.textContent = 'Ciclou na div.'
+});
 
-h2.addEventListener()
-
+//filho div
+elementsInsideDiv.forEach(element => {
+  element.addEventListener('click', event => {
+    h2.textContent = 'Clicou em algum filho da div';
+    event.stopPropagation();
+  });
+});
 
 
 /*
@@ -57,6 +62,10 @@ h2.addEventListener()
     seja exibida no console.
 */
 
+h2.addEventListener('copy', () => {
+  console.log('Texto copiado');
+});
+
 /*
   05
 
@@ -64,6 +73,12 @@ h2.addEventListener()
     o texto que ela tem por 
     "Eixo X: COORDENADA_EIXO_X | Eixo Y: COORDENADA_EIXO_Y".
 */
+
+const divEgg = document.querySelector('.egg');
+
+divEgg.addEventListener('mousemove', event => {
+  divEgg.textContent = `Eixo X: ${event.offsetX} | Eixo Y: ${event.offsetY}`;
+});
 
 /*
   06
