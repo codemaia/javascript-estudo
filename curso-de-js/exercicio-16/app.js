@@ -31,7 +31,8 @@ div.addEventListener('click', () => {
     da div.".
 */
 
-
+// const tagName = event.target.tagName;
+// console.log(`Clicou no ${tagName}, filho da div.`); // <- 02
 
 
 
@@ -42,6 +43,10 @@ div.addEventListener('click', () => {
   - Faça com que a mensagem de clique na div e a mensagem de clique em algum
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
 */
+
+
+
+
 
 /*
   04
