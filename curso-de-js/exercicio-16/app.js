@@ -9,14 +9,18 @@ const div = document.querySelector('div')
 const elementsInsideDiv = Array.from(div.children)
 
 elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', () => {
+  element.addEventListener('click', event => {
     console.log('Clicou no filho da div.')
+    event.stopPropagation(); // <-
   })
+
 })
 
 div.addEventListener('click', () => {
   console.log('Clicou na div.')
 })
+
+
 
 /*
   02
