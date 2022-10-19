@@ -1836,8 +1836,24 @@ const article = document.querySelector('article');
 
 
 const button = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper');
 
- 
+button.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+
+//quando clicar em 'popup-close', 'popup-wrapper', 'popup-link'
+//o popup deve fechar;
+
+popup.addEventListener('click', event => {
+    // console.log(event.target.classList[0]); //retorna o nome da classe, ou seja, o primeiro item do array
+    const getClassClicked = event.target.classList[0]; //mostra a classe html clicada
+    const arrClass = ['popup-close', 'popup-wrapper', 'popup-link']; //classes que devem fechar o popup quando clicadas
+    const shouldClosePopup = arrClass.some(arrClassItem => arrClassItem === getClassClicked);
+
+    if(shouldClosePopup) { //devera retornar true se a codição do metodo .some() retornar pelo menos 1 true;
+        popup.style.display = 'none';
+    }
 
 
-
+});
