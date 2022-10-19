@@ -1817,12 +1817,27 @@ const article = document.querySelector('article');
 
 // AULA 04-04 - Desenvolvendo um popup
 /**
- * 
- * 
- * 
+ *  @ Retorna as classes filhas para poder fazer a condição dos eventos
+ *     event.target.classList[0];
+ *  
+ *  # Método de array .some()
+ *   @ .some(função com condição) -> Itera sobre o ARRAY e 
+ *                                   Retorna TRUE quando pelo menos 1 item do ARRAY
+ *                                   atender a condição informada.
+ *  
+ * roadmap
+ * 1 - pegar a referencia do button e da div do pop up
+ * 2 - fazer o popup aparecer clicando no button
+ * 3 - fazer o popup fechar clicando somente no X, 'saiba mais' ou fora do popup 
+ * 4 - pegar a referencia desses itens com o event.target.classList
  * 
  */
 
+
+
+const button = document.querySelector('button');
+
+ 
 
 
 
