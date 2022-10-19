@@ -87,6 +87,13 @@ divEgg.addEventListener('mousemove', event => {
     clicado.
 */
 
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+  divEgg.style.background = 'lightgoldenrodyellow';
+});
+
+
 /*
   07
 
