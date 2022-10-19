@@ -1820,7 +1820,7 @@ const article = document.querySelector('article');
  *  @ Retorna as classes filhas para poder fazer a condição dos eventos
  *     event.target.classList[0];
  *  
- *  # Método de array .some()
+ *  # Método de array .some() -> sempre retorna BOOLEAN;
  *   @ .some(função com condição) -> Itera sobre o ARRAY e 
  *                                   Retorna TRUE quando pelo menos 1 item do ARRAY
  *                                   atender a condição informada.
