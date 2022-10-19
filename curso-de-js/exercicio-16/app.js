@@ -44,7 +44,9 @@ div.addEventListener('click', () => {
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
 */
 
+const h2 = document.querySelector('h2');
 
+h2.addEventListener()
 
 
 
