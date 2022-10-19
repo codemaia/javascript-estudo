@@ -10,7 +10,8 @@ const elementsInsideDiv = Array.from(div.children)
 
 elementsInsideDiv.forEach(element => {
   element.addEventListener('click', event => {
-    console.log('Clicou no filho da div.')
+    const tagName = event.target.tagName;
+    console.log(`Clicou no ${tagName}, filho da div.`); // <- 02
     event.stopPropagation(); // <-
   })
 
@@ -29,6 +30,10 @@ div.addEventListener('click', () => {
     exibida no console seja "Clicou no NOME_DA_TAG_COM_LETRAS_MINÚSCULAS, filho
     da div.".
 */
+
+
+
+
 
 /*
   03
