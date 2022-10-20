@@ -115,17 +115,12 @@ const people = [
   { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
 ]
 
-let arrProfession = [];
+const hasProfession = people.some(person => person.profession === 'Front-end developer');
+console.log(hasProfession);
 
-const professionPeople = people.forEach(person => {
-  arrProfession.push(person.profession);
-});
-console.log(professionPeople);
-console.log(people[0]);
+if(hasProfession) {
+  console.log("O array people contém, no mínimo, um(a) Front-end developer.");
+}
 
-// const haveFrontEnd =  people.profession.some(profession => profession === 'Front-end developer');
-// console.log(haveFrontEnd);
 
-// if(haveFrontEnd) {
-//   console.log("O array people contém, no mínimo, um(a) Front-end developer.");
-// }
+
