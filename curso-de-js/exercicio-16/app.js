@@ -121,6 +121,7 @@ const professionPeople = people.forEach(person => {
   arrProfession.push(person.profession);
 });
 console.log(professionPeople);
+console.log(people[0]);
 
 // const haveFrontEnd =  people.profession.some(profession => profession === 'Front-end developer');
 // console.log(haveFrontEnd);
