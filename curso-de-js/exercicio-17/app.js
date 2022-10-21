@@ -55,7 +55,7 @@ const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 
 
 const regexB99message = /[B9-9]{3}/;
 
-console.log(regexB99message.test(B99message));
+// console.log(regexB99message.test(B99message));
 
 
 /*
@@ -69,7 +69,8 @@ const word = 'O que a NASA fotografou no dia do seu aniversário?'
 const NASARegex = /^[A-Z]{4}$/
 const NASAResult = NASARegex.test(word)
 
-// console.log(NASAResult)
+console.log(NASAResult)
+
 
 /*
   06
