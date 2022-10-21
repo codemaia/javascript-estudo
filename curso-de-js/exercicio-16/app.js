@@ -8,18 +8,19 @@
 const div = document.querySelector('div')
 const elementsInsideDiv = Array.from(div.children)
 
-elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', event => {
-    const tagName = event.target.tagName;
-    console.log(`Clicou no ${tagName}, filho da div.`); // <- 02
-    event.stopPropagation(); // <-
-  })
+// elementsInsideDiv.forEach(element => {
+//   element.addEventListener('click', event => {
+//     const tagName = event.target.tagName;
+//     // console.log(`Clicou no ${String(tagName).toLowerCase()}, filho da div.`); 
+//     console.log(`Clicou no ${tagName.toLowerCase()}, filho da div.`);// <- 02
+//     event.stopPropagation(); // <-
+//   })
 
-})
+// })
 
-div.addEventListener('click', () => {
-  console.log('Clicou na div.')
-})
+// div.addEventListener('click', () => {
+//   console.log('Clicou na div.')
+// })
 
 /*
   02
@@ -29,8 +30,9 @@ div.addEventListener('click', () => {
     da div.".
 */
 
-// const tagName = event.target.tagName;
-// console.log(`Clicou no ${tagName}, filho da div.`); // <- 02
+    // const tagName = event.target.tagName;
+    // console.log(`Clicou no ${String(tagName).toLowerCase()}, filho da div.`); 
+    // console.log(`Clicou no ${tagName.toLowerCase()}, filho da div.`);// <- 02
 
 /*
   03
@@ -41,18 +43,30 @@ div.addEventListener('click', () => {
 */
 
 const h2 = document.querySelector('h2');
+
+const showClickMessage = ({ target }) => {
+  const clickedElementName = target.tagName.toLowerCase();
+  
+  if (clickedElementName === 'div') {
+    h2.textContent = 'Ciclou na div.'
+    return
+  }
+
+  h2.textContent = `Clicou no ${clickedElementName}, filho da div.`;
+
+}
 //div
-div.addEventListener('click', event => {
-  h2.textContent = 'Ciclou na div.'
-});
+div.addEventListener('click', showClickMessage);
+
 
 //filho div
-elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', event => {
-    h2.textContent = 'Clicou em algum filho da div';
-    event.stopPropagation();
-  });
-});
+// elementsInsideDiv.forEach(element => {
+//   element.addEventListener('click', event => {
+//     const tagName = event.target.tagName;
+//     h2.textContent = `Clicou no ${tagName.toLowerCase()}, filho da div.`;
+//     event.stopPropagation();
+//   });
+// });
 
 
 /*
@@ -61,10 +75,11 @@ elementsInsideDiv.forEach(element => {
   - Faça com que quando o texto do h2 for copiado, a mensagem "Texto copiado!"  
     seja exibida no console.
 */
-
-h2.addEventListener('copy', () => {
+const logCopyMessage = () => {
   console.log('Texto copiado');
-});
+}
+
+h2.addEventListener('copy', logCopyMessage);
 
 /*
   05
@@ -76,9 +91,12 @@ h2.addEventListener('copy', () => {
 
 const divEgg = document.querySelector('.egg');
 
-divEgg.addEventListener('mousemove', event => {
-  divEgg.textContent = `Eixo X: ${event.offsetX} | Eixo Y: ${event.offsetY}`;
-});
+const showCoordinates = ({ offsetX, offsetY}) => {
+  divEgg.textContent = `Eixo X: ${offsetX} | Eixo Y: ${offsetY}`;
+}
+
+divEgg.addEventListener('mousemove', showCoordinates);
+
 
 /*
   06
@@ -88,10 +106,11 @@ divEgg.addEventListener('mousemove', event => {
 */
 
 const button = document.querySelector('button');
-
-button.addEventListener('click', () => {
+const changeEggColor = () => {
   divEgg.style.background = 'lightgoldenrodyellow';
-});
+}
+
+button.addEventListener('click', changeEggColor);
 
 
 /*
@@ -115,7 +134,7 @@ const people = [
   { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
 ]
 
-const hasProfession = people.some(person => person.profession === 'Front-end developer');
+const hasProfession = people.some(({ profession }) => profession === 'Front-end developer');
 console.log(hasProfession);
 
 if(hasProfession) {
