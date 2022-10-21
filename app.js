@@ -1857,3 +1857,59 @@ const article = document.querySelector('article');
 
 
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+// ETAPA 06 - EVENTOS EM FORMULÁRIOS ##################################################################################
+
+//AULA 01-02 -> EVENTOS EM FORMULÁRIOS
+/**
+ *  Subimit event:
+ *  - capturar informações do usuário
+ *      ex: email e senha
+ *  
+ */
+
+
+
+
+//AULA 01-03 -> O EVENTO SUBMIT
+/**
+ *  # adicionamos o evento submit no FORM!
+ *      
+ *      @ event.preventDefault() -> para a pagina nao recarregar e conseguirmos capturar as informações
+ *  
+ *  # podemos pegar o valor do input usando :
+ *      @ a referencia do input + value -> input.value
+ *      @ form.username.value -> username sendo o ID/name no HTML
+ *      @ event.target.username.value -> para usar no REACT
+ * 
+ */
+
+
+const form = document.querySelector('.signup-form');
+// const usernameInput = document.querySelector('#username');
+
+form.addEventListener('submit', event => {
+    event.preventDefault(); // -> para a pagina nao recarregar
+    
+    //pegando o valor do imput: 
+    // console.log(usernameInput.value);
+    // ou 
+    console.log(form.username.value);
+    // ou assim para react
+    // console.log(event.target.username.value);
+})
+
+
+
+
