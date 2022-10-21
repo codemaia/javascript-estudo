@@ -5,7 +5,7 @@
 */
 
 const form = document.querySelector('form');
-console.log(form);
+// console.log(form);
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -22,7 +22,7 @@ form.addEventListener('submit', event => {
 */
 
 
-// FEITO
+// FEITO :D
 
 
 /*
@@ -33,6 +33,13 @@ form.addEventListener('submit', event => {
   - Exiba no console o boolean no qual este teste resulta.
 */
 
+const p = document.querySelector('p');
+const pTextContent = p.textContent;
+console.log(pTextContent);
+
+const myRegex = /documentation/ ;
+
+console.log(myRegex.test(pTextContent));
 
 
 
@@ -57,7 +64,7 @@ const word = 'O que a NASA fotografou no dia do seu aniversário?'
 const NASARegex = /^[A-Z]{4}$/
 const NASAResult = NASARegex.test(word)
 
-console.log(NASAResult)
+// console.log(NASAResult)
 
 /*
   06
