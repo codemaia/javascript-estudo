@@ -4,12 +4,26 @@
   - No envio do form, faça com que a página não seja recarregada.
 */
 
+const form = document.querySelector('form');
+console.log(form);
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  console.log(form.input.value);
+})
+
+
 /*
   02
 
   - No envio do form obtenha, através do objeto event, o texto inserido no  
     input e exiba-o no console.
 */
+
+
+// FEITO
+
 
 /*
   03
@@ -18,6 +32,9 @@
     index.html;
   - Exiba no console o boolean no qual este teste resulta.
 */
+
+
+
 
 /*
   04
