@@ -35,11 +35,11 @@ form.addEventListener('submit', event => {
 
 const p = document.querySelector('p');
 const pTextContent = p.textContent;
-console.log(pTextContent);
+// console.log(pTextContent);
 
 const myRegex = /documentation/ ;
 
-console.log(myRegex.test(pTextContent));
+// console.log(myRegex.test(pTextContent));
 
 
 
@@ -51,7 +51,12 @@ console.log(myRegex.test(pTextContent));
   - Teste se o match aconteceu e exiba o resultado no console.
 */
 
-const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta'
+const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta';
+
+const regexB99message = /[B9-9]{3}/;
+
+console.log(regexB99message.test(B99message));
+
 
 /*
   05
