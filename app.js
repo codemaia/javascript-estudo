@@ -1896,20 +1896,94 @@ const article = document.querySelector('article');
  */
 
 
-const form = document.querySelector('.signup-form');
-// const usernameInput = document.querySelector('#username');
+// const form = document.querySelector('.signup-form');
+// // const usernameInput = document.querySelector('#username');
 
-form.addEventListener('submit', event => {
-    event.preventDefault(); // -> para a pagina nao recarregar
-    
-    //pegando o valor do imput: 
-    // console.log(usernameInput.value);
-    // ou 
-    console.log(form.username.value);
-    // ou assim para react
-    // console.log(event.target.username.value);
-})
+// form.addEventListener('submit', event => {
+//     event.preventDefault(); // -> para a pagina nao recarregar
 
-
+//     //pegando o valor do imput: 
+//     // console.log(usernameInput.value);
+//     // ou 
+//     console.log(form.username.value);
+//     // ou assim para react
+//     // console.log(event.target.username.value);
+// })
 
 
+
+
+
+
+//AULA 01-04 -> EXPRESSOES REGULARES
+/**
+ * 
+ *  DOC MDN: 
+ *    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+ * 
+ *    https://regex101.com/
+ * 
+ * 
+ * ^javascript$ -> O ^ e $ significa que não pode haver caracteres na frente ou depois da regex
+ *                 ou seja, neste caso, somente se a palavra for javascript ira dar MATCH.
+ * 
+ * [] -> caracter set -> da MATCH com qualquer caracter que a gente inserir dentro.
+ * ^[a-z]$ -> dar MATCH com qualquer caracter de 'a' a 'z' minusculo e sendo SOMENTE 1 caracter
+ * ^[a-zA-Z]$ -> agora da MATCH com qualquer caracter de 'a' ou 'A' a 'z' ou 'Z' sendo somente 1 caracter
+ * ^[a-zA-Z]{6,10}$ -> as {} representa um quantificador que presenta a quantidade de caracteres que queremos dar MATCH
+ *                     entao agora aceitamos qualquer caracter de aA a zZ que tenham um comprimento de 6 a 10 caracteres
+ * ^[a-zA-Z0-9]{6,10}$ -> agora vamos da MATCH com qualquer caracter de aA a zZ e que tenham numeros de 0 a 9
+ *                        e que tenham um comprimento de 6 a 10 caracteres;
+ * ^.{6,10}$ -> agora com o '.' aceitamos QUALQUER caracter 'auhsd11237102730@[]]{}
+ * 
+ */
+
+
+
+
+
+//AULA 01-05 -> TESTANDO PADROES DE REGEX
+/**
+ *  # PAra testar a REGEX usamos o metodo .test que esta disponivel para regex
+ *   Ex: 
+ *     @ pattern.test(username) -> sempre retorna um boolean
+ *  
+ *  # utilizamos também o metodo search() -> ele retorna o INDEX que demos o MATCH
+ *                                           sempre retorna um valor numerico.
+ *                                           sempre que der valor negativo é porque não deu MATCH
+ *                                           sempre que retornar 0 em diante é porque demos MATCH
+ *                                           podemos utilizar também para descobrir em que indice/local deu MATCH
+ *                                           se retirarmos o ^ e $ da regex; 
+ * 
+ */
+
+
+// const form = document.querySelector('.signup-form');
+// // const usernameInput = document.querySelector('#username');
+
+// form.addEventListener('submit', event => {
+//     event.preventDefault(); // -> para a pagina nao recarregar
+
+//     //pegando o valor do imput: 
+//     // console.log(usernameInput.value);
+//     // ou 
+//     console.log(form.username.value);
+//     // ou assim para react
+//     // console.log(event.target.username.value);
+// });
+
+
+// const username = 'rogerm';
+// const pattern = /^[a-z]{6,}$/; //-> so aceita caracteres de 'a' a 'z' de no minimo 6 caracteres em diante
+
+// const isAMatch = pattern.test(username); // chamando o metodo para testar a regex
+
+// // if (isAMatch) {
+// //     console.log('o teste da regex passou =)');
+// // } else {
+// //     console.log('o teste da regex não passou =(');
+// // }
+
+
+// const result = username.search(pattern); // retornando 0 ou um numero positivo é porque deu MATCH
+// console.log(result);
