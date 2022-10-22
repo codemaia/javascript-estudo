@@ -7,10 +7,10 @@
 const form = document.querySelector('form');
 // console.log(form);
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  // console.log(inputForm);
-});
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
+//   // console.log(inputForm);
+// });
 
 
 /*
@@ -52,7 +52,7 @@ const myRegex = /documentation/ ;
 
 const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta';
 
-const regexB99message = /[B9-9]{3}/;
+const regexB99message = /[A-Z0-9]{3}/;
 
 // console.log(regexB99message.test(B99message));
 
@@ -87,19 +87,20 @@ const NASAResult = NASARegex.test(word)
 */
 
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  const regexInputForm = /^.{7}$/
-  const inputForm = form.input.value;
-  const testRegexInputForm = regexInputForm.test(inputForm);
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
+//   const regexInputForm = /^.{7,}$/
+//   const inputForm = form.input.value;
+//   const testRegexInputForm = regexInputForm.test(inputForm);
 
-  if(testRegexInputForm) {
-    console.log('O valor inserido no input é válido =)');
-  } else {
-    console.log('Valor inválido =(');
-  }
+//   if(testRegexInputForm) {
+//     console.log('O valor inserido no input é válido =)');
+//     return
+//   } 
 
-});
+//   console.log('Valor inválido =(');
+
+// });
 
 
 /*
@@ -114,4 +115,32 @@ form.addEventListener('submit', event => {
     - "eich_1961" não é um valor válido, pois contém um caractere especial.
 */
 
+const clearInput = () => {
+  input.value = ''
+  input.focus() // -> DAR FOCO NO FOMULARIO A SER PREENCHIDO
+};
+
+const logMessage = message => {
+  console.log(message);
+  clearInput();
+};
+
+const handleSubmit = event => {
+  event.preventDefault();
+
+  const input = event.target.input;
+  const regex07 = /[a-zA-Z0-9]{7,11}/;
+  const testRegex07 = regex07.test(input.value);
+
+  if (testRegex07) {
+    logMessage('O valor inserido no input é válido =)');
+    return 
+  } 
+
+  logMessage('Valor inválido =(');
+  
+  console.log(event);
+}
+
+form.addEventListener('submit', handleSubmit);
 
