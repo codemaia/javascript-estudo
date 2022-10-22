@@ -116,7 +116,7 @@ const NASAResult = NASARegex.test(word)
 */
 
 const clearInput = () => {
-  input.value = ''
+  input.value = '' // -> LIMPAR O INPUT
   input.focus() // -> DAR FOCO NO FOMULARIO A SER PREENCHIDO
 };
 
@@ -128,7 +128,7 @@ const logMessage = message => {
 const handleSubmit = event => {
   event.preventDefault();
 
-  const input = event.target.input;
+  const input = form.input; // ou event.target.input
   const regex07 = /[a-zA-Z0-9]{7,11}/;
   const testRegex07 = regex07.test(input.value);
 
@@ -139,7 +139,6 @@ const handleSubmit = event => {
 
   logMessage('Valor inválido =(');
   
-  console.log(event);
 }
 
 form.addEventListener('submit', handleSubmit);
