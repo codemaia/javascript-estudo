@@ -1987,3 +1987,51 @@ const article = document.querySelector('article');
 
 // const result = username.search(pattern); // retornando 0 ou um numero positivo é porque deu MATCH
 // console.log(result);
+
+
+
+
+
+
+
+
+//AULA 02-02 -> VALIDAÇÃO BASICA DE FORMULÁRIOS
+/**
+ * 
+ *  6 a 12 caracteres, letras maiusculas ou minusculas, sem numero e sem caracter especial
+ * 
+ * 
+ */
+
+
+
+// const form = document.querySelector('.signup-form');
+// const feedback = document.querySelector('.feedback');
+
+// form.addEventListener('submit', event => {
+//     event.preventDefault();// -> para a pagina nao recarregar
+    
+//     const inputUsername = event.target.username.value;
+//     const regex = /^[a-zA-Z]{6,12}$/;
+//     const result = regex.test(inputUsername);
+
+//     if (result) {
+//         feedback.textContent = 'username válido =D';
+//         return
+//     }
+    
+//     feedback.textContent = 'O username precisa ter de 6 a 12 caracter sem numeros e sem caracteres especiais';    
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
