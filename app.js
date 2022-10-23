@@ -2005,23 +2005,24 @@ const article = document.querySelector('article');
 
 
 
-// const form = document.querySelector('.signup-form');
-// const feedback = document.querySelector('.feedback');
+const form = document.querySelector('.signup-form');
+const feedback = document.querySelector('.feedback');
 
-// form.addEventListener('submit', event => {
-//     event.preventDefault();// -> para a pagina nao recarregar
-    
-//     const inputUsername = event.target.username.value;
-//     const regex = /^[a-zA-Z]{6,12}$/;
-//     const result = regex.test(inputUsername);
+const testUsername = username => /^[a-zA-Z]{6,12}$/.test(username);
 
-//     if (result) {
-//         feedback.textContent = 'username válido =D';
-//         return
-//     }
+form.addEventListener('submit', event => {
+    event.preventDefault();// -> para a pagina nao recarregar
     
-//     feedback.textContent = 'O username precisa ter de 6 a 12 caracter sem numeros e sem caracteres especiais';    
-// });
+    const inputUsername = event.target.username.value;
+    const result = testUsername(inputUsername);
+
+    if (result) {
+        feedback.textContent = 'username válido =D';
+        return
+    }
+    
+    feedback.textContent = 'O username precisa ter de 6 a 12 caracter sem numeros e sem caracteres especiais';    
+});
 
 
 
@@ -2033,7 +2034,24 @@ const article = document.querySelector('article');
 
 
 //AULA 02-03 -> EVENTOS DO TECLADO
+/**
+ * 
+ *   Validação de forms no front-end - MDN:
+ *   https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+ * 
+ * 
+ * 
+ */
 
 
 
+form.username.addEventListener('keyup', event => { //evento adicionado no input do html, sendo localizado pelo id='username'
+    const result = testUsername(event.target.value);
+    
+    if (result) {
+        form.username.setAttribute('class', 'success'); //usamos setAttribute pois precisamos substituir qualquer classe existente no input.
+        return
+    }
 
+    form.username.setAttribute('class', 'error');
+})
