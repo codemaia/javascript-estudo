@@ -2044,7 +2044,7 @@ form.addEventListener('submit', event => {
  */
 
 
-
+//ADICiONANDO EVENTO EM UM LUGAR ESPECIFICO (NESTE CASO NO INPUT DO FORM)
 form.username.addEventListener('keyup', event => { //evento adicionado no input do html, sendo localizado pelo id='username'
     const result = testUsername(event.target.value);
     
