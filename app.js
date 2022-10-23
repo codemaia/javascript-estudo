@@ -2032,6 +2032,8 @@ const article = document.querySelector('article');
 
 
 
-//AULA 02-02 -> VALIDAÇÃO BASICA DE FORMULÁRIOS
+//AULA 02-03 -> EVENTOS DO TECLADO
+
+
 
 
