@@ -19,7 +19,24 @@
   - Não insira o parágrafo manualmente no index.html.
   
   Dica: pesquise pelo método "insertAdjacentElement", no MDN;
+  
+  en-us:
+  https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+
+
 */
+
+const form = document.querySelector('form');
+// console.log(form);
+
+form.username.addEventListener('keyup', event => {
+  const usernameInput = event.target.value;
+  const regex = /^[a-zA-Z]{6,}$/;
+
+  
+
+});
+
 
 /*
   02

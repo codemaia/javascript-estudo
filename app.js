@@ -2054,4 +2054,4 @@ form.username.addEventListener('keyup', event => { //evento adicionado no input 
     }
 
     form.username.setAttribute('class', 'error');
-})
+});
