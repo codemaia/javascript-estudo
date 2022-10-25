@@ -27,13 +27,29 @@
 */
 
 const form = document.querySelector('form');
+const fieldset = document.querySelector('fieldset');
+const input = document.getElementById('username');
+const tempParagraph = document.createElement('p');
+// console.log(input);
 // console.log(form);
 
-form.username.addEventListener('keyup', event => {
+form.addEventListener('keyup', event => {
+  
   const usernameInput = event.target.value;
   const regex = /^[a-zA-Z]{6,}$/;
-
+  const resultRegex = regex.test(usernameInput);
   
+   
+  // console.log(usernameInput);
+  // console.log(resultRegex);<>
+      
+  if (resultRegex) {
+    tempParagraph.textContent = `Username válido`;
+    tempParagraph.setAttribute('class', 'username-success-feedback');
+    input.insertAdjacentElement('afterend', tempParagraph);
+  
+    return;
+  }
 
 });
 

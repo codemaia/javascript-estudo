@@ -3,6 +3,7 @@
   padding-top: 7.5rem;
 }
 
+/* paragrafos */
 .username-help-feedback {
   margin-bottom: 2.5rem;
   color: darkorange;
@@ -12,6 +13,8 @@
   margin-bottom: 2.5rem;
   color: green;
 }
+
+
 
 .submit-help-feedback {
   margin-bottom: 2.5rem;
