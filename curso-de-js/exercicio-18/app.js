@@ -38,18 +38,18 @@ form.addEventListener('keyup', event => {
   const usernameInput = event.target.value;
   const regex = /^[a-zA-Z]{6,}$/;
   const resultRegex = regex.test(usernameInput);
-  
-   
-  // console.log(usernameInput);
-  // console.log(resultRegex);<>
       
   if (resultRegex) {
-    tempParagraph.textContent = `Username válido`;
+    tempParagraph.textContent = 'Username válido';
     tempParagraph.setAttribute('class', 'username-success-feedback');
     input.insertAdjacentElement('afterend', tempParagraph);
   
     return;
   }
+
+  tempParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
+  tempParagraph.setAttribute('class', 'username-help-feedback');
+  input.insertAdjacentElement('afterend', tempParagraph);
 
 });
 
@@ -65,6 +65,9 @@ form.addEventListener('keyup', event => {
   - Use as classes disponíveis no arquivo style.css para colorir o parágrafo;
   - Não insira o parágrafo manualmente no index.html.
 */
+
+
+
 
 /*
   03
