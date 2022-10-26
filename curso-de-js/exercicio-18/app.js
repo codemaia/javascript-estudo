@@ -69,24 +69,23 @@ fieldset.addEventListener('keyup', event => {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const submitForm = event.target.username;
-  // const input = form.input;
-  console.log(submitForm)
-  const resultRegex = regex.test(submitForm.value);
+  const inputForm = event.target.username;
+  console.log(inputForm)
+  const resultRegex = regex.test(inputForm.value);
 
   if (resultRegex) {
     newParagraph.textContent = "Dados enviados =)"
     newParagraph.setAttribute('class', 'submit-success-feedback');
     button.insertAdjacentElement('afterend', newParagraph);
-    submitForm.value = '';
-    submitForm.focus();
+    inputForm.value = '';
+    inputForm.focus();
     return;
   }
 
   newParagraph.textContent = "Por favor, insira um username válido";
   newParagraph.setAttribute('class', 'submit-help-feedback');
   button.insertAdjacentElement('afterend', newParagraph);
-  submitForm.focus();
+  inputForm.focus();
   
 });
 
@@ -109,3 +108,4 @@ form.addEventListener('submit', event => {
         6;
     2) Pesquisar no MDN.
 */
+
