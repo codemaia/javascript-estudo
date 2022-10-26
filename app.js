@@ -1450,7 +1450,7 @@ Se o boolean é true vira false e vice e versa.
 // paragraph.classList.remove('error');
 // paragraph.classList.add('success');
 
-const paragraphs = document.querySelectorAll('p');
+// const paragraphs = document.querySelectorAll('p');
 
 // console.log(paragraphs);
 

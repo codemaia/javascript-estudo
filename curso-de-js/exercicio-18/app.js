@@ -35,7 +35,7 @@ const regex = /^[a-zA-Z]{6,}$/;
 // console.log(input);
 // console.log(form);
 
-input.addEventListener('keyup', event => {
+fieldset.addEventListener('keyup', event => {
   
   const usernameInput = event.target.value;
   const resultRegex = regex.test(usernameInput);
@@ -69,19 +69,25 @@ input.addEventListener('keyup', event => {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const submiteUsername = input.value;
-  const resultRegex = regex.test(submiteUsername);
+  const submitForm = event.target.username;
+  // const input = form.input;
+  console.log(submitForm)
+  const resultRegex = regex.test(submitForm.value);
 
   if (resultRegex) {
     newParagraph.textContent = "Dados enviados =)"
     newParagraph.setAttribute('class', 'submit-success-feedback');
     button.insertAdjacentElement('afterend', newParagraph);
+    submitForm.value = '';
+    submitForm.focus();
     return;
   }
 
-  console.log("Por favor, insira um username válido");
-
-
+  newParagraph.textContent = "Por favor, insira um username válido";
+  newParagraph.setAttribute('class', 'submit-help-feedback');
+  button.insertAdjacentElement('afterend', newParagraph);
+  submitForm.focus();
+  
 });
 
 
