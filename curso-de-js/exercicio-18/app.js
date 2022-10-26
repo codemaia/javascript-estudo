@@ -28,6 +28,7 @@
 
 const form = document.querySelector('form');
 const fieldset = document.querySelector('fieldset');
+const button = document.querySelector('button');
 const input = document.getElementById('username');
 const newParagraph = document.createElement('p');
 const regex = /^[a-zA-Z]{6,}$/;
@@ -53,7 +54,6 @@ input.addEventListener('keyup', event => {
 
 });
 
-
 /*
   02
 
@@ -72,7 +72,14 @@ form.addEventListener('submit', event => {
   const submiteUsername = input.value;
   const resultRegex = regex.test(submiteUsername);
 
-  
+  if (resultRegex) {
+    newParagraph.textContent = "Dados enviados =)"
+    newParagraph.setAttribute('class', 'submit-success-feedback');
+    button.insertAdjacentElement('afterend', newParagraph);
+    return;
+  }
+
+  console.log("Por favor, insira um username válido");
 
 
 });
