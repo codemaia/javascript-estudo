@@ -29,27 +29,27 @@
 const form = document.querySelector('form');
 const fieldset = document.querySelector('fieldset');
 const input = document.getElementById('username');
-const tempParagraph = document.createElement('p');
+const newParagraph = document.createElement('p');
+const regex = /^[a-zA-Z]{6,}$/;
 // console.log(input);
 // console.log(form);
 
-form.addEventListener('keyup', event => {
+input.addEventListener('keyup', event => {
   
   const usernameInput = event.target.value;
-  const regex = /^[a-zA-Z]{6,}$/;
   const resultRegex = regex.test(usernameInput);
       
   if (resultRegex) {
-    tempParagraph.textContent = 'Username válido';
-    tempParagraph.setAttribute('class', 'username-success-feedback');
-    input.insertAdjacentElement('afterend', tempParagraph);
+    newParagraph.textContent = 'Username válido';
+    newParagraph.setAttribute('class', 'username-success-feedback');
+    input.insertAdjacentElement('afterend', newParagraph);
   
     return;
   }
 
-  tempParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
-  tempParagraph.setAttribute('class', 'username-help-feedback');
-  input.insertAdjacentElement('afterend', tempParagraph);
+  newParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
+  newParagraph.setAttribute('class', 'username-help-feedback');
+  input.insertAdjacentElement('afterend', newParagraph);
 
 });
 
@@ -66,6 +66,16 @@ form.addEventListener('keyup', event => {
   - Não insira o parágrafo manualmente no index.html.
 */
 
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const submiteUsername = input.value;
+  const resultRegex = regex.test(submiteUsername);
+
+  
+
+
+});
 
 
 
