@@ -126,30 +126,32 @@ form.addEventListener('submit', event => {
 
 const arr1 = [1, 2, 3];
 
+
+
 const some = (arr = [], exp) => {
-    const isTrue = true;
-    const isFalse = false;
-    console.log(exp);
+  const isTrue = true;
+  const isFalse = false;
+  console.log(exp);
 
-    // for(let i = 0; i < arr.length; i++) {
-    //   if (arr[i] > 2) {
-    //     return console.log(isTrue);
-    //     break;
-    //   }
+  for(let i = 0; i < arr.length; i++) {
+    // console.log(exp(arr[i]));
+    if(exp(arr[i])) {
+      return console.log(isTrue);
+      break;
+    }
+  }
 
-    // }
+  console.log(isFalse);
+
   
-    // console.log(isFalse);
-
-    arr.forEach(item => {
-      if (item === 0) {
-        console.log(isTrue);
-      }
-    });
-
-    console.log(isFalse)
-
 }
 
-some([1, 2, 3], item => item > 2);
+some([1, 3, 5], item => item === 0);
 
+
+// const testeFunc = (n) => {
+//   return n > 2;
+// }
+
+
+// console.log(testeFunc(1));
