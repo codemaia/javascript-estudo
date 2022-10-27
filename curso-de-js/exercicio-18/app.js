@@ -32,27 +32,48 @@ const button = document.querySelector('button');
 const input = document.getElementById('username');
 const newParagraph = document.createElement('p');
 const regex = /^[a-zA-Z]{6,}$/;
-// console.log(input);
-// console.log(form);
 
-fieldset.addEventListener('keyup', event => {
+
+const insertText = (element, text) => {
+  element.textContent = text;
+};
+
+const insertAttribute = (element, attribute, className) => {
+  element.setAttribute(attribute, className);
+};
+
+const insertNewAdjacentElement = (elementTarget, attribute, newElement) => {
+  elementTarget.insertAdjacentElement(attribute, newElement);
+}
+
+
+const validatingInput = event => {
   
   const usernameInput = event.target.value;
   const resultRegex = regex.test(usernameInput);
       
   if (resultRegex) {
-    newParagraph.textContent = 'Username válido';
-    newParagraph.setAttribute('class', 'username-success-feedback');
-    input.insertAdjacentElement('afterend', newParagraph);
+    // newParagraph.textContent = 'Username válido';
+    // newParagraph.setAttribute('class', 'username-success-feedback');
+    // input.insertAdjacentElement('afterend', newParagraph);
+    insertText(newParagraph, 'Username válido');
+    insertAttribute(newParagraph, 'class', 'username-success-feedback');
+    insertNewAdjacentElement(input, 'afterend', newParagraph);
   
     return;
   }
+  // newParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
+  // newParagraph.setAttribute('class', 'username-help-feedback');
+  // input.insertAdjacentElement('afterend', newParagraph);
+  insertText(newParagraph, 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas');
+  insertAttribute(newParagraph, 'class', 'username-help-feedback');
+  insertNewAdjacentElement(input, 'afterend', newParagraph);
 
-  newParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
-  newParagraph.setAttribute('class', 'username-help-feedback');
-  input.insertAdjacentElement('afterend', newParagraph);
+};
 
-});
+fieldset.addEventListener('keyup', validatingInput);
+
+
 
 /*
   02
@@ -140,7 +161,7 @@ const some = (arr = [], exp) => {
   
 }
 
-some([1, 2, 3], item => item > 2);
+// some([1, 2, 3], item => item > 2);
 
 
 // const testeFunc = (n) => {
