@@ -109,3 +109,41 @@ form.addEventListener('submit', event => {
         6;
     2) Pesquisar no MDN.
 */
+
+
+
+/* .some(função com condição) -> Itera sobre o ARRAY e 
+ *                               Retorna TRUE quando pelo menos 1 item do ARRAY
+ *                               atender a condição informada.
+ */
+
+
+/**
+ * - some([1, 2, 3], item => item > 2) - Retorna true;
+ * - some([1, 3, 5], item => item === 0) - Retorna false;
+ */
+
+
+const arr1 = [1, 2, 3];
+
+const some = (arr = [], exp) => {
+    const isTrue = true;
+    const isFalse = false;
+    const expression = exp;
+    // const expression = ;
+  
+
+    for(let i = 0; i < arr.length; i++) {
+      if (arr[i] > 2) {
+        console.log(expression)
+        return console.log(isTrue);
+        break;
+      }
+
+    }
+    
+    console.log(isFalse);
+    
+}
+
+some([1, 2, 3], item => item > 2);
