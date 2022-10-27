@@ -87,12 +87,10 @@ fieldset.addEventListener('keyup', validatingInput);
   - Não insira o parágrafo manualmente no index.html.
 */
 
-form.addEventListener('submit', event => {
+const validatingSubmit = event => {
   event.preventDefault();
 
   const submitForm = event.target.username;
-  // const input = form.input;
-  // console.log(submitForm)
   const resultRegex = regex.test(submitForm.value);
 
   if (resultRegex) {
@@ -102,18 +100,23 @@ form.addEventListener('submit', event => {
     insertText(newParagraph, "Dados enviados =)");    
     insertAttribute(newParagraph,'class', 'submit-success-feedback')
     insertNewAdjacentElement(button, 'afterend', newParagraph);
-    
+
     submitForm.value = '';
     submitForm.focus();
     return;
   }
 
-  newParagraph.textContent = "Por favor, insira um username válido";
-  newParagraph.setAttribute('class', 'submit-help-feedback');
-  button.insertAdjacentElement('afterend', newParagraph);
+  // newParagraph.textContent = "Por favor, insira um username válido";
+  // newParagraph.setAttribute('class', 'submit-help-feedback');
+  // button.insertAdjacentElement('afterend', newParagraph);
+  insertText(newParagraph, "Por favor, insira um username válido");
+  insertAttribute(newParagraph, 'class', 'submit-help-feedback');
+  insertNewAdjacentElement(button, 'afterend', newParagraph);
   submitForm.focus();
   
-});
+};
+
+form.addEventListener('submit', validatingSubmit);
 
 
 
