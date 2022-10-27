@@ -129,21 +129,27 @@ const arr1 = [1, 2, 3];
 const some = (arr = [], exp) => {
     const isTrue = true;
     const isFalse = false;
-    const expression = exp;
-    // const expression = ;
+    console.log(exp);
+
+    // for(let i = 0; i < arr.length; i++) {
+    //   if (arr[i] > 2) {
+    //     return console.log(isTrue);
+    //     break;
+    //   }
+
+    // }
   
+    // console.log(isFalse);
 
-    for(let i = 0; i < arr.length; i++) {
-      if (arr[i] > 2) {
-        console.log(expression)
-        return console.log(isTrue);
-        break;
+    arr.forEach(item => {
+      if (item === 0) {
+        console.log(isTrue);
       }
+    });
 
-    }
-    
-    console.log(isFalse);
-    
+    console.log(isFalse)
+
 }
 
 some([1, 2, 3], item => item > 2);
+
