@@ -92,13 +92,17 @@ form.addEventListener('submit', event => {
 
   const submitForm = event.target.username;
   // const input = form.input;
-  console.log(submitForm)
+  // console.log(submitForm)
   const resultRegex = regex.test(submitForm.value);
 
   if (resultRegex) {
-    newParagraph.textContent = "Dados enviados =)"
-    newParagraph.setAttribute('class', 'submit-success-feedback');
-    button.insertAdjacentElement('afterend', newParagraph);
+    // newParagraph.textContent = "Dados enviados =)"
+    // newParagraph.setAttribute('class', 'submit-success-feedback');
+    // button.insertAdjacentElement('afterend', newParagraph);
+    insertText(newParagraph, "Dados enviados =)");    
+    insertAttribute(newParagraph,'class', 'submit-success-feedback')
+    insertNewAdjacentElement(button, 'afterend', newParagraph);
+    
     submitForm.value = '';
     submitForm.focus();
     return;
