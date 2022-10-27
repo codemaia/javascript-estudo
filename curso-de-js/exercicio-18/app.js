@@ -146,20 +146,15 @@ form.addEventListener('submit', validatingSubmit);
  */
 
 
-const arr1 = [1, 2, 3];
-const arr2 = [1, 3, 5];
-
-
-
 const some = (arr = [], exp) => {
   const isTrue = true;
   const isFalse = false;
 
   for(let i = 0; i < arr.length; i++) {
-    // console.log(exp(arr[i]));
+    
     if(exp(arr[i])) {
       return console.log(isTrue);
-      // break;
+      
     }
   }
 
@@ -168,7 +163,8 @@ const some = (arr = [], exp) => {
   
 }
 
-// some([1, 2, 3], item => item > 2);
+some([1, 2, 3], item => item > 2);
+some([1, 3, 5], item => item === 0);
 
 
 // const testeFunc = (n) => {
