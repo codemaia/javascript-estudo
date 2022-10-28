@@ -27,10 +27,11 @@
 */
 
 const form = document.querySelector('form');
-const fieldset = document.querySelector('fieldset');
 const button = document.querySelector('button');
 const input = document.getElementById('username');
-const newParagraph = document.createElement('p');
+const paragraphUsername = document.createElement('p');
+const paragraphSubmit = document.createElement('p');
+paragraphSubmit.setAttribute('data-feedback', 'submit-feedback'); //para retirar o paragrado de "Por favor, insira um username válido"
 const regex = /^[a-zA-Z]{6,}$/;
 
 
@@ -51,28 +52,33 @@ const validatingInput = event => {
   
   const usernameInput = event.target.value;
   const resultRegex = regex.test(usernameInput);
+
+  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]');
+
+  if(paragraphSubmitExists) {
+    paragraphSubmit.remove();
+  }
+
       
   if (resultRegex) {
     // newParagraph.textContent = 'Username válido';
     // newParagraph.setAttribute('class', 'username-success-feedback');
-    // input.insertAdjacentElement('afterend', newParagraph);
-    insertText(newParagraph, 'Username válido');
-    insertAttribute(newParagraph, 'class', 'username-success-feedback');
-    insertNewAdjacentElement(input, 'afterend', newParagraph);
-  
+    // input.insertAdjacentElement('afterend', newParagraph); // ou event.target.insertAdjacentElement('afterend', newParagraph);
+    insertText(paragraphUsername, 'Username válido');
+    insertAttribute(paragraphUsername, 'class', 'username-success-feedback');
+    insertNewAdjacentElement(input, 'afterend', paragraphUsername);
     return;
   }
-  // newParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
-  // newParagraph.setAttribute('class', 'username-help-feedback');
-  // input.insertAdjacentElement('afterend', newParagraph);
-  insertText(newParagraph, 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas');
-  insertAttribute(newParagraph, 'class', 'username-help-feedback');
-  insertNewAdjacentElement(input, 'afterend', newParagraph);
+  // paragraphUsername.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
+  // paragraphUsername.setAttribute('class', 'username-help-feedback');
+  // input.insertAdjacentElement('afterend', paragraphUsername); // ou event.target.insertAdjacentElement('afterend', paragraphUsername);
+  insertText(paragraphUsername, 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas');
+  insertAttribute(paragraphUsername, 'class', 'username-help-feedback');
+  insertNewAdjacentElement(input, 'afterend', paragraphUsername);
 
 };
 
-fieldset.addEventListener('keyup', validatingInput);
-
+input.addEventListener('input', validatingInput); // alterado keyup para input, para poder ser enviado com o ENTER
 
 
 /*
@@ -94,24 +100,24 @@ const validatingSubmit = event => {
   const resultRegex = regex.test(submitForm.value);
 
   if (resultRegex) {
-    // newParagraph.textContent = "Dados enviados =)"
-    // newParagraph.setAttribute('class', 'submit-success-feedback');
-    // button.insertAdjacentElement('afterend', newParagraph);
-    insertText(newParagraph, "Dados enviados =)");    
-    insertAttribute(newParagraph,'class', 'submit-success-feedback')
-    insertNewAdjacentElement(button, 'afterend', newParagraph);
+    // paragraphSubmit.textContent = "Dados enviados =)"
+    // paragraphSubmit.setAttribute('class', 'submit-success-feedback');
+    // button.insertAdjacentElement('afterend', paragraphSubmit);
+    insertText(paragraphSubmit, "Dados enviados =)");    
+    insertAttribute(paragraphSubmit,'class', 'submit-success-feedback')
+    insertNewAdjacentElement(button, 'afterend', paragraphSubmit);
 
     submitForm.value = '';
     submitForm.focus();
     return;
   }
 
-  // newParagraph.textContent = "Por favor, insira um username válido";
-  // newParagraph.setAttribute('class', 'submit-help-feedback');
-  // button.insertAdjacentElement('afterend', newParagraph);
-  insertText(newParagraph, "Por favor, insira um username válido");
-  insertAttribute(newParagraph, 'class', 'submit-help-feedback');
-  insertNewAdjacentElement(button, 'afterend', newParagraph);
+  // paragraphSubmit.textContent = "Por favor, insira um username válido";
+  // paragraphSubmit.setAttribute('class', 'submit-help-feedback');
+  // button.insertAdjacentElement('afterend', paragraphSubmit);
+  insertText(paragraphSubmit, "Por favor, insira um username válido");
+  insertAttribute(paragraphSubmit, 'class', 'submit-help-feedback');
+  insertNewAdjacentElement(button, 'afterend', paragraphSubmit);
   submitForm.focus();
   
 };
@@ -146,25 +152,24 @@ form.addEventListener('submit', validatingSubmit);
  */
 
 
-const some = (arr = [], exp) => {
-  const isTrue = true;
-  const isFalse = false;
+const some = (arr = [], func) => {
+ 
 
   for(let i = 0; i < arr.length; i++) {
     
-    if(exp(arr[i])) {
-      return console.log(isTrue);
+    if(func(arr[i])) {
+      return true;
       
     }
   }
 
-  console.log(isFalse);
+  return false;
 
   
 }
 
-some([1, 2, 3], item => item > 2);
-some([1, 3, 5], item => item === 0);
+console.log(some([1, 2, 3], item => item > 2));
+console.log(some([1, 3, 5], item => item === 0));
 
 
 // const testeFunc = (n) => {
