@@ -32,13 +32,12 @@ const button = document.querySelector('button');
 const input = document.getElementById('username');
 const paragraphUsername = document.createElement('p');
 const paragraphSubmit = document.createElement('p');
-const regex = /^[a-zA-Z]{6,}$/;
 
 paragraphSubmit.setAttribute('data-feedback', 'submit-feedback'); //para retirar o paragrado de "Por favor, insira um username válido"
 
 
-const insertParagraphIntoDom = infoParagraphIntoDom => { 
-    const { element, text, className, elementTarget } = infoParagraphIntoDom;
+const insertParagraphIntoDom = paragraphInfo => { 
+    const { element, text, className, elementTarget } = paragraphInfo;
 
     element.textContent = text;
     element.setAttribute('class', className);
@@ -47,50 +46,55 @@ const insertParagraphIntoDom = infoParagraphIntoDom => {
 };
 
 
+const removeSubmitParagraph = () => {
+  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]'); //para retirar o paragrado de "Por favor, insira um username válido" quando continuarmos a digitar o username
+
+  if(paragraphSubmitExists) {
+    paragraphSubmit.remove();
+  }
+};
+
+
+const testUserName = inputValue => /^[a-zA-Z]{6,}$/.test(inputValue);
+
+
+
 const validateInputUsername = { 
   element: paragraphUsername,
   text: 'Username válido',
   className: 'username-success-feedback',
   elementTarget: input
-} 
-
+};
 
 const InvalidateInputUsername = { 
   element: paragraphUsername,
   text: 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas',
   className: 'username-help-feedback',
   elementTarget: input
-} 
-
+};
 
 const validateSubmitForm = {
   element: paragraphSubmit,
   text: "Dados enviados =)",
   className: 'submit-success-feedback',
   elementTarget: button
-}
+};
 
 const InvalidateSubmitForm = {
   element: paragraphSubmit,
   text: "Por favor, insira um username válido",
   className: 'submit-help-feedback',
   elementTarget: button
-}
+};
 
 
 const validatingInputUsername = event => {
   
-  const usernameInput = event.target.value;
-  const resultRegex = regex.test(usernameInput);
-
-  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]'); //para retirar o paragrado de "Por favor, insira um username válido"ssss
-
-  if(paragraphSubmitExists) {
-    paragraphSubmit.remove();
-  }
-
+  const usernameInput = testUserName(event.target.value);
+  
+  removeSubmitParagraph();
       
-  if (resultRegex) {
+  if (usernameInput) {
     // newParagraph.textContent = 'Username válido';
     // newParagraph.setAttribute('class', 'username-success-feedback');
     // input.insertAdjacentElement('afterend', newParagraph); // ou event.target.insertAdjacentElement('afterend', newParagraph);
@@ -104,28 +108,13 @@ const validatingInputUsername = event => {
 
 };
 
-input.addEventListener('input', validatingInputUsername); // alterado keyup para input, para poder ser enviado com o ENTER
-
-
-/*
-  02
-
-  - Valide o envio do form;
-  - Se o username inserido no input é válido, no envio do form, exiba um  
-    parágrafo verde abaixo do botão com a mensagem "Dados enviados =)";
-  - Se no momento do envio, o valor do input é inválido, o parágrafo deve ser  
-    vermelho e exibir "Por favor, insira um username válido".
-  - Use as classes disponíveis no arquivo style.css para colorir o parágrafo;
-  - Não insira o parágrafo manualmente no index.html.
-*/
 
 const validatingSubmit = event => {
   event.preventDefault();
 
-  const submitForm = event.target.username;
-  const resultRegex = regex.test(submitForm.value);
+  const submitForm = testUserName(event.target.username.value);
 
-  if (resultRegex) {
+  if (submitForm) {
     // paragraphSubmit.textContent = "Dados enviados =)"
     // paragraphSubmit.setAttribute('class', 'submit-success-feedback');
     // button.insertAdjacentElement('afterend', paragraphSubmit);
@@ -140,7 +129,29 @@ const validatingSubmit = event => {
     
 };
 
+
+input.addEventListener('input', validatingInputUsername); // alterado keyup para input, para poder ser enviado com o ENTER
+
 form.addEventListener('submit', validatingSubmit);
+
+
+
+/*
+  02
+
+  - Valide o envio do form;
+  - Se o username inserido no input é válido, no envio do form, exiba um  
+    parágrafo verde abaixo do botão com a mensagem "Dados enviados =)";
+  - Se no momento do envio, o valor do input é inválido, o parágrafo deve ser  
+    vermelho e exibir "Por favor, insira um username válido".
+  - Use as classes disponíveis no arquivo style.css para colorir o parágrafo;
+  - Não insira o parágrafo manualmente no index.html.
+*/
+
+
+
+//LOOK UP
+
 
 
 
@@ -173,17 +184,13 @@ form.addEventListener('submit', validatingSubmit);
 const some = (arr = [], func) => {
  
 
-  for(let i = 0; i < arr.length; i++) {
-    
+  for(let i = 0; i < arr.length; i++) {    
     if(func(arr[i])) {
-      return true;
-      
+      return true;      
     }
   }
-
-  return false;
-
   
+  return false;
 }
 
 console.log(some([1, 2, 3], item => item > 2));
