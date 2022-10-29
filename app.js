@@ -2005,24 +2005,24 @@ const article = document.querySelector('article');
 
 
 
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
+// const form = document.querySelector('.signup-form');
+// const feedback = document.querySelector('.feedback');
 
-const testUsername = username => /^[a-zA-Z]{6,12}$/.test(username);
+// const testUsername = username => /^[a-zA-Z]{6,12}$/.test(username);
 
-form.addEventListener('submit', event => {
-    event.preventDefault();// -> para a pagina nao recarregar
+// form.addEventListener('submit', event => {
+//     event.preventDefault();// -> para a pagina nao recarregar
     
-    const inputUsername = event.target.username.value;
-    const result = testUsername(inputUsername);
+//     const inputUsername = event.target.username.value;
+//     const result = testUsername(inputUsername);
 
-    if (result) {
-        feedback.textContent = 'username válido =D';
-        return
-    }
+//     if (result) {
+//         feedback.textContent = 'username válido =D';
+//         return
+//     }
     
-    feedback.textContent = 'O username precisa ter de 6 a 12 caracter sem numeros e sem caracteres especiais';    
-});
+//     feedback.textContent = 'O username precisa ter de 6 a 12 caracter sem numeros e sem caracteres especiais';    
+// });
 
 
 
@@ -2045,13 +2045,16 @@ form.addEventListener('submit', event => {
 
 
 //ADICiONANDO EVENTO EM UM LUGAR ESPECIFICO (NESTE CASO NO INPUT DO FORM)
-form.username.addEventListener('keyup', event => { //evento adicionado no input do html, sendo localizado pelo id='username'
-    const result = testUsername(event.target.value);
+// form.username.addEventListener('keyup', event => { //evento adicionado no input do html, sendo localizado pelo id='username'
+//     const result = testUsername(event.target.value);
     
-    if (result) {
-        form.username.setAttribute('class', 'success'); //usamos setAttribute pois precisamos substituir qualquer classe existente no input.
-        return
-    }
+//     if (result) {
+//         form.username.setAttribute('class', 'success'); //usamos setAttribute pois precisamos substituir qualquer classe existente no input.
+//         return
+//     }
 
-    form.username.setAttribute('class', 'error');
-});
+//     form.username.setAttribute('class', 'error');
+// });
+
+
+
