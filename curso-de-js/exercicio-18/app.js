@@ -25,6 +25,7 @@
 
 
 */
+//37:37 começa a refatoração
 
 const form = document.querySelector('form');
 const button = document.querySelector('button');
