@@ -32,29 +32,58 @@ const button = document.querySelector('button');
 const input = document.getElementById('username');
 const paragraphUsername = document.createElement('p');
 const paragraphSubmit = document.createElement('p');
-paragraphSubmit.setAttribute('data-feedback', 'submit-feedback'); //para retirar o paragrado de "Por favor, insira um username válido"
 const regex = /^[a-zA-Z]{6,}$/;
 
+paragraphSubmit.setAttribute('data-feedback', 'submit-feedback'); //para retirar o paragrado de "Por favor, insira um username válido"
 
-const insertText = (element, text) => {
-  element.textContent = text;
+
+const insertParagraphIntoDom = infoParagraphIntoDom => { 
+    const { element, text, className, elementTarget } = infoParagraphIntoDom;
+
+    element.textContent = text;
+    element.setAttribute('class', className);
+    elementTarget.insertAdjacentElement('afterend', element); // ou event.target.insertAdjacentElement('afterend', newParagraph);
+
 };
 
-const insertAttribute = (element, attribute, className) => {
-  element.setAttribute(attribute, className);
-};
 
-const insertNewAdjacentElement = (elementTarget, attribute, newElement) => {
-  elementTarget.insertAdjacentElement(attribute, newElement);
+const validateInputUsername = { 
+  element: paragraphUsername,
+  text: 'Username válido',
+  className: 'username-success-feedback',
+  elementTarget: input
+} 
+
+
+const InvalidateInputUsername = { 
+  element: paragraphUsername,
+  text: 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas',
+  className: 'username-help-feedback',
+  elementTarget: input
+} 
+
+
+const validateSubmitForm = {
+  element: paragraphSubmit,
+  text: "Dados enviados =)",
+  className: 'submit-success-feedback',
+  elementTarget: button
+}
+
+const InvalidateSubmitForm = {
+  element: paragraphSubmit,
+  text: "Por favor, insira um username válido",
+  className: 'submit-help-feedback',
+  elementTarget: button
 }
 
 
-const validatingInput = event => {
+const validatingInputUsername = event => {
   
   const usernameInput = event.target.value;
   const resultRegex = regex.test(usernameInput);
 
-  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]');
+  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]'); //para retirar o paragrado de "Por favor, insira um username válido"ssss
 
   if(paragraphSubmitExists) {
     paragraphSubmit.remove();
@@ -65,21 +94,17 @@ const validatingInput = event => {
     // newParagraph.textContent = 'Username válido';
     // newParagraph.setAttribute('class', 'username-success-feedback');
     // input.insertAdjacentElement('afterend', newParagraph); // ou event.target.insertAdjacentElement('afterend', newParagraph);
-    insertText(paragraphUsername, 'Username válido');
-    insertAttribute(paragraphUsername, 'class', 'username-success-feedback');
-    insertNewAdjacentElement(input, 'afterend', paragraphUsername);
+    insertParagraphIntoDom(validateInputUsername);
     return;
   }
   // paragraphUsername.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
   // paragraphUsername.setAttribute('class', 'username-help-feedback');
   // input.insertAdjacentElement('afterend', paragraphUsername); // ou event.target.insertAdjacentElement('afterend', paragraphUsername);
-  insertText(paragraphUsername, 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas');
-  insertAttribute(paragraphUsername, 'class', 'username-help-feedback');
-  insertNewAdjacentElement(input, 'afterend', paragraphUsername);
+  insertParagraphIntoDom(InvalidateInputUsername);
 
 };
 
-input.addEventListener('input', validatingInput); // alterado keyup para input, para poder ser enviado com o ENTER
+input.addEventListener('input', validatingInputUsername); // alterado keyup para input, para poder ser enviado com o ENTER
 
 
 /*
@@ -104,23 +129,15 @@ const validatingSubmit = event => {
     // paragraphSubmit.textContent = "Dados enviados =)"
     // paragraphSubmit.setAttribute('class', 'submit-success-feedback');
     // button.insertAdjacentElement('afterend', paragraphSubmit);
-    insertText(paragraphSubmit, "Dados enviados =)");    
-    insertAttribute(paragraphSubmit,'class', 'submit-success-feedback')
-    insertNewAdjacentElement(button, 'afterend', paragraphSubmit);
-
-    submitForm.value = '';
-    submitForm.focus();
+    insertParagraphIntoDom(validateSubmitForm);
     return;
   }
 
   // paragraphSubmit.textContent = "Por favor, insira um username válido";
   // paragraphSubmit.setAttribute('class', 'submit-help-feedback');
   // button.insertAdjacentElement('afterend', paragraphSubmit);
-  insertText(paragraphSubmit, "Por favor, insira um username válido");
-  insertAttribute(paragraphSubmit, 'class', 'submit-help-feedback');
-  insertNewAdjacentElement(button, 'afterend', paragraphSubmit);
-  submitForm.focus();
-  
+  insertParagraphIntoDom(InvalidateSubmitForm);
+    
 };
 
 form.addEventListener('submit', validatingSubmit);
