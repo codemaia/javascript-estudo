@@ -25,34 +25,116 @@
 
 
 */
+//37:37 começa a refatoração
 
 const form = document.querySelector('form');
-const fieldset = document.querySelector('fieldset');
 const button = document.querySelector('button');
 const input = document.getElementById('username');
-const newParagraph = document.createElement('p');
-const regex = /^[a-zA-Z]{6,}$/;
-// console.log(input);
-// console.log(form);
+const paragraphUsername = document.createElement('p');
+const paragraphSubmit = document.createElement('p');
 
-fieldset.addEventListener('keyup', event => {
+paragraphSubmit.setAttribute('data-feedback', 'submit-feedback'); //para retirar o paragrado de "Por favor, insira um username válido"
+
+
+const insertParagraphIntoDom = paragraphInfo => { 
+    const { element, text, className, elementTarget } = paragraphInfo;
+
+    element.textContent = text;
+    element.setAttribute('class', className);
+    elementTarget.insertAdjacentElement('afterend', element); // ou event.target.insertAdjacentElement('afterend', newParagraph);
+
+};
+
+
+const removeSubmitParagraph = () => {
+  const paragraphSubmitExists = document.querySelector('[data-feedback="submit-feedback"]'); //para retirar o paragrado de "Por favor, insira um username válido" quando continuarmos a digitar o username
+
+  if(paragraphSubmitExists) {
+    paragraphSubmit.remove();
+  }
+};
+
+
+const testUserName = inputValue => /^[a-zA-Z]{6,}$/.test(inputValue);
+
+
+
+const validateInputUsername = { 
+  element: paragraphUsername,
+  text: 'Username válido',
+  className: 'username-success-feedback',
+  elementTarget: input
+};
+
+const InvalidateInputUsername = { 
+  element: paragraphUsername,
+  text: 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas',
+  className: 'username-help-feedback',
+  elementTarget: input
+};
+
+const validateSubmitForm = {
+  element: paragraphSubmit,
+  text: "Dados enviados =)",
+  className: 'submit-success-feedback',
+  elementTarget: button
+};
+
+const InvalidateSubmitForm = {
+  element: paragraphSubmit,
+  text: "Por favor, insira um username válido",
+  className: 'submit-help-feedback',
+  elementTarget: button
+};
+
+
+const validatingInputUsername = event => {
   
-  const usernameInput = event.target.value;
-  const resultRegex = regex.test(usernameInput);
+  const usernameInput = testUserName(event.target.value);
+  
+  removeSubmitParagraph();
       
-  if (resultRegex) {
-    newParagraph.textContent = 'Username válido';
-    newParagraph.setAttribute('class', 'username-success-feedback');
-    input.insertAdjacentElement('afterend', newParagraph);
-  
+  if (usernameInput) {
+    // newParagraph.textContent = 'Username válido';
+    // newParagraph.setAttribute('class', 'username-success-feedback');
+    // input.insertAdjacentElement('afterend', newParagraph); // ou event.target.insertAdjacentElement('afterend', newParagraph);
+    insertParagraphIntoDom(validateInputUsername);
+    return;
+  }
+  // paragraphUsername.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
+  // paragraphUsername.setAttribute('class', 'username-help-feedback');
+  // input.insertAdjacentElement('afterend', paragraphUsername); // ou event.target.insertAdjacentElement('afterend', paragraphUsername);
+  insertParagraphIntoDom(InvalidateInputUsername);
+
+};
+
+
+const validatingSubmit = event => {
+  event.preventDefault();
+
+  const submitForm = testUserName(event.target.username.value);
+
+  if (submitForm) {
+    // paragraphSubmit.textContent = "Dados enviados =)"
+    // paragraphSubmit.setAttribute('class', 'submit-success-feedback');
+    // button.insertAdjacentElement('afterend', paragraphSubmit);
+    insertParagraphIntoDom(validateSubmitForm);
     return;
   }
 
-  newParagraph.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
-  newParagraph.setAttribute('class', 'username-help-feedback');
-  input.insertAdjacentElement('afterend', newParagraph);
+  // paragraphSubmit.textContent = "Por favor, insira um username válido";
+  // paragraphSubmit.setAttribute('class', 'submit-help-feedback');
+  // button.insertAdjacentElement('afterend', paragraphSubmit);
+  insertParagraphIntoDom(InvalidateSubmitForm);
+    
+};
 
-});
+
+input.addEventListener('input', validatingInputUsername); // alterado keyup para input, para poder ser enviado com o ENTER
+
+form.addEventListener('submit', validatingSubmit);
+
+
 
 /*
   02
@@ -66,9 +148,8 @@ fieldset.addEventListener('keyup', event => {
   - Não insira o parágrafo manualmente no index.html.
 */
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
 
+<<<<<<< HEAD
   const inputForm = event.target.username;
   console.log(inputForm)
   const resultRegex = regex.test(inputForm.value);
@@ -88,6 +169,11 @@ form.addEventListener('submit', event => {
   inputForm.focus();
   
 });
+=======
+
+//LOOK UP
+
+>>>>>>> c9cc661ba0d4887f456505ccb4aae3317162e525
 
 
 
@@ -109,3 +195,36 @@ form.addEventListener('submit', event => {
     2) Pesquisar no MDN.
 */
 
+<<<<<<< HEAD
+=======
+
+
+/* .some(função com condição) -> Itera sobre o ARRAY e 
+ *                               Retorna TRUE quando pelo menos 1 item do ARRAY
+ *                               atender a condição informada.
+ */
+
+
+const some = (arr = [], func) => {
+ 
+
+  for(let i = 0; i < arr.length; i++) {    
+    if(func(arr[i])) {
+      return true;      
+    }
+  }
+  
+  return false;
+}
+
+console.log(some([1, 2, 3], item => item > 2));
+console.log(some([1, 3, 5], item => item === 0));
+
+
+// const testeFunc = (n) => {
+//   return n > 2;
+// }
+
+
+// console.log(testeFunc(1));
+>>>>>>> c9cc661ba0d4887f456505ccb4aae3317162e525
