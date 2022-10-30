@@ -149,31 +149,9 @@ form.addEventListener('submit', validatingSubmit);
 */
 
 
-<<<<<<< HEAD
-  const inputForm = event.target.username;
-  console.log(inputForm)
-  const resultRegex = regex.test(inputForm.value);
-
-  if (resultRegex) {
-    newParagraph.textContent = "Dados enviados =)"
-    newParagraph.setAttribute('class', 'submit-success-feedback');
-    button.insertAdjacentElement('afterend', newParagraph);
-    inputForm.value = '';
-    inputForm.focus();
-    return;
-  }
-
-  newParagraph.textContent = "Por favor, insira um username válido";
-  newParagraph.setAttribute('class', 'submit-help-feedback');
-  button.insertAdjacentElement('afterend', newParagraph);
-  inputForm.focus();
-  
-});
-=======
 
 //LOOK UP
 
->>>>>>> c9cc661ba0d4887f456505ccb4aae3317162e525
 
 
 
@@ -195,8 +173,6 @@ form.addEventListener('submit', validatingSubmit);
     2) Pesquisar no MDN.
 */
 
-<<<<<<< HEAD
-=======
 
 
 /* .some(função com condição) -> Itera sobre o ARRAY e 
@@ -227,4 +203,3 @@ console.log(some([1, 3, 5], item => item === 0));
 
 
 // console.log(testeFunc(1));
->>>>>>> c9cc661ba0d4887f456505ccb4aae3317162e525
