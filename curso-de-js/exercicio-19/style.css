@@ -4,10 +4,11 @@
 }
 
 .bg-primary {
-    background-color: #8CA8FF !important;
+    background-color: #36454F !important;
 }
 
 .myh2 {
     border-radius: 70px;
-    border-spacing: 50px;
+    border-collapse: collapse;
+    background: yellow;
 }
