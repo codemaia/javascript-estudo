@@ -48,6 +48,6 @@ form.addEventListener('submit', event => {
         alert(`Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`);
     } else {
         alert(`Perfeito! você acertou ${scoreUser}% do quiz`)
-    }
+    };
 
 });
