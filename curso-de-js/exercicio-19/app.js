@@ -12,10 +12,22 @@ Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, bus
 É importante que a sua versão do quiz seja feita apenas com o conteúdo que vimos até aqui.
 */
 
-
 const correctAnswer = ['C', 'C', 'C', 'C'];
 
 const form = document.querySelector('form');
+const pEn = document.querySelector('.enus');
+const pPt = document.querySelector('.ptbr');
+const labelEn = document.querySelector('.translate-en');
+
+
+
+
+labelEn.addEventListener('click', () => {
+    console.log('cliquei irmao');
+
+    pEn.remove();
+
+});
 
 
 form.addEventListener('submit', event => {
