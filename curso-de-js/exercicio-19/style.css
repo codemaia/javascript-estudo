@@ -7,3 +7,9 @@
     margin: .5em auto;
     
 }
+
+
+.ptbr:hover {
+    background: green;
+    
+}

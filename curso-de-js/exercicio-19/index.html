@@ -12,9 +12,17 @@
 <body>
     <div class="intro py-3 bg-primary bg-dark text-center">
         <div class="container">
-                <h2 class="myh2 display-4 my-4">Quiz JavaScript</h2>
+                <h2 class="myh2 display-3 my-4">Quiz JavaScript</h2>
+        </div>
+        
+        <div class="translate btn-group btn-group-sm" role="group" aria-label="Vertical radio toggle button group">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+            <label class="ptbr btn btn-outline-light" for="vbtn-radio1">pt-BR</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+            <label class="enus btn btn-outline-light" for="vbtn-radio3">en-US</label>
         </div>
     </div>
+
 
     <!-- Possiveis perguntas para o quiz
         1 - O método em JavaScript que adiciona um elemento no final de um array é?
@@ -41,17 +49,10 @@
     -->
 
 
-    <div class="quiz py-4 bg-dark text-white">
+    <div class="quiz py-1 bg-dark text-white">
         <div class="container">
             <h2 class="my-5 text-white text-center">Teste alguns conhecimentos em JavaScript :D</h2>
-            <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                <label class="btn text-white" for="vbtn-radio1">pt-BR</label>
-
-                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-                <label class="btn text-white" for="vbtn-radio3">en-US</label>
-              </div>
-
+            
             <form class="quiz-form text-light">
 
                 <div class="my-5">
