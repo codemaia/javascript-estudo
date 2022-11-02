@@ -56,8 +56,8 @@
             <form class="quiz-form text-light">
 
                 <div class="my-5">
-                    <p class="pen ptbr lead font-weight-normal">1. O método em JavaScript que adiciona um elemento no final de um array é?</p>
-                    <p class="ppt enus lead font-weight-normal">1. The JavaScript method that adds an element to the end of array is?</p>
+                    <p id="ptbr" class=" lead font-weight-normal">1. O método em JavaScript que adiciona um elemento no final de um array é?</p>
+                    <p id="enus" class="hidden  lead font-weight-normal">1. The JavaScript method that adds an element to the end of array?</p>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion1" value="A" checked>
@@ -79,7 +79,8 @@
                 </div>
 
                 <div class="my-5">
-                    <p class="lead font-weight-normal">2. O método em JavaScript que remove um elemento do final de um array é?</p>
+                    <p id="ptbr" class=" lead font-weight-normal">2. O método em JavaScript que remove um elemento do final de um array é?</p>
+                    <p id="enus" class=" hidden lead font-weight-normal">2. The JavaScript method that removes element from the end of array?</p>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion2" value="A" checked>
@@ -101,7 +102,8 @@
                 </div>
 
                 <div class="my-5">
-                    <p class="lead font-weight-normal">3. O método em JavaScript utilizado para verifica se uma string existe em outra string é?</p>
+                    <p id="ptbr" class="lead font-weight-normal">3. O método em JavaScript utilizado para verifica se uma string existe em outra string é?</p>
+                    <p id="enus" class="hidden lead font-weight-normal">3. The JavaScript method used to check if a string exists in another string?</p>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion3" value="A" checked>
@@ -123,29 +125,31 @@
                 </div>
 
                 <div class="my-5">
-                    <p class="lead font-weight-normal">4. Com o innerText podemos:</p>
+                    <p id="ptbr" class="lead font-weight-normal">4. Qual o resultado da expressão console.log(typeof '13')</p>
+                    <p id="enus" class="hidden lead font-weight-normal">4. What is the result of the expression console.log(typeof '13') </p>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion4" value="A" checked>
-                            Modificar propriedades que estão dentro de um objeto
+                            number
                         </label>
                     </div>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion4" value="B">
-                            Deixar os textos do HTML em caixa alta.
+                            undefined
                         </label>
                     </div>
                     <div class="form-check my-2 text-white-50">
                         <label class="form-check-label">
                             <input type="radio" name="inputQuestion4" value="C">
-                            Modificar o texto no DOM  
+                            string 
                         </label>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <button class="btn bg-primary text-light">Enviar</button>
+                    <button id="ptbr" class="btn bg-primary text-light">Enviar</button>
+                    <button id="enus" class="hidden btn bg-primary text-light">Submit</button>
                 </div>
 
             </form>

@@ -8,13 +8,6 @@
     
 }
 
-
-.ptbr:hover {
-    background: green;
-
-}
-
-
-.enus {
+.hidden {
     display: none;
 }

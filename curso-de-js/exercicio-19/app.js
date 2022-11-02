@@ -15,19 +15,44 @@ Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, bus
 const correctAnswer = ['C', 'C', 'C', 'C'];
 
 const form = document.querySelector('form');
-const pEn = document.querySelector('.enus');
-const pPt = document.querySelector('.ptbr');
+const pEn = document.querySelectorAll('#enus');
+const pPt = document.querySelectorAll('#ptbr');
 const labelEn = document.querySelector('.translate-en');
+const labelPt = document.querySelector('.translate-pt');
 
 
 
 
 labelEn.addEventListener('click', () => {
-    console.log('cliquei irmao');
 
-    pEn.remove();
+    console.log(pEn);
+    // pEn.classList.remove('hidden');
+    // pPt.classList.add('hidden');
+
+    pEn.forEach(p => {
+        p.classList.remove('hidden');
+    });
+
+    pPt.forEach(p => {
+        p.classList.add('hidden');
+    });
+    
+});
+
+
+labelPt.addEventListener('click', () => {
+
+    pPt.forEach(p => {
+        p.classList.remove('hidden');
+    });
+
+    pEn.forEach(p => {
+        p.classList.add('hidden');
+    });
 
 });
+
+
 
 
 form.addEventListener('submit', event => {
