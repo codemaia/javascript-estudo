@@ -25,11 +25,7 @@ const labelPt = document.querySelector('.translate-pt');
 
 labelEn.addEventListener('click', () => {
 
-    console.log(pEn);
-    // pEn.classList.remove('hidden');
-    // pPt.classList.add('hidden');
-
-    pEn.forEach(p => {
+     pEn.forEach(p => {
         p.classList.remove('hidden');
     });
 
