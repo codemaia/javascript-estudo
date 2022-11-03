@@ -53,7 +53,6 @@ labelPt.addEventListener('click', () => {
 
 
 
-
 form.addEventListener('submit', event => {
     event.preventDefault();
     const popupContentParagraph = popupContent.childNodes[3];
@@ -99,3 +98,17 @@ form.addEventListener('submit', event => {
     };
 
 });
+
+
+
+
+popup.addEventListener('click', event => {
+
+    const getClassClicked = event.target.classList[0];
+
+    if (getClassClicked !== null) {
+        popup.classList.add('hidden');
+    }
+
+    document.location.reload(true);
+})
