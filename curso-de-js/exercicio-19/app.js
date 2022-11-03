@@ -19,7 +19,8 @@ const pEn = document.querySelectorAll('#enus');
 const pPt = document.querySelectorAll('#ptbr');
 const labelEn = document.querySelector('.translate-en');
 const labelPt = document.querySelector('.translate-pt');
-
+const popup = document.querySelector('.popup-wrapper');
+const popupContent = document.querySelector('.popup-content');
 
 
 
@@ -49,8 +50,6 @@ labelPt.addEventListener('click', () => {
 });
 
 
-
-
 form.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -71,7 +70,11 @@ form.addEventListener('submit', event => {
 
     });
 
+
+    popup.classList.remove('hidden');
+
     if (scoreUser === 0) {
+        popup.classList.remove('hidden');
         alert(`Calma jovem, tenta de novo <3! Você tirou ${scoreUser}, mas não significa nada! =)`);
     } else if (scoreUser === 25) {
         alert(`Boa, ${scoreUser}% do quiz! mas da pra melhorar!`);

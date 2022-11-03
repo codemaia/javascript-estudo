@@ -10,11 +10,26 @@
     <title>Our Quiz</title>
 </head>
 <body>
+   
+
     <div class="intro py-3 bg-primary bg-dark text-center">
         <div class="container">
-                <h2 class="myh2 display-3 my-4">Quiz JavaScript</h2>
+            <h2 class="myh2 display-3 my-4">Quiz JavaScript</h2>
         </div>
         
+    <!-- popup result -->
+    <div class="popup-wrapper hidden">
+        <div class="popup">
+            <div class="popup-close">x</div>
+            
+            <div class="popup-content">
+                <h2>@codemaia</h2>
+                <p>O autor do popup foi o programador Ethan Zuckerman.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end popup result -->
+
         <div class="translate btn-group btn-group-sm" role="group" aria-label="Vertical radio toggle button group">
             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
             <label class="translate-pt btn btn-outline-light" for="vbtn-radio1">pt-BR</label>
@@ -23,32 +38,7 @@
         </div>
     </div>
 
-
-    <!-- Possiveis perguntas para o quiz
-        1 - O método em JavaScript que adiciona um elemento no final de um array é?
-            A - pull()
-            B - pop()
-            C - push()
-        
-        2 - O método em JavaScript que remove um elemento do final de um array é?
-            A - some()
-            B - setAttribute.remove()
-            C - pop() 
-
-        3 - O método em JavaScript utilizado para verifica se uma string existe em outra string é?
-            A - concat()
-            B - join()
-            C - includes()
-
-        4 - Com o innerText nós podemos:
-            A - Modificar propriedades que estão dentro de um objeto
-            B - Deixar os textos do HTML em caixa alta.
-            C - Modificar o texto no DOM    
-
-
-    -->
-
-
+    <!-- Title and asks -->
     <div class="quiz py-1 bg-dark text-white">
         <div class="container">
             <h2 id="ptbr" class="my-5 text-white text-center">Teste seus conhecimentos em JavaScript :D</h2>
@@ -147,7 +137,7 @@
                         </label>
                     </div>
                 </div>
-
+            <!-- End title and asks -->
                 <div class="text-center">
                     <button id="ptbr" class="btn bg-primary text-light">Enviar</button>
                     <button id="enus" class="hidden btn bg-primary text-light">Submit</button>
@@ -158,4 +148,27 @@
     </div>
     <script src="./app.js"></script>
 </body>
+
+<!-- Possiveis perguntas para o quiz
+        1 - O método em JavaScript que adiciona um elemento no final de um array é?
+            A - pull()
+            B - pop()
+            C - push()
+        
+        2 - O método em JavaScript que remove um elemento do final de um array é?
+            A - some()
+            B - setAttribute.remove()
+            C - pop() 
+
+        3 - O método em JavaScript utilizado para verifica se uma string existe em outra string é?
+            A - concat()
+            B - join()
+            C - includes()
+
+        4 - Com o innerText nós podemos:
+            A - Modificar propriedades que estão dentro de um objeto
+            B - Deixar os textos do HTML em caixa alta.
+            C - Modificar o texto no DOM    
+
+    -->
 </html>
