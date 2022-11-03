@@ -26,6 +26,7 @@ const popupContent = document.querySelector('.popup-content');
 
 labelEn.addEventListener('click', () => {
 
+    //maybe function
      pEn.forEach(p => {
         p.classList.remove('hidden');
     });
@@ -39,6 +40,7 @@ labelEn.addEventListener('click', () => {
 
 labelPt.addEventListener('click', () => {
 
+    //maybe function
     pPt.forEach(p => {
         p.classList.remove('hidden');
     });
@@ -50,8 +52,11 @@ labelPt.addEventListener('click', () => {
 });
 
 
+
+
 form.addEventListener('submit', event => {
     event.preventDefault();
+    const popupContentParagraph = popupContent.childNodes[3];
 
     let scoreUser = 0;
 
@@ -70,20 +75,27 @@ form.addEventListener('submit', event => {
 
     });
 
-
-    popup.classList.remove('hidden');
-
+    //vai virar function kk 
     if (scoreUser === 0) {
         popup.classList.remove('hidden');
-        alert(`Calma jovem, tenta de novo <3! Você tirou ${scoreUser}, mas não significa nada! =)`);
+        popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você tirou ${scoreUser}, mas não significa nada! =)`
+        
     } else if (scoreUser === 25) {
-        alert(`Boa, ${scoreUser}% do quiz! mas da pra melhorar!`);
+        popup.classList.remove('hidden');
+        popupContentParagraph.textContent = `Boa, ${scoreUser}% do quiz! mas da pra melhorar!`
+
     } else if (scoreUser === 50) {
-        alert(`Muito bom, ${scoreUser}% do quiz! Vamo que da pra fechar o quiz!`);
+        popup.classList.remove('hidden');
+        popupContentParagraph.textContent = `Muito bom, ${scoreUser}% do quiz! Vamo que da pra fechar o quiz!`
+    
     } else if (scoreUser === 75) {
-        alert(`Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`);
+        popup.classList.remove('hidden');
+        popupContentParagraph.textContent = `Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`
+        
     } else {
-        alert(`Perfeito! você acertou ${scoreUser}% do quiz`)
+        popup.classList.remove('hidden');
+        popupContentParagraph.textContent = `Perfeito! você acertou ${scoreUser}% do quiz`
+
     };
 
 });
