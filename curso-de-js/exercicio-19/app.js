@@ -77,7 +77,7 @@ form.addEventListener('submit', event => {
     //vai virar function kk 
     if (scoreUser === 0) {
         popup.classList.remove('hidden');
-        popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você tirou ${scoreUser}, mas não significa nada! =)`
+        popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alteranativatrue, mas não significa nada! =)`
         
     } else if (scoreUser === 25) {
         popup.classList.remove('hidden');
@@ -101,7 +101,7 @@ form.addEventListener('submit', event => {
 
 
 
-
+/** Fechar popup */
 popup.addEventListener('click', event => {
 
     const getClassClicked = event.target.classList[0];
@@ -111,4 +111,5 @@ popup.addEventListener('click', event => {
     }
 
     document.location.reload(true);
+    
 })

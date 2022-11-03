@@ -22,6 +22,12 @@
     border-radius: 25px;
 }
 
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
 
 .myh2 {
     background: yellow;
