@@ -53,10 +53,12 @@ labelPt.addEventListener('click', () => {
 
 
 
+
 form.addEventListener('submit', event => {
     event.preventDefault();
-    const popupContentParagraph = popupContent.childNodes[3];
 
+
+    const popupContentParagraph = popupContent.childNodes[3];
     let scoreUser = 0;
 
     const answerUser = [
@@ -76,11 +78,19 @@ form.addEventListener('submit', event => {
 
     //vai virar function kk 
     if (scoreUser === 0) {
-        popup.classList.remove('hidden');
-        popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
+       popup.classList.remove('hidden');
+       popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
+    //    console.log(popupContent.children)
+    //    Array.from(popupContent.children).forEach(p =>{
+    //     console.log(p.children)
+    //    })
+    //    if(true) {
+    //        popupContentParagraph[3].textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
+    //    }
         
     } else if (scoreUser === 25) {
         popup.classList.remove('hidden');
+
         popupContentParagraph.textContent = `Boa, ${scoreUser}% do quiz! mas da pra melhorar!`
 
     } else if (scoreUser === 50) {
@@ -110,6 +120,6 @@ popup.addEventListener('click', event => {
         popup.classList.add('hidden');
     }
 
-    document.location.reload(true);
+    // document.location.reload(true);
     
 })
