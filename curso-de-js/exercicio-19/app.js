@@ -58,7 +58,10 @@ form.addEventListener('submit', event => {
     event.preventDefault();
 
 
-    const popupContentParagraph = popupContent.childNodes[3];
+    const popupContentParagraphPt = popupContent.childNodes[3];
+    const popupContentParagraphEn = popupContent.childNodes[5];
+
+    
     let scoreUser = 0;
 
     const answerUser = [
@@ -78,32 +81,34 @@ form.addEventListener('submit', event => {
 
     //vai virar function kk 
     if (scoreUser === 0) {
-       popup.classList.remove('hidden');
-       popupContentParagraph.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
-    //    console.log(popupContent.children)
-    //    Array.from(popupContent.children).forEach(p =>{
-    //     console.log(p.children)
-    //    })
-    //    if(true) {
-    //        popupContentParagraph[3].textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
-    //    }
-        
-    } else if (scoreUser === 25) {
-        popup.classList.remove('hidden');
 
-        popupContentParagraph.textContent = `Boa, ${scoreUser}% do quiz! mas da pra melhorar!`
+       popup.classList.remove('hidden');
+       popupContentParagraphPt.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
+       popupContentParagraphEn.textContent = `Your score is 0 :(`;
+
+    } else if (scoreUser === 25) {
+
+        popup.classList.remove('hidden');
+        popupContentParagraphPt.textContent = `Boa, ${scoreUser}% do quiz! mas da pra melhorar!`
+        popupContentParagraphEn.textContent = `Nice, your score is ${scoreUser}% of the quiz!`
 
     } else if (scoreUser === 50) {
+
         popup.classList.remove('hidden');
-        popupContentParagraph.textContent = `Muito bom, ${scoreUser}% do quiz! Vamo que da pra fechar o quiz!`
-    
+        popupContentParagraphPt.textContent = `Muito bom, ${scoreUser}% do quiz! Vamo que da pra fechar o quiz!`
+        popupContentParagraphEn.textContent = `Very good, your score is ${scoreUser}% of the quiz!`
+
     } else if (scoreUser === 75) {
+
         popup.classList.remove('hidden');
-        popupContentParagraph.textContent = `Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`
-        
+        popupContentParagraphPt.textContent = `Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`
+        popupContentParagraphEn.textContent = `Good job! Your score is ${scoreUser}% of the quiz!`
+
     } else {
+
         popup.classList.remove('hidden');
-        popupContentParagraph.textContent = `Perfeito! você acertou ${scoreUser}% do quiz`
+        popupContentParagraphPt.textContent = `Perfeito! você acertou ${scoreUser}% do quiz`
+        popupContentParagraphEn.textContent = `Perfect! ${scoreUser}% of the quiz`
 
     };
 
@@ -120,6 +125,6 @@ popup.addEventListener('click', event => {
         popup.classList.add('hidden');
     }
 
-    // document.location.reload(true);
+    document.location.reload(true);
     
 })
