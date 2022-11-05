@@ -1,6 +1,7 @@
 const correctAnswers = ['B', 'B', 'B', 'B'];
 
 const form = document.querySelector('form');
+const finalResult = document.querySelector('.result');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
@@ -21,6 +22,7 @@ form.addEventListener('submit', event => {
         }
     });
 
-    alert(`Good job, your score is ${score}!`);
+    finalResult.querySelector('span').textContent = `${score}%`;
+    finalResult.classList.remove('d-none');
 
 });
