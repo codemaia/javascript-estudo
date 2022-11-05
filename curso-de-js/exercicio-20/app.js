@@ -37,14 +37,12 @@ const start = () => {
 
 btnInitCounter.addEventListener('click', () => {
   
-  
     idSetInterval = setInterval(() => {
     counter += 1
     counterContainer.textContent = `${counter}`;
   
   }, 1000);
   
- 
 
 });
 
