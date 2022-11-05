@@ -11,6 +11,9 @@
     mensagem "Um segundo e meio se passaram desde que a página foi carregada".
 */
 
+// setTimeout(() => {
+//   console.log("Um segundo e meio se passaram desde que a página foi carregada");
+// }, 1500);
 
 
 /* 
@@ -19,6 +22,30 @@
   - Faça o contador do index.html funcionar;
   - O clique no botão "Parar contador" deve fazer com que o contador exiba 0.
 */
+
+const counterContainer = document.querySelector('.counter-container');
+const btnInitCounter = document.querySelector('.button-init-counter');
+const btnStopCounter = document.querySelector('.button-stop-counter');
+
+
+
+btnInitCounter.addEventListener('click', event=> {
+  
+  // console.log(counterContainer.textContent);
+  setInterval(() => {
+    let counter = 1;
+
+    for (let i = 0; i < counter; i++) {
+      counter++;
+    }
+    // counterContainer.textContent = `${counter++}`;
+    console.log(counter)
+  }, 1000);
+  
+});
+
+
+
 
 
 
