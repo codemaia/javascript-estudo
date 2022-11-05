@@ -22,7 +22,12 @@ form.addEventListener('submit', event => {
         }
     });
 
+    scrollTo(0, 0);
+
     finalResult.querySelector('span').textContent = `${score}%`;
     finalResult.classList.remove('d-none');
 
 });
+
+//setTimeout 
+

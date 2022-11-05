@@ -2059,4 +2059,27 @@ const article = document.querySelector('article');
 
 
 
+//METODO scrollTo
 
+/**
+ * 
+ * @ scrollTo()
+ * 
+ *  # scrollTo(0, 0); -> Rola a pagina para cima!
+ * 
+ */
+
+
+// MOTODO setTimeout
+/**
+ * executa uma função após um determinado tempo (que passamos como parametro)
+ *  @ setTimeout
+ * 
+ *  @ setTimeoute()
+ * 
+ */
+
+//mostra o alert após 2 segundos
+// setTimeout(() => {
+//     alert('hello')
+// }, 2000);
