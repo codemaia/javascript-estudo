@@ -24,6 +24,7 @@ const popupContent = document.querySelector('.popup-content');
 
 
 
+// NEED REFATORING
 labelEn.addEventListener('click', () => {
 
     //maybe function
@@ -50,7 +51,6 @@ labelPt.addEventListener('click', () => {
     });
 
 });
-
 
 
 
