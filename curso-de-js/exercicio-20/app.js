@@ -26,26 +26,33 @@
 const counterContainer = document.querySelector('.counter-container');
 const btnInitCounter = document.querySelector('.button-init-counter');
 const btnStopCounter = document.querySelector('.button-stop-counter');
+let counter = 0;
+let idSetInterval;
 
 
 
-btnInitCounter.addEventListener('click', event=> {
+const start = () => {
+
+}
+
+btnInitCounter.addEventListener('click', () => {
   
-  // console.log(counterContainer.textContent);
-  setInterval(() => {
-    let counter = 1;
-
-    for (let i = 0; i < counter; i++) {
-      counter++;
-    }
-    // counterContainer.textContent = `${counter++}`;
-    console.log(counter)
+  
+    idSetInterval = setInterval(() => {
+    counter += 1
+    counterContainer.textContent = `${counter}`;
+  
   }, 1000);
   
+ 
+
 });
 
 
-
+btnStopCounter.addEventListener('click', () => {
+  clearInterval(idSetInterval);
+  counterContainer.textContent = 0;
+});
 
 
 
