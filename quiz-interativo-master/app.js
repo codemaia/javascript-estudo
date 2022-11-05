@@ -24,10 +24,30 @@ form.addEventListener('submit', event => {
 
     scrollTo(0, 0);
 
-    finalResult.querySelector('span').textContent = `${score}%`;
     finalResult.classList.remove('d-none');
+    
+    let counter = 0;
+    
+    // armazena na const timer para poder pegar o ID que é gerado cada vez que um setInterval é criado.
+    // com esse ID podemos parar o setInterval;
+    const timer = setInterval(() => {
+        //parar o setInterval quando o counter for igual ao score acertado;
+        //passa o timer para o clearInterval pois nele cosnta o ID do setInterval
+        
+        if (counter === score) {
+            clearInterval(timer);
+        }
+        
+        finalResult.querySelector('span').textContent = `${counter}%`;
+        counter++ //necessário incrementar o counter para o valor poder mudar.
+        
+    }, 10);
 
 });
 
+//setInterval
+
+
 //setTimeout 
+
 

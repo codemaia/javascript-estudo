@@ -2072,10 +2072,12 @@ const article = document.querySelector('article');
 
 // MOTODO setTimeout
 /**
- * executa uma função após um determinado tempo (que passamos como parametro)
+ * # Executa uma função após um determinado tempo (que passamos como parametro)
+ *    # Executa uma única vez!
+ * 
  *  @ setTimeout
  * 
- *  @ setTimeoute()
+ *  @ setTimeout()
  * 
  */
 
@@ -2083,3 +2085,25 @@ const article = document.querySelector('article');
 // setTimeout(() => {
 //     alert('hello')
 // }, 2000);
+
+
+
+//METODO setInterval
+
+/** PODEMOS USAR PARA ANIMAÇÕES
+ *   # Exercuta a função repetidamente, e com o segundo parametro dizemos de quanto em quanto tempo ira repetir
+ *      # Executa a função repetidamente com o intervalo de tempo que especificamos
+ *  @ setInterval
+ *                             #tempo de repetição
+ *      setInterval(() => {}, 1000)
+ *  
+ * 
+ *  Verificar o exercicio do QUIZ para pegar um exemplo mais amplo do uso do setInterval :D
+ *    Pasta 'quiz-interativo-master'
+ * 
+ * 
+ *   # PARA O setInverval
+ *     -> Utilizamos o clearInterval() para parar o setInverval;
+ *      clearInterval(AQUI VAI O ID DO SETINTERVAL);
+ * 
+ */
