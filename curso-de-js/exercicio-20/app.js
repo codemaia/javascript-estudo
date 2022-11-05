@@ -26,32 +26,28 @@
 const counterContainer = document.querySelector('.counter-container');
 const btnInitCounter = document.querySelector('.button-init-counter');
 const btnStopCounter = document.querySelector('.button-stop-counter');
-let counter = 0;
+
 let idSetInterval;
-
-
-
-const start = () => {
-
-}
+let count = 0;
 
 btnInitCounter.addEventListener('click', () => {
-  
-    idSetInterval = setInterval(() => {
-    counter += 1
-    counterContainer.textContent = `${counter}`;
-  
+
+  idSetInterval = setInterval(() => {
+    count += 1;
+    counterContainer.textContent = `${count}`;
   }, 1000);
-  
 
 });
 
 
 btnStopCounter.addEventListener('click', () => {
+  
   clearInterval(idSetInterval);
-  counterContainer.textContent = 0;
-});
 
+  counterContainer.textContent = `0`;
+  count = 0;
+
+});
 
 
 /* 
@@ -99,3 +95,31 @@ btnStopCounter.addEventListener('click', () => {
   você pode hospedá-la no Netlify seguindo este tutorial: 
   https://www.youtube.com/playlist?list=PLlAbYrWSYTiMGMxQf9JSoZUU1rgVpGPth
 */
+
+
+
+
+/**
+ * 
+ * 
+ * let counter = 0;
+let idSetInterval;
+
+
+btnInitCounter.addEventListener('click', () => {
+  
+    idSetInterval = setInterval(() => {
+    counter += 1
+    counterContainer.textContent = `${counter}`;
+  
+  }, 1000);
+  
+
+});
+
+
+btnStopCounter.addEventListener('click', () => {
+  clearInterval(idSetInterval);
+  counterContainer.textContent = 0;
+});
+ */
