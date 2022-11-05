@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- CSS Projeto-->
@@ -12,23 +13,24 @@
 <body>
    
 
-    <div class="intro py-3 bg-primary bg-dark text-center">
+    <div class="intro py-3 bg-primary bg-dark text-center close">
         <div class="container">
             <h2 class="myh2 display-3 my-4">Quiz JavaScript</h2>
         </div>
         
-    <!-- popup result -->
-    <div class="popup-wrapper hidden">
-        <div class="popup">
-            <div class="popup-close">x</div>
-            
-            <div class="popup-content">
-                <h2>@codemaia</h2>
-                <p>Se eu apareci algo deu errado kkkkk</p>
+        <!-- popup result -->
+        <div class="popup-wrapper hidden">
+            <div class="popup">
+                <div class="popup-close">x</div>
+                <i class="bi bi-twitter"></i><i class="bi bi-github"></i>
+                <div class="popup-content">
+                  <h2>@codemaia</h2>
+                  <p id="ptbr" class="my-4">Se eu apareci algo deu errado kkkkk</p>
+                  <p id="enus" class="my-4 hidden">Hello there</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- end popup result -->
+        <!-- end popup result -->
 
         <div class="translate btn-group btn-group-sm" role="group" aria-label="Vertical radio toggle button group">
             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
@@ -39,7 +41,7 @@
     </div>
 
     <!-- Title and asks -->
-    <div class="quiz py-1 bg-dark text-white">
+    <div class="quiz py-1 bg-dark text-white close">
         <div class="container">
             <h2 id="ptbr" class="my-5 text-white text-center">Teste seus conhecimentos em JavaScript :D</h2>
             <h2 id="enus" class="hidden my-5 text-white text-center">Test your JavaScript knowledge :D</h2>
