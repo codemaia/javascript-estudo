@@ -46,6 +46,7 @@ btnStopCounter.addEventListener('click', () => {
 
   counterContainer.textContent = `0`;
   count = 0;
+  // document.location.reload();
 
 });
 
