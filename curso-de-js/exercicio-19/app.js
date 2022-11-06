@@ -98,17 +98,18 @@ const logicOfQuiz = event => {
     let count = 0;    
 
 
-    const resultOfQuiz = () => {
-        
+    const resultOfQuiz = (paragrah, msg) => {
+        paragrah.textContent = msg;
     };
 
     //vai virar function kk 
     if (scoreUser === 0) {
 
        removeClasses(popup, 'hidden');
-
-       popupContentParagraphPt.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
-       popupContentParagraphEn.textContent = `Your score is 0 :(`;
+       resultOfQuiz(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
+       resultOfQuiz(popupContentParagraphEn, `Your score is 0 :(`); 
+    //    popupContentParagraphPt.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
+    //    popupContentParagraphEn.textContent = `Your score is 0 :(`;
 
     } else if (scoreUser === 25) {
         
