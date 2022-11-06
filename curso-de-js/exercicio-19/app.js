@@ -71,7 +71,7 @@ const closeThePopup = event => {
 };
 
 
-const resultOfQuiz = (paragrah, msg) => {
+const printResult = (paragrah, msg) => {
     paragrah.textContent = msg;
 };
 
@@ -114,8 +114,8 @@ const logicOfQuiz = event => {
     if (resultAnswers() === 0) {
         
        removeClasses(popup, 'hidden');
-       resultOfQuiz(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
-       resultOfQuiz(popupContentParagraphEn, `Your score is 0 :(`); 
+       printResult(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
+       printResult(popupContentParagraphEn, `Your score is 0 :(`); 
     
 
     } else if (resultAnswers() === 25) {
@@ -128,8 +128,8 @@ const logicOfQuiz = event => {
                 clearInterval(idSetInterval);
             }
 
-            resultOfQuiz(popupContentParagraphPt, `Boa, ${count}% do quiz! mas da pra melhorar!`);
-            resultOfQuiz(popupContentParagraphEn, `Nice, your score is ${count}% of the quiz!`);
+            printResult(popupContentParagraphPt, `Boa, ${count}% do quiz! mas da pra melhorar!`);
+            printResult(popupContentParagraphEn, `Nice, your score is ${count}% of the quiz!`);
 
             count++;
 
@@ -146,8 +146,8 @@ const logicOfQuiz = event => {
                 clearInterval(idSetInterval);
             }
 
-            resultOfQuiz(popupContentParagraphPt, `Muito bom, ${count}% do quiz! Vamo que da pra fechar o quiz!`);
-            resultOfQuiz(popupContentParagraphEn, `Very good, your score is ${count}% of the quiz!`);
+            printResult(popupContentParagraphPt, `Muito bom, ${count}% do quiz! Vamo que da pra fechar o quiz!`);
+            printResult(popupContentParagraphEn, `Very good, your score is ${count}% of the quiz!`);
 
             count++
 
@@ -163,8 +163,8 @@ const logicOfQuiz = event => {
                 clearInterval(idSetInterval);
             }
 
-            resultOfQuiz(popupContentParagraphPt, `Show, acertou ${count}%! Quase perfeito hein?! Vamo acertar tudo agora?`);
-            resultOfQuiz(popupContentParagraphEn, `Good job! Your score is ${count}% of the quiz!`);
+            printResult(popupContentParagraphPt, `Show, acertou ${count}%! Quase perfeito hein?! Vamo acertar tudo agora?`);
+            printResult(popupContentParagraphEn, `Good job! Your score is ${count}% of the quiz!`);
 
             count++
 
@@ -180,8 +180,8 @@ const logicOfQuiz = event => {
                 clearInterval(idSetInterval);
             }
             
-            resultOfQuiz(popupContentParagraphPt, `Perfeito! você acertou ${count}% do quiz`);
-            resultOfQuiz(popupContentParagraphEn, `Perfect! ${count}% of the quiz`);
+            printResult(popupContentParagraphPt, `Perfeito! você acertou ${count}% do quiz`);
+            printResult(popupContentParagraphEn, `Perfect! ${count}% of the quiz`);
 
             count++
 
