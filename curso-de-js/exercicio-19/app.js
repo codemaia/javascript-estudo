@@ -79,7 +79,7 @@ form.addEventListener('submit', event => {
 
     });
 
-    let counter = 0;    
+    let count = 0;    
     //vai virar function kk 
     if (scoreUser === 0) {
 
@@ -92,14 +92,14 @@ form.addEventListener('submit', event => {
 
         idSetInterval = setInterval(() => {
 
-            if(scoreUser === counter) {
+            if(scoreUser === count) {
                 clearInterval(idSetInterval);
             }
 
-            popupContentParagraphPt.textContent = `Boa, ${counter}% do quiz! mas da pra melhorar!`;
-            popupContentParagraphEn.textContent = `Nice, your score is ${counter}% of the quiz!`;
+            popupContentParagraphPt.textContent = `Boa, ${count}% do quiz! mas da pra melhorar!`;
+            popupContentParagraphEn.textContent = `Nice, your score is ${count}% of the quiz!`;
 
-            counter++;
+            count++;
 
         }, 10);
 
@@ -110,13 +110,13 @@ form.addEventListener('submit', event => {
         popup.classList.remove('hidden');
 
         idSetInterval = setInterval(() => {
-            if (scoreUser === counter) {
+            if (scoreUser === count) {
                 clearInterval(idSetInterval);
             }
 
-            popupContentParagraphPt.textContent = `Muito bom, ${counter}% do quiz! Vamo que da pra fechar o quiz!`
-            popupContentParagraphEn.textContent = `Very good, your score is ${counter}% of the quiz!`
-            counter++
+            popupContentParagraphPt.textContent = `Muito bom, ${count}% do quiz! Vamo que da pra fechar o quiz!`
+            popupContentParagraphEn.textContent = `Very good, your score is ${count}% of the quiz!`
+            count++
         }, 10)
 
     } else if (scoreUser === 75) {
@@ -125,15 +125,28 @@ form.addEventListener('submit', event => {
 
         idSetInterval = setInterval(() => {
 
+            if (scoreUser === count) {
+                clearInterval(idSetInterval);
+            }
+            popupContentParagraphPt.textContent = `Show, acertou ${count}%! Quase perfeito hein?! Vamo acertar tudo agora?`
+            popupContentParagraphEn.textContent = `Good job! Your score is ${count}% of the quiz!`
+            count++
         }, 10)
-        popupContentParagraphPt.textContent = `Show, acertou ${scoreUser}%! Quase perfeito hein?! Vamo acertar tudo agora?`
-        popupContentParagraphEn.textContent = `Good job! Your score is ${scoreUser}% of the quiz!`
 
     } else {
 
         popup.classList.remove('hidden');
-        popupContentParagraphPt.textContent = `Perfeito! você acertou ${scoreUser}% do quiz`
-        popupContentParagraphEn.textContent = `Perfect! ${scoreUser}% of the quiz`
+
+        idSetInterval = setInterval(() => {
+            
+            if (scoreUser === count) {
+                clearInterval(idSetInterval);
+            }
+
+            popupContentParagraphPt.textContent = `Perfeito! você acertou ${count}% do quiz`
+            popupContentParagraphEn.textContent = `Perfect! ${count}% of the quiz`
+            count++
+        }, 10);
 
     };
 
