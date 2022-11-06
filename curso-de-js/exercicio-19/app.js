@@ -76,9 +76,8 @@ const resultOfQuiz = (paragrah, msg) => {
 };
 
 
-const logicOfQuiz = event => {
-    event.preventDefault();
-    
+
+const resultAnswers = () => {
     let scoreUser = 0;
 
     const answerUser = [
@@ -96,28 +95,36 @@ const logicOfQuiz = event => {
 
     });
 
+    return scoreUser;
+};
+
+
+
+const logicOfQuiz = event => {
+    event.preventDefault();
+    
+    resultAnswers();
+
 
     const popupContentParagraphPt = popupContent.childNodes[3];
     const popupContentParagraphEn = popupContent.childNodes[5];
     let count = 0;    
 
 
-
-    //vai virar function kk 
-    if (scoreUser === 0) {
+    if (resultAnswers() === 0) {
 
        removeClasses(popup, 'hidden');
        resultOfQuiz(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
        resultOfQuiz(popupContentParagraphEn, `Your score is 0 :(`); 
     
 
-    } else if (scoreUser === 25) {
+    } else if (resultAnswers() === 25) {
         
         removeClasses(popup, 'hidden');
 
         idSetInterval = setInterval(() => {
 
-            if(scoreUser === count) {
+            if(resultAnswers() === count) {
                 clearInterval(idSetInterval);
             }
 
@@ -129,13 +136,13 @@ const logicOfQuiz = event => {
         }, 10);
 
 
-    } else if (scoreUser === 50) {
+    } else if (resultAnswers() === 50) {
 
         removeClasses(popup, 'hidden')
 
         idSetInterval = setInterval(() => {
 
-            if (scoreUser === count) {
+            if (resultAnswers() === count) {
                 clearInterval(idSetInterval);
             }
 
@@ -146,13 +153,13 @@ const logicOfQuiz = event => {
 
         }, 10);
 
-    } else if (scoreUser === 75) {
+    } else if (resultAnswers() === 75) {
 
         removeClasses(popup, 'hidden');
         
         idSetInterval = setInterval(() => {
 
-            if (scoreUser === count) {
+            if (resultAnswers() === count) {
                 clearInterval(idSetInterval);
             }
 
@@ -169,7 +176,7 @@ const logicOfQuiz = event => {
 
         idSetInterval = setInterval(() => {
             
-            if (scoreUser === count) {
+            if (resultAnswers() === count) {
                 clearInterval(idSetInterval);
             }
             
@@ -177,7 +184,7 @@ const logicOfQuiz = event => {
             resultOfQuiz(popupContentParagraphEn, `Perfect! ${count}% of the quiz`);
 
             count++
-            
+
         }, 10);
 
     };
