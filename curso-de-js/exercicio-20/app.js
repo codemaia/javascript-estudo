@@ -58,7 +58,7 @@ btnStopCounter.addEventListener('click', () => {
   - Adicione mais 2 alternativas em cada pergunta do quiz.
 */
 
-
+// DONE
 
 
 /* 
@@ -67,6 +67,8 @@ btnStopCounter.addEventListener('click', () => {
   - Modifique a ordem das alternativas corretas. Ou seja, faça com que a  
     alternativa correta das perguntas não seja apenas a alternativa "B".
 */
+
+// DONE 
 
 /* 
   06
@@ -78,6 +80,8 @@ btnStopCounter.addEventListener('click', () => {
       funções isoladas;
     - Depois, cuide da legibilidade das funções.
 */
+
+
 
 /* 
   07
@@ -98,6 +102,7 @@ btnStopCounter.addEventListener('click', () => {
   Se você ainda não tem um site próprio para hospedar os arquivos da aplicação, 
   você pode hospedá-la no Netlify seguindo este tutorial: 
   https://www.youtube.com/playlist?list=PLlAbYrWSYTiMGMxQf9JSoZUU1rgVpGPth
+  
 */
 
 

@@ -24,43 +24,56 @@ const popupContent = document.querySelector('.popup-content');
 let idSetInterval;
 
 
-// NEED REFATORING
-labelEn.addEventListener('click', () => {
+//functions
+const removeClasses = (element, className) => {
+    element.classList.remove(className);
+};
+
+
+const translateForEnglish = () => {
 
     //maybe function
      pEn.forEach(p => {
-        p.classList.remove('hidden');
+        removeClasses(p, 'hidden')
     });
 
     pPt.forEach(p => {
         p.classList.add('hidden');
     });
     
-});
+};
 
 
-labelPt.addEventListener('click', () => {
+const translateForPortuguese = () => {
 
     //maybe function
     pPt.forEach(p => {
-        p.classList.remove('hidden');
+        removeClasses(p, 'hidden');
     });
 
     pEn.forEach(p => {
         p.classList.add('hidden');
     });
 
-});
+};
+
+
+const closeThePopup = event => {
+
+    const getClassClicked = event.target.classList[0];
+
+    if (getClassClicked !== null) {
+        popup.classList.add('hidden');
+    }
+
+    document.location.reload(true);
+    
+};
 
 
 
-form.addEventListener('submit', event => {
+const logicOfQuiz = event => {
     event.preventDefault();
-
-
-    const popupContentParagraphPt = popupContent.childNodes[3];
-    const popupContentParagraphEn = popupContent.childNodes[5];
-
     
     let scoreUser = 0;
 
@@ -79,16 +92,27 @@ form.addEventListener('submit', event => {
 
     });
 
+
+    const popupContentParagraphPt = popupContent.childNodes[3];
+    const popupContentParagraphEn = popupContent.childNodes[5];
     let count = 0;    
+
+
+    const resultOfQuiz = () => {
+        
+    };
+
     //vai virar function kk 
     if (scoreUser === 0) {
 
-       popup.classList.remove('hidden');
+       removeClasses(popup, 'hidden');
+
        popupContentParagraphPt.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
        popupContentParagraphEn.textContent = `Your score is 0 :(`;
 
     } else if (scoreUser === 25) {
-        popup.classList.remove('hidden');
+        
+        removeClasses(popup, 'hidden');
 
         idSetInterval = setInterval(() => {
 
@@ -103,11 +127,10 @@ form.addEventListener('submit', event => {
 
         }, 10);
 
-        
 
     } else if (scoreUser === 50) {
 
-        popup.classList.remove('hidden');
+        removeClasses(popup, 'hidden')
 
         idSetInterval = setInterval(() => {
             if (scoreUser === count) {
@@ -121,8 +144,8 @@ form.addEventListener('submit', event => {
 
     } else if (scoreUser === 75) {
 
-        popup.classList.remove('hidden');
-
+        removeClasses(popup, 'hidden');
+        
         idSetInterval = setInterval(() => {
 
             if (scoreUser === count) {
@@ -135,7 +158,7 @@ form.addEventListener('submit', event => {
 
     } else {
 
-        popup.classList.remove('hidden');
+        removeClasses(popup, 'hidden');
 
         idSetInterval = setInterval(() => {
             
@@ -151,19 +174,18 @@ form.addEventListener('submit', event => {
     };
 
     scrollTo(0,0);
-});
+};
 
 
 
-/** Fechar popup */
-popup.addEventListener('click', event => {
+// refactored
+labelEn.addEventListener('click', translateForEnglish);
 
-    const getClassClicked = event.target.classList[0];
+labelPt.addEventListener('click', translateForPortuguese);
 
-    if (getClassClicked !== null) {
-        popup.classList.add('hidden');
-    }
+form.addEventListener('submit', logicOfQuiz);
 
-    document.location.reload(true);
-    
-});
+
+
+/** close popup */
+popup.addEventListener('click', closeThePopup);
