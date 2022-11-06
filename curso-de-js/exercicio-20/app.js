@@ -46,7 +46,7 @@ btnStopCounter.addEventListener('click', () => {
 
   counterContainer.textContent = `0`;
   count = 0;
-  // document.location.reload();
+  document.location.reload();
 
 });
 
@@ -57,6 +57,9 @@ btnStopCounter.addEventListener('click', () => {
   - A partir deste exercício, vamos voltar a trabalhar na sua versão do Quiz =D
   - Adicione mais 2 alternativas em cada pergunta do quiz.
 */
+
+
+
 
 /* 
   05
