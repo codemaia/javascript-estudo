@@ -166,4 +166,4 @@ popup.addEventListener('click', event => {
 
     document.location.reload(true);
     
-})
+});
