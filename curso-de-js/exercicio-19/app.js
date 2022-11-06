@@ -71,6 +71,10 @@ const closeThePopup = event => {
 };
 
 
+const resultOfQuiz = (paragrah, msg) => {
+    paragrah.textContent = msg;
+};
+
 
 const logicOfQuiz = event => {
     event.preventDefault();
@@ -98,9 +102,6 @@ const logicOfQuiz = event => {
     let count = 0;    
 
 
-    const resultOfQuiz = (paragrah, msg) => {
-        paragrah.textContent = msg;
-    };
 
     //vai virar function kk 
     if (scoreUser === 0) {
@@ -108,8 +109,7 @@ const logicOfQuiz = event => {
        removeClasses(popup, 'hidden');
        resultOfQuiz(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
        resultOfQuiz(popupContentParagraphEn, `Your score is 0 :(`); 
-    //    popupContentParagraphPt.textContent = `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`
-    //    popupContentParagraphEn.textContent = `Your score is 0 :(`;
+    
 
     } else if (scoreUser === 25) {
         
@@ -121,8 +121,8 @@ const logicOfQuiz = event => {
                 clearInterval(idSetInterval);
             }
 
-            popupContentParagraphPt.textContent = `Boa, ${count}% do quiz! mas da pra melhorar!`;
-            popupContentParagraphEn.textContent = `Nice, your score is ${count}% of the quiz!`;
+            resultOfQuiz(popupContentParagraphPt, `Boa, ${count}% do quiz! mas da pra melhorar!`);
+            resultOfQuiz(popupContentParagraphEn, `Nice, your score is ${count}% of the quiz!`);
 
             count++;
 
@@ -134,14 +134,17 @@ const logicOfQuiz = event => {
         removeClasses(popup, 'hidden')
 
         idSetInterval = setInterval(() => {
+
             if (scoreUser === count) {
                 clearInterval(idSetInterval);
             }
 
-            popupContentParagraphPt.textContent = `Muito bom, ${count}% do quiz! Vamo que da pra fechar o quiz!`
-            popupContentParagraphEn.textContent = `Very good, your score is ${count}% of the quiz!`
+            resultOfQuiz(popupContentParagraphPt, `Muito bom, ${count}% do quiz! Vamo que da pra fechar o quiz!`);
+            resultOfQuiz(popupContentParagraphEn, `Very good, your score is ${count}% of the quiz!`);
+
             count++
-        }, 10)
+
+        }, 10);
 
     } else if (scoreUser === 75) {
 
@@ -152,10 +155,13 @@ const logicOfQuiz = event => {
             if (scoreUser === count) {
                 clearInterval(idSetInterval);
             }
-            popupContentParagraphPt.textContent = `Show, acertou ${count}%! Quase perfeito hein?! Vamo acertar tudo agora?`
-            popupContentParagraphEn.textContent = `Good job! Your score is ${count}% of the quiz!`
+
+            resultOfQuiz(popupContentParagraphPt, `Show, acertou ${count}%! Quase perfeito hein?! Vamo acertar tudo agora?`);
+            resultOfQuiz(popupContentParagraphEn, `Good job! Your score is ${count}% of the quiz!`);
+
             count++
-        }, 10)
+
+        }, 10);
 
     } else {
 
@@ -166,10 +172,12 @@ const logicOfQuiz = event => {
             if (scoreUser === count) {
                 clearInterval(idSetInterval);
             }
+            
+            resultOfQuiz(popupContentParagraphPt, `Perfeito! você acertou ${count}% do quiz`);
+            resultOfQuiz(popupContentParagraphEn, `Perfect! ${count}% of the quiz`);
 
-            popupContentParagraphPt.textContent = `Perfeito! você acertou ${count}% do quiz`
-            popupContentParagraphEn.textContent = `Perfect! ${count}% of the quiz`
             count++
+            
         }, 10);
 
     };
