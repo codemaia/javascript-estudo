@@ -112,7 +112,7 @@ const logicOfQuiz = event => {
 
 
     if (resultAnswers() === 0) {
-
+        
        removeClasses(popup, 'hidden');
        resultOfQuiz(popupContentParagraphPt, `Calma jovem, tenta de novo <3! Você não acertou nenhuma alternativa, mas não significa nada! =)`)
        resultOfQuiz(popupContentParagraphEn, `Your score is 0 :(`); 
