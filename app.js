@@ -2077,7 +2077,7 @@ const article = document.querySelector('article');
  * 
  *  @ setTimeout
  * 
- *  @ setTimeout()
+ *  @ setTimeout(function, time, aqui vão os parametros necessarios na function)
  * 
  */
 

@@ -4,6 +4,8 @@
   - Insira apenas o css do bootstrap no index.html.
 */
 
+// DONE
+
 /* 
   02
 
@@ -11,9 +13,15 @@
     mensagem "Um segundo e meio se passaram desde que a página foi carregada".
 */
 
-// setTimeout(() => {
-//   console.log("Um segundo e meio se passaram desde que a página foi carregada");
-// }, 1500);
+// const logMessage = message => {
+//   console.log(message);
+// }
+
+// const message = "Um segundo e meio se passaram desde que a página foi carregada";
+
+// setTimeout(console.log, 1500,message);
+
+
 
 
 /* 
