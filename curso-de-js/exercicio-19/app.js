@@ -110,7 +110,7 @@ const logicOfQuiz = event => {
     const popupContentParagraphEn = popupContent.childNodes[5];
     let count = 0;    
 
-
+    
     if (resultAnswers() === 0) {
         
        removeClasses(popup, 'hidden');
