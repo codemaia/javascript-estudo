@@ -36,25 +36,29 @@ const btnInitCounter = document.querySelector('.button-init-counter');
 const btnStopCounter = document.querySelector('.button-stop-counter');
 
 let idSetInterval;
-let count = 0;
+//let count = 0;
+//++count PRE INCREMENTO -> Melhor para contador (mostra o valor depois incrementa)
+//count++ POS INCREMENTO -> primeiro mostra o valor depois incrementa
+
+const stopCounter = () => {
+  clearInterval(idSetInterval);
+  counterContainer.textContent = 0;
+}
 
 btnInitCounter.addEventListener('click', () => {
 
-  idSetInterval = setInterval(() => {
-    count += 1;
-    counterContainer.textContent = `${count}`;
-  }, 1000);
+  const incrementCounter = () => {
+    const incrementedCounter = Number(counterContainer.textContent) + 1
+    counterContainer.textContent = incrementedCounter;
+  };
+  
+  idSetInterval = setInterval(incrementCounter, 1000);
 
 });
 
-
 btnStopCounter.addEventListener('click', () => {
   
-  clearInterval(idSetInterval);
-
-  counterContainer.textContent = `0`;
-  count = 0;
-  document.location.reload();
+  stopCounter();
 
 });
 
