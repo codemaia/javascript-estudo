@@ -45,12 +45,15 @@ const stopCounter = () => {
   counterContainer.textContent = 0;
 }
 
-btnInitCounter.addEventListener('click', () => {
 
-  const incrementCounter = () => {
-    const incrementedCounter = Number(counterContainer.textContent) + 1
-    counterContainer.textContent = incrementedCounter;
-  };
+const incrementCounter = () => {
+  const incrementedCounter = Number(counterContainer.textContent) + 1
+  counterContainer.textContent = incrementedCounter;
+};
+
+
+
+btnInitCounter.addEventListener('click', () => {
   
   idSetInterval = setInterval(incrementCounter, 1000);
 
