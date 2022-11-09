@@ -1,29 +1,28 @@
 const correctAnswers = ['B', 'B', 'B', 'B'];
 
 const form = document.querySelector('form');
-const finalResult = document.querySelector('.result');
+const finalScoreContainer = document.querySelector('.final-score-container');
 
 let score = 0;
-let counter = 0;
 let timer;
 
 const getUserAnswers = () => {
-
-    const userAnswers = [
-        form.inputQuestion1.value,
-        form.inputQuestion2.value,
-        form.inputQuestion3.value,
-        form.inputQuestion4.value,
-    ];
+    let userAnswers = []
+                        /** iterou sobre o correctAnswers porque possui o mesmo numero de elementos no array! kkk mto bom */
+    for(let i = 0; i < correctAnswers.length; i++) {
+        userAnswers.push(form[`inputQuestion${i + 1}`].value);
+    }
 
     return userAnswers;
+  
+
 };
 
 
     /** ira pegar o userAnswers como parametro, que esta dentro do form.addEventListener */
 const calculateUserScore = userAnswers => {
     userAnswers.forEach((answer, index) => {
-    
+                /** forma de comparar os valores do arrays, se são iguais ou não */
         if (answer === correctAnswers[index]) {
             score += 25;
         }
@@ -34,11 +33,13 @@ const calculateUserScore = userAnswers => {
 
 const showScore = () => {
     scrollTo(0, 0);
-    finalResult.classList.remove('d-none');
+    finalScoreContainer.classList.remove('d-none');
 };  
 
 
 const animationResult = () => {
+
+    let counter = 0;
     // armazena na const timer para poder pegar o ID que é gerado cada vez que um setInterval é criado.
     // com esse ID podemos parar o setInterval;
     timer = setInterval(() => {
@@ -49,7 +50,7 @@ const animationResult = () => {
             clearInterval(timer);
         }
         
-        finalResult.querySelector('span').textContent = `${counter++}%`;
+        finalScoreContainer.querySelector('span').textContent = `${counter++}%`;
                      //necessário incrementar o counter para o valor poder mudar.
         
     }, 10);
@@ -60,18 +61,11 @@ const animationResult = () => {
 form.addEventListener('submit', event => {
     event.preventDefault();
     
-    
-// OBTEM A RESPOSTA DO USUARIO
+
     const userAnswers = getUserAnswers();
 
-// CALCULA A PONTUAÇÃO DO USUARIO
     calculateUserScore(userAnswers);
-
-
-// EXIBE A PONTUAÇÃO
-    showScore();
-    
-// ANIMA O RESULTADO
+    showScore();  
     animationResult();
 
 });
