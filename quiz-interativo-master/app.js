@@ -3,11 +3,8 @@ const correctAnswers = ['B', 'B', 'B', 'B'];
 const form = document.querySelector('form');
 const finalResult = document.querySelector('.result');
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
 
-    let score = 0;
-
+const getUserAnswers = () => {
     const userAnswers = [
         form.inputQuestion1.value,
         form.inputQuestion2.value,
@@ -15,17 +12,37 @@ form.addEventListener('submit', event => {
         form.inputQuestion4.value,
     ];
 
+    return userAnswers;
+};
+
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    
+    let score = 0;
+    
+// OBTEM A RESPOSTA DO USUARIO
+    const userAnswers = getUserAnswers();
+
+
+// CALCULA A PONTUAÇÃO DO USUARIO
     userAnswers.forEach((answer, index) => {
     
         if (answer === correctAnswers[index]) {
             score += 25;
         }
+        
     });
 
-    scrollTo(0, 0);
 
+
+// IR PARA O INICIAR
+    scrollTo(0, 0);
     finalResult.classList.remove('d-none');
     
+
+// ANIMA O RESULTADO
+
     let counter = 0;
     
     // armazena na const timer para poder pegar o ID que é gerado cada vez que um setInterval é criado.
