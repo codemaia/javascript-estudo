@@ -7,32 +7,44 @@ let score = 0;
 let timer;
 
 const getUserAnswers = () => {
-    let userAnswers = []
+    let userAnswers = [];
                         /** iterou sobre o correctAnswers porque possui o mesmo numero de elementos no array! kkk mto bom */
-    for(let i = 0; i < correctAnswers.length; i++) {
-        userAnswers.push(form[`inputQuestion${i + 1}`].value);
-    }
+    // for(let i = 0; i < correctAnswers.length; i++) {
+    //     userAnswers.push(form[`inputQuestion${i + 1}`].value);
+    // }
+
+    // return userAnswers;
+    
+    correctAnswers.forEach((_, index) => {
+        const userAnswer = form[`inputQuestion${index + 1}`].value;
+        userAnswers.push(userAnswer);
+    });
 
     return userAnswers;
-  
-
 };
 
 
     /** ira pegar o userAnswers como parametro, que esta dentro do form.addEventListener */
 const calculateUserScore = userAnswers => {
     userAnswers.forEach((answer, index) => {
+        const isUserAnswerCorrect = answer === correctAnswers[index];
                 /** forma de comparar os valores do arrays, se são iguais ou não */
-        if (answer === correctAnswers[index]) {
+        if (isUserAnswerCorrect) {
             score += 25;
-        }
+        };
         
     });
 };
 
 
 const showScore = () => {
-    scrollTo(0, 0);
+
+    /** deixar a rolagem do scroll mais suave */
+    scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
     finalScoreContainer.classList.remove('d-none');
 };  
 
