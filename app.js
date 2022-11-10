@@ -2261,7 +2261,15 @@ const article = document.querySelector('article');
  *          #-> STRING
  *          #-> NUMBER
  *          #-> ARRAY
- *  
+ *  # A FUNÇÃO SEMPRE PRECISA RETORNAR UM VALOR - RETURN VALOR
+ *      
+ *  # CADA VEZ QUE O VALOR É RETORNADO ELE VAI PARA O PARAMETRO ACCUMULATOR
+ *      #-> ELE EXISTE PARA ACUMULAR ESSE VALOR A CADA EXECUÇÃO DA FUNÇÃO
+ * 
+ *      reduce((accumulator, item, index, array) => {
+ *          return accumulator + item 
+ *      }, 0) -> SÓ SERVE PARA VALOR INICIAL DO ACCUMULATOR
+ * 
  * 
  */
 
@@ -2270,3 +2278,43 @@ const article = document.querySelector('article');
 // @ REDUCE
 
 
+
+// const numbers = [1, 2 , 3];
+                                            /**
+                                             * accumulator 0 + item 1
+                                             * accumulator 1 + item 2
+                                             * accumulator 3 + item 3
+                                             * return 6
+                                             */
+// const sumResult = numbers.reduce((accumulator, item) => accumulator + item, 0);
+                     
+
+// console.log(sumResult);
+
+
+
+// const phaseScores = [
+//     { name: 'Vinicius Costa', score: 337 },
+//     { name: 'Roger Melo', score: 43 },
+//     { name: 'Alfredo Braga', score: 234 },
+//     { name: 'Pedro H. Silva', score: 261 },
+//     { name: 'Ana Paula Rocha', score: 491 },
+//     { name: 'Vinicius Costa', score: 167 },
+//     { name: 'Roger Melo', score: 137 },
+//     { name: 'Alfredo Braga', score: 135 },
+//     { name: 'Ana Paula Rocha', score: 359 },
+//     { name: 'Pedro H. Silva', score: 133 }
+// ];
+
+
+
+// const rogerScore = phaseScores.reduce((accumulator, item) => {
+//     if (item.name === 'Roger Melo') {
+//         accumulator += item.score;
+//     }
+
+//     return accumulator;
+// }, 0);
+
+
+// console.log(rogerScore);
