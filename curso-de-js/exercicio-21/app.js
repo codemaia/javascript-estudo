@@ -7,6 +7,16 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
+const unpairedArray = randomNumbers.filter(item => {
+  if (item % 2 !== 0) {
+    return item;
+  }
+});
+
+
+// console.log(unpairedArray, randomNumbers);
+
+
 /*
   02
 
@@ -15,6 +25,17 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
+const numbersBelow501 = crazyNumbers.filter(item => {
+
+  if (item < 501) {
+    return item;
+  }
+
+});
+
+
+// console.log(numbersBelow501, numbersBelow501.length);
+
 /*
   03
 
@@ -22,7 +43,11 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
     exiba o novo array no console.
 */
 
-const numbers = [5, 7, 3]
+const numbers = [5, 7, 3];
+
+
+
+
 
 /*
   04
@@ -49,12 +74,15 @@ const cart = [
   - Nome 3
 */
 
-const newCart = cart.map(item => {
-    return console.log(`- ${item.name}`);
-});
+// const newCart = cart.map(item => {
+//     return console.log(`- ${item.name}`);
+// });
 
 
 // console.log(newCart);
+
+
+
 
 /*
   05
