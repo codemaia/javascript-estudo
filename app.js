@@ -2199,7 +2199,8 @@ const article = document.querySelector('article');
  *    # RECEBE UMA FUNÇÃO COMO ARGUMENTO E EXECUTA ESSA FUNÇÃO PARA CADA ITEM DO ARRAY
  *    # BASEADO EM UMA CONDIÇÃO, OBTER UM NOVO ARRAY SOMENTE COM OS ITENS DO ARRAY ORIGINAL QUE ATENDEM A CONDIÇÃO
  *    # A FUNÇÃO SEMPRE RETORNA TRUE, CASO RETORNE FALSE O FILTER RETORNARÁ UM ARRAY VAZIO
- *      
+ *    # SEMPRE RETORNA UM BOOLEAN      
+ *
  *     filter((item, index, array) => {
  *      
  *     })

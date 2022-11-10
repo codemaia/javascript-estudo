@@ -49,6 +49,13 @@ const cart = [
   - Nome 3
 */
 
+const newCart = cart.map(item => {
+    return console.log(`- ${item.name}`);
+});
+
+
+// console.log(newCart);
+
 /*
   05
 
