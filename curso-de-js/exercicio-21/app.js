@@ -51,7 +51,7 @@ const numbersSquare = numbers.map(number => {
   return Math.pow(number, 2);
 });
 
-console.log(numbersSquare);
+// console.log(numbersSquare, numbers);
 
 
 /*
@@ -112,6 +112,17 @@ const tarantinoMovies = [
 
 
 
+const beforeYears2000 = tarantinoMovies.filter(movie => {
+    
+  if (movie.release < 2000) {
+    return movie;
+  }
+});
+
+
+// console.log(beforeYears2000);
+
+
 
 
 
@@ -132,6 +143,15 @@ const tvShows = [
   { name: 'House M.D.', releaseYear: 2004 },
   { name: 'Watchmen', releaseYear: 2019 }
 ]
+
+
+const newTvShows = tvShows.map(show => {
+  return {name: show.name};
+});
+
+console.log(newTvShows, tvShows);
+
+
 
 /*
   07
