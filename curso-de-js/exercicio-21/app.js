@@ -7,9 +7,9 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
-const unpairedArray = randomNumbers.filter(item => {
-  if (item % 2 !== 0) {
-    return item;
+const unpairedArray = randomNumbers.filter(number => {
+  if (number % 2 !== 0) {
+    return number;
   }
 });
 
@@ -25,10 +25,10 @@ const unpairedArray = randomNumbers.filter(item => {
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
-const numbersBelow501 = crazyNumbers.filter(item => {
+const numbersBelow501 = crazyNumbers.filter(number => {
 
-  if (item < 501) {
-    return item;
+  if (number < 501) {
+    return number;
   }
 
 });
@@ -45,8 +45,13 @@ const numbersBelow501 = crazyNumbers.filter(item => {
 
 const numbers = [5, 7, 3];
 
+//Math.pow(7, 2);
 
+const numbersSquare = numbers.map(number => {
+  return Math.pow(number, 2);
+});
 
+console.log(numbersSquare);
 
 
 /*
@@ -103,7 +108,13 @@ const tarantinoMovies = [
   { name: 'Cães de Aluguel', release: 1992 },
   { name: 'À Prova de Morte', release: 2007 },
   { name: 'Kill Bill: Volume 1', release: 2003 }
-]
+];
+
+
+
+
+
+
 
 /*
   06
