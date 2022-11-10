@@ -2121,10 +2121,13 @@ const article = document.querySelector('article');
 //# AULA 01-02 - O MÉTODO MAP
 /**
  *              #IMPORTANTE
- *   # NÃO MODIFICA O ARRAY ORIGINAL
- *   # PRECISA SEMPRE RETORNAR UM VALOR 
  *   # GERAR UM NOVO ARRAY COM A MESMA QUANTIDADE DE ITENS DO ARRAY ORIGINAL SO QUE COM ELEMENTOS TRANSFORMADOS POR UMA FUNÇÃO
- * 
+ *   # NÃO MODIFICA O ARRAY ORIGINAL / POREM COM OBJETOS DEVEMOS return { 'objeto' }
+ *   # PRECISA SEMPRE RETORNAR UM VALOR 
+ *   
+ *    map((item, index, array) => {
+ *      
+ *     })
  * 
  */
 
@@ -2152,36 +2155,118 @@ const article = document.querySelector('article');
 
 
 
-const products = [
-    { name: 'Mouse Sem Fio', price: 30 },
-    { name: 'Pen Drive', price: 25 },
-    { name: 'Cartucho de Tinta', price: 50 },
-    { name: 'Suporte Ergonômico para Notebook', price: 23 },
-    { name: 'Repetidor de Sinal Wi-Fi', price: 44 }
-];
+// const products = [
+//     { name: 'Mouse Sem Fio', price: 30 },
+//     { name: 'Pen Drive', price: 25 },
+//     { name: 'Cartucho de Tinta', price: 50 },
+//     { name: 'Suporte Ergonômico para Notebook', price: 23 },
+//     { name: 'Repetidor de Sinal Wi-Fi', price: 44 }
+// ];
 
-// DESTE MODO MODIFICAMOS O ARRAY ORIGINAL
-// const saleProducts = products.map(product => {
+// // DESTE MODO MODIFICAMOS O ARRAY ORIGINAL
+// // const saleProducts = products.map(product => {
     
+// //     if (product.price >= 30) {
+// //         product.price = product.price / 2; // DESTE MODO MODIFICAMOS O ARRAY ORIGINAL
+// //         return product
+// //     }
+
+// //     return product
+// // });
+
+//                                     //aqui recebemos o proprio objeto
+// const saleProducts = products.map(product => {
 //     if (product.price >= 30) {
-//         product.price = product.price / 2; // DESTE MODO MODIFICAMOS O ARRAY ORIGINAL
-//         return product
+//         return {
+//             name: product.name, price: product.price / 2
+//         }
 //     }
 
-//     return product
+//     return product;
 // });
 
-                                    //aqui recebemos o proprio objeto
-const saleProducts = products.map(product => {
-    if (product.price >= 30) {
-        return {
-            name: product.name, price: product.price / 2
-        }
-    }
+// console.log(saleProducts, products)
 
-    return product;
-});
 
-console.log(saleProducts, products)
+
+
+//# AULA 01-03 - O MÉTODO FILTER
+
+
+/**
+ *          #IMPORTANTES
+ *    # PRECISA "APENAS" RETORNAR TRUE
+ *    # RECEBE UMA FUNÇÃO COMO ARGUMENTO E EXECUTA ESSA FUNÇÃO PARA CADA ITEM DO ARRAY
+ *    # BASEADO EM UMA CONDIÇÃO, OBTER UM NOVO ARRAY SOMENTE COM OS ITENS DO ARRAY ORIGINAL QUE ATENDEM A CONDIÇÃO
+ *    # A FUNÇÃO SEMPRE RETORNA TRUE, CASO RETORNE FALSE O FILTER RETORNARÁ UM ARRAY VAZIO
+ *      
+ *     filter((item, index, array) => {
+ *      
+ *     })
+ */
+
+
+// @ FILTER! 
+
+
+// const randomNumbers = [36, 99, 37, 63];
+
+// const numberGreaterThan37 = randomNumbers.filter(number => number > 37);
+
+// console.log({numberGreaterThan37, randomNumbers});
+
+// const users = [
+//     { name: 'Ada Lovelace', premium: true },
+//     { name: 'Grace Hopper', premium: false },
+//     { name: 'Alan Turing', premium: true },
+//     { name: 'Linus Torvalds', premium: false },
+//     { name: 'Margaret Hamilton', premium: true }
+// ];
+
+
+// const premiumUsers = users.filter(user => {
+//     if (user.premium === true) {
+//         return {
+//             name: user.name, premium: user.premium
+//         }
+//     }
+// });
+
+
+// OU 
+
+
+// const premiumUsers = users.filter(user => user.premium);
+
+// console.log(premiumUsers);
+
+
+
+
+
+
+//# AULA 01-03 - O MÉTODO REDUCE
+
+
+/**
+ *          #IMPORTANTE
+ *   # POSSDEMOS GERAR QUALQUER TIPO DE OUTPUT COM ESTE METODO!
+ *          #-> OBJETO LITERAL
+ *          #-> STRING
+ *          #-> NUMBER
+ *          #-> ARRAY
+ *   # RECEBE UMA FUNÇÃO COMO ARGUMENTO E EXECUTA ESSA FUNÇÃO PARA CADA ITEM DO ARRAY
+ *   # QUANDO BASEADO NO ARRAY ORIGINAL PRECISAR REDUZIR O ARRAY A ALGUM OUTRO TIPO DE DADO, O DADO PODE SER:
+ *          #-> OBJETO LITERAL
+ *          #-> STRING
+ *          #-> NUMBER
+ *          #-> ARRAY
+ *  
+ * 
+ */
+
+
+
+// @ REDUCE
 
 
