@@ -2319,3 +2319,57 @@ const article = document.querySelector('article');
 
 
 // console.log(rogerScore);
+
+
+
+
+
+
+
+//# AULA 02-02 - O MÉTODO SORT (ORDENAR)
+
+/**
+ *          #IMPORTANTE
+ *    # O METODO MODIFICA O ARRAY ORIGINAL, LEMBRAR DE FAZER COPIA
+ * 
+ *    # Ordenar os itens de um array
+ *    # Ordem os itens de um array em ordem alfabetica
+ *    # Ordernar numeros em ordem crescente ou decrescente
+ *    # Ordenar objetos.
+ * 
+ */
+
+
+
+// exemplo 1: ordenando strings
+const names = ['Christian', 'Alfredo', 'Edson'];
+
+names.sort();
+console.log(names);
+
+
+// exemplor 2: ordenando números
+
+/**
+ *  # Para ordenar números devemos passar 2 parametros para o metodo sort
+ *  sort((item1, item2) => {
+ *  })
+ *    e essa função deve comparar os dois números e retornar um NUMERO
+ *    e esse NUMERO deve ser MENOR que ZERO, MAIOR que ZERO ou ZERO (a ordenação vai acontecer a partir desses numeros gerados)
+ *    SE o item1 deve vir ANTES do item2 devemos retornar um NUMERO NEGATIVO(-n...-1)
+ *    SE o item2 deve vir ANTES do item1 devemos retornar um NUMERO POSITIVO(1...n)
+ *    SE não tivermos que ORDENAR os numeros a função deve retornar ZERO.
+ *      
+ *      #EM RESUMO!
+ *    item2 - item1 = DECRESCENTE
+ *    item1 - item2 = CRESCENTE 
+ *   
+ */
+
+const scores = [10, 50, 20, 5, 35, 70, 45];
+
+scores.sort((score1, score2) => score1 - score2);
+
+console.log(scores);
+
+// exemplo 3: ordenando objetos
