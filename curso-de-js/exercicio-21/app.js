@@ -7,15 +7,12 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
-const unpairedArray = randomNumbers.filter(number => {
-  if (number % 2 !== 0) {
-    return number;
-  }
-});
+const getOddNumbers = number => number % 2 === 1;
+
+const oddNumbers = randomNumbers.filter(getOddNumbers);
 
 
-// console.log(unpairedArray, randomNumbers);
-
+console.log(oddNumbers);
 
 /*
   02
@@ -25,15 +22,20 @@ const unpairedArray = randomNumbers.filter(number => {
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
-
-const numbersBelow501 = crazyNumbers.reduce((accumulator, number) => {
-  if(number < 501) {
-    accumulator += 1;
-  }
-
-  return accumulator;
+                                                              //ternario!
+const countNumberLessThan501 = (accumulator, number) => number < 501 ? ++accumulator : accumulator;
   
-}, 0);
+ 
+
+  // if(number < 501) {
+  //   accumulator += 1;
+  // }
+
+  // return accumulator;
+ 
+
+
+const numbersBelow501 = crazyNumbers.reduce(countNumberLessThan501, 0);
 
 
 // console.log(numbersBelow501)
@@ -82,8 +84,20 @@ const cart = [
   - Nome 3
 */
 
+const newCart = cart.reduce((accumulator, { name }) => 
+  /**
+   *    #IMPORTANT
+   *  Na primeira vez que a função é executada ela retorna:
+   *  ' item.name', a função vai ser executada ate que todos os itens do arrays sejam checkados.
+   *  na segunda vez que a funçao é executada ela retorna:
+   *  ' item.name item.name' => Ou seja, tudo que ela ja tem MAIS o proximo item do array.
+   * O accumulator esta recebendo uma string vazia
+   */
 
+   `${accumulator}- ${name}\n`
+, '' /*-> accumulator*/);
 
+// console.log(newCart);
 
 
 /*
@@ -109,18 +123,10 @@ const tarantinoMovies = [
 
 
 
-const beforeYears2000 = tarantinoMovies.filter(movie => {
-    
-  if (movie.release < 2000) {
-    return movie;
-  }
-});
+const moviesBefore2000 = tarantinoMovies.filter(({ release }) => release < 2000);
 
 
-// console.log(beforeYears2000);
-
-
-
+// console.log(moviesBefore2000);
 
 
 
@@ -142,11 +148,11 @@ const tvShows = [
 ]
 
 
-const newTvShows = tvShows.map(show => {
-  return {name: show.name};
-});
 
-// console.log(newTvShows, tvShows);
+const newTvShows = tvShows.map(({ name }) => name);
+
+//debugger -> verificar o valor que esta retornando no momento da execução! ! ! !
+// console.log(newTvShows);
 
 
 
