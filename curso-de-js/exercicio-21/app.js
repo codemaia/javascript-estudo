@@ -79,12 +79,11 @@ const cart = [
   - Nome 3
 */
 
-// const newCart = cart.map(item => {
-//     return console.log(`- ${item.name}`);
-// });
+let newCart = cart.map(item => {
 
+  return console.log(`- ${item.name}`)
 
-// console.log(newCart);
+});
 
 
 
@@ -149,7 +148,7 @@ const newTvShows = tvShows.map(show => {
   return {name: show.name};
 });
 
-console.log(newTvShows, tvShows);
+// console.log(newTvShows, tvShows);
 
 
 
