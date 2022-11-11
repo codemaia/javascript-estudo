@@ -25,16 +25,19 @@ const unpairedArray = randomNumbers.filter(number => {
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
-const numbersBelow501 = crazyNumbers.filter(number => {
 
-  if (number < 501) {
-    return number;
+const numbersBelow501 = crazyNumbers.reduce((accumulator, number) => {
+  if(number < 501) {
+    accumulator += 1;
   }
 
-});
+  return accumulator;
+  
+}, 0);
 
 
-// console.log(numbersBelow501, numbersBelow501.length);
+// console.log(numbersBelow501)
+
 
 /*
   03
@@ -45,7 +48,7 @@ const numbersBelow501 = crazyNumbers.filter(number => {
 
 const numbers = [5, 7, 3];
 
-//Math.pow(7, 2);
+//Math.pow(itemArray, 2);
 
 const numbersSquare = numbers.map(number => {
   return Math.pow(number, 2);
@@ -79,11 +82,6 @@ const cart = [
   - Nome 3
 */
 
-let newCart = cart.map(item => {
-
-  return console.log(`- ${item.name}`)
-
-});
 
 
 
