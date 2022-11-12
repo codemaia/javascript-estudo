@@ -16,6 +16,8 @@ orderdNames.sort();
 
 
 
+
+
 /*
   02
 
@@ -67,22 +69,25 @@ orderNumbers.sort((number1, number2) => number1 - number2);
 */
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
+const reduceNumbersArray = randomNumbers.map(number => number);
 
-// const numberGreaterThan50 = randomNumbers.filter(randomNumber => randomNumber > 50);
+const numberGreaterThan50 = reduceNumbersArray.filter(randomNumber => randomNumber > 50);
 
-// const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
+const teste = randomNumbers.reduce((accumulator, number) => {
   
-//   for (let i = 0; i < randomNumbers.length; i++) {
-//     if (randomNumber > 50) {
-//       return randomNumber;
-//     }
-//     break;  
-//   }
-
+    if (number > 50) {
+     return accumulator = number
+      // debugger
+      
+      
+    }
+    return number
+    // debugger
   
-// });
+},0)
 
-// console.log(numberGre aterThan50);
+
+// console.log(teste);
 
 
 
@@ -95,6 +100,13 @@ const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
 */
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
+const peopleOrder = people.map(people => people);
+
+peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
+
+// console.log(peopleOrder);
+
+
 
 /*
   06
@@ -105,6 +117,18 @@ const people = ['Cauã', 'Alfredo', 'Bruno']
 */
 
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
+
+const newIngredients = ingredients.reduce((accumulator, ingredient) => {
+  // return `${accumulator}${ingredient} cozido, `
+
+  if (ingredient === 'cebola') {
+  return `${accumulator},${ingredient} cozida,`
+  } else {
+  return `${accumulator}${ingredient} cozido,`
+  }
+},'');
+
+console.log(newIngredients)
 
 /*
   07
