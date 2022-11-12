@@ -70,13 +70,19 @@ const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
 
 // const numberGreaterThan50 = randomNumbers.filter(randomNumber => randomNumber > 50);
 
-const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
-  if (randomNumber > 50) {
-    return randomNumber;
-  }
-});
+// const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
+  
+//   for (let i = 0; i < randomNumbers.length; i++) {
+//     if (randomNumber > 50) {
+//       return randomNumber;
+//     }
+//     break;  
+//   }
 
-console.log(numberGreaterThan50);
+  
+// });
+
+// console.log(numberGre aterThan50);
 
 
 
