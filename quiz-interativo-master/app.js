@@ -15,10 +15,10 @@ const getUserAnswers = () => {
 
     // return userAnswers;
     
-    const userAnswers = correctAnswers.map((_, index) => {
+      const userAnswers = correctAnswers.map((_, index) => {
          return form[`inputQuestion${index + 1}`].value;
          
-    }) 
+    }); 
     
     // correctAnswers.forEach((_, index) => {
     //     const userAnswer = form[`inputQuestion${index + 1}`].value;
