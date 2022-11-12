@@ -25,6 +25,9 @@ const getUserAnswers = () => {
 
 
     /** ira pegar o userAnswers como parametro, que esta dentro do form.addEventListener */
+    // não podemos utilziar o map neste forEach porque o SCORE é uma variavel de scopo
+    // devemos evitar utilizar metodos em variáveis que executam uma mudança de estado
+    // neste caso a váriavel SCORE executa uma mudança de estado;
 const calculateUserScore = userAnswers => {
     userAnswers.forEach((answer, index) => {
         const isUserAnswerCorrect = answer === correctAnswers[index];

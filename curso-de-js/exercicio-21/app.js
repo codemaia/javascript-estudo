@@ -162,3 +162,6 @@ const newTvShows = tvShows.map(({ name }) => name);
   - Observe os loops da sua versão do quiz e considere se, baseado no que foi  
     visto nessa aula, você deve refatorá-los.
 */
+
+
+ 
