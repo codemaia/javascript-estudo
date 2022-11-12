@@ -2345,7 +2345,7 @@ const article = document.querySelector('article');
 const names = ['Christian', 'Alfredo', 'Edson'];
 
 names.sort();
-console.log(names);
+// console.log(names);
 
 
 // exemplor 2: ordenando números
@@ -2370,7 +2370,7 @@ const scores = [10, 50, 20, 5, 35, 70, 45];
 
 scores.sort((score1, score2) => score1 - score2);
 
-console.log(scores);
+// console.log(scores);
 
 // exemplo 3: ordenando objetos
 
@@ -2386,4 +2386,54 @@ const theBigFamily = [
 
 theBigFamily.sort((item1, item2) => item2.score - item1.score);
 
-console.log(theBigFamily);
+// console.log(theBigFamily);
+
+
+
+
+
+
+
+//# AULA 02-03 - ENCADEANDO MÉTODOS
+
+/**
+ *      #IMPORTANTE
+ *   
+ * 
+ *  
+ */
+
+
+// obter só os livros acima de 20 reais e depois gerar pra todos os livros uma string com o 
+// nome e o preço do livro em promoção
+
+
+const books = [
+    { name: 'Código Limpo', price: 30 },
+    { name: 'O milagre da manhã', price: 5 },
+    { name: 'Alice no País das Maravilhas', price: 10 },
+    { name: 'Quem Pensa Enriquece', price: 50 },
+    { name: 'O livro da ciência', price: 40 }
+];
+
+
+// const bookSales = books.filter((book) => {
+//     return book.price > 20;
+// }).reduce((accumulator, book) => {
+//     return `${accumulator} ${book.name} R$${book.price}\n`;
+// }, '');
+// console.log(bookSales);
+
+// const bookOnSale = books
+//   .filter((book) => {
+//     return book.price > 20;
+// }).map((book) => {
+//     return `O preço do livro "${book.name}" caiu para ${book.price} reais`
+// });
+
+
+const bookOnSale = books
+  .filter(({ price }) => price > 20)
+  .map(({ name, price }) => `O preço do livro "${name}" caiu para ${price} reais`);
+
+// console.log(bookOnSale);
