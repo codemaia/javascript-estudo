@@ -122,16 +122,16 @@ const newIngredients = ingredients.reduce((accumulator, ingredient) => {
   // return `${accumulator}${ingredient} cozido, `
 
   if (ingredient === 'cebola') {
-  return `${accumulator},${ingredient} cozida,`
-  } else {
-  return `${accumulator}${ingredient} cozido,`
-  }
+   return `${accumulator}${ingredient} cozida, `
+  } 
+
+  return `${accumulator}${ingredient} cozido, `
 },'');
 
 console.log(newIngredients)
 
 /*
-  07
+  07git 
   
   - À partir do array abaixo, obtenha e exiba no console o total de pessoas que 
     assistiram apenas os filmes da Disney.
