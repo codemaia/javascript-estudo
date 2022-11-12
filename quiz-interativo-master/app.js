@@ -7,7 +7,7 @@ let score = 0;
 let timer;
 
 const getUserAnswers = () => {
-    let userAnswers = [];
+    // let userAnswers = [];
                         /** iterou sobre o correctAnswers porque possui o mesmo numero de elementos no array! kkk mto bom */
     // for(let i = 0; i < correctAnswers.length; i++) {
     //     userAnswers.push(form[`inputQuestion${i + 1}`].value);
@@ -15,10 +15,15 @@ const getUserAnswers = () => {
 
     // return userAnswers;
     
-    correctAnswers.forEach((_, index) => {
-        const userAnswer = form[`inputQuestion${index + 1}`].value;
-        userAnswers.push(userAnswer);
-    });
+    const userAnswers = correctAnswers.map((_, index) => {
+         return form[`inputQuestion${index + 1}`].value;
+         
+    }) 
+    
+    // correctAnswers.forEach((_, index) => {
+    //     const userAnswer = form[`inputQuestion${index + 1}`].value;
+    //     userAnswers.push(userAnswer);
+    // });
 
     return userAnswers;
 };
@@ -27,7 +32,7 @@ const getUserAnswers = () => {
     /** ira pegar o userAnswers como parametro, que esta dentro do form.addEventListener */
     // não podemos utilziar o map neste forEach porque o SCORE é uma variavel de scopo
     // devemos evitar utilizar metodos em variáveis que executam uma mudança de estado
-    // neste caso a váriavel SCORE executa uma mudança de estado;
+    // neste caso a váriavel SCORE executa uma mudança de estado ou seja um SIDE EFECTORY;
 const calculateUserScore = userAnswers => {
     userAnswers.forEach((answer, index) => {
         const isUserAnswerCorrect = answer === correctAnswers[index];
