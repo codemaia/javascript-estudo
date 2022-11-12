@@ -12,7 +12,7 @@ const orderdNames = names.map(name => {
   return name;
 });
 orderdNames.sort();
-console.log(orderdNames);
+// console.log(orderdNames);
 
 
 
@@ -31,7 +31,15 @@ const characters = [
   { id: 04, name: 'Mufasa' }
 ];
 
+const orderCharacters = characters.map(character => {
+  return character;
+});
 
+orderCharacters.sort((item1, item2) => {
+  return item1.id - item2.id;
+});
+
+// console.log(orderCharacters);
 
 
 /*
@@ -42,7 +50,15 @@ const characters = [
   - Exiba o array ordenado no console.
 */
 
-const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
+const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291];
+
+const orderNumbers = numbers.map(number => number);
+
+orderNumbers.sort((number1, number2) => number1 - number2);
+
+// console.log(orderNumbers);
+
+
 
 /*
   04
@@ -50,7 +66,19 @@ const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
   - Encontre e exiba no console o 1º item maior que 50 do array abaixo.
 */
 
-const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
+const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
+
+// const numberGreaterThan50 = randomNumbers.filter(randomNumber => randomNumber > 50);
+
+const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
+  if (randomNumber > 50) {
+    return randomNumber;
+  }
+});
+
+console.log(numberGreaterThan50);
+
+
 
 /*
   05
