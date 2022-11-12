@@ -6,7 +6,15 @@
   - Exiba o array ordenado no console.
 */
 
-const names = ['Caio', 'André', 'Dário']
+const names = ['Caio', 'André', 'Dário'];
+
+const orderdNames = names.map(name => {
+  return name;
+});
+orderdNames.sort();
+console.log(orderdNames);
+
+
 
 /*
   02
@@ -21,7 +29,10 @@ const characters = [
   { id: 02, name: 'Nala' },
   { id: 01, name: 'Scar' },
   { id: 04, name: 'Mufasa' }
-]
+];
+
+
+
 
 /*
   03
