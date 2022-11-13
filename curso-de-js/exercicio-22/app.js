@@ -134,7 +134,7 @@ const newIngredients = ingredients.reduce((accumulator, ingredient) => {
 },''); 
 
 
-console.log(newIngredients.slice(0, newIngredients.length - 2));
+// console.log(newIngredients.slice(0, newIngredients.length - 2));
 
 
 
@@ -146,6 +146,8 @@ console.log(newIngredients.slice(0, newIngredients.length - 2));
   
   - À partir do array abaixo, obtenha e exiba no console o total de pessoas que 
     assistiram apenas os filmes da Disney.
+
+    - 61494014
 */
 
 const topBrazilmovies = [
@@ -160,6 +162,19 @@ const topBrazilmovies = [
   { title: 'Os Vingadores', peopleAmount: 10968065, distributedBy: 'Disney' },
   { title: 'Dona Flor e Seus Dois Maridos', peopleAmount: 10735524, distributedBy: 'Embrafilme' }
 ]
+
+
+const peopleWatchedDisneyMovies = topBrazilmovies.reduce((accumulator, { peopleAmount, distributedBy }) => {
+  if (distributedBy === 'Disney') {
+    accumulator += peopleAmount
+  }
+  
+  return accumulator;
+}, 0);
+
+
+console.log(peopleWatchedDisneyMovies);
+
 
 /*
   08
