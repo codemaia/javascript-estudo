@@ -123,20 +123,19 @@ const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 const newIngredients = ingredients.reduce((accumulator, ingredient) => {
 
   if (ingredient === 'cebola') {
-    const cebola = accumulator += ingredient + ' cozida, ';
-   return cebola
   
-  } 
-    const othersIngredients = accumulator += ingredient + ' cozido, '
+    accumulator += ingredient + ' cozida, ';
+  } else {
+
+    accumulator += ingredient + ' cozido, '
+  }
     
-   return othersIngredients;
+   return accumulator;
   
 },''); 
 
 
 // console.log(newIngredients.slice(0, newIngredients.length - 2));
-
-
 
 
 
@@ -173,7 +172,7 @@ const peopleWatchedDisneyMovies = topBrazilmovies.reduce((accumulator, { peopleA
 }, 0);
 
 
-console.log(peopleWatchedDisneyMovies);
+// console.log(peopleWatchedDisneyMovies);
 
 
 /*
@@ -196,12 +195,24 @@ const pets = [
   { name: 'Chico', age: 6, gender: 'Male', type: 'Dog' }
 ]
 
+
+
+
+
+
+
 /*
   09
   
   - Considerando o array topBrazilmovies, através do map ou do reduce, insira 
     os nomes dos filmes na ul do index.html.
+
+
+
+
 */
+
+
 
 /*
   10
