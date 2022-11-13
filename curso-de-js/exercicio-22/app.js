@@ -121,20 +121,20 @@ peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 
 const newIngredients = ingredients.reduce((accumulator, ingredient) => {
-  // return `${accumulator}${ingredient} cozido, `
 
   if (ingredient === 'cebola') {
     const cebola = accumulator += ingredient + ' cozida, ';
    return cebola
-  //  `${accumulator}, ${ingredient} cozida`
+  
   } 
     const othersIngredients = accumulator += ingredient + ' cozido, '
     
-   return othersIngredients.slice(0, 59);
-  //  `${accumulator}, ${ingredient} cozido`
-}, '');
+   return othersIngredients;
+  
+},''); 
 
-console.log(newIngredients)
+
+console.log(newIngredients.slice(0, newIngredients.length - 2));
 
 
 
