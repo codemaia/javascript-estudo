@@ -88,8 +88,8 @@ const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
   
 });
 
-console.log(numberGreaterThan50);
-console.log(teste1);
+// console.log(numberGreaterThan50);
+// console.log(teste1);
 
 
 
@@ -124,16 +124,25 @@ const newIngredients = ingredients.reduce((accumulator, ingredient) => {
   // return `${accumulator}${ingredient} cozido, `
 
   if (ingredient === 'cebola') {
-   return `${accumulator}${ingredient} cozida, `
+    const cebola = accumulator += ingredient + ' cozida, ';
+   return cebola
+  //  `${accumulator}, ${ingredient} cozida`
   } 
+    const othersIngredients = accumulator += ingredient + ' cozido, '
+    
+   return othersIngredients.slice(0, 59);
+  //  `${accumulator}, ${ingredient} cozido`
+}, '');
 
-  return `${accumulator}${ingredient} cozido, `
-},'');
+console.log(newIngredients)
 
-// console.log(newIngredients)
+
+
+
+
 
 /*
-  07git 
+  07
   
   - À partir do array abaixo, obtenha e exiba no console o total de pessoas que 
     assistiram apenas os filmes da Disney.
