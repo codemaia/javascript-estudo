@@ -66,13 +66,17 @@ orderNumbers.sort((number1, number2) => number1 - number2);
   04
 
   - Encontre e exiba no console o 1º item maior que 50 do array abaixo.
+
 */
 // const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
-const reduceNumbersArray = randomNumbers.map(number => number);
 
-const numberGreaterThan50 = reduceNumbersArray.filter(randomNumber => randomNumber > 50);
+const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
+  if (randomNumber > 50) {
+    return randomNumber;
+  }
+});
 
 const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
     
@@ -84,7 +88,7 @@ const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
   
 });
 
-
+console.log(numberGreaterThan50);
 console.log(teste1);
 
 
