@@ -255,23 +255,23 @@ const topBrazilmovies = [
 const ul = document.querySelector('.list-group');
 const li = document.createElement('li');
 
-// const testeUl = topBrazilmovies.reduce((acc, movie) => {
-//     acc += `<li>${movie.title}</li>`;
-//     return ul.innerHTML = acc;
-// }, []);
-
 const testeUl = topBrazilmovies.reduce((acc, movie) => {
+    acc += `<li>${movie.title}</li>`;
+    return ul.innerHTML = acc;
+}, []);
 
-  // newParagraph.textContent = 'Username válido';
-    // newParagraph.setAttribute('class', 'username-success-feedback');
-    // input.insertAdjacentElement('afterend', newParagraph)
-    
-  acc += movie.title;
-  li.textContent = acc;
-  return ul.innerHTML =
+
+
+// const testeUl = topBrazilmovies.reduce((acc, movie) => {
   
-  console.log(li)
-},[]);
+//   // debugger
+//   li.textContent = movie.title
+
+//   acc += li.childNodes
+  
+//   return acc
+
+// }, []);
 
 
 console.log(testeUl);
