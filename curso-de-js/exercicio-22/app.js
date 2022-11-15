@@ -196,6 +196,17 @@ const pets = [
 ]
 
 
+const arrayDogs = pets.reduce((accumulator, pet) => {
+  if (pet.type === 'Dog') {
+    {accumulator += pet}
+    debugger
+  }
+  
+  return accumulator;
+}, []);
+
+console.log(arrayDogs);
+
 
 
 
