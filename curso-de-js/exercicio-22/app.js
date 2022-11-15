@@ -216,11 +216,12 @@ const reduceArrayPets = pets.reduce((accumulator , pet) => {
     accumulator.push(pet);
     
   }
+
   return accumulator;
 
 }, []);
 
-console.log(reduceArrayPets);
+// console.log(reduceArrayPets);
 
 
 
@@ -234,9 +235,37 @@ console.log(reduceArrayPets);
     os nomes dos filmes na ul do index.html.
 
 
+    const topBrazilmovies = [
+  { title: 'Vingadores: Ultimato', peopleAmount: 19686119, distributedBy: 'Disney' },
+  { title: 'Titanic', peopleAmount: 17050000, distributedBy: 'Paramount / 20th Century' },
+  { title: 'O Rei Leão', peopleAmount: 16267649, distributedBy: 'Disney' },
+  { title: 'Vingadores: Guerra Infinita', peopleAmount: 14572181, distributedBy: 'Disney' },
+  { title: 'Tubarão', peopleAmount: 13035000, distributedBy: 'Universal' },
+  { title: 'Nada a Perder', peopleAmount: 11944985, distributedBy: 'Paris Filmes' },
+  { title: 'Os Dez Mandamentos', peopleAmount: 11259536, distributedBy: 'Paris / Downtown Filmes' },
+  { title: 'Tropa de Elite 2', peopleAmount: 11204815, distributedBy: 'Zazen' },
+  { title: 'Os Vingadores', peopleAmount: 10968065, distributedBy: 'Disney' },
+  { title: 'Dona Flor e Seus Dois Maridos', peopleAmount: 10735524, distributedBy: 'Embrafilme' }
+]
+
 
 
 */
+
+const ul = document.querySelector('.list-group');
+
+const testeUl = topBrazilmovies.reduce((acc, movie) => {
+    return acc += ul.innerHTML = `<li>${movie.title}</li>`;
+},[]);
+
+console.log(testeUl)
+
+
+7517
+
+
+
+
 
 
 
