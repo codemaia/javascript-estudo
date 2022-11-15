@@ -196,14 +196,16 @@ const pets = [
 ]
 
 
-const arrayDogs = pets.reduce((accumulator, pet) => {
-  if (pet.type === 'Dog') {
-    {accumulator += pet}
-    debugger
+
+const arrayDogs = pets.filter(({ type }) => {
+  if (type === 'Dog') {
+    return pets
   }
-  
-  return accumulator;
-}, []);
+}).map(({ name, age, gender, type }) => {
+  return {
+    name: name, age: age * 7, gender: gender, type: type
+  }
+}); 
 
 console.log(arrayDogs);
 
