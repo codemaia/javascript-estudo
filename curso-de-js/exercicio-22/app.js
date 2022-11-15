@@ -235,7 +235,7 @@ const reduceArrayPets = pets.reduce((accumulator , pet) => {
     os nomes dos filmes na ul do index.html.
 
 
-    const topBrazilmovies = [
+const topBrazilmovies = [
   { title: 'Vingadores: Ultimato', peopleAmount: 19686119, distributedBy: 'Disney' },
   { title: 'Titanic', peopleAmount: 17050000, distributedBy: 'Paramount / 20th Century' },
   { title: 'O Rei Leão', peopleAmount: 16267649, distributedBy: 'Disney' },
@@ -254,14 +254,16 @@ const reduceArrayPets = pets.reduce((accumulator , pet) => {
 
 const ul = document.querySelector('.list-group');
 
-topBrazilmovies.reduce((acc, movie) => {
-    return acc += ul.innerHTML = `<li>${movie.title}</li>`;
-},[]);
 
-// console.log(testeUl)
+const testeUl = topBrazilmovies.reduce((acc, movie) => {
+    acc += `<li>${movie.title}</li>`;
+    return ul.innerHTML = acc;
+}, []);
+
+console.log(testeUl)
 
 
-7517
+
 
 
 
