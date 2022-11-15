@@ -254,11 +254,11 @@ const reduceArrayPets = pets.reduce((accumulator , pet) => {
 
 const ul = document.querySelector('.list-group');
 
-const testeUl = topBrazilmovies.reduce((acc, movie) => {
+topBrazilmovies.reduce((acc, movie) => {
     return acc += ul.innerHTML = `<li>${movie.title}</li>`;
 },[]);
 
-console.log(testeUl)
+// console.log(testeUl)
 
 
 7517
