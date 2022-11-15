@@ -207,7 +207,16 @@ const arrayDogs = pets.filter(({ type }) => {
   }
 }); 
 
-console.log(arrayDogs);
+// console.log(arrayDogs);
+
+// const reduceArrayPets = pets.reduce((accumulator, pet) => {
+//   if (pet.type === 'Dog') {
+//     accumulator += pe
+//   }
+//   return accumulator.name
+// },[]);
+
+// console.log(reduceArrayPets);
 
 
 
