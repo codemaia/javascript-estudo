@@ -274,26 +274,27 @@ const ul = document.querySelector('.list-group');
 
 
 
-const addListWithMap = topBrazilmovies.map(movie => {
+// const addListWithMap = topBrazilmovies.map(movie => {
   
-    return movie.title;
+//     return movie.title;
 
-}).forEach((movieItem) => {
+// }).forEach((movieItem) => {
     
-    const li = `<li>${movieItem}</li>`
-    return ul.innerHTML += li;
+//     const li = `<li>${movieItem}</li>`
+//     return ul.innerHTML += li;
     
+// });
+
+
+const addListWithMap = topBrazilmovies.map(movie => {
+  const li = `<li>${movie.title}</li>`
+  return ul.innerHTML += li
+
 });
 
 
 // console.log(addListWithReduce);
 console.log(addListWithMap);
-
-
-
-
-
-
 
 
 
