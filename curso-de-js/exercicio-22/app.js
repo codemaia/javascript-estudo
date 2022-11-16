@@ -254,27 +254,40 @@ const topBrazilmovies = [
 
 const ul = document.querySelector('.list-group');
 
-// const addList = topBrazilmovies.reduce((acc, movie) => {
+// const addListWithReduce = topBrazilmovies.reduce((acc, movie) => {
 //     acc += `<li>${movie.title}</li>`;
 //     return ul.innerHTML = acc;
 // }, []);
 
 
 
-const addList = topBrazilmovies.reduce((acc, movie) => {
-  const li = document.createElement('li');
-  li.textContent = movie.title;
+// const addListWithReduce = topBrazilmovies.reduce((acc, movie) => {
+//   const li = document.createElement('li');
+//   li.textContent = movie.title;
   
-  acc += ul.appendChild(li);
+//   acc += ul.appendChild(li);
 
-  return acc;
-  // return ul.appendChild(li);
+//   return acc;
+//   // return ul.appendChild(li);
 
-},[]);
+// },[]);
 
 
-// console.log(addList);
 
+const addListWithMap = topBrazilmovies.map(movie => {
+  
+    return movie.title;
+
+}).forEach((movieItem) => {
+    
+    const li = `<li>${movieItem}</li>`
+    return ul.innerHTML += li;
+    
+});
+
+
+// console.log(addListWithReduce);
+console.log(addListWithMap);
 
 
 
