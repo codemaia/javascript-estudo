@@ -10,8 +10,8 @@ const names = ['Caio', 'André', 'Dário'];
 
 const orderdNames = names.map(name => {
   return name;
-});
-orderdNames.sort();
+}).sort();
+// orderdNames.sort();
 // console.log(orderdNames);
 
 
@@ -33,6 +33,14 @@ const characters = [
   { id: 04, name: 'Mufasa' }
 ];
 
+/**
+ *  quando um array retorna um objeto se fizermos a copia somente com o map e return quando modificarmos
+ *  o array original a copia também será modificada.
+ *  então devemos junto com o map retornar um objeto
+ * 
+ *  ex : return { id: item.id, name: item.name }
+ * 
+ */
 const orderCharacters = characters.map(character => {
   return character;
 });
@@ -41,7 +49,7 @@ orderCharacters.sort((item1, item2) => {
   return item1.id - item2.id;
 });
 
-// console.log(orderCharacters);
+console.log(orderCharacters);
 
 
 /*
@@ -294,7 +302,7 @@ const addListWithMap = topBrazilmovies.map(movie => {
 
 
 // console.log(addListWithReduce);
-console.log(addListWithMap);
+// console.log(addListWithMap);
 
 
 
