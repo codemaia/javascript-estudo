@@ -135,7 +135,7 @@ const peopleOrder = people.map(people => people);
 // peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
 peopleOrder.sort();
 peopleOrder.reverse();
-console.log({ people, peopleOrder });
+// console.log({ people, peopleOrder });
 
 
 
@@ -177,6 +177,11 @@ const newIngredients = ingredients.reduce((accumulator, ingredient) => {
 
     - 61494014
 */
+
+/**
+ *  refazer utilizando filter() e reduce()
+ * 
+ */
 
 const topBrazilmovies = [
   { title: 'Vingadores: Ultimato', peopleAmount: 19686119, distributedBy: 'Disney' },
