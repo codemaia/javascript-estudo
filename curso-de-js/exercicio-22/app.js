@@ -34,7 +34,8 @@ const characters = [
 ];
 
 /**
- *  
+ *  reassistir aula da etapa 4 tipos de referencia X tipos primitivos 
+ * 
  *  quando um array retorna um objeto se fizermos a copia somente com o map e return quando modificarmos
  *  o array original a copia também será modificada porque os objetos do array copia são os mesmos do original.
  *  então devemos junto com o map retornar um objeto
@@ -49,7 +50,7 @@ orderCharacters.sort((item1, item2) => item1.id - item2.id);
 
 // characters[0].name = 'teste de modificação'
 
-console.log(characters, orderCharacters);
+// console.log(characters, orderCharacters);
 
 
 
@@ -80,23 +81,33 @@ orderNumbers.sort((number1, number2) => number1 - number2);
 */
 // const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
 
+
+/**
+ *  UTILIZAR O METODO FIND() PARA RESOLVEEEEEEEEEEEEEEEEEER
+ *  retorna o primeiro item(true) que atende a função que foi passada a ele
+ *  caso a função não obtenha o item ele retorna um falsy
+ */
+
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
 
-const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
-  if (randomNumber > 50) {
-    return randomNumber;
-  }
-});
+const numberGreaterThan50 = randomNumbers.find(number => number > 50);
 
-const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
+
+// const numberGreaterThan50 = randomNumbers.filter(randomNumber => {
+//   if (randomNumber > 50) {
+//     return randomNumber;
+//   }
+// });
+
+// const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
     
-    if (number > 50) {
+//     if (number > 50) {
 
-      return accumulator
+//       return accumulator
 
-    }    
+//     }    
   
-});
+// });
 
 // console.log(numberGreaterThan50);
 // console.log(teste1);
@@ -111,12 +122,20 @@ const teste1 = numberGreaterThan50.reduce((accumulator, number) => {
   - Exiba o array ordenado no console.
 */
 
+
+/**
+ *  ASSISTIR AULA 2 ETAPA 5 E UTILZIAR O METODO REVERSE()
+ *  ele inverte a ordem dos itens de um array
+ * 
+ */
+
 const people = ['Cauã', 'Alfredo', 'Bruno']
 const peopleOrder = people.map(people => people);
 
-peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
-
-// console.log(peopleOrder);
+// peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
+peopleOrder.sort();
+peopleOrder.reverse();
+console.log({ people, peopleOrder });
 
 
 
