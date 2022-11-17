@@ -41,18 +41,17 @@ const characters = [
  * 
  *  ex : return { id: item.id, name: item.name }
  * 
- */
-const orderCharacters = characters.map(character => {
-  return { id: character.id, name: character.name };
-});
+ */                                               // com parenteses a criação do objeto se torna prioridade
+                                                  // os ( ) 'parenteses' tem a maior prioridade no JavaScript
+const orderCharacters = characters.map(character => ({ id: character.id, name: character.name }));
 
-orderCharacters.sort((item1, item2) => {
-  return item1.id - item2.id;
-});
+orderCharacters.sort((item1, item2) => item1.id - item2.id);
 
 // characters[0].name = 'teste de modificação'
 
 console.log(characters, orderCharacters);
+
+
 
 
 /*
