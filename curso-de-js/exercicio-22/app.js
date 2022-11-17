@@ -34,22 +34,25 @@ const characters = [
 ];
 
 /**
+ *  
  *  quando um array retorna um objeto se fizermos a copia somente com o map e return quando modificarmos
- *  o array original a copia também será modificada.
+ *  o array original a copia também será modificada porque os objetos do array copia são os mesmos do original.
  *  então devemos junto com o map retornar um objeto
  * 
  *  ex : return { id: item.id, name: item.name }
  * 
  */
 const orderCharacters = characters.map(character => {
-  return character;
+  return { id: character.id, name: character.name };
 });
 
 orderCharacters.sort((item1, item2) => {
   return item1.id - item2.id;
 });
 
-console.log(orderCharacters);
+// characters[0].name = 'teste de modificação'
+
+console.log(characters, orderCharacters);
 
 
 /*
