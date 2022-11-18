@@ -78,26 +78,10 @@ orderCharacters.sort((item1, item2) => item1.id - item2.id);
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291];
 
+const numbersCopy = numbers.map(item => item);
+numbersCopy.sort((number2, number1) => number2 - number1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(numbersCopy);
 
 
 
@@ -126,6 +110,13 @@ orderNumbers.sort((number1, number2) => number1 - number2);
  */
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
+
+
+const numberGreaterThan50V2 = randomNumbers.find(number => number > 50);
+
+// console.log(numberGreaterThan50V2);
+
+
 
 const numberGreaterThan50 = randomNumbers.find(number => number > 50);
 
@@ -167,6 +158,14 @@ const numberGreaterThan50 = randomNumbers.find(number => number > 50);
  */
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
+
+const peopleCopy = people.map(item => item);
+peopleCopy.sort();
+peopleCopy.reverse();
+
+// console.log(peopleCopy);
+
+
 const peopleOrder = people.map(people => people);
 
 // peopleOrder.sort((string1, string2) => string2 < string1 ?  -1 : 1)
@@ -185,6 +184,33 @@ peopleOrder.reverse();
 */
 
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
+
+
+const ingredientsNew = ingredients.reduce((acc, item, index, array) => {
+        const testWordItem = /a$/.test(item);
+        const testLastItem = index === array.length - 1;
+            //verifica se a ultima letra do item é 'a' ou não
+          //utilizando ternário
+    // const correctWordGender = item[item.length - 1] === 'a' ? 'cozida' : 'cozido';
+    //ou utilizando REGEX
+      const correctWordGender = testWordItem ? 'cozida' : 'cozido';
+      
+  //comparamos o ultimo index (3) com o tamanho do array - 1 (3)
+  //para quando chegar na ultima iteração do array ele não colocar a virgula do final
+    if (testLastItem) {
+      return acc + `${item} ${correctWordGender}`  
+    }
+
+    return acc + `${item} ${correctWordGender}, `
+
+},'')
+
+
+// console.log(ingredientsNew);
+
+
+
+
 
 const newIngredients = ingredients.reduce((accumulator, ingredient) => {
 
@@ -234,6 +260,19 @@ const topBrazilmovies = [
 ]
 
 
+
+const peopleAmountDisneyMovie = topBrazilmovies
+    .filter(movie => movie.distributedBy === 'Disney')
+    .reduce((acc, movie) => {
+      return acc + movie.peopleAmount;
+    }, 0)
+
+
+// console.log(peopleAmountDisneyMovie);
+
+
+
+
 const peopleWatchedDisneyMovies = topBrazilmovies.reduce((accumulator, { peopleAmount, distributedBy }) => {
   if (distributedBy === 'Disney') {
     accumulator += peopleAmount
@@ -278,7 +317,7 @@ const arrayDogs = pets.filter(({ type }) => {
   }
 }); 
 
-// console.log(arrayDogs);
+console.log(arrayDogs);
 
 const reduceArrayPets = pets.reduce((accumulator , pet) => {
   if (pet.type === 'Dog') {
