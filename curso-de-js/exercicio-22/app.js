@@ -6,13 +6,15 @@
   - Exiba o array ordenado no console.
 */
 
+const getArrayCopy = array => array.map(item => item);
+
 const names = ['Caio', 'André', 'Dário'];
 
 
-const namesCopy = names.map(item => item);
+const namesCopy = getArrayCopy(names);
 namesCopy.sort()
 
-// console.log(namesCopy);
+console.log(namesCopy);
 // const orderdNames = names.map(name => {
 //   return name;
 // }).sort();
@@ -78,10 +80,13 @@ orderCharacters.sort((item1, item2) => item1.id - item2.id);
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291];
 
-const numbersCopy = numbers.map(item => item);
+const numbersCopy = getArrayCopy(numbers);
 numbersCopy.sort((number2, number1) => number2 - number1);
 
-// console.log(numbersCopy);
+console.log(numbersCopy);
+
+
+
 
 
 
@@ -110,8 +115,6 @@ orderNumbers.sort((number1, number2) => number1 - number2);
  */
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70];
-
-
 const numberGreaterThan50V2 = randomNumbers.find(number => number > 50);
 
 // console.log(numberGreaterThan50V2);
@@ -159,11 +162,11 @@ const numberGreaterThan50 = randomNumbers.find(number => number > 50);
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
 
-const peopleCopy = people.map(item => item);
+const peopleCopy = getArrayCopy(people);
 peopleCopy.sort();
 peopleCopy.reverse();
 
-// console.log(peopleCopy);
+console.log(peopleCopy);
 
 
 const peopleOrder = people.map(people => people);
@@ -188,7 +191,7 @@ const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 
 const ingredientsNew = ingredients.reduce((acc, item, index, array) => {
         const testWordItem = /a$/.test(item);
-        const testLastItem = index === array.length - 1;
+        const isLastItem = index === array.length - 1;
             //verifica se a ultima letra do item é 'a' ou não
           //utilizando ternário
     // const correctWordGender = item[item.length - 1] === 'a' ? 'cozida' : 'cozido';
@@ -197,7 +200,7 @@ const ingredientsNew = ingredients.reduce((acc, item, index, array) => {
       
   //comparamos o ultimo index (3) com o tamanho do array - 1 (3)
   //para quando chegar na ultima iteração do array ele não colocar a virgula do final
-    if (testLastItem) {
+    if (isLastItem) {
       return acc + `${item} ${correctWordGender}`  
     }
 
@@ -262,9 +265,9 @@ const topBrazilmovies = [
 
 
 const peopleAmountDisneyMovie = topBrazilmovies
-    .filter(movie => movie.distributedBy === 'Disney')
-    .reduce((acc, movie) => {
-      return acc + movie.peopleAmount;
+    .filter(({ distributedBy }) => distributedBy === 'Disney')
+    .reduce((acc, { peopleAmount }) => {
+      return acc + peopleAmount;
     }, 0)
 
 
@@ -307,15 +310,14 @@ const pets = [
 
 
 
-const arrayDogs = pets.filter(({ type }) => {
-  if (type === 'Dog') {
-    return pets
-  }
-}).map(({ name, age, gender, type }) => {
-  return {
-    name: name, age: age * 7, gender: gender, type: type
-  }
-}); 
+const arrayDogs = pets
+  .filter(({ type }) => type === 'Dog')
+  .map(({ name, age, gender, type }) => ({
+    name,
+    age: age * 7,
+    gender,
+    type
+  })); 
 
 console.log(arrayDogs);
 
@@ -364,11 +366,10 @@ const topBrazilmovies = [
 
 const ul = document.querySelector('.list-group');
 
-// const addListWithReduce = topBrazilmovies.reduce((acc, movie) => {
-//     acc += `<li>${movie.title}</li>`;
-//     return ul.innerHTML = acc;
-// }, []);
-
+const addListWithReduce = topBrazilmovies
+  .reduce((acc, { title }) => acc + `<li>${title}</li>`,'');
+  
+ul.innerHTML = addListWithReduce;
 
 
 // const addListWithReduce = topBrazilmovies.reduce((acc, movie) => {
@@ -396,11 +397,11 @@ const ul = document.querySelector('.list-group');
 // });
 
 
-const addListWithMap = topBrazilmovies.map(movie => {
-  const li = `<li>${movie.title}</li>`
-  return ul.innerHTML += li
+// const addListWithMap = topBrazilmovies.map(movie => {
+//   const li = `<li>${movie.title}</li>`
+//   return ul.innerHTML += li
 
-});
+// });
 
 
 // console.log(addListWithReduce);
