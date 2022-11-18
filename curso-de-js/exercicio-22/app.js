@@ -8,9 +8,14 @@
 
 const names = ['Caio', 'André', 'Dário'];
 
-const orderdNames = names.map(name => {
-  return name;
-}).sort();
+
+const namesCopy = names.map(item => item);
+namesCopy.sort()
+
+// console.log(namesCopy);
+// const orderdNames = names.map(name => {
+//   return name;
+// }).sort();
 // orderdNames.sort();
 // console.log(orderdNames);
 
@@ -32,6 +37,14 @@ const characters = [
   { id: 01, name: 'Scar' },
   { id: 04, name: 'Mufasa' }
 ];
+
+
+const charactersCopy = characters.map(item => ({ id: item.id, name: item.name }));
+charactersCopy.sort((item2, item1) => item2.id - item1.id);
+// characters[0].name = 'simba boladao';
+
+// console.log(characters, charactersCopy);
+
 
 /**
  *  reassistir aula da etapa 4 tipos de referencia X tipos primitivos 
@@ -64,6 +77,30 @@ orderCharacters.sort((item1, item2) => item1.id - item2.id);
 */
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const orderNumbers = numbers.map(number => number);
 
