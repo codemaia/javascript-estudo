@@ -191,16 +191,14 @@ const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 const learnIngredients = ingredients.reduce((acc, ingredient, index, array) => {
 
     const testLastLetter = /a$/.test(ingredient);
-    const cookedOrBoiled = testLastLetter ? 'cozida' : 'cozido';
     const isLastItem = index === array.length - 1;
+    
+    const cookedOrBoiled = testLastLetter ? 'cozida' : 'cozido';
 
+    return isLastItem ? acc + `${ingredient} ${cookedOrBoiled}` : acc + `${ingredient} ${cookedOrBoiled}, `;
 
 //-> OU SEJA, SE NO ULTIMO INDEX (3) O ARRAY.LENGTH - 1 FOR 3, DETECTARA O FINAL DA FRASE PORQUE SABERA QUE ESTA NO ULTIMO ITEM DO ARRAY
-    if(isLastItem){ 
-      return acc + `${ingredient} ${cookedOrBoiled}`;  
-    }
-
-    return acc + `${ingredient} ${cookedOrBoiled}, `;
+    
 
 },'');
 
