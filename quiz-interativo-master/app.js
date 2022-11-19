@@ -34,9 +34,10 @@ const getUserAnswers = () => {
     // devemos evitar utilizar metodos em variáveis que executam uma mudança de estado
     // neste caso a váriavel SCORE executa uma mudança de estado ou seja um SIDE EFECTORY;
 const calculateUserScore = userAnswers => {
-    if (score !== 0) {
-        score = 0;
-    }
+    // if (score !== 0) {
+    //     score = 0;
+    // }
+
     userAnswers.forEach((answer, index) => {
         
 
@@ -85,13 +86,17 @@ const animationResult = () => {
 };
 
 
+const resetScore = () => {
+    score = 0;
+}
 
 form.addEventListener('submit', event => {
     event.preventDefault();
     
 
     const userAnswers = getUserAnswers();
-
+    
+    resetScore();
     calculateUserScore(userAnswers);
     showScore();  
     animationResult();
