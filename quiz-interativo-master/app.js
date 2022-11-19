@@ -90,6 +90,8 @@ const resetScore = () => {
     score = 0;
 }
 
+
+
 form.addEventListener('submit', event => {
     event.preventDefault();
     
