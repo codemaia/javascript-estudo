@@ -192,7 +192,7 @@ const learnIngredients = ingredients.reduce((acc, ingredient, index, array) => {
 
     const testLastLetter = /a$/.test(ingredient);
     const isLastItem = index === array.length - 1;
-    
+
     const cookedOrBoiled = testLastLetter ? 'cozida' : 'cozido';
 
     return isLastItem ? acc + `${ingredient} ${cookedOrBoiled}` : acc + `${ingredient} ${cookedOrBoiled}, `;
@@ -203,32 +203,7 @@ const learnIngredients = ingredients.reduce((acc, ingredient, index, array) => {
 },'');
 
 
-console.log(learnIngredients);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(learnIngredients);
 
 
 const ingredientsNew = ingredients.reduce((acc, item, index, array) => {
@@ -408,10 +383,22 @@ const topBrazilmovies = [
 
 const ul = document.querySelector('.list-group');
 
+
+
 const addListWithReduce = topBrazilmovies
-  .reduce((acc, { title }) => acc + `<li>${title}</li>`,'');
-  
+    .reduce((acc, { title }) => acc + `<li>${title}</li>`, '');
+
+
 ul.innerHTML = addListWithReduce;
+
+// console.log(addListWithReduce)
+
+
+
+// const addListWithReduce = topBrazilmovies
+//   .reduce((acc, { title }) => acc + `<li>${title}</li>`,'');
+  
+// ul.innerHTML = addListWithReduce;
 
 
 // const addListWithReduce = topBrazilmovies.reduce((acc, movie) => {
