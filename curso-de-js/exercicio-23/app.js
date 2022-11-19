@@ -7,6 +7,9 @@
 
 const myString = '    JS      '
 
+// console.log(myString.trim())
+
+
 /*
   02
 
@@ -21,7 +24,19 @@ const people = [
   { firstName: 'José', lastName: 'Antônio', score: 100 },
   { firstName: 'Felipe', lastName: 'Tavares', score: 71 },
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
-]
+];
+
+
+const peopleCopy = people
+  .map(item => ({ firstName: item.firstName, lastName: item.lastName, score: item.score }))
+  .sort((score2, score1) => score2.score - score1.score);
+
+
+console.log(peopleCopy);
+// console.log(people, peopleCopy);
+
+
+
 
 /*
   03
