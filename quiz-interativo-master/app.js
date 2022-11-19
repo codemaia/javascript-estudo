@@ -34,14 +34,22 @@ const getUserAnswers = () => {
     // devemos evitar utilizar metodos em variáveis que executam uma mudança de estado
     // neste caso a váriavel SCORE executa uma mudança de estado ou seja um SIDE EFECTORY;
 const calculateUserScore = userAnswers => {
+    if (score !== 0) {
+        score = 0;
+    }
     userAnswers.forEach((answer, index) => {
+        
+
         const isUserAnswerCorrect = answer === correctAnswers[index];
                 /** forma de comparar os valores do arrays, se são iguais ou não */
+
         if (isUserAnswerCorrect) {
             score += 25;
         };
         
     });
+
+    
 };
 
 
