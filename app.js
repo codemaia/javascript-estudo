@@ -2437,3 +2437,31 @@ const bookOnSale = books
   .map(({ name, price }) => `O preço do livro "${name}" caiu para ${price} reais`);
 
 // console.log(bookOnSale);
+
+
+
+
+
+
+
+
+
+
+// ETAPA 9 APLICAÇÃO TO-DO LIST ********************************************************************
+
+//AULA 01-03 - ADICIONANDO TO-DOS
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+
+
+
+
