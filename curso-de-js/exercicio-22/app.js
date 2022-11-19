@@ -14,7 +14,7 @@ const names = ['Caio', 'André', 'Dário'];
 const namesCopy = getArrayCopy(names);
 namesCopy.sort()
 
-console.log(namesCopy);
+// console.log(namesCopy);
 // const orderdNames = names.map(name => {
 //   return name;
 // }).sort();
@@ -83,7 +83,7 @@ const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291];
 const numbersCopy = getArrayCopy(numbers);
 numbersCopy.sort((number2, number1) => number2 - number1);
 
-console.log(numbersCopy);
+// console.log(numbersCopy);
 
 
 
@@ -166,7 +166,7 @@ const peopleCopy = getArrayCopy(people);
 peopleCopy.sort();
 peopleCopy.reverse();
 
-console.log(peopleCopy);
+// console.log(peopleCopy);
 
 
 const peopleOrder = people.map(people => people);
@@ -187,6 +187,50 @@ peopleOrder.reverse();
 */
 
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
+
+const learnIngredients = ingredients.reduce((acc, ingredient, index, array) => {
+
+    const testLastLetter = /a$/.test(ingredient);
+    const cookedOrBoiled = testLastLetter ? 'cozida' : 'cozido';
+    const isLastItem = index === array.length - 1;
+
+
+//-> OU SEJA, SE NO ULTIMO INDEX (3) O ARRAY.LENGTH - 1 FOR 3, DETECTARA O FINAL DA FRASE PORQUE SABERA QUE ESTA NO ULTIMO ITEM DO ARRAY
+    if(isLastItem){ 
+      return acc + `${ingredient} ${cookedOrBoiled}`;  
+    }
+
+    return acc + `${ingredient} ${cookedOrBoiled}, `;
+
+},'');
+
+
+console.log(learnIngredients);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const ingredientsNew = ingredients.reduce((acc, item, index, array) => {
@@ -319,7 +363,7 @@ const arrayDogs = pets
     type
   })); 
 
-console.log(arrayDogs);
+// console.log(arrayDogs);
 
 const reduceArrayPets = pets.reduce((accumulator , pet) => {
   if (pet.type === 'Dog') {
