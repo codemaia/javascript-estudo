@@ -52,7 +52,7 @@ const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
 
 const animalsThreeLetters = animals.filter(animal => animal.length === 3);
 
-console.log(animalsThreeLetters)
+// console.log(animalsThreeLetters)
 
 
 
@@ -66,12 +66,10 @@ console.log(animalsThreeLetters)
 */
 
 
-const animalsQuantityLetters = animals.map(animal => {
-  return animal.length;
-});
+const animalsQuantityLetters = animals.map(animal => animal.length);
 
-console.log(animals)
-console.log(animalsQuantityLetters);
+
+// console.log(animalsQuantityLetters);
 
 
 
@@ -89,7 +87,15 @@ const friends = [
   { id: 3, name: 'Luana', nearMe: false },
   { id: 4, name: 'Nilson', nearMe: true },
   { id: 5, name: 'Solange', nearMe: false }
-]
+];
+
+const friendsNearMe = friends.filter(({ nearMe }) => nearMe === true)
+                             .map(({ name }) => ({ name: name }));
+
+console.log(friendsNearMe);
+
+
+
 
 
 
