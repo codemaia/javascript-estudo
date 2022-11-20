@@ -32,7 +32,7 @@ const peopleCopy = people
   .sort((score2, score1) => score2.score - score1.score);
 
 
-console.log(peopleCopy);
+// console.log(peopleCopy);
 // console.log(people, peopleCopy);
 
 
@@ -50,12 +50,28 @@ console.log(peopleCopy);
 
 const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
 
+const animalsThreeLetters = animals.filter(animal => animal.length === 3);
+
+console.log(animalsThreeLetters)
+
+
+
+
+
 /*
   04
 
   - Baseado no array "animals", gere um novo array com a quantidade de letras do 
     nome de cada animal. Ex.: [6, 8, 2].
 */
+
+
+const animalsQuantityLetters = animals.map(animal => {
+  return animal.length;
+});
+
+console.log(animals)
+console.log(animalsQuantityLetters);
 
 
 
