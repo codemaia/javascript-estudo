@@ -92,7 +92,7 @@ const friends = [
 const friendsNearMe = friends.filter(({ nearMe }) => nearMe === true)
                              .map(({ name }) => ({ name: name }));
 
-console.log(friendsNearMe);
+// console.log(friendsNearMe);
 
 
 
@@ -107,6 +107,13 @@ console.log(friendsNearMe);
 */
 
 const numbers = [46, 86, 212, 29, 51, 9, 25, 42, 81]
+
+const sumNumberOdd = numbers.filter(number => number % 2 !== 0)
+                            .reduce((acc, number) => acc + number, 0);
+
+// console.log(sumNumberOdd);
+
+
 
 /*
   07
@@ -127,4 +134,12 @@ const data = [{
 }, {
   country: 'Indonesia',
   population: 263991379
-}]
+}];
+
+
+const sumData = data.filter(country => country.country != 'China')
+                    .reduce((acc, country) => {
+                      return acc + country.population;
+                    }, 0);
+
+console.log(sumData);
