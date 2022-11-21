@@ -15,12 +15,10 @@ formTodo.addEventListener('submit', event => {
                 <i class="far fa-trash-alt delete"></i>
             </li>
             `
-        
-        formTodo.add.value = ''
-
+        // formTodo.add.value = ''
+        event.target.reset();
     }
 
-
-
+    
     
 });

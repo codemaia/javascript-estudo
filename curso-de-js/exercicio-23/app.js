@@ -28,11 +28,14 @@ const people = [
 
 
 const peopleCopy = people
-  .map(item => ({ firstName: item.firstName, lastName: item.lastName, score: item.score }))
+  .map(({ firstName, lastName, score }) => ({ 
+    firstName, //shorthand property name
+    lastName,
+    score }))
   .sort((score2, score1) => score2.score - score1.score);
 
 
-// console.log(peopleCopy);
+console.log(peopleCopy);
 // console.log(people, peopleCopy);
 
 
@@ -50,9 +53,10 @@ const peopleCopy = people
 
 const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
 
-const animalsThreeLetters = animals.filter(animal => animal.length === 3);
-
-// console.log(animalsThreeLetters)
+// const animalsThreeLetters = animals.filter(animal => animal.length === 3);
+const animalsThreeLetters = animals.filter(({ length }) => length === 3);
+// debugger;
+console.log(animalsThreeLetters)
 
 
 
@@ -66,10 +70,10 @@ const animalsThreeLetters = animals.filter(animal => animal.length === 3);
 */
 
 
-const animalsQuantityLetters = animals.map(animal => animal.length);
+const animalsQuantityLetters = animals.map(({ length }) => length);
 
 
-// console.log(animalsQuantityLetters);
+console.log(animalsQuantityLetters);
 
 
 
@@ -89,12 +93,13 @@ const friends = [
   { id: 5, name: 'Solange', nearMe: false }
 ];
 
-const friendsNearMe = friends.filter(({ nearMe }) => nearMe === true)
-                             .map(({ name }) => ({ name: name }));
+// const friendsNearMe = friends.filter(({ nearMe }) => nearMe === true)
+//                              .map(({ name }) => ({ name: name }));
 
-// console.log(friendsNearMe);
+const friendsNearMe = friends.filter(({ nearMe }) => nearMe);
+const nameOfFriendsNearMe = friendsNearMe.map(({ name }) => name);
 
-
+console.log(nameOfFriendsNearMe)
 
 
 
@@ -108,7 +113,7 @@ const friendsNearMe = friends.filter(({ nearMe }) => nearMe === true)
 
 const numbers = [46, 86, 212, 29, 51, 9, 25, 42, 81]
 
-const sumNumberOdd = numbers.filter(number => number % 2 !== 0)
+const sumNumberOdd = numbers.filter(number => number % 2)
                             .reduce((acc, number) => acc + number, 0);
 
 // console.log(sumNumberOdd);
@@ -137,9 +142,7 @@ const data = [{
 }];
 
 
-const sumData = data.filter(country => country.country != 'China')
-                    .reduce((acc, country) => {
-                      return acc + country.population;
-                    }, 0);
+const sumData = data.filter(({ country }) => country !== 'China')
+                    .reduce((acc, { population }) => acc + population, 0);
 
-console.log(sumData);
+// console.log(sumData);
