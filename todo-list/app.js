@@ -1,3 +1,6 @@
+// add to-do - ok
+// remove to-do
+
 const formTodo = document.querySelector('.form-add-todo');
 const todosContainer = document.querySelector('.todos-container');
 
@@ -18,7 +21,17 @@ formTodo.addEventListener('submit', event => {
         // formTodo.add.value = ''
         event.target.reset();
     }
+    
+});
 
+
+todosContainer.addEventListener('click', event => {
     
-    
+    const clickedElement = event.target.parentElement;
+    console.log(clickedElement);
+
+    if(clickedElement) {
+        // clickedElement.remove();
+    }
+
 });
