@@ -39,11 +39,14 @@ todosContainer.addEventListener('click', event => {
 
 formSearch.addEventListener('input', event => {
     
-    const inputValue = event.target.value.toLowerCase();
-    console.log(inputValue);
-    if (todosContainer.textContent.toLowerCase().includes(inputValue)) {
-        console.log('existe o to-do');
-    }
+    const inputValue = event.target.value.toLowerCase().trim();
+    // console.log(inputValue);
+
+    console.log(todosContainer.textContent.toLowerCase().trim().includes(inputValue));
+
+    // if (todosContainer.textContent.toLowerCase().includes(inputValue)) {
+    //     console.log(todosContainer.children)
+    // }
     
 
 });
