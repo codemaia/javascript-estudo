@@ -39,9 +39,11 @@ todosContainer.addEventListener('click', event => {
 
 formSearch.addEventListener('input', event => {
     
-    const inputValue = event.target.value;
+    const inputValue = event.target.value.toLowerCase();
+    console.log(inputValue);
+    if (todosContainer.textContent.toLowerCase().includes(inputValue)) {
+        console.log('existe o to-do');
+    }
     
-    const toDoText = todosContainer.textContent;
-    console.log(toDoText);
 
 });
