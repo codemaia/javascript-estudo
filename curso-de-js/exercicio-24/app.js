@@ -7,12 +7,10 @@
 
 const message = 'Próxima etapa: 10'
 
-console.log(message.includes(':'));
-
 const testString = /[:]/;
 
-
-console.log(testString.test(message));
+// console.log(message.includes(':'));
+// console.log(testString.test(message));
 
 
 /*
@@ -22,7 +20,14 @@ console.log(testString.test(message));
     abaixo.
 */
 
-const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462]
+const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462];
+
+//podemos utilizar o some()?
+// console.log(numbers.some(number => number === 635));
+// console.log(numbers.includes(635));
+
+
+
 
 /*
   A partir daqui, vamos treinar nossas skills de refatoração.
