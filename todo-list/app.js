@@ -1,5 +1,6 @@
 // add to-do - ok
-// remove to-do
+// remove to-do - ok
+// filter to-do - ok
 
 const formTodo = document.querySelector('.form-add-todo');
 const todosContainer = document.querySelector('.todos-container');
