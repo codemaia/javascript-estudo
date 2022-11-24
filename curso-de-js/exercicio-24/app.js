@@ -9,6 +9,9 @@ const message = 'Próxima etapa: 10'
 
 console.log(message.includes(':'));
 
+const testString = /[:]/;
+
+console.log(testString.test(message));
 
 
 /*
