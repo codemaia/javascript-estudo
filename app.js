@@ -2464,4 +2464,36 @@ const bookOnSale = books
 
 
 
+/**
+ * 
+ *   REMOVE TO-DO
+ * 
+ * inputSearchTodo.addEventListener('input', event => {
+    
+    const inputValue = event.target.value.trim().toLowerCase();
+    
+
+    Array.from(todosContainer.children)
+        .filter(todo => {
+           return !todo.textContent.toLowerCase().includes(inputValue);
+    }).forEach(todo => {
+        todo.classList.remove('d-flex');
+        todo.classList.add('hidden');
+    });
+    Array.from(todosContainer.children)
+        .filter(todo => {
+           return todo.textContent.toLowerCase().includes(inputValue); // com o filter recebe todas as <lis> que não possui o valor da busca
+    }).forEach(todo => { // add a classe nas <li> que não correspondem a busca  
+        todo.classList.remove('hidden');
+        todo.classList.add('d-flex');
+    });
+
+
+});
+ *   
+ * 
+ * 
+ */
+
+
 

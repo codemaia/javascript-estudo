@@ -3,7 +3,7 @@
 
 const formTodo = document.querySelector('.form-add-todo');
 const todosContainer = document.querySelector('.todos-container');
-const formSearch = document.querySelector('.form-search input');
+const inputSearchTodo = document.querySelector('.form-search input');
 
 
 formTodo.addEventListener('submit', event => {
@@ -36,32 +36,29 @@ todosContainer.addEventListener('click', event => {
     
 });
 
+/** remove to-do
+ *  search all <li> in <ul> (use children)
+ *  filter the <li> that meet the value to input
+ *  add the class hidden
+ *  
+ */
 
-formSearch.addEventListener('input', event => {
+inputSearchTodo.addEventListener('input', event => {
+    const inputValue = event.target.value.toLowerCase().trim();
     
-    const inputValue = event.target.value.trim();
-    // console.log(inputValue);
-    // console.log(todosContainer.textContent.toLowerCase().trim().includes(inputValue));
-    // console.log(!todosContainer.textContent.toLowerCase().trim().includes(inputValue))
-
     Array.from(todosContainer.children)
-        .filter(todo => {
-           return !todo.textContent.includes(inputValue);
-    }).forEach(todo => {
-        todo.classList.add('hidden');
+    .filter(todo => !todo.textContent.toLowerCase().includes(inputValue))
+    .forEach(todo => {
         todo.classList.remove('d-flex');
+        todo.classList.add('hidden');
     });
-
     Array.from(todosContainer.children)
-        .filter(todo => {
-           return todo.textContent.includes(inputValue); // com o filter recebe todas as <lis> que não possui o valor da busca
-    }).forEach(todo => { // add a classe nas <li> que não correspondem a busca  
-        todo.classList.add('d-flex');
+    .filter(todo => todo.textContent.toLowerCase().includes(inputValue))
+    .forEach(todo => {
         todo.classList.remove('hidden');
+        todo.classList.add('d-flex');
     });
-
-    
-   
-
 
 });
+
+
