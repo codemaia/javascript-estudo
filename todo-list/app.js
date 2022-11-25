@@ -7,6 +7,7 @@ const todosContainer = document.querySelector('.todos-container');
 const inputSearchTodo = document.querySelector('.form-search input');
 
 
+//add to-do
 formTodo.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -26,6 +27,8 @@ formTodo.addEventListener('submit', event => {
 });
 
 
+
+//remove to-do
 todosContainer.addEventListener('click', event => {
     
     const clickedElement = event.target;
@@ -44,6 +47,8 @@ todosContainer.addEventListener('click', event => {
  *  
  */
 
+
+//filter to-do
 inputSearchTodo.addEventListener('input', event => {
     const inputValue = event.target.value.toLowerCase().trim();
     

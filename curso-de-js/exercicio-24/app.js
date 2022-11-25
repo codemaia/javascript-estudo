@@ -37,6 +37,10 @@ const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462];
   estado em que ele está agora, se necessário.
 */
 
+
+
+
+
 /*
   03
 
@@ -51,6 +55,12 @@ const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462];
     
     Dica: pesquise por dataset e atributos data.
 */
+
+
+
+
+
+
 
 /*
   04
