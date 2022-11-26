@@ -6,6 +6,8 @@ const formTodo = document.querySelector('.form-add-todo');
 const todosContainer = document.querySelector('.todos-container');
 const inputSearchTodo = document.querySelector('.form-search input');
 
+const lis = document.querySelectorAll('[data-li]');
+
 
 //add to-do
 formTodo.addEventListener('submit', event => {
@@ -15,11 +17,11 @@ formTodo.addEventListener('submit', event => {
 
     if (inputValue) {
         todosContainer.innerHTML += `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-li="li">
                 <span>${inputValue}</span>
                 <i class="far fa-trash-alt delete"></i>
             </li>
-            `
+            `   
         // formTodo.add.value = ''
         event.target.reset();
     }
@@ -29,16 +31,35 @@ formTodo.addEventListener('submit', event => {
 
 
 //remove to-do
-todosContainer.addEventListener('click', event => {
-    
-    const clickedElement = event.target;
 
-    if (Array.from(clickedElement.classList).includes('delete')) {
+lis.forEach(li => {
+    li.addEventListener('click', event => {
+        const clickedElement = event.target;
         
-        clickedElement.parentElement.remove();
-    }
-    
+        if(Array.from(clickedElement.classList).includes('delete')) {
+            li.remove()
+        }
+
+    });
 });
+
+// console.log(dataTodosContainer)
+// const lis_array = Array.from(dataTodosContainer);
+
+
+
+
+
+// todosContainer.addEventListener('click', event => {
+    
+//     const clickedElement = event.target;
+
+//     if (Array.from(clickedElement.classList).includes('delete')) {
+        
+//         clickedElement.parentElement.remove();
+//     }
+    
+// });
 
 /** remove to-do
  *  search all <li> in <ul> (use children)
