@@ -1,99 +1,128 @@
-/*
-  01
+// /*
+//   01
 
-  - Exiba no console o index da 1ª (e única) ocorrência do mês "Fevereiro" do 
-    array "months".
-*/
+//   - Exiba no console o index da 1ª (e única) ocorrência do mês "Fevereiro" do 
+//     array "months".
+// */
 
-const months = [
-  'Janeiro',
-  'Fevereiro',
-  'Março',
-  'Abril',
-  'Maio',
-  'Junho',
-  'Julho',
-  'Agosto',
-  'Setembro',
-  'Outubro',
-  'Novembro',
-  'Dezembro'
-]
+// const months = [
+//   'Janeiro',
+//   'Fevereiro',
+//   'Março',
+//   'Abril',
+//   'Maio',
+//   'Junho',
+//   'Julho',
+//   'Agosto',
+//   'Setembro',
+//   'Outubro',
+//   'Novembro',
+//   'Dezembro'
+// ]
 
-// console.log(months.lastIndexOf('Fevereiro'));
-
-
-
-/*
-  02
-
-  - Crie um objeto de data que represente o momento presente;
-  - Exiba o objeto no console.
-*/
-
-const present = new Date();
-console.log(present)
-console.log({ present })
+// console.log(months.indexOf('Fevereiro'));
 
 
 
+// /*
+//   02
 
-/*
-  03
+//   - Crie um objeto de data que represente o momento presente;
+//   - Exiba o objeto no console.
+// */
 
-  - Baseado no objeto que você acabou de criar, exiba o ano atual no console.
-*/
-
-console.log('currentYear:', present.getFullYear());
-
-
-/*
-  04
-
-  - Crie um objeto de data que represente um momento passado;
-  - Exiba o objeto no console.
-*/
-
-
-const past = new Date('Sep 13 2022 23:59:59');
-console.log({past})
-
-/*
-  05
-
-  - Exiba, no console, a hora do objeto que você acabou de criar.
-*/
-
-console.log('Hours:', past.getHours());
+// const present = new Date();
+// console.log(present)
+// console.log({ present })
 
 
 
-/*
-  06
 
-  - Crie um objeto de data que represente um momento futuro;
-  - Exiba o objeto no console.
-*/
+// /*
+//   03
 
-const future = new Date('Nov 30 2022 23:59:59');
-console.log({ future })
+//   - Baseado no objeto que você acabou de criar, exiba o ano atual no console.
+// */
 
+// console.log('currentYear:', present.getFullYear());
 
 
-/*
-  07
+// /*
+//   04
 
-  - Exiba no console a quantidade de dias entre o momento futuro e o passado.
-*/
+//   - Crie um objeto de data que represente um momento passado;
+//   - Exiba o objeto no console.
+// */
 
-const differencePastAndFuture = future.getTime() - past.getTime() 
 
-const second = Math.round(differencePastAndFuture / 1000);
-const minutes = Math.round(second / 60);
-const hours = Math.round(minutes / 60);
-const days = Math.round(hours / 24);
+// const past = new Date('Sep 13 2022 23:59:59');
+// console.log({past})
 
-console.log(days)
+// /*
+//   05
+
+//   - Exiba, no console, a hora do objeto que você acabou de criar.
+// */
+
+// console.log('Hours:', past.getHours());
+
+
+
+// /*
+//   06
+
+//   - Crie um objeto de data que represente um momento futuro;
+//   - Exiba o objeto no console.
+// */
+
+// const future = new Date('Nov 30 2022 23:59:59');
+// console.log({ future })
+
+
+
+// /*
+//   07
+
+//   - Exiba no console a quantidade de dias entre o momento futuro e o passado.
+// */
+
+// const differencePastAndFuture = future.getTime() - past.getTime() 
+
+// const second = Math.round(differencePastAndFuture / 1000);
+// const minutes = Math.round(second / 60);
+// const hours = Math.round(minutes / 60);
+// const days = Math.round(hours / 24);
+// //or
+// const differenceInDays = Math.round(differencePastAndFuture / 1000 / 60 / 60 / 24)
+
+// console.log(days)
+// console.log(differenceInDays)
+
+
+//relogio didital
+const  divClock = document.querySelector('.clock-container');
+
+const myClock = () => {
+  const present = new Date();
+  const hours = present.getHours();
+  const minutes = present.getMinutes();
+  const seconds = present.getSeconds();
+
+  const clockHtml = `
+    <span>${String(hours).length === 1 ? `0${hours}` : hours }</span>
+    <span>${String(minutes).length === 1 ? `0${minutes}` : minutes }</span>
+    <span>${String(seconds).length === 1 ? `0${seconds}` : seconds }</span>
+  `
+
+  divClock.innerHTML = clockHtml; 
+
+};
+
+
+setInterval(myClock, 1000);
+
+
+
 
 /*
   08
