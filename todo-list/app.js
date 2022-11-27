@@ -6,15 +6,42 @@ const formTodo = document.querySelector('.form-add-todo');
 const todosContainer = document.querySelector('.todos-container');
 const inputSearchTodo = document.querySelector('.form-search input');
 
+const filterTodos = (todos, inputValue, returnMatchedTodos) => {
+    return todos
+        .filter(todo => {
+            const matchedTodos = todo.textContent.toLowerCase().includes(inputValue)
+            return returnMatchedTodos ? matchedTodos : !matchedTodos
+    
+    });
+};
 
 
+const addStyles = (todos, remove, add) => {
+    todos.forEach(todo => {
+        todo.classList.remove(remove);
+        todo.classList.add(add);
+    });
 
-//add to-do
-formTodo.addEventListener('submit', event => {
-    event.preventDefault();
+}
 
-    const inputValue = event.target.add.value.trim();
 
+const hideTodos = (todos, inputValue) => {
+
+    const todosHide = filterTodos(todos, inputValue, false);
+    addStyles(todosHide, 'd-flex', 'hidden')
+    
+};
+
+const showTodos = (todos, inputValue) => {
+    
+    const todosShow = filterTodos(todos, inputValue, true)
+    addStyles(todosShow, 'hidden', 'd-flex');
+
+};
+
+
+const addTodos = (inputValue) => {
+    
     if (inputValue) {
         todosContainer.innerHTML += `
             <li class="list-group-item d-flex justify-content-between align-items-center" data-todo="${inputValue}">
@@ -25,6 +52,16 @@ formTodo.addEventListener('submit', event => {
         // formTodo.add.value = ''
         event.target.reset();
     }
+};
+
+
+//add to-do
+formTodo.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const inputValue = event.target.add.value.trim();
+
+    addTodos(inputValue);
     
 });
 
@@ -39,7 +76,6 @@ todosContainer.addEventListener('click', event => {
         document.querySelector(`[data-todo="${clickedElement.dataset.trash}"]`).remove();
     }
     
-
 
 });
 
@@ -67,23 +103,16 @@ todosContainer.addEventListener('click', event => {
  *  
  */
 
-
 //filter to-do
+
+
 inputSearchTodo.addEventListener('input', event => {
+
     const inputValue = event.target.value.toLowerCase().trim();
-    
-    Array.from(todosContainer.children)
-    .filter(todo => !todo.textContent.toLowerCase().includes(inputValue))
-    .forEach(todo => {
-        todo.classList.remove('d-flex');
-        todo.classList.add('hidden');
-    });
-    Array.from(todosContainer.children)
-    .filter(todo => todo.textContent.toLowerCase().includes(inputValue))
-    .forEach(todo => {
-        todo.classList.remove('hidden');
-        todo.classList.add('d-flex');
-    });
+    const todos = Array.from(todosContainer.children);
+
+    hideTodos(todos, inputValue);
+    showTodos(todos, inputValue);
 
 });
 
