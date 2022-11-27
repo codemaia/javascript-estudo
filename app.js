@@ -2546,3 +2546,72 @@ inputSearchTodo.addEventListener('input', event => {
 
 
 
+
+
+
+
+// ETAPA 10 - DATAS #####################################################################################################
+
+
+// AULA 01-02 DATA E HORA EM JAVASCRIPT
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+const present = new Date(); 
+
+// console.log(present)
+
+// console.log('getFullYear:', present.getFullYear()); // ano atual
+// console.log('getMonth:', present.getMonth()); // contagem do mes é zero base ou seja, janeiro = 0, fevereiro = 1 ... dezembro = 11
+// console.log('getDate:', present.getDate()); // retorna o dia do mes 
+// console.log('getDay:', present.getDay()); // contagem 0 base = domingo 0, segunda = 1, terca = 2, quarta = 3, quinta = 4, sexta = 5, sabado = 6
+// console.log('getHours:', present.getHours()); //hours
+// console.log('getMinutes:', present.getMinutes()); //minutes
+// console.log('getSeconds:', present.getSeconds()); //seconds
+
+// console.log('timestamp:', present.getTime()); // numero de milisegundos de 1970 até hoje 
+
+// console.log('toDateString:', present.toDateString()); // data em string
+// console.log('toTimeString:', present.toTimeString()); // horas em string
+// console.log('toLocaleString:', present.toLocaleString()); // data e hora como estamos acostumados
+
+
+
+
+
+
+
+// AULA 01-03 Timestamps e comparaçoes
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+// const past = new Date('Nov 20 2022 23:59:59');
+// const present2 = new Date();
+
+// const difference = present2.getTime() - past.getTime();
+
+// const seconds = Math.round(difference / 1000);
+// const minutes = Math.round(seconds / 60);
+// const hours = Math.round(minutes / 60)
+
+// const days = Math.round(hours / 24);
+
+// console.log(difference);
+// console.log(days)
+
+
+
+
+
