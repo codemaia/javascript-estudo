@@ -92,8 +92,10 @@ const { name: nameB } = robotB;
 const a = 'a'
 const b = 'b'
 const c = 'c'
+const idd = 1
+const item = { model: 'Nike SB', number: '42' }
 
-const obj = { a, b, c};
+const obj = { a, b, c, idd, item };
 
 // console.log(obj);
 
