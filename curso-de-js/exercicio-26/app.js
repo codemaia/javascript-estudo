@@ -93,6 +93,13 @@ const a = 'a'
 const b = 'b'
 const c = 'c'
 
+const obj = { a, b, c};
+
+// console.log(obj);
+
+
+
+
 /*
   06
 
