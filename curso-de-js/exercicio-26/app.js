@@ -6,6 +6,16 @@
   - Não utilize a date-fns.
 */
 
+
+const dateFormat = (date) => {
+    const present = new Date (date);
+
+    return present.toLocaleDateString('pt-BR');
+}
+
+// console.log(dateFormat('November 30 2022 23:59:59'));
+
+
 /*
   02
 
@@ -13,6 +23,23 @@
     data na formatação: "03:07 - domingo, 7 de junho de 2020";
   - Não utilize a date-fns.
 */
+
+const hoursAndDateFormat = (date) => {
+    const present = new Date (date);
+
+    const hours = String(present.getHours()).length === 1 ? `0${present.getHours()}` : `${present.getHours()}`;
+    const minutes = String(present.getMinutes()).length === 1 ? `0${present.getMinutes()}` : `${present.getMinutes()}`;
+    const dayOfWeek = present.toLocaleString('pt-BR', { weekday: 'long'});
+    const dayOfMonth = present.getDate()
+    const month = present.toLocaleString('pt-BR', { month: 'long' })
+    const year = present.getFullYear()
+
+    return  `${hours}:${minutes} - ${dayOfWeek}, ${dayOfMonth} de ${month} de ${year}`
+    
+}
+
+// console.log(hoursAndDateFormat('Nov 28 2022 03:09:53'));
+
 
 /*
   03
@@ -23,6 +50,11 @@
 */
 
 const user = { id: 42, isVerified: true }
+
+const { id, isVerified } = user;
+
+// console.log(id, isVerified);
+
 
 /*
   04
