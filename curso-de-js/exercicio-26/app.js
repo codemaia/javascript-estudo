@@ -123,6 +123,7 @@ const updateSomething = (data = { }) => {
     willChange = 'valor desejado'
   }
 
+
   useDataSomewhereElse({
     target,
     property,
@@ -149,19 +150,33 @@ updateSomething({ target: '1', property: '2', willChange: 'valor indesejado' })
 
 const clockContainer = document.querySelector('.clock-container')
 
+const funcHoursMinutesSeconds = (value) => {
+  return String(value).length === 1 ? `0${value}` : value
+}
+
+
 const updateClock = () => {
   const present = new Date()
+  
   const hours = present.getHours()
   const minutes = present.getMinutes()
   const seconds = present.getSeconds()
 
   const clockHTML = `
-    <span>${String(hours).length === 1 ? `0${hours}` : hours}</span> :
-    <span>${String(minutes).length === 1 ? `0${minutes}` : minutes}</span> :
-    <span>${String(seconds).length === 1 ? `0${seconds}` : seconds}</span>
+    <span>${funcHoursMinutesSeconds(hours)}</span> :
+    <span>${funcHoursMinutesSeconds(minutes)}</span> :
+    <span>${funcHoursMinutesSeconds(seconds)}</span>
   `
 
   clockContainer.innerHTML = clockHTML
-}
+};
 
-setInterval(updateClock, 1000)
+setInterval(updateClock, 1000);
+
+
+/**
+    <span>${String(hours).length === 1 ? `0${hours}` : hours}</span> :
+    <span>${String(minutes).length === 1 ? `0${minutes}` : minutes}</span> :
+    <span>${String(seconds).length === 1 ? `0${seconds}` : seconds}</span>
+
+ */
