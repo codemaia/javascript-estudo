@@ -2627,21 +2627,61 @@ const present = new Date();
  * 
  */
 
-const present3 =  new Date();
+// const present3 =  new Date();
 
 
-console.log(dateFns);
-console.log(dateFns.isToday(present3)) //verificar a data atual
+// console.log(dateFns);
+// console.log(dateFns.isToday(present3)) //verificar a data atual
 
 
-console.log(dateFns.format(present3, 'DD/MM/YYYY'))
+// console.log(dateFns.format(present3, 'DD/MM/YYYY'))
 
 
-const past2 = new Date ('Nov 27 2022 17:00:00');
+// const past2 = new Date ('Nov 27 2022 17:00:00');
 
-console.log(dateFns.distanceInWords(present3, past2,{ addSuffix: true })) //retorna quanto tempo se passou até a data atual.
+// console.log(dateFns.distanceInWords(present3, past2,{ addSuffix: true })) //retorna quanto tempo se passou até a data atual.
 
 
+
+
+
+
+
+
+
+
+
+// ETAPA 11 - JAVASCRIPT ASSINCRONO   ###############################################################################
+
+
+// AULA 01-02 - CODIGO ASSINCRONO EM JAVASCRIPT
+
+/**
+ * 
+ *   O que é uma operação assíncrona?
+ * É um código que inicia um processo agora e finaliza esse processo posteriormente
+ * 
+ * 
+ * 
+ */
+
+
+
+
+// AULA 01-03 - CODIGO ASSINCRONO NA PRATICA
+
+
+
+
+
+
+// AULA 01-04 - O QUE SÃO REQUESTS HTTP
+
+/**
+ * 
+ * 
+ * 
+ */
 
 
 

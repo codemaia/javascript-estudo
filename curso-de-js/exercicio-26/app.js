@@ -13,7 +13,7 @@ const dateFormat = (date) => {
     return present.toLocaleDateString('pt-BR');
 }
 
-// console.log(dateFormat('November 30 2022 23:59:59'));
+console.log(dateFormat('November 30 2022 23:59:59'));
 
 
 /*
@@ -38,7 +38,7 @@ const hoursAndDateFormat = (date) => {
     
 }
 
-// console.log(hoursAndDateFormat('Nov 28 2022 03:09:53'));
+console.log(hoursAndDateFormat('Nov 28 2022 03:09:53'));
 
 
 /*
@@ -53,7 +53,7 @@ const user = { id: 42, isVerified: true }
 
 const { id, isVerified } = user;
 
-// console.log(id, isVerified);
+console.log(id, isVerified);
 
 
 /*
@@ -75,7 +75,7 @@ const  { name: nameA } = robotA;
 
 const { name: nameB } = robotB;
 
-// console.log(nameA, nameB);
+console.log(nameA, nameB);
 
 
 
@@ -97,7 +97,7 @@ const item = { model: 'Nike SB', number: '42' }
 
 const obj = { a, b, c, idd, item };
 
-// console.log(obj);
+console.log(obj);
 
 
 
@@ -157,7 +157,7 @@ const funcHoursMinutesSeconds = (value) => {
 
 const updateClock = () => {
   const present = new Date()
-  
+
   const hours = present.getHours()
   const minutes = present.getMinutes()
   const seconds = present.getSeconds()
