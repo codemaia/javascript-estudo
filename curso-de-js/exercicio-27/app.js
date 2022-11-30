@@ -64,6 +64,10 @@ console.log(`Preço total: ${totalPrice}`)
 
 let car = { color: 'amarelo' }
 
+
+
+
+
 /*
   06
 
