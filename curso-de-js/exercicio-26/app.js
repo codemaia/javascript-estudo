@@ -112,30 +112,52 @@ const useDataSomewhereElse = value => {
   console.log(value)
 }
 
-const updateSomething = (data = { }) => {
+
+
+const updateSomething = ({ target, property, willChange }) => {
   
-  const target = data.target
-  const property = data.property
-  let willChange = data.willChange
-
-
+  
   if (willChange === 'valor indesejado') {
     willChange = 'valor desejado'
-  }
+  };
 
+  
   useDataSomewhereElse({
     target,
     property,
     willChange
 
-  })
+  });
 
-  // useDataSomewhereElse({
-  //   target: target,
-  //   property: property,
-  //   willChange: willChange
-  // })
+  
 }
+
+
+
+// const updateSomething = (data = { }) => {
+  
+//   const target = data.target
+//   const property = data.property
+//   let willChange = data.willChange
+
+
+//   if (willChange === 'valor indesejado') {
+//     willChange = 'valor desejado'
+//   }
+
+//   useDataSomewhereElse({
+//     target,
+//     property,
+//     willChange
+
+//   })
+
+//   // useDataSomewhereElse({
+//   //   target: target,
+//   //   property: property,
+//   //   willChange: willChange
+//   // })
+// }
 
 updateSomething({ target: '1', property: '2', willChange: 'valor indesejado' })
 
