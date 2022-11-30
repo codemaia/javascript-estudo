@@ -80,6 +80,9 @@ for (let i = 0; i < prices.length; i++) {
 
 console.log(`Preço total: ${totalPrice}`)
 
+
+
+
 /*
   05
 
@@ -89,7 +92,9 @@ console.log(`Preço total: ${totalPrice}`)
 
 let car = { color: 'amarelo' }
 
+car['color'] = 'azul';
 
+console.log(car);
 
 
 
