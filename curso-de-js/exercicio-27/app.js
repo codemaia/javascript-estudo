@@ -9,7 +9,9 @@ console.log('Linha 2')
 console.log('Linha 3')
 console.log('Linha 4')
 
-
+setTimeout(() => {
+  console.log(`I'm a assync code`);
+}, 2000);
 
 console.log('Linha 5')
 console.log('Linha 6')
@@ -28,6 +30,10 @@ function logGreeting (name) {
 }
 
 // x(logGreeting)
+
+
+
+
 
 /*
   03

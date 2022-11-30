@@ -178,7 +178,6 @@ const funcHoursMinutesSeconds = (value) => {
 
 const updateClock = () => {
   const present = new Date()
-
   const hours = present.getHours()
   const minutes = present.getMinutes()
   const seconds = present.getSeconds()
