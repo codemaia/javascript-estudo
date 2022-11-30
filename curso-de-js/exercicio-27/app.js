@@ -4,32 +4,42 @@
   - Implemente um código assíncrono entre os console.log() abaixo.
 */
 
-console.log('Linha 1')
-console.log('Linha 2')
-console.log('Linha 3')
-console.log('Linha 4')
+// console.log('Linha 1')
+// console.log('Linha 2')
+// console.log('Linha 3')
+// console.log('Linha 4')
 
-setTimeout(() => {
-  console.log(`I'm a assync code`);
-}, 2000);
+// setTimeout(() => {
+//   console.log(`I'm a assync code`);
+// }, 2000);
 
-console.log('Linha 5')
-console.log('Linha 6')
-console.log('Linha 7')
-console.log('Linha 8')
+// console.log('Linha 5')
+// console.log('Linha 6')
+// console.log('Linha 7')
+// console.log('Linha 8')
+
+
+
 
 /*
   02
 
   - Descomente o código abaixo e crie a função que fará a string dentro da 
     "logGreeting" ser exibida no console.
+
 */
+
 
 function logGreeting (name) {
   console.log(`olá, ${name}`)
 }
 
-// x(logGreeting)
+const x = (value) => {
+  return value;
+}
+
+
+// x(logGreeting('renan'))
 
 
 
