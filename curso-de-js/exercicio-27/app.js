@@ -51,10 +51,19 @@ const x = (value) => {
   - O código abaixo possui uma parte que pode ser isolada. Isole-a.
 */
 
-const numbers = [3, 4, 10, 20]
-const lesserThanFive = numbers.filter(num => num < 5)
+const numbers = [3, 4, 10, 20];
 
-console.log(lesserThanFive)
+const funcToNumber = (num) => {
+  return num => num < 5
+;}
+
+const lesserThanFive = numbers.filter(funcToNumber(numbers));
+
+// const lesserThanFive = numbers.filter(num => num < 5)
+
+// console.log(lesserThanFive)
+
+
 
 /*
   04
