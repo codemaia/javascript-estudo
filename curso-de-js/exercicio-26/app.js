@@ -121,11 +121,7 @@ const updateSomething = ({ target, property, willChange }) => {
     willChange = 'valor desejado'
   };
 
-<<<<<<< HEAD
   
-=======
-
->>>>>>> be6f0e3ebb119145cdb668436ca99116b83683ff
   useDataSomewhereElse({
     target,
     property,
