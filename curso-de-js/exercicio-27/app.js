@@ -72,13 +72,18 @@ const lesserThanFive = numbers.filter(funcToNumber(numbers));
 */
 
 const prices = [12, 19, 7, 209]
-let totalPrice = 0
+// let totalPrice = 0
 
-for (let i = 0; i < prices.length; i++) {
-  totalPrice += prices[i]
-}
+const reducePrices = prices.reduce((acc, price) => {
+  return acc + price;
+}, 0);
 
-console.log(`Preço total: ${totalPrice}`)
+// console.log(`Preço total: ${reducePrices}`)
+
+// for (let i = 0; i < prices.length; i++) {
+//   totalPrice += prices[i]
+// }
+
 
 
 
