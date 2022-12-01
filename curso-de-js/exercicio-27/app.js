@@ -95,11 +95,12 @@ const reducePrices = prices.reduce((acc, price) => {
   - Não insira `car.color = azul`.
 */
 
+
 let car = { color: 'amarelo' }
 
 car['color'] = 'azul';
 
-console.log(car);
+// console.log(car);
 
 
 
@@ -113,20 +114,29 @@ console.log(car);
     invocada com 3 argumentos'.
 */
 
-const functionTest = (value1, value2, value3) => {
-  const arrTest = [value1, value2, value3];
+const onlyThreeArguments = (value1, value2, value3) => {
 
-  console.log(arrTest.length)
-  if (arrTest.length === 3) {
-    return `aqui tem 3`
-  }
+  const arrArg = [value1, value2, value3];
+  const testArrArg = arrArg.some(item => item === undefined)
   
-  return `aqui não tem 3`
+  if (testArrArg) {
+    return 'A função deve ser invocada com 3 argumentos'
+  }
 
-}
+  return 'A função foi invocada com 3 argumentos'
 
 
-console.log(functionTest(1, 2))
+
+  
+  
+  
+
+
+};
+
+
+console.log(onlyThreeArguments(1, 2, 3));
+
 
 
 
