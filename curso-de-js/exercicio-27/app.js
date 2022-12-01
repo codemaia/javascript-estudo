@@ -127,7 +127,7 @@ const onlyThreeArguments = (arg1, arg2, arg3) => {
 };
 
 
-console.log(onlyThreeArguments(1, 2, 3));
+// console.log(onlyThreeArguments(1, 2, 3));
 
 
 // const onlyThreeArguments = (arg1, arg2, arg3, ...n) => {
@@ -171,7 +171,24 @@ console.log(onlyThreeArguments(1, 2, 3));
       na frase acima.
 */
 
+
+
+
+
 let booksBox = {
   spaces: 5,
-  booksIn: 0
+  booksIn: 0,
+  addBooks (num) {
+
+    this.booksIn += num;
+    
+    return this.booksIn;
+  }
 }
+
+
+
+
+console.log(booksBox.booksIn)
+
+
