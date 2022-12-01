@@ -113,6 +113,25 @@ console.log(car);
     invocada com 3 argumentos'.
 */
 
+const functionTest = (value1, value2, value3) => {
+  const arrTest = [value1, value2, value3];
+
+  console.log(arrTest.length)
+  if (arrTest.length === 3) {
+    return `aqui tem 3`
+  }
+  
+  return `aqui não tem 3`
+
+}
+
+
+console.log(functionTest(1, 2))
+
+
+
+
+
 /*
   07
 
