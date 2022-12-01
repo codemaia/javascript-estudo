@@ -116,22 +116,34 @@ car['color'] = 'azul';
 
 const onlyThreeArguments = (arg1, arg2, arg3) => {
 
-  const arrArg = [arg1, arg2, arg3]  ;
+  const arrArg = [arg1, arg2, arg3]
   
-  const testArrArg = arrArg.some(item => item === undefined);
+  const testArrArg = arrArg.some(item => item === undefined );
   // debugger
 
-  if (!testArrArg) {
-    return 'A função foi invocada com 3 argumentos'
-  }
-
-  return 'A função deve ser invocada com 3 argumentos'
+  return testArrArg ? 'A função deve ser invocada com 3 argumentos' : 'A função foi invocada com 3 argumentos' 
+  
 
 };
 
 
-console.log(onlyThreeArguments(1, 2));
+console.log(onlyThreeArguments(1, 2, 3));
 
+
+// const onlyThreeArguments = (arg1, arg2, arg3, ...n) => {
+
+//   const arrArg = [arg1, arg2, arg3, ...n]  ;
+//   console.log(arrArg.length)
+//   const testArrArg = arrArg.some(item => item === undefined || arrArg.length !== 3);
+//   // debugger
+
+//   return testArrArg ? 'A função deve ser invocada com 3 argumentos' : 'A função foi invocada com 3 argumentos' 
+  
+
+// };
+
+
+// console.log(onlyThreeArguments(1, 2, 3));
 
 
 
