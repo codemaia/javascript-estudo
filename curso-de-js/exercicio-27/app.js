@@ -1,4 +1,4 @@
-/*
+  /*
   01
 
   - Implemente um código assíncrono entre os console.log() abaixo.
@@ -180,24 +180,14 @@ let booksBox = {
   addBooks (num) {
     
     
-    // const books = this.booksIn += num;
+    const books = this.booksIn += num;
     
-    for (let i = 0; i < this.spaces; i++) {
-
-      if (this.spaces > this.booksIn) {
-        
-        return `Já há ${this.booksIn += num} livros na caixa`;
-   
-      } else if (books > this.spaces) {
-        // debugger
-        const remainingSpace = this.spaces - this.booksIn;
-  
-        return remainingSpace === 1 ? `Só cabe mais ${remainingSpace} livro` : `Só cabem mais ${remainingSpace} livros`
-  
-      }
+    if (this.spaces > books) {
       
-    }
-
+      return `Já há ${this.booksIn} livros na caixa`;
+ 
+    } 
+    
 
     return `A caixa já está cheia` 
 
