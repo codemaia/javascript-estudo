@@ -167,28 +167,50 @@ const onlyThreeArguments = (arg1, arg2, arg3) => {
       parâmetro for ultrapassar o limite de espaços da caixa, mostre quantos 
       espaços ainda podem ser ocupados, com a frase: "Só cabem mais 
       QUANTIDADE_DE_LIVROS_QUE_CABEM livros";
+
+
+
     - Se couber somente mais um livro, mostre a palavra "livro" (no singular) 
       na frase acima.
 */
-
-
-
-
 
 let booksBox = {
   spaces: 5,
   booksIn: 0,
   addBooks (num) {
-
-    this.booksIn += num;
     
-    return this.booksIn;
+    
+    // const books = this.booksIn += num;
+    
+    for (let i = 0; i < this.spaces; i++) {
+
+      if (this.spaces > this.booksIn) {
+        
+        return `Já há ${this.booksIn += num} livros na caixa`;
+   
+      } else if (books > this.spaces) {
+        // debugger
+        const remainingSpace = this.spaces - this.booksIn;
+  
+        return remainingSpace === 1 ? `Só cabe mais ${remainingSpace} livro` : `Só cabem mais ${remainingSpace} livros`
+  
+      }
+      
+    }
+
+
+    return `A caixa já está cheia` 
+
   }
 }
 
 
 
+console.log(booksBox.addBooks(1));
+console.log(booksBox.addBooks(2));
+console.log(booksBox.addBooks(1));
+console.log(booksBox.addBooks(5));
 
-console.log(booksBox.booksIn)
+
 
 
