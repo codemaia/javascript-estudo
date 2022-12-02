@@ -160,9 +160,12 @@ const onlyThreeArguments = (arg1, arg2, arg3) => {
     - Receber por parâmetro o número de livros que serão colocados na caixa. 
       Esse número não precisa encher a caixa de uma só vez, os livros podem 
       ser acrescentados aos poucos;
+
     - Retornar a frase: "Já há 'X' livros na caixa";
+
     - Se a caixa já estiver cheia, com todos os espaços já preenchidos, o 
       método deve retornar a frase: "A caixa já está cheia";
+
     - Se ainda houverem espaços na caixa mas a quantidade de livros passada por
       parâmetro for ultrapassar o limite de espaços da caixa, mostre quantos 
       espaços ainda podem ser ocupados, com a frase: "Só cabem mais 
@@ -180,16 +183,38 @@ let booksBox = {
   addBooks (num) {
     
     
-    const books = this.booksIn += num;
-    
-    if (this.spaces > books) {
-      
-      return `Já há ${this.booksIn} livros na caixa`;
- 
-    } 
+    this.booksIn += num;
+
+
+    if (this.booksIn > this.spaces) {
     
 
-    return `A caixa já está cheia` 
+      return `talvez : ${this.booksIn}`
+    }
+
+
+
+    if (this.booksIn < this.spaces) {
+        
+      return `Já há ${this.booksIn} livros na caixa`;
+ 
+    }
+    
+
+    
+    
+
+    if (this.booksIn === this.spaces) {
+
+      return `A caixa já está cheia`
+
+    }
+      
+      
+    
+    
+    
+    // return `A caixa já está cheia` 
 
   }
 }
@@ -199,7 +224,8 @@ let booksBox = {
 console.log(booksBox.addBooks(1));
 console.log(booksBox.addBooks(2));
 console.log(booksBox.addBooks(1));
-console.log(booksBox.addBooks(5));
+console.log(booksBox.addBooks(1));
+console.log(booksBox.addBooks(1));
 
 
 
