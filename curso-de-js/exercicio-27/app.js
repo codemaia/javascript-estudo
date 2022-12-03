@@ -180,26 +180,29 @@ const onlyThreeArguments = (arg1, arg2, arg3) => {
 let booksBox = {
   spaces: 5,
   booksIn: 0,
-  addBooks (num) {
-        
-    this.booksIn += num;
-
-    if (this.booksIn < this.spaces) {
-      
+  addBooks (booksToInsert) {
+    
+    this.booksIn += booksToInsert;
+    const lessThanSpaces =  this.booksIn < this.spaces;
+    const greaterThanSpaces = this.booksIn > this.spaces;
+    
+    if (lessThanSpaces) {  
       
       return `Já há ${this.booksIn} livros na caixa`;
       
     }
     
-    if (this.booksIn > this.spaces) {
-      const booksAdds = this.spaces - (this.booksIn - num);
+    if (greaterThanSpaces) {
+  
+      const booksAdds = Math.abs(this.spaces - (this.booksIn - booksToInsert));
+      const onlyOneBook = `Só cabe mais ${booksAdds} livro`;
+      const moreThenOneBook = `Só cabem mais ${booksAdds} Livros`;
 
-      return booksAdds === 1 ? `Só cabe mais ${booksAdds} livro` : `Só cabem mais ${booksAdds} Livros`
+    return booksAdds === 1 && booksAdds > 0 ? onlyOneBook : moreThenOneBook;
 
     }
 
       return `A caixa já está cheia`
-    
 
   }
 }
@@ -208,6 +211,6 @@ let booksBox = {
 
 console.log(booksBox.addBooks(1));
 console.log(booksBox.addBooks(2));
-console.log(booksBox.addBooks(5));
-// console.log(booksBox.addBooks(2));
+console.log(booksBox.addBooks(3));
+// console.log(booksBox.addBooks(1));
 // console.log(booksBox.addBooks(2));
