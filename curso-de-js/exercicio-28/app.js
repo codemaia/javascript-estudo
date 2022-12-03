@@ -41,12 +41,12 @@
 const myInformation = {
   name: 'Renan',
   lastName: 'Maia',
-  gender: 'Male',
-  year: 32,
-  height: 184,
+  gender: 'Female',
+  year: 2,
+  height: 1.84,
   weight: 85,
   isWalking: false,
-  howManyMetersWalked: 0
+  howManyMetersWalked: 1
 };
 
 
@@ -64,11 +64,11 @@ const myInformation = {
 
 myInformation.addYears = () => myInformation.year += 1;
 
-myInformation.addYears();
-myInformation.addYears();
-myInformation.addYears();
-myInformation.addYears();
-myInformation.addYears();
+// myInformation.addYears();
+// myInformation.addYears();
+// myInformation.addYears();
+// myInformation.addYears();
+// myInformation.addYears();
 
 
 
@@ -97,13 +97,13 @@ myInformation.addMetersWalked = (meters) => {
 };
 
 
-myInformation.addMetersWalked(3);
-myInformation.addMetersWalked(5);
+// myInformation.addMetersWalked(3);
+// myInformation.addMetersWalked(5);
 myInformation.addMetersWalked(1);
-myInformation.addMetersWalked(2);
+// myInformation.addMetersWalked(2);
 
 
-console.log(myInformation);
+
 
 
 /*
@@ -124,12 +124,22 @@ console.log(myInformation);
 */
 
 
+myInformation.myResume = () => {
+
+  let years = 'anos';
+  let gender = 'o';
+  let meters = 'metros';
+
+  myInformation.year === 1 ? years = 'ano' : years;
+  myInformation.gender === 'Female' ? gender = 'a' : gender;
+  myInformation.howManyMetersWalked === 1 ? meters = 'metro' : meters;
+
+  return `Oi. Eu sou ${gender} ${myInformation.name} ${myInformation.lastName}, tenho ${myInformation.year} ${years}, ${myInformation.height} metros de altura, peso ${myInformation.weight} quilos e, só hoje, eu já caminhei ${myInformation.howManyMetersWalked} ${meters}.`;
+}
 
 
-
-
-
-
+console.log(myInformation.myResume());
+console.log(myInformation);
 
 /*
   06
