@@ -182,24 +182,23 @@ let booksBox = {
   booksIn: 0,
   addBooks (num) {
     
-    
+    // const booksInBooksIn = this.booksIn;
     this.booksIn += num;
 
-
-    if (this.booksIn > this.spaces) {
     
-
-      return `talvez : ${this.booksIn}`
-    }
-
-
-
     if (this.booksIn < this.spaces) {
-        
+      
       return `Já há ${this.booksIn} livros na caixa`;
- 
+      
     }
     
+    if (this.booksIn > this.spaces) {
+
+
+      return `space : ${this.spaces}
+booksIn: ${this.booksIn}`
+
+    }
 
     
     
@@ -222,10 +221,10 @@ let booksBox = {
 
 
 console.log(booksBox.addBooks(1));
-console.log(booksBox.addBooks(2));
-console.log(booksBox.addBooks(1));
-console.log(booksBox.addBooks(1));
-console.log(booksBox.addBooks(1));
+console.log(booksBox.addBooks(5));
+// console.log(booksBox.addBooks(1));
+// console.log(booksBox.addBooks(1));
+// console.log(booksBox.addBooks(1));
 
 
 
