@@ -2685,3 +2685,34 @@ const present = new Date();
 
 
 
+
+
+
+// AULA 02-03 - FAZENDO REQUESTS HTTP
+
+/**
+ * 
+ * FAZ AS ANOTAÇÕES IRMAO
+ * 
+ */
+
+
+
+
+
+
+
+
+
+// AULA 02-04 - STATUS DE RESPOSTAS HTTP
+
+/**
+ * 
+ *  FAZ AS ANOTAÇÔES IRMAO
+ * 
+ */
+
+
+
+
+
