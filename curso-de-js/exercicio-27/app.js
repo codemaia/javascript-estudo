@@ -183,13 +183,17 @@ let booksBox = {
   addBooks (num) {
     
     // const booksInBooksIn = this.booksIn;
-    this.booksIn += num;
-    const spaceFree = Math.abs(this.booksIn - this.spaces)
+    
+    
+    // console.log(this.spaces)
 
-    console.log(spaceFree)
+    // console.log(spaceFree)
     console.log(this.booksIn)
+    
+    this.booksIn += num;
 
-    if (this.booksIn < spaceFree) {
+    if (this.booksIn < this.spaces) {
+      
       
       return `Já há ${this.booksIn} livros na caixa`;
       
@@ -197,26 +201,14 @@ let booksBox = {
     
     if (this.booksIn > this.spaces) {
 
-
-      return `space free: ${spaceFree}
-booksIn: ${this.booksIn}`
+      return `
+space free: ${this.spaces - (this.booksIn - num) }
+`
 
     }
-
-    
-    
-
-    if (this.booksIn === this.spaces) {
 
       return `A caixa já está cheia`
-
-    }
-      
-      
     
-    
-    
-    // return `A caixa já está cheia` 
 
   }
 }
@@ -224,11 +216,7 @@ booksIn: ${this.booksIn}`
 
 
 console.log(booksBox.addBooks(1));
-// console.log(booksBox.addBooks(7));
-// console.log(booksBox.addBooks(1));
-// console.log(booksBox.addBooks(1));
-// console.log(booksBox.addBooks(1));
-
-
-
-
+console.log(booksBox.addBooks(2));
+console.log(booksBox.addBooks(4));
+// console.log(booksBox.addBooks());
+// console.log(booksBox.addBooks(2));
