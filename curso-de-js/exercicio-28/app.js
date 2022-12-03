@@ -16,6 +16,13 @@
   - Teste também a verificação do item acima.
 */
 
+
+
+
+
+
+
+
 /*
   02
 
@@ -31,6 +38,20 @@
     - Quantos metros você caminhou (number iniciado em 0).
 */
 
+const myInformation = {
+  name: 'Renan',
+  lastName: 'Maia',
+  gender: 'Male',
+  year: 32,
+  height: 184,
+  weight: 85,
+  isWalking: false,
+  howManyMetersWalked: 0
+};
+
+
+
+
 /*
   03
 
@@ -39,6 +60,19 @@
   - A cada vez que o método é invocado, 1 deve ser somado à idade atual;
   - Após criar o método, adicione 5 anos à idade do objeto.
 */
+
+
+myInformation.addYears = () => myInformation.year += 1;
+
+myInformation.addYears();
+myInformation.addYears();
+myInformation.addYears();
+myInformation.addYears();
+myInformation.addYears();
+
+console.log(myInformation);
+
+
 
 /*
   04
@@ -50,6 +84,10 @@
   - Após criar o método, faça a pessoa caminhar alguns metros, invocando o 
     método 4x, com diferentes metragens passadas por parâmetro.
 */
+
+
+
+
 
 /*
   05
