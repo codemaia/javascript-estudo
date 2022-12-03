@@ -70,7 +70,7 @@ myInformation.addYears();
 myInformation.addYears();
 myInformation.addYears();
 
-console.log(myInformation);
+
 
 
 
@@ -86,7 +86,24 @@ console.log(myInformation);
 */
 
 
+myInformation.addMetersWalked = (meters) => {
 
+  myInformation.howManyMetersWalked += meters
+
+  if (myInformation.isWalking === false) {
+    myInformation.isWalking = true;
+  }
+  
+};
+
+
+myInformation.addMetersWalked(3);
+myInformation.addMetersWalked(5);
+myInformation.addMetersWalked(1);
+myInformation.addMetersWalked(2);
+
+
+console.log(myInformation);
 
 
 /*
@@ -105,6 +122,14 @@ console.log(myInformation);
     - Se a quantidade de metros caminhados for 1, substitua "metros" por 
       "metro", no singular.
 */
+
+
+
+
+
+
+
+
 
 /*
   06
