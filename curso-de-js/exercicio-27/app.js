@@ -34,12 +34,12 @@ function logGreeting (name) {
   console.log(`olá, ${name}`)
 }
 
-const x = (value) => {
-  return value;
+const x = callback => {
+  return callback('renan');
 }
 
 
-// x(logGreeting('renan'))
+x(logGreeting)
 
 
 
@@ -53,15 +53,13 @@ const x = (value) => {
 
 const numbers = [3, 4, 10, 20];
 
-const funcToNumber = (num) => {
-  return num => num < 5
-;}
+const funcToNumber = num => num < 5;
 
-const lesserThanFive = numbers.filter(funcToNumber(numbers));
+const lesserThanFive = numbers.filter(funcToNumber);
 
 // const lesserThanFive = numbers.filter(num => num < 5)
 
-// console.log(lesserThanFive)
+console.log(lesserThanFive)
 
 
 
@@ -71,15 +69,14 @@ const lesserThanFive = numbers.filter(funcToNumber(numbers));
   - Refatore o código abaixo.
 */
 
-const prices = [12, 19, 7, 209]
+const prices = [12, 19, 7, 209];
+const getTotalPrices = (acc, price) => acc + price;
+
+const reducePrices = prices.reduce(getTotalPrices, 0);
+
+console.log(`Preço total: ${reducePrices}`)
+
 // let totalPrice = 0
-
-const reducePrices = prices.reduce((acc, price) => {
-  return acc + price;
-}, 0);
-
-// console.log(`Preço total: ${reducePrices}`)
-
 // for (let i = 0; i < prices.length; i++) {
 //   totalPrice += prices[i]
 // }
@@ -97,8 +94,10 @@ const reducePrices = prices.reduce((acc, price) => {
 
 
 let car = { color: 'amarelo' }
+let secondCar = car;
 
-car['color'] = 'azul';
+secondCar.color = 'azul';
+// car['color'] = 'azul';
 
 // console.log(car);
 
@@ -112,6 +111,8 @@ car['color'] = 'azul';
     deve ser invocada com 3 argumentos' deve ser retornada;
   - Se todos os argumentos forem passados, retorne a string 'A função foi 
     invocada com 3 argumentos'.
+
+    # OBS: acertei mas preciso fazer uma versão do exercicio utilizando o metodo INCLUDES
 */
 
 const onlyThreeArguments = (arg1, arg2, arg3) => {
@@ -127,24 +128,7 @@ const onlyThreeArguments = (arg1, arg2, arg3) => {
 };
 
 
-// console.log(onlyThreeArguments(1, 2, 3));
-
-
-// const onlyThreeArguments = (arg1, arg2, arg3, ...n) => {
-
-//   const arrArg = [arg1, arg2, arg3, ...n]  ;
-//   console.log(arrArg.length)
-//   const testArrArg = arrArg.some(item => item === undefined || arrArg.length !== 3);
-//   // debugger
-
-//   return testArrArg ? 'A função deve ser invocada com 3 argumentos' : 'A função foi invocada com 3 argumentos' 
-  
-
-// };
-
-
-// console.log(onlyThreeArguments(1, 2, 3));
-
+// console.log(onlyThreeArguments(1, 2, [1]));
 
 
 
@@ -209,8 +193,8 @@ let booksBox = {
 
 
 
-console.log(booksBox.addBooks(1));
-console.log(booksBox.addBooks(2));
-console.log(booksBox.addBooks(3));
+console.log(booksBox.addBooks(7));
+// console.log(booksBox.addBooks(2));
 // console.log(booksBox.addBooks(1));
+// console.log(booksBox.addBooks(3));
 // console.log(booksBox.addBooks(2));
