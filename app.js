@@ -2698,29 +2698,26 @@ const present = new Date();
  * 
  */
 
-const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
 
-//saber se a requisicao foi bem sucedida e
-//acessar os dados
+// const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
 
-// estudr documentação readyState
+// //saber se a requisicao foi bem sucedida e
+// //acessar os dados
 
-request.addEventListener('readystatechange', () => {
-    if (request.readyState === 4) { // no estado 4 é que podemos fazer algo com os dados recebidos.
-        console.log(request.responseText);
-    }
-});
+// // estudr documentação readyState
 
-
-//abertura da requisicao
-request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
-
-//envio do request
-request.send();
+// request.addEventListener('readystatechange', () => {
+//     if (request.readyState === 4) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+//         console.log(request.responseText);
+//     }
+// });
 
 
+// //abertura da requisicao
+// request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
 
-
+// //envio do request
+// request.send();
 
 
 
@@ -2734,9 +2731,30 @@ request.send();
  * 
  *  FAZ AS ANOTAÇÔES IRMAO
  * 
+ *  doc status das resposta => https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ * 
  */
 
 
 
+ const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+
+ //saber se a requisicao foi bem sucedida e
+ //acessar os dados
+ 
+ // estudr documentação readyState
+ 
+ request.addEventListener('readystatechange', () => {
+     if (request.readyState === 4 && request.status === 200) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+         console.log(request.responseText);
+     }
+ });
+ 
+ 
+ //abertura da requisicao
+ request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+ 
+ //envio do request
+ request.send();
 
 
