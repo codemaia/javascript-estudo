@@ -2692,10 +2692,15 @@ const present = new Date();
 
 /**
  * 
- * FAZ AS ANOTAÇÕES IRMAO
+ * A primeira coisa que devemos fazer é criar um objeto de request
  * 
  */
 
+const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+
+request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+
+console.log(request); 
 
 
 

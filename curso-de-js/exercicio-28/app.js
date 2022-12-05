@@ -138,8 +138,8 @@ myInformation.myResume = () => {
 }
 
 
-console.log(myInformation.myResume());
-console.log(myInformation);
+// console.log(myInformation.myResume());
+// console.log(myInformation);
 
 /*
   06
@@ -152,6 +152,8 @@ console.log(myInformation);
     valor truthy;
     - Faça isso até que 7 valores truthy sejam passados.
 */
+
+
 
 /*
   07
