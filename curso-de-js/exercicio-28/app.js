@@ -14,6 +14,7 @@
     a operação foi completada), exiba no console a mensagem 'Não foi possível 
     obter os dados do pokémon';
   - Teste também a verificação do item acima.
+  
 */
 
 
@@ -56,7 +57,7 @@ const myInformation = {
   name: 'Renan',
   lastName: 'Maia',
   gender: 'Female',
-  year: 2,
+  year: 32,
   height: 1.84,
   weight: 85,
   isWalking: false,
@@ -77,6 +78,11 @@ const myInformation = {
 
 
 myInformation.addYears = () => myInformation.year += 1;
+
+for (let i = 0; i < 5; i++) {
+  console.log(myInformation.addYears());
+}
+
 
 // myInformation.addYears();
 // myInformation.addYears();
@@ -100,20 +106,34 @@ myInformation.addYears = () => myInformation.year += 1;
 */
 
 
+
+
 myInformation.addMetersWalked = (meters) => {
 
   myInformation.howManyMetersWalked += meters
-
-  if (myInformation.isWalking === false) {
-    myInformation.isWalking = true;
-  }
+  myInformation.isWalking = true;
   
 };
 
 
+
+
+
+
+// myInformation.addMetersWalked = (meters) => {
+
+//   myInformation.howManyMetersWalked += meters
+
+//   if (myInformation.isWalking === false) {
+//     myInformation.isWalking = true;
+//   }
+  
+// };
+
+
 // myInformation.addMetersWalked(3);
 // myInformation.addMetersWalked(5);
-myInformation.addMetersWalked(1);
+// myInformation.addMetersWalked(1);
 // myInformation.addMetersWalked(2);
 
 
@@ -178,13 +198,15 @@ myInformation.myResume = () => {
 
 */
 
-const isFalsyOrTruthy = (value) => {
-  if (value) {
-    return true;
-  }
 
-  return false;
-};
+
+// const isFalsyOrTruthy = (value) => {
+//   if (value) {
+//     return true;
+//   }
+
+//   return false;
+// };
 
 // console.log(isFalsyOrTruthy(false));
 // console.log(isFalsyOrTruthy(0));
