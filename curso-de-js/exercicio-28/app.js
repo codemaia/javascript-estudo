@@ -186,24 +186,24 @@ const isFalsyOrTruthy = (value) => {
   return false;
 };
 
-console.log(isFalsyOrTruthy(false));
-console.log(isFalsyOrTruthy(0));
-console.log(isFalsyOrTruthy(""));
-console.log(isFalsyOrTruthy(''));
-console.log(isFalsyOrTruthy(``));
-console.log(isFalsyOrTruthy(null));
-console.log(isFalsyOrTruthy(undefined));
-console.log(isFalsyOrTruthy(NaN));
+// console.log(isFalsyOrTruthy(false));
+// console.log(isFalsyOrTruthy(0));
+// console.log(isFalsyOrTruthy(""));
+// console.log(isFalsyOrTruthy(''));
+// console.log(isFalsyOrTruthy(``));
+// console.log(isFalsyOrTruthy(null));
+// console.log(isFalsyOrTruthy(undefined));
+// console.log(isFalsyOrTruthy(NaN));
 
 
-console.log(isFalsyOrTruthy(true));
-console.log(isFalsyOrTruthy(1));
-console.log(isFalsyOrTruthy("a"));
-console.log(isFalsyOrTruthy('b'));
-console.log(isFalsyOrTruthy(`c`));
-console.log(isFalsyOrTruthy([]));
-console.log(isFalsyOrTruthy({}));
-console.log(isFalsyOrTruthy(12));
+// console.log(isFalsyOrTruthy(true));
+// console.log(isFalsyOrTruthy(1));
+// console.log(isFalsyOrTruthy("a"));
+// console.log(isFalsyOrTruthy('b'));
+// console.log(isFalsyOrTruthy(`c`));
+// console.log(isFalsyOrTruthy([]));
+// console.log(isFalsyOrTruthy({}));
+// console.log(isFalsyOrTruthy(12));
 
 
 
@@ -225,4 +225,36 @@ console.log(isFalsyOrTruthy(12));
     os livros.
 
   Dica: propriedades de objetos podem ser declaradas como strings.
+
 */
+
+
+
+//função com parametro que vai ser o nome de um livro (string)
+//1 obj com 3 propriedades que vao ser nomes de livros
+//        cada uma das 3 props deve armazenar um novo obj que tera outras 3 props que armazenam:
+//          - quantidade de paginas (number)
+//          - Autor
+//          - Editora.
+//
+// A função deve retornar o objeto que representa o livro passado por parametro;
+// se o parametro nao for passado, a função deve retornar o objeto com todos os livros
+
+
+
+
+const searchBooks = (book) => {
+
+  const books = {
+    nameBook1: { numberPages: 200, author: 'Author One', publishing: 'Editora One' },
+    nameBook2: { numberPages: 178, author: 'Author Two', publishing: 'Editora Two' },
+    nameBook3: { numberPages: 400, author: 'Author Three', publishing: 'Editora Three' }
+  };
+
+  const nameBook = books[`${book}`];
+
+  return nameBook ? nameBook : books
+
+}
+
+console.log(searchBooks('nameBook1'));
