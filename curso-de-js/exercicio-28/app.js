@@ -61,7 +61,7 @@ const myInformation = {
   height: 1.84,
   weight: 85,
   isWalking: false,
-  howManyMetersWalked: 1
+  howManyMetersWalked: 0
 };
 
 
@@ -80,10 +80,10 @@ const myInformation = {
 myInformation.addYears = () => myInformation.year += 1;
 
 for (let i = 0; i < 5; i++) {
-  console.log(myInformation.addYears());
+  myInformation.addYears();
 }
 
-
+console.log(myInformation.year);
 // myInformation.addYears();
 // myInformation.addYears();
 // myInformation.addYears();
@@ -116,6 +116,12 @@ myInformation.addMetersWalked = (meters) => {
 };
 
 
+const meters = [7, 13, 15, 20];
+
+
+meters.forEach(meter => myInformation.addMetersWalked(meter));
+
+console.log(myInformation.howManyMetersWalked, myInformation.isWalking);
 
 
 
@@ -197,6 +203,21 @@ myInformation.myResume = () => {
 
 
 */
+
+
+const isTruthy = value => Boolean(value);
+
+const falsyValues = [false, 0, '', null, undefined, NaN];
+const truthyValues = [true, () => {}, [], {}, 1, -1, 'false' ];
+
+falsyValues.forEach(falsyValue => {
+  console.log(isTruthy(falsyValue));
+})
+
+truthyValues.forEach(truthyValue => {
+  console.log(isTruthy(truthyValue));
+})
+
 
 
 
