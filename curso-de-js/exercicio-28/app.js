@@ -33,7 +33,7 @@ request.addEventListener('readystatechange', () => {
 
 
 request.open('GET', 'https://pokeapi.co/api/v2/pokemon/pikachu');
-request.send()
+// request.send()
 
 
 
@@ -165,7 +165,46 @@ myInformation.myResume = () => {
   - Invoque a função e, desta vez, a cada invocação, passe como argumento um 
     valor truthy;
     - Faça isso até que 7 valores truthy sejam passados.
+
+
+  Valores falsy:
+//     - false
+//     - 0
+//     - "", '', ``
+//     - null
+//     - undefined
+//     - NaN
+
+
 */
+
+const isFalsyOrTruthy = (value) => {
+  if (value) {
+    return true;
+  }
+
+  return false;
+};
+
+console.log(isFalsyOrTruthy(false));
+console.log(isFalsyOrTruthy(0));
+console.log(isFalsyOrTruthy(""));
+console.log(isFalsyOrTruthy(''));
+console.log(isFalsyOrTruthy(``));
+console.log(isFalsyOrTruthy(null));
+console.log(isFalsyOrTruthy(undefined));
+console.log(isFalsyOrTruthy(NaN));
+
+
+console.log(isFalsyOrTruthy(true));
+console.log(isFalsyOrTruthy(1));
+console.log(isFalsyOrTruthy("a"));
+console.log(isFalsyOrTruthy('b'));
+console.log(isFalsyOrTruthy(`c`));
+console.log(isFalsyOrTruthy([]));
+console.log(isFalsyOrTruthy({}));
+console.log(isFalsyOrTruthy(12));
+
 
 
 
