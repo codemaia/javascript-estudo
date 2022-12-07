@@ -35,9 +35,21 @@
     2) Pesquisar no MDN.
 */
 
+// Metodo MAP = retorna um array com o mesmo numero de elementos do array original so que modificado
+
+const funcMap = (arr, func) => {
+
+  let newArr = []
+  arr.forEach(arrs => {
+    newArr.push(func(arrs));
+  })
+  
+   return newArr;
+
+}
 
 
-
+console.log(funcMap([1, 2, 3], number => number * 2));
 
 
 
