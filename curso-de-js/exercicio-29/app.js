@@ -42,12 +42,33 @@
     objeto person.
 */
 
+// const person = {
+//   name: 'Roger',
+//   getName: () => this.name
+// }
+
 const person = {
   name: 'Roger',
-  getName: () => this.name
+  getName: function () { return this.name } 
 }
 
-// console.log(person.getName())
+// const person = {
+//   name: 'Roger',
+//   getName: () => person
+// }
+
+
+// const person = {
+//   name: 'Roger',
+//   getName: function () {
+//     return person
+//   }
+// }
+
+
+
+console.log(person.getName());
+
 
 /*
   04
