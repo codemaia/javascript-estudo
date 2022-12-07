@@ -39,7 +39,7 @@
 
 const funcMap = (arr, func) => {
 
-  let newArr = []
+  const newArr = []
   arr.forEach(arrs => {
     newArr.push(func(arrs));
   })
