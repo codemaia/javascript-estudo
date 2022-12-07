@@ -286,18 +286,20 @@ truthyValues.forEach(truthyValue => {
 
 
 
-const searchBooks = (book) => {
+const searchBooks = (bookName) => {
 
   const books = {
-    nameBook1: { numberPages: 200, author: 'Author One', publishing: 'Editora One' },
-    nameBook2: { numberPages: 178, author: 'Author Two', publishing: 'Editora Two' },
-    nameBook3: { numberPages: 400, author: 'Author Three', publishing: 'Editora Three' }
+    'name Book1': { numberPages: 200, author: 'Author One', publishing: 'Editora One' },
+    'name Book2': { numberPages: 178, author: 'Author Two', publishing: 'Editora Two' },
+    'name Book3': { numberPages: 400, author: 'Author Three', publishing: 'Editora Three' }
   };
 
-  const nameBook = books[`${book}`];
+  const nameBook = books[bookName];
 
-  return nameBook ? nameBook : books
+  return nameBook || books // -> tips name curto circuito.
+
+  // return nameBook ? nameBook : books
 
 }
 
-console.log(searchBooks('nameBook1'));
+console.log(searchBooks('name Book3'));
