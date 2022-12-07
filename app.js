@@ -2775,6 +2775,74 @@ const present = new Date();
  */
 
 
+// const getTodos = callback => {
+//     const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+    
+//     //saber se a requisicao foi bem sucedida e
+//     //acessar os dados
+    
+//     // estudr documentação readyState
+    
+//     request.addEventListener('readystatechange', () => {
+//        const isRequestOk = request.readyState === 4 && request.status === 200;
+//        const isRequestNotOk = request.readyState === 4;
+    
+//         if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+//             callback(null, request.responseText);
+//             return
+//         }
+    
+//         if (isRequestNotOk) {
+//            callback('Não foi possível obter os dados da API', null)
+           
+//         }
+//     });
+    
+    
+//     //abertura da requisicao
+//     request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+//     //envio do request
+//     request.send();
+
+// }
+
+
+// getTodos((error, data) => {
+//     console.log('Callback executada');
+
+//     if (error) {
+//         console.log(error);
+//         return 
+//     }
+
+//     console.log(data);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+ // AULA 03-04 - TRABALHANDO COM JSON (JAVASCRIPT OBJECT NOTATION)
+
+/**
+ * 
+ *  doc status das resposta => https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ * 
+ *   
+ * 
+ * 
+ */
+
+
+
+
 const getTodos = callback => {
     const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
     
@@ -2788,7 +2856,8 @@ const getTodos = callback => {
        const isRequestNotOk = request.readyState === 4;
     
         if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
-            callback(null, request.responseText);
+            const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
+            callback(null, data);
             return
         }
     
@@ -2800,7 +2869,7 @@ const getTodos = callback => {
     
     
     //abertura da requisicao
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+    request.open('GET', './todos.json'); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
     //envio do request
     request.send();
 
@@ -2817,7 +2886,4 @@ getTodos((error, data) => {
 
     console.log(data);
 });
-
-
-
 
