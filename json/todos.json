@@ -1,0 +1,14 @@
+[
+    {
+        "myKey": "My key value",
+        "myKey1": 7
+    },
+    {
+        "myKey": "Other value",
+        "myKey1": true
+    },
+    {
+        "myKey": "Another value",
+        "myKey1": null
+    }
+]
