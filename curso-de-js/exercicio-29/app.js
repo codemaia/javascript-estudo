@@ -35,6 +35,12 @@
     2) Pesquisar no MDN.
 */
 
+
+
+
+
+
+
 /*
   03
 
@@ -67,7 +73,7 @@ const person = {
 
 
 
-console.log(person.getName());
+// console.log(person.getName());
 
 
 /*
@@ -79,8 +85,17 @@ console.log(person.getName());
     delas.
 */
 
-const x = 'x'
-// const x = 'y'
+const x = 'x';
+
+const getX = () => {
+  const x = 'y';
+  return x; 
+}
+
+// console.log(x, getX());
+
+
+
 
 /*
   05
@@ -97,6 +112,9 @@ const getFullName = (user) => {
 }
 
 console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
+
+
+
 
 /*
   06
