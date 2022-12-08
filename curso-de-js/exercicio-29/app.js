@@ -14,6 +14,34 @@
 */
 
 
+const getPokemons = () => {
+
+  const request = new XMLHttpRequest ();
+  
+  
+  request.addEventListener('readystatechange', () => {
+    
+    if (request.readyState === 4 && request.status === 200) {
+      console.log(request.responseText);
+    }
+  
+    if (request.readyState === 4) {
+      console.log('Não foi possivel obter o pokemon');
+    }
+  
+  });
+  
+  
+  request.open('GET', 'https://pokeapi.co/api/v2/pokemon/bulbasaur');
+  request.send();
+
+
+};
+
+
+
+getPokemons();
+
 
 
 /*
@@ -49,7 +77,7 @@ const funcMap = (arr, func) => {
 }
 
 
-console.log(funcMap([1, 2, 3], number => number * 2));
+// console.log(funcMap([1, 2, 3], number => number * 2));
 
 
 
