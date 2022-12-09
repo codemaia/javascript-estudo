@@ -14,7 +14,7 @@
 */
 
 
-const getPokemons = () => {
+const getPokemons = (url, callback) => {
 
   const request = new XMLHttpRequest ();
   
@@ -22,17 +22,18 @@ const getPokemons = () => {
   request.addEventListener('readystatechange', () => {
     
     if (request.readyState === 4 && request.status === 200) {
-      console.log(request.responseText);
+      callback(null, request.responseText);
+      return 
     }
   
     if (request.readyState === 4) {
-      console.log('Não foi possivel obter o pokemon');
+      callback('Não foi possível obter o Pokémon', null);
     }
   
   });
   
-  
-  request.open('GET', 'https://pokeapi.co/api/v2/pokemon/bulbasaur');
+
+  request.open('GET', url);
   request.send();
 
 
@@ -40,7 +41,23 @@ const getPokemons = () => {
 
 
 
-getPokemons();
+getPokemons('https://pokeapi.co/api/v2/pokemon/bulbasaur',(error, data) => {
+  console.log('Pokémon obtido: Bulbasaur');
+  getPokemons('https://pokeapi.co/api/v2/pokemon/charmander',(error, data) => {
+    if (error) {
+      console.log(error);
+    }
+
+    if (data) {
+      console.log('Pokémon obtido: Charmander');
+    }
+
+    getPokemons('https://pokeapi.co/api/v2/pokemon/squirtle', (error, data) => {
+      console.log('Pokémon obtido: Squirtle');
+    });
+  });
+
+});
 
 
 
