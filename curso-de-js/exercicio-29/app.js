@@ -37,32 +37,31 @@ const getPokemons = (url, callback) => {
 };
 
 
+// getPokemons('https://pokeapi.co/api/v2/pokemon/bulbasaur',(error, data) => {
+//   if (error) {
+//     console.log(error);
+//   }
+//   if (data) {
+//     console.log('Pokémon obtido: Bulbasaur');
+//   }
+//   getPokemons('https://pokeapi.co/api/v2/pokemon/charmander',(error, data) => {
+//     if (error) {
+//       console.log(error);
+//     }
+//     if (data) {
+//       console.log('Pokémon obtido: Charmander')
+//     }
+//     getPokemons('https://pokeapi.co/api/v2/pokemon/squirtle', (error, data) => {
+//       if (error) {
+//         console.log(error);
+//       }
+//       if (data) {
+//         console.log('Pokémon obtido: Squirtle');
+//       }
+//     });
+//   });
 
-getPokemons('https://pokeapi.co/api/v2/pokemon/bulbasaur',(error, data) => {
-  if (error) {
-    console.log(error)
-  }
-  if (data) {
-    console.log('Pokémon obtido: Bulbasaur');
-  }
-  getPokemons('https://pokeapi.co/api/v2/pokemon/charmander',(error, data) => {
-    if (error) {
-      console.log(error);
-    }
-    if (data) {
-      console.log('Pokémon obtido: Charmander')
-    }
-    getPokemons('https://pokeapi.co/api/v2/pokemon/squirtle', (error, data) => {
-      if (error) {
-        console.log(error);
-      }
-      if (data) {
-        console.log('Pokémon obtido: Squirtle');
-      }
-    });
-  });
-
-});
+// });
 
 
 
@@ -172,7 +171,7 @@ const getFullName = (user) => {
   return `${firstName} ${lastName}`
 }
 
-console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
+// console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
 
 
 
@@ -195,12 +194,66 @@ console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
     parâmetro. Exemplo: 'red';
   - Escolha 5 cores que serão convertidas do nome da cor para o seu
     equivalente hexadecimal (pode ser qualquer tom);
+
+    black 	#000000
+    red     #FF0000
+    pink    #FFC0CB
+    green   #00FF00
+    yellow  #FFFF00
+
+
+
   - Verifique se a cor passada por parâmetro é algum hexa escolhido. Se for,
     retorne a frase 'O hexadecimal para a cor COR é HEXADECIMAL';
   - Se a cor passada por parâmetro não estiver entre as selecionadas, mostre
     a mensagem 'Não temos o equivalente hexadecimal para COR';
   - Exiba o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
+
+
+
+const convertToHex = (value) => {
+  
+  if (value === 'black') {
+    return `O hexadecimal para a cor ${value} é #000000`;
+  
+  }
+
+  if (value === 'red') {
+    return `O hexadecimal para a cor ${value} é #FF0000`;
+    
+  }
+
+  if (value === 'pink') {
+    return `O hexadecimal para a cor ${value} é #FFC0CB`;
+  
+  }
+
+  if (value === 'green') {
+    return `O hexadecimal para a cor ${value} é #00FF00`;
+  
+  }
+
+  if (value === 'yellow') {
+    return `O hexadecimal para a cor ${value} é #FFFF00`;
+    
+  }
+
+  return `Não temos o equivalente hexadecimal para ${value}`
+  
+};
+
+
+
+console.log(convertToHex('red'));
+console.log(convertToHex('green'));
+console.log(convertToHex('black'));
+console.log(convertToHex('yellow'));
+console.log(convertToHex('pink'));
+console.log(convertToHex('blue'));
+console.log(convertToHex('withe'));
+
+
 
 
 /*
