@@ -42,18 +42,26 @@ const getPokemons = (url, callback) => {
 
 
 getPokemons('https://pokeapi.co/api/v2/pokemon/bulbasaur',(error, data) => {
-  console.log('Pokémon obtido: Bulbasaur');
+  if (error) {
+    console.log(error)
+  }
+  if (data) {
+    console.log('Pokémon obtido: Bulbasaur');
+  }
   getPokemons('https://pokeapi.co/api/v2/pokemon/charmander',(error, data) => {
     if (error) {
       console.log(error);
     }
-
     if (data) {
-      console.log('Pokémon obtido: Charmander');
+      console.log('Pokémon obtido: Charmander')
     }
-
     getPokemons('https://pokeapi.co/api/v2/pokemon/squirtle', (error, data) => {
-      console.log('Pokémon obtido: Squirtle');
+      if (error) {
+        console.log(error);
+      }
+      if (data) {
+        console.log('Pokémon obtido: Squirtle');
+      }
     });
   });
 
