@@ -167,13 +167,23 @@ const getX = () => {
 */
 
 const getFullName = (user) => {
-  const firstName = user.firstName
-  const lastName = user.lastName
-
+  const { firstName, lastName } = user;
+  
   return `${firstName} ${lastName}`
 }
 
 console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
+
+
+
+// const getFullName = (user) => {
+//   const firstName = user.firstName
+//   const lastName = user.lastName
+
+//   return `${firstName} ${lastName}`
+// }
+
+// console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
 
 
 
