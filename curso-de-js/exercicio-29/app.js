@@ -220,42 +220,14 @@ const convertToHex = (value) => {
     pink: '#FFC0CB',
     green: '#00FF00',
     yellow: '#FFFF00',
-  }
+  };
   
+
   if (colors[value]) {
     return `O hexadecimal para a cor ${value} é ${colors[value]}`;
   }
 
   return `Não temos o equivalente hexadecimal para ${value}`;
-
-
-
-  // if (value === 'black') {
-  //   return `O hexadecimal para a cor ${value} é #000000`;
-  
-  // }
-
-  // if (value === 'red') {
-  //   return `O hexadecimal para a cor ${value} é #FF0000`;
-    
-  // }
-
-  // if (value === 'pink') {
-  //   return `O hexadecimal para a cor ${value} é #FFC0CB`;
-  
-  // }
-
-  // if (value === 'green') {
-  //   return `O hexadecimal para a cor ${value} é #00FF00`;
-  
-  // }
-
-  // if (value === 'yellow') {
-  //   return `O hexadecimal para a cor ${value} é #FFFF00`;
-    
-  // }
-
-  // return `Não temos o equivalente hexadecimal para ${value}`
   
 };
 
