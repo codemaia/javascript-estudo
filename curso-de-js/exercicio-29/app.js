@@ -249,6 +249,7 @@ console.log(convertToHex('blue'));
 
   - Através do array abaixo, gere um objeto com a frequência de idades das 
     pessoas;
+
   - Ou seja, se o array contém 3 pessoas com 18 anos, o objeto gerado deve ter 
     uma propriedade 18 com o valor 3, se o array contém 2 pessoas com 19 anos,
     o objeto gerado deve ter uma propriedade 19 com o valor 2 e assim por 
@@ -266,4 +267,16 @@ const people = [
   { id: 87, name: 'Felipe', age: 18, federativeUnit: 'Minas Gerais' },
   { id: 9 , name: 'Gabriel', age: 20, federativeUnit: 'São Paulo' },
   { id: 73, name: 'Aline', age: 19, federativeUnit: 'Brasília' }
-]
+];
+
+
+const peopleAge = people.reduce((acc, item) => {
+
+  
+
+});
+
+
+
+
+
