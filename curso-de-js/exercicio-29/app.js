@@ -233,12 +233,12 @@ const convertToHex = (value) => {
 
 
 
-console.log(convertToHex('red'));
+// console.log(convertToHex('red'));
 // console.log(convertToHex('green'));
 // console.log(convertToHex('black'));
 // console.log(convertToHex('yellow'));
 // console.log(convertToHex('pink'));
-console.log(convertToHex('blue'));
+// console.log(convertToHex('blue'));
 // console.log(convertToHex('withe'));
 
 
@@ -270,10 +270,20 @@ const people = [
 ];
 
 
-const peopleAge = people.reduce((acc, item) => {
+// let a = 0
+// const objAge = {
+//   [`18${a = people.filter(person => person.age === 18)}`]: 
+// }
 
-  
+// console.log(objAge);
 
+
+
+people.forEach(item => {
+  let i ='';
+  return console.log({
+    [`18 ${item.age === 18 ? i++ : i}`]: i
+  });
 });
 
 
