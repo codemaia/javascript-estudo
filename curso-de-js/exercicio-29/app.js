@@ -276,11 +276,14 @@ let newObj = {};
 people.forEach(person => {
 
   if (person.age === person.age) {
-    return console.log(newObj[person.age]: countAge++) 
-
+    countAge++
+    return newObj = {
+      [person.age]: countAge
+    }
   }
 });
 
+console.log(newObj)
 
 
 // const objAge = people.reduce((acc, person) => {
