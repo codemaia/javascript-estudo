@@ -270,22 +270,31 @@ const people = [
 ];
 
 
-// let a = 0
-// const objAge = {
-//   [`18${a = people.filter(person => person.age === 18)}`]: 
-// }
+let countAge = 0;
+let newObj = {};
 
-// console.log(objAge);
+people.forEach(person => {
 
+  if (person.age === person.age) {
+    return console.log(newObj[person.age]: countAge++) 
 
-
-people.forEach(item => {
-  let i ='';
-  return console.log({
-    [`18 ${item.age === 18 ? i++ : i}`]: i
-  });
+  }
 });
 
+
+
+// const objAge = people.reduce((acc, person) => {
+  
+//   if (person) {
+
+//     return {[person.age]: acc }  
+    
+//   }
+
+// }, 0);
+
+
+// console.log(objAge)
 
 
 
