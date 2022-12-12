@@ -222,13 +222,11 @@ const convertToHex = (value) => {
     yellow: '#FFFF00',
   };
   
-  return colors[value] ? `O hexadecimal para a cor ${value} é ${colors[value]}` : `Não temos o equivalente hexadecimal para ${value}`;
+  const haveHex = `O hexadecimal para a cor ${value} é ${colors[value]}`;
+  const notHaveHex = `Não temos o equivalente hexadecimal para ${value}`
+  const color = colors[value];
 
-  // if (colors[value]) {
-  //   return `O hexadecimal para a cor ${value} é ${colors[value]}`;
-  // }
-
-  // return `Não temos o equivalente hexadecimal para ${value}`;
+  return color ? haveHex : notHaveHex;
   
 };
 
@@ -241,6 +239,7 @@ console.log(convertToHex('yellow'));
 console.log(convertToHex('pink'));
 console.log(convertToHex('blue'));
 console.log(convertToHex('withe'));
+console.log(convertToHex('gray'));
 
 
 
