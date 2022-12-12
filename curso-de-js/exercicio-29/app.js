@@ -86,7 +86,7 @@ const getPokemons = (url, callback) => {
 
 // Metodo MAP = retorna um array com o mesmo numero de elementos do array original so que modificado
 
-const funcMap = (arr, func) => {
+const map = (arr, func) => {
 
   const newArr = []
   arr.forEach(arrs => {
@@ -98,7 +98,7 @@ const funcMap = (arr, func) => {
 }
 
 
-// console.log(funcMap([1, 2, 3], number => number * 2));
+// console.log(map([1, 2, 3], number => number * 2));
 
 
 
@@ -131,7 +131,6 @@ const person = {
 //     return person
 //   }
 // }
-
 
 
 // console.log(person.getName());
@@ -232,14 +231,14 @@ const convertToHex = (value) => {
 
 
 
-console.log(convertToHex('red'));
-console.log(convertToHex('green'));
-console.log(convertToHex('black'));
-console.log(convertToHex('yellow'));
-console.log(convertToHex('pink'));
-console.log(convertToHex('blue'));
-console.log(convertToHex('withe'));
-console.log(convertToHex('gray'));
+// console.log(convertToHex('red'));
+// console.log(convertToHex('green'));
+// console.log(convertToHex('black'));
+// console.log(convertToHex('yellow'));
+// console.log(convertToHex('pink'));
+// console.log(convertToHex('blue'));
+// console.log(convertToHex('withe'));
+// console.log(convertToHex('gray'));
 
 
 
