@@ -271,6 +271,13 @@ const people = [
 ];
 
 
+// const frequencyAge = people.reduce((acc, { age }) => {
+//   acc[age] = acc[age] + 1 || 1;
+//   return acc;
+// }, {});
+
+// console.log(frequencyAge);
+
 const objAge = people.reduce((acc, { age }) => {
     //[age] -> expressão que vai ser computada como nome do objeto
   acc[age] = acc[age] + 1 || 1
