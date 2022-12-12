@@ -270,20 +270,30 @@ const people = [
 ];
 
 
-let countAge = 0;
-let newObj = {};
-
-people.forEach(person => {
-
-  if (person.age === person.age) {
-    countAge++
-    return newObj = {
-      [person.age]: countAge
-    }
+let countAge18 = 0;  
+let countAge19 = 0;
+let countAge20 = 0;
+ 
+const newObj = people.reduce((acc, person) => {
+  
+  if (person.age === 18) {
+   countAge18++  
   }
-});
+
+  if (person.age === 19) {
+    countAge19++
+  }
+
+  if (person.age === 20) {
+    countAge20++
+  }
+
+  return { 18: countAge18, 19: countAge19, 20: countAge20 }
+
+}, {});
 
 console.log(newObj)
+
 
 
 // const objAge = people.reduce((acc, person) => {
