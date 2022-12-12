@@ -258,6 +258,7 @@ const convertToHex = (value) => {
   Resultado desejado: { 18: 3, 19: 2, 20: 1 }
 
   Dica: pesquise por Computed Property Names.
+    // 
 */
 
 const people = [
@@ -270,57 +271,15 @@ const people = [
 ];
 
 
-let countAge18 = 0;  
-let countAge19 = 0;
-let countAge20 = 0;
+const objAge = people.reduce((acc, { age }) => {
+    //[age] -> expressão que vai ser computada como nome do objeto
+  acc[age] = acc[age] + 1 || 1
+
+  return acc
+}, {});
 
 
-let newObj2 = {}
-
-people.forEach(person => {
-
-   newObj2 = {[`${person.age === 18 ? countAge18++ : 18 }`]: countAge18,
-              [`19${person.age === 19 ? countAge19++ : countAge19+=0 }`]: countAge19, 
-              [`${person.age === 20 ? countAge20++ : 20 }`]: countAge20 }
-
-});
-
-console.log(newObj2)
- 
-// const newObj = people.reduce((acc, person) => {
-  
-//   if (person.age === 18) {
-//    countAge18++  
-//   }
-
-//   if (person.age === 19) {
-//     countAge19++
-//   }
-
-//   if (person.age === 20) {
-//     countAge20++
-//   }
-
-//   return { 18: countAge18, 19: countAge19, 20: countAge20 }
-
-// }, {});
-
-// console.log(newObj)
-
-
-
-// const objAge = people.reduce((acc, person) => {
-  
-//   if (person) {
-
-//     return {[person.age]: acc }  
-    
-//   }
-
-// }, 0);
-
-
-// console.log(objAge)
+console.log(objAge)
 
 
 
