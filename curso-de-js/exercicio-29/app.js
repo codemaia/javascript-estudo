@@ -222,24 +222,25 @@ const convertToHex = (value) => {
     yellow: '#FFFF00',
   };
   
+  return colors[value] ? `O hexadecimal para a cor ${value} é ${colors[value]}` : `Não temos o equivalente hexadecimal para ${value}`;
 
-  if (colors[value]) {
-    return `O hexadecimal para a cor ${value} é ${colors[value]}`;
-  }
+  // if (colors[value]) {
+  //   return `O hexadecimal para a cor ${value} é ${colors[value]}`;
+  // }
 
-  return `Não temos o equivalente hexadecimal para ${value}`;
+  // return `Não temos o equivalente hexadecimal para ${value}`;
   
 };
 
 
 
-// console.log(convertToHex('red'));
-// console.log(convertToHex('green'));
-// console.log(convertToHex('black'));
-// console.log(convertToHex('yellow'));
-// console.log(convertToHex('pink'));
-// console.log(convertToHex('blue'));
-// console.log(convertToHex('withe'));
+console.log(convertToHex('red'));
+console.log(convertToHex('green'));
+console.log(convertToHex('black'));
+console.log(convertToHex('yellow'));
+console.log(convertToHex('pink'));
+console.log(convertToHex('blue'));
+console.log(convertToHex('withe'));
 
 
 
@@ -286,7 +287,7 @@ const objAge = people.reduce((acc, { age }) => {
 }, {});
 
 
-console.log(objAge)
+// console.log(objAge)
 
 
 
