@@ -20,14 +20,17 @@ const getPokemons = (url, callback) => {
   const request = new XMLHttpRequest();
   
   request.addEventListener('readystatechange', () => {
-    
-    if (request.readyState === 4 && request.status === 200) {
+
+    const isRequestOk = request.readyState === 4 && request.status === 200;
+    const isRequestNotOk = request.readyState === 4;
+
+    if (isRequestOk) {
       const data = JSON.parse(request.responseText);
       callback(null, data);
       return
     }
   
-    if (request.readyState === 4) {
+    if (isRequestNotOk) {
       callback('Não foi possível obter o Pokémon', null);
       
     }
@@ -40,23 +43,22 @@ const getPokemons = (url, callback) => {
 }
 
 
-const logPokemonData = (error, data) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  
-  console.log(`Pokémon obtido: ${data.name}`);
-  
-}
+const logPokemonData = (error, data) => error 
+  ? console.log(error)
+  : console.log(`Pokémon obtido: ${data.name}`);
 
-getPokemons('https://pokeapi.co/api/v2/pokemon/bulbasaur',(error, data) => {
+
+const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
+
+const bulbasaur = getPokemonUrl(1);
+const charmander = getPokemonUrl(4);
+const squirtle = getPokemonUrl(7);
+
+getPokemons(bulbasaur,(error, data) => {
   logPokemonData(error, data);
-  getPokemons('https://pokeapi.co/api/v2/pokemon/charmander', (error, data) => {
+  getPokemons(charmander, (error, data) => {
     logPokemonData(error, data);
-    getPokemons('https://pokeapi.co/api/v2/pokemon/squirtle', (error, data) => {
-      logPokemonData(error, data);
-    });
+    getPokemons(squirtle, logPokemonData); // podemos fazer assim também, porém iria fazer chamada de uma vez só.
   });
 });
 
