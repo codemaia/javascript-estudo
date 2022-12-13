@@ -335,15 +335,17 @@ const people = [
 
 // console.log(frequencyAge);
 
-const objAge = people.reduce((acc, { age }) => {
-    //[age] -> expressão que vai ser computada como nome do objeto
-  acc[age] = acc[age] + 1 || 1
+const createOrIncrementObjAge = (acc, { age }) => {
+  //[age] -> expressão que vai ser computada como nome do objeto
+acc[age] = acc[age] + 1 || 1
 
-  return acc
-}, {});
+return acc
+};
+
+const objAge = people.reduce(createOrIncrementObjAge, {});
 
 
-// console.log(objAge)
+console.log(objAge)
 
 
 
