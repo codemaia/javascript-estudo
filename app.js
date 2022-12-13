@@ -2913,45 +2913,64 @@ const present = new Date();
 
 
 
- const getTodos = (url, callback) => {
-    const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+//  const getTodos = (url, callback) => {
+//     const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
     
     //saber se a requisicao foi bem sucedida e
     //acessar os dados
     
     // estudr documentação readyState
     
-    request.addEventListener('readystatechange', () => {
-       const isRequestOk = request.readyState === 4 && request.status === 200;
-       const isRequestNotOk = request.readyState === 4;
+//     request.addEventListener('readystatechange', () => {
+//        const isRequestOk = request.readyState === 4 && request.status === 200;
+//        const isRequestNotOk = request.readyState === 4;
     
-        if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
-            const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
-            callback(null, data);
-            return
-        }
+//         if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+//             const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
+//             callback(null, data);
+//             return
+//         }
     
-        if (isRequestNotOk) {
-           callback('Não foi possível obter os dados da API', null)
+//         if (isRequestNotOk) {
+//            callback('Não foi possível obter os dados da API', null)
            
-        }
-    });
+//         }
+//     });
     
     
-    //abertura da requisicao
-    request.open('GET', url); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
-    //envio do request
-    request.send();
+//     //abertura da requisicao
+//     request.open('GET', url); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+//     //envio do request
+//     request.send();
 
-}
+// }
 
 
-getTodos('./json/todos.json',(error, data) => {
-    console.log(data);
-    getTodos('./json/todos-02.json', (error, data) => {
-        console.log(data);
-        getTodos('./json/todos-03.json', (error, data) => {
-            console.log(data);
-        });
-    });
-});
+// getTodos('./json/todos.json',(error, data) => {
+//     console.log(data);
+//     getTodos('./json/todos-02.json', (error, data) => {
+//         console.log(data);
+//         getTodos('./json/todos-03.json', (error, data) => {
+//             console.log(data);
+//         });
+//     });
+// });
+
+
+
+
+
+
+// AULA 04-03 - INTRODUÇÃO A PROMISES
+
+/**
+ * 
+ *  
+ * 
+ *   
+ * 
+ * 
+ */
+
+
+
