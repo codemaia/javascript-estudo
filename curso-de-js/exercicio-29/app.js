@@ -169,10 +169,10 @@ console.log(map([10, 20, 30], number => number * 2));
 //   getName: () => this.name
 // }
 
-const person = {
-  name: 'Roger',
-  getName: function () { return this.name } 
-}
+// const person = { // CORRETO
+//   name: 'Roger',
+//   getName: function () { return this.name } 
+// }
 
 // const person = {
 //   name: 'Roger',
@@ -180,15 +180,13 @@ const person = {
 // }
 
 
-// const person = {
-//   name: 'Roger',
-//   getName: function () {
-//     return person
-//   }
-// }
+const person = { // CORRETO TAMBÉM 
+  name: 'Roger',
+  getName: () => person.name
+}
 
 
-// console.log(person.getName());
+console.log(person.getName());
 
 
 /*
@@ -207,7 +205,7 @@ const getX = () => {
   return x; 
 }
 
-// console.log(x, getX());
+console.log(x, getX());
 
 
 
@@ -219,13 +217,17 @@ const getX = () => {
     conseguir.
 */
 
-const getFullName = (user) => {
-  const { firstName, lastName } = user;
-  
-  return `${firstName} ${lastName}`
-}
 
-// console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
+
+const getFullName = ({ firstName, lastName }) => `${firstName} ${lastName}`
+
+// const getFullName = (user) => {
+//   const { firstName, lastName } = user;
+  
+//   return `${firstName} ${lastName}`
+// }
+
+console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
 
 
 
@@ -275,26 +277,27 @@ const convertToHex = (value) => {
     green: '#00FF00',
     yellow: '#FFFF00',
   };
-  
-  const haveHex = `O hexadecimal para a cor ${value} é ${colors[value]}`;
-  const notHaveHex = `Não temos o equivalente hexadecimal para ${value}`
-  const color = colors[value];
 
-  return color ? haveHex : notHaveHex;
+  return colors[value] 
+  ? `O hexadecimal para a cor ${value} é ${colors[value]}` 
+  : `Não temos o equivalente hexadecimal para ${value}`;
   
 };
 
 
+const colors = [
+  'black', 
+  'withe', 
+  'red', 
+  'pink', 
+  'gray', 
+  'green', 
+  'yellow', 
+  'blue'
+];
 
-// console.log(convertToHex('red'));
-// console.log(convertToHex('green'));
-// console.log(convertToHex('black'));
-// console.log(convertToHex('yellow'));
-// console.log(convertToHex('pink'));
-// console.log(convertToHex('blue'));
-// console.log(convertToHex('withe'));
-// console.log(convertToHex('gray'));
-
+const logColors = color => console.log(convertToHex(color));
+colors.forEach(logColors);
 
 
 
