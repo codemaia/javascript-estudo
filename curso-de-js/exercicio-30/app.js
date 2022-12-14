@@ -9,6 +9,29 @@
 */
 
 
+const getUsers = url => new Promise((resolve, reject) => {
+
+  const request = new XMLHttpRequest();
+
+  request.addEventListener('readystatechange', () => {
+    if (request.readyState === 4 && request.status === 200) {
+      const data = JSON.parse(request.responseText);
+      resolve(data);
+    }
+    
+    
+  });
+
+  request.open('GET', url);
+  request.send();
+
+})
+
+
+getUsers('https://jsonplaceholder.typicode.com/users')
+  .then(users => {
+    console.log(users);
+  })
 
 
 /*
