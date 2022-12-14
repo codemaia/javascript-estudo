@@ -3041,7 +3041,9 @@ const present = new Date();
 });
 
 
-getTodos('')
+getTodos('https://pokeapi.co/api/v2/pokemon/1')
+    .then(pokemon => console.log(pokemon))
+    .catch(error => console.log(error));
 
 
 
