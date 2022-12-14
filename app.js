@@ -2965,12 +2965,95 @@ const present = new Date();
 
 /**
  * 
+ *  # FAZER REQUESTS SEQUENCIAIS
+ * 
+ *  PROMISSE é um objeto que representa o sucesso ou a falha
+ *  de uma operação asincrona.   
+ * 
+ *  Uma promise sempre vai ter 2 resultados possiveis:
+ *    RESOLVE: deu tudo certo
+ *    REJECT: deu errado / foi rejeitada
  *  
+ *  Promises possuem RETURN implicito
  * 
- *   
  * 
+ *    PARA CONSUMIR UMA PROMISE UTILIZAMOS O METODO then()
+ *      
+ *      then() é responsavel por receber a resposta de sucesso(resolve)
+ *      da promise
  * 
+ *   PARA TRATAR ERROS UTILIZAMOS O METODO catch()    
+ *      
+ *      catch() é usado para tratar os erros, quando o then() nao der uma resposta
+ *      de sucesso;
+ *      é utilizad em 2 situaçoes:
+ *          1 - quando a REJECT dentro da criação da promisse é invocada
+ *          2 - quando o codigo dentro de algum then() lança um error.
+        
+                // CREATED PROMISE (SINTAXXE)
+
+                const getData = () => {
+                    return new Promise((resolve, reject) => {
+                        resolve('Dados aqui');
+                        // reject('Erro aqui');
+                    })
+                }
+
+
+                getData()
+                    .then(value => console.log(value))
+                    .catch(error => console.log(error));  
+ *      
+ *  
  */
+
+
+ const getTodos = url => new Promise((resolve, reject) => {
+
+     const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+     
+     // saber se a requisicao foi bem sucedida e
+     // acessar os dados
+     
+     // estudr documentação readyState
+     
+     request.addEventListener('readystatechange', () => {
+        const isRequestOk = request.readyState === 4 && request.status === 200;
+        const isRequestNotOk = request.readyState === 4;
+     
+         if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+             const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
+             resolve(data);
+             
+         }
+     
+         if (isRequestNotOk) {
+            reject('Não foi possível obter os dados da API');
+            
+         }
+     });
+     
+     
+     //abertura da requisicao
+     request.open('GET', url); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+     //envio do request
+     request.send();
+});
+
+
+getTodos('')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
