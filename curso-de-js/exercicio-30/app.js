@@ -8,6 +8,9 @@
     dados dos usuários."
 */
 
+
+
+
 /*
   02
 
@@ -22,6 +25,10 @@
   - Se o operador não for válido, retorne a mensagem "Operação inválida."
 */
 
+
+
+
+
 /*
   03
 
@@ -35,6 +42,9 @@
   - Crie um novo array chamado `newSul`, que recebe somente os estados do sul,
     pegando do array `brasil`. Não remova esses itens de `brasil`.
 */
+
+
+
 
 /*
   04
@@ -55,6 +65,9 @@
     every.
 */
 
+
+
+
 /*
   05
 
@@ -68,3 +81,7 @@
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
+
+
+
+
