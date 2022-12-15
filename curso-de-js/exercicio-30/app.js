@@ -53,9 +53,15 @@ getUsers('https://jsonplaceholder.typicode.com/users')
   - O retorno dessa segunda função é a operação matemática completa, com a 
     mensagem: "Resultado da operação: NUMERO_1 OPERADOR NUMERO_2 = RESULTADO."
   - Se o operador não for válido, retorne a mensagem "Operação inválida."
-*/
+*/ 
 
 
+const calculator = operator => (number1, number2) => {
+  const operations = {
+    '+': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 + number2}.`
+  }
+
+}
 
 
 
