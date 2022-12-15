@@ -31,12 +31,12 @@ const getUsers = url => new Promise((resolve, reject) => {
   request.open('GET', url);
   request.send();
 
-})
+});
 
 
 getUsers('https://jsonplaceholder.typicode.com/users')
   .then(users => {
-    console.log(users);
+    // console.log(users);
   })
   .catch(error => console.log(error));
 
@@ -73,6 +73,9 @@ getUsers('https://jsonplaceholder.typicode.com/users')
     pegando do array `brasil`. Não remova esses itens de `brasil`.
 */
 
+
+const sul = [];
+const suldest = [];
 
 
 
