@@ -74,9 +74,19 @@ getUsers('https://jsonplaceholder.typicode.com/users')
 */
 
 
-const sul = [];
-const suldest = [];
+const sul = ['Paraná', 'Santa Catarina', 'Rio Grande do Sul'];
+const suldeste = ['São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Minas Gerais'];
 
+const brasil = sul.concat(suldeste);
+
+brasil.unshift('Amazônas', 'Pará');
+brasil.shift();
+
+const newSul = [];
+newSul.push(brasil[1], brasil[2], brasil[3]);
+
+console.log(brasil);
+console.log(newSul);
 
 
 /*
