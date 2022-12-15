@@ -65,7 +65,10 @@ const calculator = operator => (number1, number2) => {
     '%': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 & number2} .`,
   }
 
-  return operations[operator];
+  return operations[operator] 
+         ? operations[operator]
+         : 'Operação inválida.';
+         
 }
 
 const sum = calculator('+');
@@ -73,12 +76,14 @@ const dif = calculator('-');
 const mult = calculator('*');
 const div = calculator('/');
 const mod = calculator('%');
+const outherOperation = calculator('$')
 
 console.log(sum(2, 2));
 console.log(dif(10, 3));
 console.log(mult(2, 2));
 console.log(div(553, 33));
 console.log(mod(10, 5));
+console.log(outherOperation(2, 8));
 
 
 
