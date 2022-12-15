@@ -58,10 +58,27 @@ getUsers('https://jsonplaceholder.typicode.com/users')
 
 const calculator = operator => (number1, number2) => {
   const operations = {
-    '+': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 + number2}.`
+    '+': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 + number2} .`,
+    '-': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 - number2} .`,
+    '*': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 * number2} .`,
+    '/': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 / number2} .`,
+    '%': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 & number2} .`,
   }
 
+  return operations[operator];
 }
+
+const sum = calculator('+');
+const dif = calculator('-');
+const mult = calculator('*');
+const div = calculator('/');
+const mod = calculator('%');
+
+console.log(sum(2, 2));
+console.log(dif(10, 3));
+console.log(mult(2, 2));
+console.log(div(553, 33));
+console.log(mod(10, 5));
 
 
 
@@ -101,8 +118,8 @@ const getState = (arr1, arr2) => {
   return newSul
 }
 
-console.log(brasil);
-console.log(getState(brasil, sul));
+// console.log(brasil);
+// console.log(getState(brasil, sul));
 
 
 /*
