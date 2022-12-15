@@ -83,10 +83,20 @@ brasil.unshift('Amazônas', 'Pará');
 brasil.shift();
 
 const newSul = [];
-newSul.push(brasil[1], brasil[2], brasil[3]);
+// newSul.push(brasil[1], brasil[2], brasil[3]);
+
+const getState = (arr1, arr2) => {
+  arr1.forEach(item => {
+    if (arr2.includes(item)) {
+      newSul.push(item);
+    }
+  });
+
+  return newSul
+}
 
 console.log(brasil);
-console.log(newSul);
+console.log(getState(brasil, sul));
 
 
 /*
