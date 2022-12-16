@@ -68,7 +68,7 @@ const calculator = operator => (number1, number2) => {
   return operations[operator] 
          ? operations[operator]
          : 'Operação inválida.';
-         
+
 }
 
 const sum = calculator('+');
@@ -84,6 +84,7 @@ console.log(mult(2, 2));
 console.log(div(553, 33));
 console.log(mod(10, 5));
 console.log(outherOperation(2, 8));
+console.log(outherOperation(24, 8.5));
 
 
 
