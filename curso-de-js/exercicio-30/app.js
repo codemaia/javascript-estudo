@@ -85,6 +85,7 @@ console.log(div(553, 33));
 console.log(mod(10, 5));
 console.log(outherOperation(2, 8));
 console.log(outherOperation(24, 8.5));
+console.log(outherOperation(24, 9.5));
 
 
 
