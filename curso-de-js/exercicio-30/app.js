@@ -78,14 +78,11 @@ const div = calculator('/');
 const mod = calculator('%');
 const outherOperation = calculator('$')
 
-console.log(sum(2, 2));
-console.log(dif(10, 3));
-console.log(mult(2, 2));
-console.log(div(553, 33));
-console.log(mod(10, 5));
-console.log(outherOperation(2, 8));
-console.log(outherOperation(24, 8.5));
-console.log(outherOperation(24, 9.5));
+// console.log(sum(2, 2));
+// console.log(dif(10, 3));
+// console.log(mult(2, 2));
+// console.log(div(553, 33));
+// console.log(mod(10, 5));
 
 
 
@@ -113,7 +110,7 @@ brasil.unshift('Amazônas', 'Pará');
 brasil.shift();
 
 const newSul = [];
-// newSul.push(brasil[1], brasil[2], brasil[3]);
+newSul.push(brasil[1], brasil[2], brasil[3]);
 
 const getState = (arr1, arr2) => {
   arr1.forEach(item => {
@@ -125,8 +122,9 @@ const getState = (arr1, arr2) => {
   return newSul
 }
 
-// console.log(brasil);
-// console.log(getState(brasil, sul));
+console.log(newSul)
+console.log(brasil);
+console.log(getState(brasil, sul));
 
 
 /*
@@ -151,6 +149,7 @@ const getState = (arr1, arr2) => {
 
 
 
+
 /*
   05
 
@@ -164,6 +163,9 @@ const getState = (arr1, arr2) => {
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
+
+
+
 
 
 
