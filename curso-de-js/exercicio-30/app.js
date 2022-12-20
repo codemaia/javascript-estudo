@@ -122,9 +122,9 @@ const getState = (arr1, arr2) => {
   return newSul
 }
 
-// console.log(newSul)
-// console.log(brasil);
-// console.log(getState(brasil, sul));
+console.log(newSul)
+console.log(brasil);
+console.log(getState(brasil, sul));
 
 
 /*

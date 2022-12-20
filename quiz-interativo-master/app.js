@@ -23,7 +23,7 @@ const getUserAnswers = () => {
     // correctAnswers.forEach((_, index) => {
     //     const userAnswer = form[`inputQuestion${index + 1}`].value;
     //     userAnswers.push(userAnswer);
-    // });
+        // });
 
     return userAnswers;
 };
