@@ -131,14 +131,18 @@ console.log(getState(brasil, sul));
   04
 
   - Crie um novo array chamado `nordeste`, que tenha os estados do nordeste;
+
   - Remova de `brasil` os estados do `sudeste`, colocando-os em uma constante
     chamada `newSudeste`. Pesquise pelo método "splice";
+
   - Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
     ficar no mesmo nível que os estados já existentes, não em um array separado;
+
   - Percorra o array `brasil` e gere um novo array chamado `newBrasil`. Esse 
     array deve ter cada item como um objeto, com as propriedades:
       - `id`: que será o índice do array `brasil`;
       - `estado`: que será o estado do array `brasil`;
+
   - Percorra o array `brasil` e verifique se os estados tem mais de 7 letras 
     cada, atribuindo o resultado à uma constante. Se tiver, mostre no console a 
     mensagem "Sim, todos os estados tem mais de 7 letras.". Se não, mostre no 
@@ -146,6 +150,16 @@ console.log(getState(brasil, sul));
     every.
 */
 
+const nordeste = [
+'Maranhão',
+'Piauí',
+'Ceará',
+'Rio Grande do Norte',
+'Paraíba',
+'Pernambuco',
+'Alagoas',
+'Sergipe'
+];
 
 
 
