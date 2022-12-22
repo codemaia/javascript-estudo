@@ -123,7 +123,7 @@ const getState = (arr1, arr2) => {
 }
 
 console.log(newSul)
-console.log(brasil);
+// console.log(brasil);
 console.log(getState(brasil, sul));
 
 
@@ -165,6 +165,11 @@ const nordeste = [
 const newSudeste = brasil.splice(4)
 console.log(newSudeste);
 
+for (let i = 0; i < nordeste.length; i++) {
+  brasil.push(nordeste[i]);
+}
+
+console.log(brasil);
 
 
 /*
