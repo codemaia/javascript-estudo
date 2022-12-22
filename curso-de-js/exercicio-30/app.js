@@ -171,8 +171,9 @@ for (let i = 0; i < nordeste.length; i++) {
 console.log(brasil);
 
 const newBrasil = brasil.reduce((acc, item, index) => {
-  
-  // acc = { 'id': index, 'estado': item } || acc += { 'id': index, 'estado': item 
+  [{ id: index }];
+
+  return  acc
 
   
 
