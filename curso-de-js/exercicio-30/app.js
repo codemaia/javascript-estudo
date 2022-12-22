@@ -168,8 +168,19 @@ console.log(newSudeste);
 for (let i = 0; i < nordeste.length; i++) {
   brasil.push(nordeste[i]);
 }
-
 console.log(brasil);
+
+const newBrasil = brasil.reduce((acc, item, index) => {
+  
+  acc += [{'id': index, 'estado': item}]
+
+  debugger;
+
+}, [{ }]);
+
+console.log(newBrasil);
+
+
 
 
 /*
@@ -185,10 +196,3 @@ console.log(brasil);
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
-
-
-
-
-
-
-
