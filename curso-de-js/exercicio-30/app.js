@@ -161,6 +161,9 @@ const nordeste = [
 'Sergipe'
 ];
 
+//brasil ['Pará', 'Paraná', 'Santa Catarina', 'Rio Grande do Sul', 'São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Minas Gerais']
+const newSudeste = brasil.splice(4)
+console.log(newSudeste);
 
 
 
