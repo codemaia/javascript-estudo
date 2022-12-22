@@ -170,17 +170,13 @@ for (let i = 0; i < nordeste.length; i++) {
 }
 console.log(brasil);
 
-const newBrasil = brasil.reduce((acc, item, index) => {
-  [{ id: index }];
 
-  return  acc
+const newBrasil = brasil.map((item, index) => {
+  return { 'id': index, 'estado': item };
+})
 
-  
-
-}, []);
 
 console.log(newBrasil);
-
 
 
 
