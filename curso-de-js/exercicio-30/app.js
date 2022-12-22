@@ -161,8 +161,8 @@ const nordeste = [
 'Sergipe'
 ];
 
-//brasil ['Pará', 'Paraná', 'Santa Catarina', 'Rio Grande do Sul', 'São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Minas Gerais']
-const newSudeste = brasil.splice(4)
+
+const newSudeste = brasil.splice(4);
 console.log(newSudeste);
 
 for (let i = 0; i < nordeste.length; i++) {
@@ -170,15 +170,22 @@ for (let i = 0; i < nordeste.length; i++) {
 }
 console.log(brasil);
 
-
 const newBrasil = brasil.map((item, index) => {
   return { 'id': index, 'estado': item };
 })
 
-
 console.log(newBrasil);
 
 
+
+const cbEvery = value => value.length > 7
+
+const greaterThan7Letters = brasil.every(cbEvery) 
+                          ? "Sim, todos os estados tem mais de 7 letras." 
+                          : "Nem todos os estados tem mais de 7 letras.";
+
+
+console.log(greaterThan7Letters);
 
 /*
   05
@@ -193,3 +200,9 @@ console.log(newBrasil);
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
+
+
+
+
+
+
