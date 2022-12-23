@@ -187,12 +187,14 @@ const greaterThan7Letters = brasil.every(cbEvery)
 
 console.log(greaterThan7Letters);
 
+
 /*
   05
 
   - Percorra o array `brasil` e verifique se o Ceará está incluído, atribuindo o
     resultado à uma constante. Se esse estado existir no array, mostre no 
     console "Ceará está incluído.". Se não, mostre "Ceará não foi incluído =/";
+
   - Percorra o array `newBrasil` e crie um novo array que some 1 no ID de cada
     objeto desse array, e adicione a frase abaixo na propriedade `estado`:
     - "ESTADO pertence ao Brasil.";
@@ -200,6 +202,11 @@ console.log(greaterThan7Letters);
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
+
+
+const thereIsCeara = brasil.includes('Ceará') ? "Ceará está incluído." : "Ceará não foi incluído =/";
+
+console.log(thereIsCeara)
 
 
 
