@@ -199,15 +199,26 @@ console.log(greaterThan7Letters);
     objeto desse array, e adicione a frase abaixo na propriedade `estado`:
     - "ESTADO pertence ao Brasil.";
   - Atribua o novo array a uma constante;
+
   - Filtre o array criado acima, retornando somente os estados que tiverem ID 
     par. Atribua este novo array à uma constante.
 */
 
+console.log('05 ------- ');
 
 const thereIsCeara = brasil.includes('Ceará') ? "Ceará está incluído." : "Ceará não foi incluído =/";
 
-console.log(thereIsCeara)
+console.log(thereIsCeara);
 
+const newBrasilTwo = newBrasil.map(({ id, estado }) => {
+  return { id: id + 1, estado: `${estado} pertence ao Brasil.` }
+})
+
+console.log(newBrasilTwo)
+
+const newBrasilTwoWithIdPair = newBrasilTwo.filter(({ id }) => id % 2 === 0);
+
+console.log(newBrasilTwoWithIdPair);
 
 
 
