@@ -56,18 +56,19 @@ getUsers('https://jsonplaceholder.typicode.com/users')
 */ 
 
 
+const getOperationMessage = (number1, operator, number2, operation) => 
+  `Resultado da operação: ${number1} ${operator} ${number2} = ${operation} .`
+
 const calculator = operator => (number1, number2) => {
   const operations = {
-    '+': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 + number2} .`,
+    '+': getOperationMessage(number1, operator, number2, number1 + number2 ),
     '-': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 - number2} .`,
     '*': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 * number2} .`,
     '/': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 / number2} .`,
-    '%': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 & number2} .`,
+    '%': `Resultado da operação: ${number1} ${operator} ${number2} = ${number1 % number2} .`,
   }
 
-  return operations[operator] 
-         ? operations[operator]
-         : 'Operação inválida.';
+  return operations[operator] || 'Operação inválida.';
 
 }
 
@@ -78,11 +79,12 @@ const div = calculator('/');
 const mod = calculator('%');
 const outherOperation = calculator('$')
 
-// console.log(sum(2, 2));
-// console.log(dif(10, 3));
-// console.log(mult(2, 2));
-// console.log(div(553, 33));
-// console.log(mod(10, 5));
+console.log(sum(2, 2));
+console.log(dif(10, 3));
+console.log(mult(2, 2));
+console.log(div(553, 33));
+console.log(mod(5, 2));
+console.log(outherOperation(1, 1));
 
 
 
@@ -100,6 +102,7 @@ const outherOperation = calculator('$')
     pegando do array `brasil`. Não remova esses itens de `brasil`.
 */
 
+console.log('03 --------------------------- ')
 
 const sul = ['Paraná', 'Santa Catarina', 'Rio Grande do Sul'];
 const suldeste = ['São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Minas Gerais'];
@@ -149,6 +152,9 @@ console.log(getState(brasil, sul));
     console: "Nem todos os estados tem mais de 7 letras.". Pesquise pelo método 
     every.
 */
+
+console.log('04 ----------------------------------- ')
+
 
 const nordeste = [
 'Maranhão',
@@ -207,7 +213,7 @@ console.log(greaterThan7Letters);
 console.log('05 ------- ');
 
 const thereIsCeara = brasil.includes('Ceará') 
-                     ? "Ceará está incluído." : "Ceará não foi incluído =/";
+                    ? "Ceará está incluído." : "Ceará não foi incluído =/";
 
 console.log(thereIsCeara);
 
