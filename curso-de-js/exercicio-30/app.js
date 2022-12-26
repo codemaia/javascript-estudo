@@ -36,7 +36,7 @@ const getUsers = url => new Promise((resolve, reject) => {
 
 getUsers('https://jsonplaceholder.typicode.com/users')
   .then(users => {
-    // console.log(users);
+    console.log(users);
   })
   .catch(error => console.log(error));
 
@@ -206,7 +206,8 @@ console.log(greaterThan7Letters);
 
 console.log('05 ------- ');
 
-const thereIsCeara = brasil.includes('Ceará') ? "Ceará está incluído." : "Ceará não foi incluído =/";
+const thereIsCeara = brasil.includes('Ceará') 
+                     ? "Ceará está incluído." : "Ceará não foi incluído =/";
 
 console.log(thereIsCeara);
 
