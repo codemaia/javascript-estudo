@@ -226,9 +226,6 @@ console.log(newBrasilTwo)
 const newBrasilTwoWithIdPair = newBrasilTwo.filter(({ id }) => id % 2 === 0);
 
 console.log(newBrasilTwoWithIdPair);
-console.log(newBrasilTwoWithIdPair);
-console.log(newBrasilTwoWithIdPair);
-console.log(newBrasilTwoWithIdPair);
 
 
 
