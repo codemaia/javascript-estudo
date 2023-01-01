@@ -3208,6 +3208,6 @@ const logUsers = async () => {
 }
 
 
-logUsers()
+logUsers();
 
 
