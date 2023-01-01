@@ -3101,58 +3101,86 @@ const present = new Date();
  */
 
 
- const getPokemon = url => new Promise((resolve, reject) => {
+//  const getPokemon = url => new Promise((resolve, reject) => {
 
-     const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
+//      const request = new XMLHttpRequest() // 1 - criando um objeto de request / objeto usado para enviar um request para o servidor
      
-     // saber se a requisicao foi bem sucedida e
-     // acessar os dados
+//      // saber se a requisicao foi bem sucedida e
+//      // acessar os dados
      
-     // estudr documentação readyState
+//      // estudr documentação readyState
      
-     request.addEventListener('readystatechange', () => {
-        const isRequestOk = request.readyState === 4 && request.status === 200;
-        const isRequestNotOk = request.readyState === 4;
+//      request.addEventListener('readystatechange', () => {
+//         const isRequestOk = request.readyState === 4 && request.status === 200;
+//         const isRequestNotOk = request.readyState === 4;
      
-         if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
-             const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
-             resolve(data);
+//          if (isRequestOk) { // no estado 4 é que podemos fazer algo com os dados recebidos.
+//              const data = JSON.parse(request.responseText); // CONVERTENDO OS DADOS RECEBIDOS DA API PARA JSON, PARA PODERMOS MANIPULALOS
+//              resolve(data);
              
-         }
+//          }
      
-         if (isRequestNotOk) {
-            reject('Não foi possível obter os dados da API');
+//          if (isRequestNotOk) {
+//             reject('Não foi possível obter os dados da API');
             
-         }
-     });
+//          }
+//      });
      
      
-     //abertura da requisicao
-     request.open('GET', url); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
-     //envio do request
-     request.send();
-});
+//      //abertura da requisicao
+//      request.open('GET', url); // -> recebe 2 argumentos / 1 - a string com o metodo, no caso 'GET' que é pegar / 2 - o endpoint que queremos nos comunicar
+//      //envio do request
+//      request.send();
+// });
 
 
-getPokemon('https://pokeapi.co/api/v2/pokemon/1')
-    .then(bulbasaur => {
-        console.log(bulbasaur);
-        return getPokemon('https://pokeapi.co/api/v2/pokemon/4')
+// getPokemon('https://pokeapi.co/api/v2/pokemon/1')
+//     .then(bulbasaur => {
+//         console.log(bulbasaur);
+//         return getPokemon('https://pokeapi.co/api/v2/pokemon/4')
+//     })
+//     .then(charmanger => {
+//         console.log(charmanger);
+//         return getPokemon('https://pokeapi.co/api/v2/pokemon/7')
+//     })
+//     .then(console.log)
+//     .catch(error => console.log(error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// AULA 05-03 - A FETCH API 
+
+
+/**
+ *  
+ *  FETCH usa promises;
+ *  
+ *  BUSCAR DADOS DE OUTRO LUGAR
+ * 
+ *  1º PASSO: Busco os dados atraves da invocação do metodo FETCH
+ *  2º PASSO: Obtenho a resposta e retorno uma promise com o 'response.json()'
+ *  3º PASSO: Encadeio um SEGUNDO 'then' na promise que o PRIMEIRO then esta retornando pra dentro desta função fazer algo com os dados que obtive.
+ * 
+ */
+
+
+fetch('https://jsonplaceholder.typicode.com/users') //retorna uma promise
+    .then(response => {
+        console.log('Response', response);
+        return response.json();
     })
-    .then(charmanger => {
-        console.log(charmanger);
-        return getPokemon('https://pokeapi.co/api/v2/pokemon/7')
-    })
-    .then(console.log)
-    .catch(error => console.log(error));
-
-
-
-
-
-
-
-
+    .then(users => console.log(users))
+    .catch(error => console.log('deu ruim ' + error));
 
 
 
