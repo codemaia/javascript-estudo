@@ -8,15 +8,36 @@
     do GitHub.
 */
 
+
+const getUserGitHub = async () => {
+  const response = await fetch('https://api.github.com/users/codemaia')
+  return await response.json();
+}
+
+
+const logDataUser = async () => {
+  const dataUser = await getUserGitHub();
+  return dataUser;
+}
+
+
+logDataUser();
+
+
+
+
+
 /*
   02
 
   - A partir do array numbers (abaixo), crie um novo array que contém somente 
     os números do array numbers que são divisíveis por 2 ou 3;
   - Exiba esse novo array no console.
+
 */
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
 /*
   03
@@ -31,6 +52,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     - Natália => "PNaPtáPlia";
     - Rafaela => "PRaPfaPePla".
 */
+
+
+
+
 
 /*
   04
@@ -47,6 +72,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   Dica: pesquise pelo método split.
 */
 
+
+
+
+
 /*
   05
 
@@ -59,6 +88,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   Dica: pesquise pelo método Object.keys().
 */
+
+
+
+
 
 /*
   06
@@ -74,6 +107,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 */
 
 const scores = [100, 90, 85, 100, 60, 85, 100, 90, 55, 75, 60]
+
+
+
+
 
 /*
   07
