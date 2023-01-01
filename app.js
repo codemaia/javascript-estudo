@@ -3174,15 +3174,40 @@ const present = new Date();
  */
 
 
-fetch('https://jsonplaceholder.typicode.com/users') //retorna uma promise
-    .then(response => {
-        console.log('Response', response);
-        return response.json();
-    })
-    .then(users => console.log(users))
-    .catch(error => console.log('deu ruim ' + error));
+// fetch('https://jsonplaceholder.typicode.com/users') //retorna uma promise
+//     .then(response => {
+//         console.log('Response', response);
+//         return response.json();
+//     })
+//     .then(users => console.log(users))
+//     .catch(error => console.log('deu ruim ' + error));
 
 
 
+
+
+// AULA 05-04 - ASYNC / AWAIT
+
+
+/**
+ *  Inserir ASYNC na frente da declaração da função
+ *     -> Assim ira retornar uma promise
+ * 
+ */
+
+
+const getUsers = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    return await response.json();
+}
+
+
+const logUsers = async () => {
+    const users = await getUsers();
+    return users;
+}
+
+
+logUsers()
 
 
