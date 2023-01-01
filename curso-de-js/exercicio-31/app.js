@@ -46,7 +46,10 @@ const newNumbers = numbers.filter(number => {
 });
 
 
-console.log(newNumbers);
+// console.log(newNumbers);
+
+
+
 
 /*
   03
@@ -62,8 +65,17 @@ console.log(newNumbers);
     - Rafaela => "PRaPfaPePla".
 */
 
+//PRePnan
+
+const myName = ['Re', 'nan'];
 
 
+const newName = myName.reduce((acc, silaba) => {
+  return acc += `P${silaba}`;
+}, '');
+
+
+console.log(newName);
 
 
 /*
