@@ -3196,6 +3196,21 @@ const present = new Date();
  */
 
 
+
+// const getUsersGitHub = async () => {
+//     const response = await fetch('https://api.github.com/users/codemaia');
+//     return await response.json();
+//   }
+  
+  
+//   const logDataUsers = async () => {
+//     const dataUsers = await getUsersGitHub();
+//     console.log(dataUsers);
+//   }
+  
+  
+//   logDataUsers()
+
 const getUsers = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     return await response.json();
@@ -3204,7 +3219,7 @@ const getUsers = async () => {
 
 const logUsers = async () => {
     const users = await getUsers();
-    return users;
+    console.log(users);
 }
 
 

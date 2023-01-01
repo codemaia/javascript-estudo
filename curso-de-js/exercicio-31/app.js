@@ -4,25 +4,24 @@
   - Utilizando a fetch API, implemente uma função assíncrona que busca dados do 
     seu perfil de usuário no GitHub, através do seguinte endpoint:
     - https://api.github.com/users/SEU_NOME_DE_USUARIO_NO_GITHUB
-  - Implemente uma segunda função que exibe, no console, seus dados de usuário 
+  - Imple(mente uma segunda função que exibe, no console, seus dados de usuário 
     do GitHub.
 */
 
 
-const getUsersGitHub = async () => {
+const getDataUsersGitHub = async () => {
   const response = await fetch('https://api.github.com/users/codemaia');
   return await response.json();
 }
 
 
-const logDataUsers = async () => {
-  const dataUsers = await getUsersGitHub();
+const showDataUsersGitHub = async () => {
+  const dataUsers = await getDataUsersGitHub();
   console.log(dataUsers);
 }
 
 
-logDataUsers()
-
+// showDataUsersGitHub();
 
 
 
@@ -38,6 +37,16 @@ logDataUsers()
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+const newNumbers = numbers.filter(number => {
+
+  if (number % 2 === 0 || number % 3 === 0  ) {
+    return number;
+  }
+
+});
+
+
+console.log(newNumbers);
 
 /*
   03
