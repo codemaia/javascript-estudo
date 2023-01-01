@@ -9,19 +9,19 @@
 */
 
 
-const getUserGitHub = async () => {
-  const response = await fetch('https://api.github.com/users/codemaia')
+const getUsersGitHub = async () => {
+  const response = await fetch('https://api.github.com/users/codemaia');
   return await response.json();
 }
 
 
-const logDataUser = async () => {
-  const dataUser = await getUserGitHub();
-  return dataUser;
+const logDataUsers = async () => {
+  const dataUsers = await getUsersGitHub();
+  console.log(dataUsers);
 }
 
 
-logDataUser();
+logDataUsers()
 
 
 
