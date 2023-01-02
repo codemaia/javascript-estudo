@@ -75,7 +75,7 @@ const newName = myName.reduce((acc, silaba) => {
 }, '');
 
 
-console.log(newName);
+// console.log(newName);
 
 
 /*
@@ -92,6 +92,18 @@ console.log(newName);
 
   Dica: pesquise pelo método split.
 */
+
+
+
+const meName = 'Renan';
+
+
+const newMeName = meName.split('');
+
+newMeName.forEach((word, index) => {
+  return console.log(`- "${word}" é a ${index + 1}º letra do meu nome;`);
+});
+
 
 
 
