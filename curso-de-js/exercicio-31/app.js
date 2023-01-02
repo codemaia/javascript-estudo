@@ -96,15 +96,11 @@ const newName = myName.reduce((acc, silaba) => {
 
 
 const meName = 'Renan';
-
-
 const newMeName = meName.split('');
 
-newMeName.forEach((word, index) => {
-  return console.log(`- "${word}" é a ${index + 1}º letra do meu nome;`);
-});
-
-
+// newMeName.forEach((word, index) => {
+//   return console.log(`- "${word}" é a ${index + 1}º letra do meu nome;`);
+// });
 
 
 
@@ -122,6 +118,14 @@ newMeName.forEach((word, index) => {
   Dica: pesquise pelo método Object.keys().
 */
 
+const obj = {
+  name: 'Livia',
+  lastname: 'Maia',
+  age: 32
+}
+
+
+console.log(Object.keys(obj));
 
 
 
