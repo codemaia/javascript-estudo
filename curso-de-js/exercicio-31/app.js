@@ -201,7 +201,7 @@ const filter = (arr, func) => {
 
   const newArr = [];
 
-  const funct = func(item, index, array);
+  // const funct = func(item);
   
 
   arr.forEach(item => {
@@ -213,7 +213,7 @@ const filter = (arr, func) => {
   });
 
   return console.log(newArr);
-  
+
 }
 
 
