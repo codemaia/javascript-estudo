@@ -201,11 +201,11 @@ const filter = (arr, func) => {
 
   const newArr = [];
 
-  // const funct = func(item);
+  // let funct = func(index, array);
   
 
   arr.forEach(item => {
-
+  
     if (func) {
       newArr.push(item);
     }
@@ -218,4 +218,4 @@ const filter = (arr, func) => {
 
 
 filter([1, 2, 3], item => item); // [1, 2, 3];
-// filter([0, 1, 2], item => item); // [1, 2];
+
