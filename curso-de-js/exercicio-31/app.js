@@ -21,7 +21,7 @@ const showDataUsersGitHub = async () => {
 }
 
 
-// showDataUsersGitHub();
+showDataUsersGitHub();
 
 
 
@@ -39,7 +39,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const newNumbers = numbers.filter(number => {
 
-  if (number % 2 === 0 || number % 3 === 0  ) {
+  if (number % 2 === 0 || number % 3 === 00) {
     return number;
   }
 
@@ -75,7 +75,7 @@ const newName = myName.reduce((acc, silaba) => {
 }, '');
 
 
-// console.log(newName);
+console.log(newName);
 
 
 /*
@@ -98,9 +98,9 @@ const newName = myName.reduce((acc, silaba) => {
 const meName = 'Renan';
 const newMeName = meName.split('');
 
-// newMeName.forEach((word, index) => {
-//   return console.log(`- "${word}" é a ${index + 1}º letra do meu nome;`);
-// });
+newMeName.forEach((word, index) => { //=> FOREACH UTILIZADO PARA GERAR UM EFEITO COLATERAL (MOSTRAR ALGO)
+  return console.log(`- "${word}" é a ${index + 1}º letra do meu nome;`);
+});
 
 
 
@@ -163,7 +163,7 @@ const repeatNumber = (arr, value) => {
 }
 
 
-// console.log(repeatNumber(scores, 100));
+console.log(repeatNumber(scores, 100));
 // console.log(repeatNumber(scores, 90));
 // console.log(repeatNumber(scores, 85));
 // console.log(repeatNumber(scores, 60));
@@ -199,14 +199,15 @@ const repeatNumber = (arr, value) => {
 
 const filter = (arr, func) => {
 
-  const newArr = [];
+  let newArr = [];
 
   arr.forEach((item, index, array) => {
     const funct = func(item, index, array);
 
-    if (funct) {
-      newArr.push(item);
-    }
+    funct ? newArr.push(item) : newArr;
+    // if (funct) {
+    //   newArr.push(item);
+    // }
     
   });
 
