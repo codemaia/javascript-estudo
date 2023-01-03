@@ -153,18 +153,20 @@ const repeatNumber = (arr, value) => {
   let count = 0;
   
   arr.forEach((item) => {
-    if (item === value) {
-      count++;
-    }
+
+    item === value ? count++ : count
 
   });
 
   return count;
+
 }
 
 
-console.log(repeatNumber(scores, 100));
-
+// console.log(repeatNumber(scores, 100));
+// console.log(repeatNumber(scores, 90));
+// console.log(repeatNumber(scores, 85));
+// console.log(repeatNumber(scores, 60));
 
 
 
@@ -193,3 +195,27 @@ console.log(repeatNumber(scores, 100));
   Dica: lembre-se que o método filter inclui o item em questão no novo array 
   que está sendo gerado **apenas** se a função retorna um valor truthy.
 */
+
+
+const filter = (arr, func) => {
+
+  const newArr = [];
+
+  const funct = func(item, index, array);
+  
+
+  arr.forEach(item => {
+
+    if (func) {
+      newArr.push(item);
+    }
+    
+  });
+
+  return console.log(newArr);
+  
+}
+
+
+filter([1, 2, 3], item => item); // [1, 2, 3];
+// filter([0, 1, 2], item => item); // [1, 2];
