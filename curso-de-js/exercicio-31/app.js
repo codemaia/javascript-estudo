@@ -201,12 +201,10 @@ const filter = (arr, func) => {
 
   const newArr = [];
 
-  // let funct = func(index, array);
-  
+  arr.forEach((item, index, array) => {
+    const funct = func(item, index, array);
 
-  arr.forEach(item => {
-  
-    if (func) {
+    if (funct) {
       newArr.push(item);
     }
     
@@ -218,4 +216,7 @@ const filter = (arr, func) => {
 
 
 filter([1, 2, 3], item => item); // [1, 2, 3];
-
+filter([0, 1, 2], item => item) // [1, 2];
+filter([1, 2, 3], item => item < 2) // [1];
+filter([1, 2, 3, 5], (item, index) => item === index + 1) // [1, 2, 3];
+filter([1, 2, 3, 2, 1, 5], (item, index, array) => index === array.indexOf(item)) // [1, 2, 3, 5];
