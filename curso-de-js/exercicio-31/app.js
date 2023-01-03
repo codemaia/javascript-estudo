@@ -141,13 +141,29 @@ console.log(Object.keys(obj));
     argumento e o número 1 é passado como 2º argumento, a função deve retornar 
     2, pois há duas ocorrências do número 1 no array;
   - Utilize o array abaixo para testar a função.
+
+
+  138.197.74.174
 */
 
 const scores = [100, 90, 85, 100, 60, 85, 100, 90, 55, 75, 60]
 
+const repeatNumber = (arr, value) => {
+
+  let count = 0;
+  
+  arr.forEach((item) => {
+    if (item === value) {
+      count++;
+    }
+
+  });
+
+  return count;
+}
 
 
-
+console.log(repeatNumber(scores, 100));
 
 
 
