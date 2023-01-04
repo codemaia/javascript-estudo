@@ -39,14 +39,12 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const newNumbers = numbers.filter(number => {
 
-  if (number % 2 === 0 || number % 3 === 00) {
-    return number;
-  }
+  return number % 2 === 0 || number % 3 === 00
 
 });
 
 
-// console.log(newNumbers);
+console.log(newNumbers);
 
 
 
@@ -148,24 +146,29 @@ console.log(Object.keys(obj));
 
 const scores = [100, 90, 85, 100, 60, 85, 100, 90, 55, 75, 60]
 
-const repeatNumber = (arr, value) => {
 
-  let count = 0;
+const repeatNumber = (arr, value) =>
+  arr.reduce((acc, number) => number === value ? acc + 1 : acc, 0);
+
+
+// const repeatNumber = (arr, value) => {
+
+//   let count = 0;
   
-  arr.forEach((item) => {
+//   arr.forEach((item) => {
 
-    item === value ? count++ : count
+//     item === value ? count++ : count
 
-  });
+//   });
 
-  return count;
+//   return count;
 
-}
+// }
 
 
 console.log(repeatNumber(scores, 100));
-// console.log(repeatNumber(scores, 90));
-// console.log(repeatNumber(scores, 85));
+console.log(repeatNumber(scores, 90));
+console.log(repeatNumber(scores, 85));
 // console.log(repeatNumber(scores, 60));
 
 
@@ -201,15 +204,16 @@ const filter = (arr, func) => {
 
   let newArr = [];
 
-  arr.forEach((item, index, array) => {
+  const filterItem = (item, index, array) => {
+
     const funct = func(item, index, array);
 
     funct ? newArr.push(item) : newArr;
-    // if (funct) {
-    //   newArr.push(item);
-    // }
     
-  });
+  }
+
+  
+  arr.forEach(filterItem);
 
   return console.log(newArr);
 
