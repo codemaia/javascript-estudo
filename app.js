@@ -3283,3 +3283,33 @@ const present = new Date();
 // getPokemons()
 
 
+
+
+
+
+// AULA 06-04 - TRATANDO ERROS COM TRY/CATCH
+
+/**
+ *  # ERROR
+ *     Quando um erro é lançand em uma aplicação JavaScript, o código abaixo
+ *      do código que disparou o error não é executado.
+ * 
+ *  # try/catch
+ *        se o codigo que  try tentar executar causar algum error
+ *          vou poder tentar executar um outro código (catch), evitando que a aplicaçã trave
+ *      EM JAVASCRIPT todos os objetos de ERROR possuem as propriedades name e menssage
+ * 
+ */
+
+
+// try {
+//     console.log(oi)
+// } catch (error) {
+//     if (error.name === 'ReferenceError', error.message === 'oi is not defined') {
+//         const oi = 'const oi criada';
+//         console.log(oi);
+//     }
+    
+// }
+
+// console.log('oi')
