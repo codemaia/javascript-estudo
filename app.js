@@ -3313,3 +3313,35 @@ const present = new Date();
 // }
 
 // console.log('oi')
+
+
+
+
+/**
+ * 
+ * ## IMPORTANTE
+ * 
+ *      O AWAIT DESENCAPSULA O OBJETO RECEBIDO (PROMISE)
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
