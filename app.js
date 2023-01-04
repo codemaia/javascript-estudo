@@ -3211,18 +3211,75 @@ const present = new Date();
   
 //   logDataUsers()
 
-const getUsers = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    return await response.json();
-}
+// const getUsers = async () => {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//     return await response.json();
+// }
 
 
-const logUsers = async () => {
-    const users = await getUsers();
-    console.log(users);
-}
+// const logUsers = async () => {
+//     const users = await getUsers();
+//     console.log(users);
+// }
 
 
-logUsers();
+// logUsers();
+
+
+
+
+
+
+
+
+
+
+// AULA 06-03 - REQUESTS PARALELOS VS SEQUENCIAIS
+
+/**
+ * # Promise.all() -> Recebe como argumento um array de promises
+ *    1 - Recebe um array de promises e quando todas as promises forem
+ *        resolvidas ele retorna uma unica promises com um arrays com os valores de todas 
+ *        as promises resolvidas
+ *        
+ *    2 - Se uma das promises que o Promise.all() recebeu for rejeitada
+ *        a promise que o Promise.all() retorna é uma promise rejeitada
+ *        que contem a mensagem e o erro que causou a rejeição
+ *      
+ *  
+ */
+
+ //SEQUENIAL -> QUANDO PRECISAM DE RESPOSTAS DE OUTROS ENDPOINTS 
+// const getPokemons = async () => {
+//     const bulbasaur = await fetch('https://pokeapi.co/api/v2/pokemon/1');
+//     const charmander = await fetch('https://pokeapi.co/api/v2/pokemon/4')
+//     const squartle = await fetch('https://pokeapi.co/api/v2/pokemon/7')
+
+//     console.log(await bulbasaur.json());
+//     console.log(await charmander.json());
+//     console.log(await squartle.json());
+
+// }
+
+// getPokemons()
+
+
+
+//PARALELO -> SAO ENDPOINTS INDEPENDENTES
+//Utilizar o Promise.all()
+// const getPokemons = async () => {
+//     const bulbasaur = fetch('https://pokeapi.co/api/v2/pokemon/1');
+//     const charmander = fetch('https://pokeapi.co/api/v2/pokemon/4');
+//     const squartle = fetch('https://pokeapi.co/api/v2/pokemon/7');
+
+//     const results = await Promise.all([bulbasaur, charmander, squartle]);
+//     results.forEach(async response => console.log(await response.json()));
+//     // console.log(await bulbasaur.json());
+//     // console.log(await charmander.json());
+//     // console.log(await squartle.json());
+
+// }
+
+// getPokemons()
 
 
