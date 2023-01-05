@@ -20,3 +20,7 @@
       listados na documentação: https://developers.giphy.com/docs/api/endpoint#search
   - Ignore os avisos no console. Para limpá-lo, pressione "ctrl + L".
 */
+
+
+
+
