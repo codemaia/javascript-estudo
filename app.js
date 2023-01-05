@@ -3329,12 +3329,41 @@ const present = new Date();
 
 
 
+// AULA 06-05 - TRY/CATCH EM REQUESTS E ERROS PERSONALIZADOS
+
+/**
+ * 
+ * 
+ * 
+ * 
+ */
 
 
+const getUsers = async () => {
+    try {
+        const response = await fetch('./json/todos.json');
+
+        if (!response.ok) {
+            throw new Error('Não foi possivel obter os dados');
+        }
+
+        return response.json();
 
 
+    } catch (error) {
+        console.log(error)
+    }
+
+}
 
 
+const logUsers = async () => {
+    const users = await getUsers();
+    console.log(users);
+}
+
+
+logUsers();
 
 
 
