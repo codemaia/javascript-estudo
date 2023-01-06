@@ -22,20 +22,28 @@
 */
 
 
+const form = document.querySelector('form');
+const input = document.querySelector('#search');
 
 
-const getGifs = async () => {
+
+const getGifs = async (value) => {
   // const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=dog');
-  const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&q=dog&limit=1&offset=0&rating=g&lang=en');
+  const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&q=${value}&limit=1&offset=0&rating=g&lang=en`);
   return await response.json();
 
 }
 
 
-const logGetGifs = async () => {
-  const resultGif = await getGifs();
+const logGetGifs = async (value) => {
+  const resultGif = await getGifs(value);
   return console.log(resultGif.data[0].images.original['webp']);
 }
 
+form.addEventListener('submit', event => {
 
-logGetGifs();
+  event.preventDefault();
+  const inputValue = input.value;
+
+  return console.log(logGetGifs(inputValue));
+});
