@@ -24,6 +24,7 @@
 
 const form = document.querySelector('form');
 const input = document.querySelector('#search');
+const out = document.querySelector('.out');
 
 
 
@@ -37,13 +38,20 @@ const getGifs = async (value) => {
 
 const logGetGifs = async (value) => {
   const resultGif = await getGifs(value);
-  return console.log(resultGif.data[0].images.original['webp']);
+  return await resultGif.data[0].images.original['webp'];
 }
 
-form.addEventListener('submit', event => {
+
+form.addEventListener('submit', async event => {
 
   event.preventDefault();
   const inputValue = input.value;
 
-  return console.log(logGetGifs(inputValue));
+  out.innerHTML += `<div calss="img">${await logGetGifs(inputValue)}</div>`;
+  
+  
+
+
+  
+
 });
