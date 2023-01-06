@@ -34,7 +34,7 @@ const getGifs = async () => {
 
 const logGetGifs = async () => {
   const resultGif = await getGifs();
-  return console.log(resultGif);
+  return console.log(resultGif.data[0].images.original['webp']);
 }
 
 
