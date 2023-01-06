@@ -24,3 +24,18 @@
 
 
 
+const getGifs = async () => {
+  // const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=dog');
+  const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&q=dog&limit=1&offset=0&rating=g&lang=en');
+  return await response.json();
+
+}
+
+
+const logGetGifs = async () => {
+  const resultGif = await getGifs();
+  return console.log(resultGif);
+}
+
+
+logGetGifs();
