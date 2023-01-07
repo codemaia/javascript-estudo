@@ -47,14 +47,24 @@ const logGetGifs = async (value) => {
 form.addEventListener('submit', async event => {
 
   event.preventDefault();
+
   const inputValue = input.value;
   const theGif = await logGetGifs(inputValue);
-  let arr = [];
+  
+  const img = `<img src='${theGif}' alt='${inputValue}'>`;
+  // console.log(img)
+  out.innerHTML += img
+  
+  // .prepend(img);
 
-      out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`;
- arr.forEach()       
-  arr.push(out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`);
+  // out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`;
 
-  console.log(arr);
+  // arr.push(out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`);
+
+  // console.log(arr);
 
 });
+
+
+
+
