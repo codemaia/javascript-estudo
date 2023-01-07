@@ -27,10 +27,8 @@ const input = document.querySelector('#search');
 const out = document.querySelector('.out');
 
 
-
 const getGifs = async (value) => {
   // const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=dog');
-  
   // const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&q=${value}&limit=1&offset=0&rating=g&lang=en`);
   const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=${value}`);
   return await response.json();
@@ -50,8 +48,13 @@ form.addEventListener('submit', async event => {
 
   event.preventDefault();
   const inputValue = input.value;
+  const theGif = await logGetGifs(inputValue);
+  let arr = [];
 
-  out.innerHTML += `<img src='${await logGetGifs(inputValue)}' alt='${inputValue}'>`;
+      out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`;
+        
+  arr.push(out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`);
 
+  console.log(arr);
 
 });
