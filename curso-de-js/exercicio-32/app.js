@@ -52,7 +52,7 @@ form.addEventListener('submit', async event => {
   let arr = [];
 
       out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`;
-        
+ arr.forEach()       
   arr.push(out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`);
 
   console.log(arr);
