@@ -43,7 +43,7 @@ const logGetGifs = async (value) => {
   return await resultGif.data[0].images.original['webp'];
 }
 
-
+ 
 
 
 form.addEventListener('submit', async event => {
@@ -51,7 +51,7 @@ form.addEventListener('submit', async event => {
   event.preventDefault();
   const inputValue = input.value;
 
-  out.innerHTML += `<img class="img" src='${await logGetGifs(inputValue)}' alt='${inputValue}'>`;
+  out.innerHTML += `<img src='${await logGetGifs(inputValue)}' alt='${inputValue}'>`;
 
 
 });
