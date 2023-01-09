@@ -1338,6 +1338,9 @@ Se o boolean é true vira false e vice e versa.
 
 
 
+
+
+
 // //adicionar ou modificar o HTML dos elementos
 // const div = document.querySelector('.content');
 
@@ -1380,7 +1383,7 @@ Se o boolean é true vira false e vice e versa.
 
 // const paragraph = document.querySelector('p');
 // console.log(paragraph.getAttribute('class'));
-
+0
 // paragraph.setAttribute('class', 'success');
 
 
