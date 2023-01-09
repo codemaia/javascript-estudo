@@ -58,23 +58,10 @@ form.addEventListener('submit', async event => {
   // const img = `<img src='${theGif}'>`;
   
   img.setAttribute('src', `${theGif}`);
-  out.prepend(img);
+  // out.prepend(img);
+  out.insertAdjacentElement('afterbegin', img);
 
-
-  // out.innerHTML += img;
-
-  // imgAtt.setAttribute('scr', `${theGif}`);
-  
-
-
-  
-  // .prepend(img);
-
-  // out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`;
-
-  // arr.push(out.innerHTML += `<img src='${theGif}' alt='${inputValue}'>`);
-
-  // console.log(arr);
+  input.value = '';
 
 });
 
