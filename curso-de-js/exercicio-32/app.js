@@ -53,7 +53,7 @@ form.addEventListener('submit', async event => {
   const img = document.createElement('img');
   // const img = `<img src='${theGif}'>`;
   
-  
+  img.setAttribute('src', `${theGif}`);
   out.prepend(img);
   // out.innerHTML += img;
 
