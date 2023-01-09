@@ -55,6 +55,8 @@ form.addEventListener('submit', async event => {
   
   img.setAttribute('src', `${theGif}`);
   out.prepend(img);
+
+  
   // out.innerHTML += img;
 
   // imgAtt.setAttribute('scr', `${theGif}`);
