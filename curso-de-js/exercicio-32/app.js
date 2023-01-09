@@ -38,11 +38,15 @@ const getGifs = async (value) => {
 
 const logGetGifs = async (value) => {
   const resultGif = await getGifs(value);
-  return await resultGif.data[0].images.original['webp'];
+  // return await resultGif.data[0].images.original['webp'];
+  // return await console.log(resultGif.data[0].images.original['webp']);
+  return await resultGif.data[0].images.downsized.url;
+  // return await console.log(resultGif);
+
 }
 
  
-
+// logGetGifs();
 
 form.addEventListener('submit', async event => {
 
@@ -56,7 +60,7 @@ form.addEventListener('submit', async event => {
   img.setAttribute('src', `${theGif}`);
   out.prepend(img);
 
-  
+
   // out.innerHTML += img;
 
   // imgAtt.setAttribute('scr', `${theGif}`);
