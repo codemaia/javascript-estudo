@@ -53,8 +53,7 @@ const logGetGifs = async (value) => {
 
 }
 
- 
-// logGetGifs();
+
 
 form.addEventListener('submit', async event => {
 
