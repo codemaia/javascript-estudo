@@ -25,23 +25,31 @@
 const form = document.querySelector('form');
 const input = document.querySelector('#search');
 const out = document.querySelector('.out');
-const main = document.querySelector('main');
+
 
 const getGifs = async (value) => {
-  // const response = await fetch('https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=dog');
-  // const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&q=${value}&limit=1&offset=0&rating=g&lang=en`);
-  const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=${value}`);
-  return await response.json();
+  try {
+    const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=pBtDxyXSuyrg4cZ5uaMTadhXeXibFs1M&limit=1&q=${value}`);
+
+    if (!response.ok) {
+      throw new Error('Não foi possivel obter os dados da API');
+    }
+
+    console.log(response)
+    return await response.json(); 
+
+  } catch (error) {
+    
+    console.log(error);
+
+  }
 
 }
 
 
 const logGetGifs = async (value) => {
   const resultGif = await getGifs(value);
-  // return await resultGif.data[0].images.original['webp'];
-  // return await console.log(resultGif.data[0].images.original['webp']);
   return await resultGif.data[0].images.downsized.url;
-  // return await console.log(resultGif);
 
 }
 
@@ -55,10 +63,9 @@ form.addEventListener('submit', async event => {
   const inputValue = input.value;
   const theGif = await logGetGifs(inputValue);
   const img = document.createElement('img');
-  // const img = `<img src='${theGif}'>`;
+  
   
   img.setAttribute('src', `${theGif}`);
-  // out.prepend(img);
   out.insertAdjacentElement('afterbegin', img);
 
   input.value = '';
