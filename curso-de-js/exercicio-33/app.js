@@ -18,6 +18,14 @@
 */
 
 
+// const newArr = (arr = []) => {
+//   const arr =
+// return arr;
+
+// }
+
+
+// console.log(newArr(['item1', 'item2', 'item3']))
 
 
 
@@ -33,6 +41,13 @@ const topics = [
   { id: 2, name: 'Negócios & finanças'},
   { id: 3, name: 'Carreiras'}
 ]
+
+
+const [, , { name } ] = topics;
+
+console.log(name)
+
+
 
 /*
   04
