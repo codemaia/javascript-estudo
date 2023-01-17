@@ -81,19 +81,18 @@ const [ , [ red = '#FF0D0D', green = '#0AFA00', blue = '#011EFA'],  ] = colors
 */
 
 
-const greet = (obj = { name: 'desconhecido' }, value) => {
+const greet = (obj = { }, value) => {
 
-  const { name } = obj
+  
+  const { [value]: nome = 'desconhecido' } = obj
 
-  return name + ' ' + value;
+  return  `Olá, meu nome é ${[nome]}!`
 
 }
 
 
 console.log(greet({ name: 'Roger' }, 'name'))
 console.log(greet({}, 'personName'))
-
-
 
 
 
