@@ -7,6 +7,7 @@
 
 // console.log(book)
 
+
 /*
   02
 
@@ -18,11 +19,10 @@
 */
 
 
-// const newArr = (arr = []) => {
-//   const arr =
-// return arr;
-
-// }
+const newArr = (arr = [item1, item2, item3]) => {
+  const newArr = [arr[2], arr[0], arr[1]];
+  return newArr
+}
 
 
 // console.log(newArr(['item1', 'item2', 'item3']))
@@ -45,7 +45,7 @@ const topics = [
 
 const [, , { name } ] = topics;
 
-console.log(name)
+// console.log(name);
 
 
 
@@ -57,7 +57,14 @@ console.log(name)
     'red', 'green' e 'blue'.
 */
 
-const colors = ['#FF00FF', ['#FF0D0D', '#0AFA00', '#011EFA'], '#7BF0FF']
+const colors = ['#FF00FF', ['#FF0D0D', '#0AFA00', '#011EFA'], '#7BF0FF'];
+
+const [ , [ red = '#FF0D0D', green = '#0AFA00', blue = '#011EFA'],  ] = colors
+
+
+// console.log(red, green, blue);
+
+
 
 /*
   05
