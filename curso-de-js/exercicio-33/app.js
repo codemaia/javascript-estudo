@@ -80,8 +80,24 @@ const [ , [ red = '#FF0D0D', green = '#0AFA00', blue = '#011EFA'],  ] = colors
     - Faça a função retornar "Olá, meu nome é [NOME]!".
 */
 
-// console.log(greet({ name: 'Roger' }, 'name'))
-// console.log(greet({}, 'personName'))
+
+const greet = (obj = { name: 'desconhecido' }, value) => {
+
+  const { name } = obj
+
+  return name + ' ' + value;
+
+}
+
+
+console.log(greet({ name: 'Roger' }, 'name'))
+console.log(greet({}, 'personName'))
+
+
+
+
+
+
 
 /*
   06
